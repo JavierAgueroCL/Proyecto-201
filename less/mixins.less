@@ -1,0 +1,221 @@
+.font-face (@name, @url, @id : '') {
+  @font-face {
+    font-family: %('%d', @name);
+    src: e(%("url('%d.eot?') format('eot')", ~"@{url}")),
+         e(%("url('%d.eot?#iefix') format('embedded-opentype')", ~"@{url}")),
+         e(%("url('%d.svg#%s') format('svg')", ~"@{url}", ~"@{id}")),
+         e(%("url('%d.woff') format('woff')", ~"@{url}")),
+         e(%("url('%d.ttf') format('truetype')", ~"@{url}"));
+  }
+}
+.appearance( @val ){
+    -webkit-appearance: @val;
+    -moz-appearance: @val;
+    appearance: @val;
+}
+.transform-prop( @val ){
+    -webkit-transform: @val;
+    -moz-transform: @val;
+    -ms-transform: @val;
+    -o-transform: @val;
+    transform: @val;
+}
+
+.transition-prop( @prop, @speed, @acc ){
+    -webkit-transition: @prop @speed @acc;
+    -moz-transition: @prop @speed @acc;
+    -ms-transition: @prop @speed @acc;
+    -o-transition: @prop @speed @acc;
+    transition: @prop @speed @acc;
+}
+.transition-delay(@value){
+    -webkit-transition-delay: @value;
+    -moz-transition-delay: @value;
+    -ms-transition-delay: @value;
+    -o-transition-delay: @value;
+    transition-delay: @value;
+}
+.perspective (@value: 1000) {
+    -webkit-perspective: @value;
+    -moz-perspective: @value;
+    -ms-perspective: @value;
+    perspective: @value;
+}
+.transform-origin (@x:center, @y:center, @z:0) {
+    -webkit-transform-origin: @x @y @z;
+    -moz-transform-origin: @x @y @z;
+    -ms-transform-origin: @x @y @z;
+    -o-transform-origin: @x @y @z;
+}
+.transform-style (@value: 1000) {
+    -webkit-transform-style: @value;
+    -moz-transform-style: @value;
+    -ms-transform-style: @value;
+    -o-transform-style: @value;
+    transform-style: @value;
+}
+.backface-visibility ( @val ){
+  -webkit-backface-visibility: @val;
+  -moz-backface-visibility: @val;
+  -ms-backface-visibility: @val;
+  backface-visibility: @val;
+}
+
+.set-bg-img( @cool_url, @fallback_url ){
+    background-image: @cool_url;
+    .no-svg &{ background-image: @fallback_url; }
+}
+.vertical-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+    background: linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+    background-color: @startColor;
+    background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+    background-image: linear-gradient(left, @startColor, @endColor);
+}
+.radial-gradient (@startColor: #eee, @endColor: white){
+  background: @startColor;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@startColor), color-stop(100%,@endColor));
+  background: -webkit-radial-gradient(center, ellipse cover, @startColor 0%,@endColor 100%);
+  background: -moz-radial-gradient(center, ellipse cover, @startColor 0%, @endColor 100%);
+  background: -ms-radial-gradient(center, ellipse cover, @startColor 0%,@endColor 100%);
+  background: -o-radial-gradient(center, ellipse cover, @startColor 0%,@endColor 100%);
+  background: radial-gradient(ellipse at center, @startColor 0%,@endColor 100%);
+}
+
+.column-generator (@index, @col_percent, @gap_percent, @column_name) when (@index <= @column_num) {
+    @col_calc : ( @index * @col_percent ) + ( @gap_percent * (@index - 1) );
+    .@{column_name}-@{index} { width: percentage( ( @col_calc/100 ) ); }
+    .@{column_name}-offset-@{index} { margin-left: percentage( ( @col_calc/100 ) ); }
+    .column-generator(@index + 1, @col_percent, @gap_percent, @column_name);
+}
+.ninja-grid (@column_num, @gap_width, @max_width, @column_name){
+    @gap_percent_total : ( ( (@column_num - 1) * @gap_width ) * 100 ) / @max_width;
+    @gap_percent : @gap_percent_total / (@column_num - 1);
+    @col_percent_total : 100 - @gap_percent_total;
+    @col_percent : @col_percent_total / @column_num;
+
+    .row [class*="@{column_name}"] {
+            display: block; float: left; margin-right: percentage( (@gap_percent/100) - 0.001 );
+            &.last { margin-right: 0; }
+    }
+    .column-generator(1, @col_percent, @gap_percent, @column_name);
+}
+.user-select(@argument: none) {
+  -webkit-user-select: @argument;
+  -moz-user-select: @argument;
+  -ms-user-select: @argument;
+  user-select: @argument;
+}
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+.background-clip(@argument: padding-box) {
+  -moz-background-clip: @argument;
+  -webkit-background-clip: @argument;
+  background-clip: @argument;
+}
+
+.ptb(@top){
+    .ptb-@{top}{padding:unit(@top, px) 0;}
+}
+
+.image-replacement {
+    .appearance( none );
+    font-size: 0px;
+    line-height: 0;
+    color: transparent;
+}
+.button-reset {
+    .appearance( none );
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+}
+.elastic-img{
+    width:100%;
+    max-width: 100%;
+    height:auto;
+}
+.clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.nocallout {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+}
+
+.triangle-base() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+}
+.triangle(@direction, @size, @color) {
+    .triangle(@direction, @size * 2, @size, @color);
+}
+.triangle(@direction, @width, @height, @color) when (@direction = up) {
+    .triangle-base();
+    border-left: (@width / 2)solid transparent;
+    border-right: (@width / 2)solid transparent;
+    border-bottom: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = down) {
+    .triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-top: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = left) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-right: @height solid @color;
+}
+.triangle(@direction, @width, @height, @color) when (@direction = right) {
+    .triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-left: @height solid @color;
+}

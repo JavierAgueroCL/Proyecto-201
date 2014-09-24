@@ -8,10 +8,12 @@
     <title>Sodimac</title>
 
     <!-- estilos -->
-    <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- scripts -->
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/modernizr.js"></script>
     <script>
     less = {
         env: "development",
@@ -31,6 +33,94 @@
 </head>
 
 <body>
+
+    <div class="container clearfix">
+            <div class="corporativo clearfix">
+                <ul class="list-inline pull-right">
+                    <li><a href="#">Falabella</a></li>
+                    <li><a href="#">CMR</a></li>
+                    <li><a href="#">Banco Falabella</a></li>
+                    <li><a href="#">Viajes Falabella</a></li>
+                    <li><a href="#">Seguros Falabella</a></li>
+                    <li><a href="#">Sodimac</a></li>
+                    <li><a href="#">Homy</a></li>
+                    <li><a href="#">Tottus</a></li>
+                </ul>
+            </div>
+            <div class="corporativo">
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-inline border-right empresas">
+                            <li><a href="#">Sodimac</a></li>
+                            <li><a href="#">Homy</a></li>
+                            <li><a href="#">VentaEmpresas</a></li>
+                            <li><a href="#">Círculo Especialistas</a></li>
+                            <li><a href="#">Hágalo Usted Mismo</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 last">
+                        <ul class="list-inline pull-right border-right">
+                            <li><a href="#"><i class="fa fa-truck"></i> Seguimiento de tu compra</a></li>
+                            <li><a href="#">Servicio al cliente</a></li>
+                            <li><a href="#">Compra telefónica <strong>600 600 40 20</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <header class="row clearfix">
+                <div class="col-8">
+                    <h1><a class="logo" href="#">Sodimac</a></h1>
+                </div>
+
+                <div class="col-2">
+                    <div class="usuario">
+                        <p>Hola Alejandro,<br>
+                        <strong>Mi Cuenta</strong></p>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="icono-usuario">
+                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                        <span class="badge badge-notificacion">10</span>
+                    </div>
+                </div>
+                <div class="col-1 icono-usuario last">
+                    <a href="#"><i class="fa fa-envelope-o"></i>
+                    <span class="badge badge-notificacion">9</span></a>
+                </div>            
+            </header>
+
+            <div class="nav-section clearfix">
+                <!--<nav>
+                    <ul>
+                        <li><a href="#">Campaña OnLine</a></li>
+                        <li><a href="#">Muebles</a></li>
+                        <li><a href="#">Decohogar</a></li>
+                        <li><a href="#">Climatización</a></li>
+                        <li><a href="#">Electrohogar</a></li>
+                        <li><a href="#">Organización</a></li>
+                        <li><a href="#">Aire Libre</a></li>
+                        <li><a href="#">Jardín</a></li>
+                        <li><a href="#">Baños</a></li>
+                        <li><a href="#">Cocina</a></li>
+                        <li><a href="#">Pintura</a></li>
+                        <li><a href="#">Pisos</a></li>
+                        <li><a href="#">Puertas y Ventanas</a></li>
+                        <li><a href="#">Herramientas</a></li>
+                        <li><a href="#">Ferretería</a></li>
+                        <li><a href="#">Construcción</a></li>
+                        <li><a href="#">Servicios</a></li>
+                    </ul>
+                </nav>-->
+                <form class="search pull-right">
+                    <input type="text">
+                    <button type="submit" class="btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+    </div>
 
 </body>
 
