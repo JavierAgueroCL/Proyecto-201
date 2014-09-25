@@ -15,6 +15,7 @@
     <!-- scripts -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
+    <script type="text/javascript" src="js/mainScript.js"></script>
     <script>
     less = {
         env: "development",
@@ -24,13 +25,13 @@
         functions: {},
         dumpLineNumbers: "comments",
         relativeUrls: false,
-        rootpath: ":/a.com/"
+        rootpath: "/"
     };
     </script>
     <script type="text/javascript" src="js/less.js"></script>
 </head>
 
-<body>
+<body data-relativeURL="http://sodimac.ida.cl/">
 
     <div class="container clearfix">
             <div class="corporativo hide-on-mobile clearfix">
@@ -45,7 +46,7 @@
                     <li><a href="#">Tottus</a></li>
                 </ul>
             </div>
-            <div class="corporativo hide-on-mobile">
+            <div class="corporativo2 hide-on-mobile">
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-inline border-right empresas">
@@ -121,11 +122,14 @@
                         <li><a href="#">Servicios</a></li>
                     </ul>
                 </nav>-->
-                <form class="search pull-right" method="get" action="/">
-                    <input type="search" name="search">
-                    <button type="submit" class="btn">
-                        <i class="fa fa-search"></i>
-                    </button>
+                <form class="search pull-right" method="get" action="/"  >
+                    <input type="search" name="search" data-customMessage="este campo no es valido">
+                    <input type="submit">
                 </form>
+
+                <div class="owl" data-count="5">
+
+                </div>
+
             </div>
     </div>

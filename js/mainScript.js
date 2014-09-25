@@ -277,7 +277,7 @@ function FastClick(e,t){"use strict";function r(e,t){return function(){return e.
                 $item = $(elem);
                 $item.attr('src', $item.data('svgfallback'));
             });
-        },
+        }
     };
     
     //COMIENZO
