@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <title>Sodimac</title>
+    <meta name="description" content="" >
 
     <!-- estilos -->
     <link rel="stylesheet/less" type="text/css" href="less/style.less" />
@@ -27,9 +28,6 @@
     };
     </script>
     <script type="text/javascript" src="js/less.js"></script>
-    <!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 </head>
 
 <body>
@@ -51,7 +49,7 @@
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-inline border-right empresas">
-                            <li><a href="#">Sodimac</a></li>
+                            <li><a href="#" title="" rel="external">Sodimac</a></li>
                             <li><a href="#">Homy</a></li>
                             <li><a href="#">VentaEmpresas</a></li>
                             <li><a href="#">Círculo Especialistas</a></li>
@@ -98,8 +96,7 @@
                         <li><a class="btn btn-default" href="#"><i class="fa fa-user"></i></a></li>
                         <li><a class="btn btn-default" href="#"><i class="fa fa-shopping-cart"></i></a></li>
                     </ul>
-                </div>
-                            
+                </div>       
             </header>
 
             <div class="nav-section clearfix">
@@ -124,15 +121,11 @@
                         <li><a href="#">Servicios</a></li>
                     </ul>
                 </nav>-->
-                <form class="search pull-right">
-                    <input type="text">
+                <form class="search pull-right" method="get" action="/">
+                    <input type="search" name="search">
                     <button type="submit" class="btn">
                         <i class="fa fa-search"></i>
                     </button>
                 </form>
             </div>
     </div>
-
-</body>
-
-</html>
