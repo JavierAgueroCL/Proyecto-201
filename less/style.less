@@ -6,6 +6,8 @@
 @-ms-viewport { width: device-width; }
 @viewport { width: device-width; }
 
+.only-on-phones{display:none;}
+
 @tablet: ~"only screen and (max-width: 1024px) and (min-width : 641)";
 @tablet-horizontal: ~"only screen and (max-width: 1024px) and (min-width : 801)";
 @tablet-vertical: ~"only screen and (max-width: 800px)";
@@ -144,3 +146,23 @@ a{
 	}
 }
 
+.header-buttons{
+	margin:17px 0;
+	li{
+		&:last-child{margin-right: 0;}
+	}
+}
+
+.btn{
+	display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px;
+}
+
+.btn-default { color: #333; background-color: #fff; border-color: #ccc;}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active{ color: #333; background-color: #e6e6e6; border-color: #adadad;
+}
+
+
+/* ---------------------------------------- Media Queries */
+
+@import "media-queries";

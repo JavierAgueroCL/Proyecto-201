@@ -35,7 +35,7 @@
 <body>
 
     <div class="container clearfix">
-            <div class="corporativo clearfix">
+            <div class="corporativo hide-on-mobile clearfix">
                 <ul class="list-inline pull-right">
                     <li><a href="#">Falabella</a></li>
                     <li><a href="#">CMR</a></li>
@@ -47,7 +47,7 @@
                     <li><a href="#">Tottus</a></li>
                 </ul>
             </div>
-            <div class="corporativo">
+            <div class="corporativo hide-on-mobile">
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-inline border-right empresas">
@@ -69,26 +69,37 @@
             </div>
 
             <header class="row clearfix">
-                <div class="col-8">
+                <div class="col-3">
                     <h1><a class="logo" href="#">Sodimac</a></h1>
                 </div>
 
-                <div class="col-2">
-                    <div class="usuario">
-                        <p>Hola Alejandro,<br>
-                        <strong>Mi Cuenta</strong></p>
+                <div class="hide-on-mobile">
+                    <div class="col-2 col-offset-5">
+                        <div class="usuario">
+                            <p>Hola Alejandro,<br>
+                            <strong>Mi Cuenta</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="icono-usuario">
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+                            <span class="badge badge-notificacion">10</span>
+                        </div>
+                    </div>
+                    <div class="col-1 icono-usuario last">
+                        <a href="#"><i class="fa fa-envelope-o"></i>
+                        <span class="badge badge-notificacion">9</span></a>
                     </div>
                 </div>
-                <div class="col-1">
-                    <div class="icono-usuario">
-                        <a href="#"><i class="fa fa-shopping-cart"></i></a>
-                        <span class="badge badge-notificacion">10</span>
-                    </div>
+
+                <div class="only-on-phones pull-right">
+                    <ul class="header-buttons list-inline">
+                        <li><a class="btn btn-default" href="#"><i class="fa fa-map-marker"></i></a></li>
+                        <li><a class="btn btn-default" href="#"><i class="fa fa-user"></i></a></li>
+                        <li><a class="btn btn-default" href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
                 </div>
-                <div class="col-1 icono-usuario last">
-                    <a href="#"><i class="fa fa-envelope-o"></i>
-                    <span class="badge badge-notificacion">9</span></a>
-                </div>            
+                            
             </header>
 
             <div class="nav-section clearfix">
