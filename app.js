@@ -27,7 +27,22 @@ http.createServer(function(request, response) {
                 return;
             }
 
-            response.writeHead(200);
+            if(path.extname(request.url) == ".gif"){
+                response.writeHead(200, {'content-type':'image/gif'});
+            }
+            else if(path.extname(request.url) == ".svg"){
+                response.writeHead(200, {'content-type':'image/svg+xml'});
+            }
+            else if(path.extname(request.url) == ".js"){
+                response.writeHead(200, {'content-type':'application/javascript'});
+            } 
+            else if(path.extname(request.url) == ".css"){
+                response.writeHead(200, {'content-type':'text/css'});
+            } 
+            else {
+                response.writeHead(200);
+            }
+            
             response.write(file, "binary");
             response.end();
         });

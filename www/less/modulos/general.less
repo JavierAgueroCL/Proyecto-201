@@ -1,0 +1,407 @@
+/***************************************************
+**************************** Top bar
+****************************************************/
+.top-logos-bar {
+    display: block;
+    .vertical-gradient (#fff, @blocks_border_light-grey);
+    border-bottom: 1px solid @blocks_border_light-grey;
+    text-align: right;
+    line-height: 0;
+    font-size: 0;
+}
+
+.top-logo-item {
+    .image-replacement;
+    display: inline-block;
+    width: auto;
+    height: 25px;
+    border-left: 1px solid @blocks_border_grey;
+
+    .set-bg-img( url("../images/logos/top-logos-sprite.svg"), url("../images/logos/top-logos-sprite.png") );
+    &:hover { background-color: #fff; }
+    
+    &.falabella {
+        width: 64px;
+        background-position: 0 50%;
+    }
+    &.cmr {
+        width: 46px;
+        background-position: -64px 50%;
+    }
+    &.banco-falabella {
+        width: 93px;
+        background-position: -110px 50%;
+    }
+    &.viajes-falabella {
+        width: 75px;
+        background-position: -203px 50%;
+    }
+    &.seguros-falabella {
+        width: 68px;
+        background-position: -278px 50%;
+    }
+    &.sodimac {
+        width: 86px;
+        background-position: -346px 50%;
+    }
+    &.homy {
+        width: 65px;
+        background-position: -432px 50%;
+    }
+    &.tottus {
+        width: 65px;
+        background-position: -497px 50%;
+    }
+}
+
+.top-additional-bar {
+    font-size: unit( 11/@base_font_size, em );
+    background: #f9f9f9;
+    border-bottom: 1px solid @blocks_border_light-grey;
+    line-height: 30px;
+    padding: 0 5px;
+}
+
+.top-additional-lefted-content {
+    float: left;
+    color: #666;
+    a { color: #666; }
+}
+
+.top-additional-righted-content {
+    float: right;
+}
+
+.top-additional-logo-item {
+    .image-replacement;
+    display: inline-block;
+}
+
+
+/***************************************************
+**************************** Main header
+****************************************************/
+.main-header {
+    background: #fff;
+    padding: 10px 5px;
+}
+
+.main-header-section-left { 
+    float: left;  
+}
+
+.main-header-section-right { 
+    float: right; 
+    text-align: right;
+}
+
+.logo-holder {
+    padding-top: 1em;
+}
+
+.logo-item {
+    display: block;
+    img { display: block; }
+}
+
+.account-profile-welcome {
+    display: inline-block;
+    background: @light_blocks_grey;
+    border-radius: @border_radius;
+    padding: 7px;
+    position: relative;
+    text-align: left;
+    font-size: @base_font_size;
+    line-height: @base_line_height;
+
+    /// fix para bug de inline-block (margen fantasma)
+    .transform( translateY(2px) );
+}
+
+.account-profile-welcome-options {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+
+    i { color: @sodimac_red; }
+}
+
+.account-notifier {
+    display: inline-block;
+    background: @light_blocks_grey;
+    border-radius: @border_radius;
+    padding: 7px;
+    margin-left: 5px;
+    position: relative;
+    font-size: unit(@base_font_size*2.3, px);
+    color: @light_text_color;
+
+    &:hover { color: #000; }
+}
+
+.account-notifications-num {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: @sodimac_red;
+    font-size: 11px;
+    color: #fff;
+    line-height: 100%;
+    padding: 3px;
+    border-radius: 100px;
+}
+
+
+/***************************************************
+**************************** Navegacion principal
+****************************************************/
+.main-navigation {
+    background: @header_grey;
+    padding: 5px;
+    border-radius: @border_radius;
+    position: relative;
+}
+
+.main-navigation-item {
+    display: block;
+    float: left;
+    margin-left: 1%;
+
+    &:first-child { margin-left: 0; } 
+
+    &.submenu-holder { 
+        width: 15%; 
+        position: relative;
+
+        &.deployed:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 8px;
+
+            border: 1px solid @dark_blocks_grey;
+            border-width: 0 1px 0 1px;
+            background: #fff;
+            
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: -2px;
+        }
+    }
+    &.location-menu-holder { width: 33.5%; } 
+    &.search-holder { width: 33.5%; }
+}
+
+.location-menu-holder {
+    line-height: 150%;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid @dark_blocks_grey;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 @border_radius @border_radius;
+    margin-top: 5px;
+    z-index: 10;
+
+    .deployed & { display: block; }
+}
+
+.submenu-list-item {
+    display: block;
+    border-top: 1px solid @submenu_grey;
+    padding: 5px 10px;
+
+    &:hover {
+        background: @sodimac_red;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.submenu-contents {
+    width: 100%;
+    padding: 15px 10px 10px 10px;
+}
+
+.submenu-img {
+    display: block;
+    border: 1px solid @blocks_border_grey;
+}
+
+.submenu-button-holder {
+    margin-top: 1em;
+}
+
+
+/***************************************************
+**************************** Promos principales home
+****************************************************/
+.main-promo-slider {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-top: @regular_vertical_margin;
+    min-height: 380px;
+    &.loaded { min-height: 0; }
+}
+
+.main-promo-slider-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.main-promo-slider-item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    .transform( translateZ(0) );
+    .transition( all, ease, 700ms );
+    
+    &.active { opacity: 1; }
+
+    a, img { display: block; }
+}
+
+.main-promo-slider-bullet, .main-promo-slider-control {
+    .button-reset;
+}
+
+.main-promo-slider-bullets {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    padding-right: 15px;
+    pointer-events: none;
+    font-size: 0;
+    line-height: 0;
+    text-align: right;
+}
+
+.main-promo-slider-bullet {
+    pointer-events: auto;
+    display: inline-block;
+    width: @base_font_size;
+    height: @base_font_size;
+    border-radius: @base_font_size;
+    background: #fff;
+    margin-left: @base_font_size;
+
+    &.active { background: @sodimac_red; }
+    &:hover { background: lighten(@sodimac_red, 20%); }
+}
+
+.main-promo-slider-controls {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.main-promo-slider-control {
+    pointer-events: auto;
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 0;
+
+    &.prev { 
+        left: -40px; 
+        border-radius: 0 100px 100px 0;
+        text-align: right;
+        padding-right: 7px;
+    }
+    &.next { 
+        right: -40px; 
+        border-radius: 100px 0 0 100px;
+        text-align: left;
+        padding-left: 7px;
+    }
+    &:hover {
+        background: rgba(255,255,255,1);
+        color: @sodimac_red;
+    }
+}
+
+
+/***************************************************
+**************************** Promos secundarias home
+****************************************************/
+.secondary-promos-holder {
+    display: block;
+    width: 100%;
+    margin-top: @regular_vertical_margin * 2;
+}
+
+.secondary-promo-row {
+    margin-top: @regular_vertical_margin;
+}
+
+
+/***************************************************
+**************************** Footer
+****************************************************/
+.footer-container {
+    margin-top: @regular_vertical_margin * 2;
+}
+
+.footer-section {
+    padding: (@regular_vertical_margin * 2) 0;
+    border: 1px solid @blocks_border_grey;
+    border-width: 1px 0 1px 0;
+
+    &:first-child { border-width: 1px 0 0 0; }
+}
+
+.footer-column {
+    font-size: 11px;
+    padding: 0 1em;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        background: @blocks_border_grey;
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    &:first-child:before { display: none; }
+
+    p { margin-bottom: @regular_vertical_margin; }
+}
+
+.footer-section-title {
+    font-size: @base_font_size;
+    font-weight: bold;
+    color: @washed_text_color;
+    margin-bottom: @regular_vertical_margin;
+}

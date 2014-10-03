@@ -62,8 +62,8 @@
 }
 
 .set-bg-img( @cool_url, @fallback_url ){
-    background-image: @cool_url;
-    .no-svg &{ background-image: @fallback_url; }
+    background: @cool_url;
+    .no-svg &{ background: @fallback_url; }
 }
 .vertical-gradient (@startColor: #eee, @endColor: white) {
     background-color: @startColor;
@@ -145,45 +145,6 @@
 
 .ptb(@top){
     .ptb-@{top}{padding:unit(@top, px) 0;}
-}
-
-.image-replacement {
-    .appearance( none );
-    font-size: 0px;
-    line-height: 0;
-    color: transparent;
-}
-.button-reset {
-    .appearance( none );
-    background: transparent;
-    border-radius: 0px;
-    border: 0px;
-    outline: 0px;
-    padding: 0px;
-}
-.elastic-img{
-    width:100%;
-    max-width: 100%;
-    height:auto;
-}
-.clearfix {
-    *zoom: 1;
-    &:before, &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
-.nocallout {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-touch-callout:none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none; 
 }
 
 .triangle-base() {

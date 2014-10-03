@@ -1,0 +1,63 @@
+/// el diseno requiere un reset total
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: @base_font_size;
+    line-height: @base_line_height;
+}
+
+
+/// se formatean los links
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.important-paragraph {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.light-paragraph {
+    color: @light_text_color;
+}
+
+.minified-paragraph {
+    font-size: 11px;
+}
+
+.check-icon-list {
+    padding-left: 1.3em;
+    list-style-image: url('../images/icons/check-icon.svg');
+    .no-svg & { list-style-image: url('../images/icons/check-icon.png'); }
+}
+
+
+
+///////////////////////////////////////////////////
+//////////////////////////// Submenu
+///////////////////////////////////////////////////
+.submenu-title, .submenu-subtitle {
+    line-height: @base_line_height;
+    margin-bottom: @base_font_size;
+}
+
+.submenu-title {
+    font-size: unit( 18/@base_font_size, em );
+}
+
+.submenu-subtitle {
+    font-size: unit( 13/@base_font_size, em );
+    &.minified { margin-bottom: 0; }
+}

@@ -1,0 +1,128 @@
+/*********************************************************
+************************************ Objetos regulares
+*********************************************************/
+
+.button {
+
+    // defaults
+    .button-reset;
+    display: inline-block;
+    padding: 5px;
+    border-radius: @border_radius;
+    text-decoration: none;
+    &:hover { text-decoration: none; }
+    
+    // overrides
+    &.block-btn { display: block; width: 100%; }
+    &.one-line-medium-btn { padding: 12px 12px 12px 5px; }
+    &.medium-btn { padding: 8px 10px; }
+    &.big-btn { padding: 2em; }
+
+    &.red-btn {
+        background: @sodimac_red;
+        color: #fff;
+        &:hover { background: darken(@sodimac_red, 10%); }
+    }
+
+    &.grey-btn {
+        background: @previous_grey;
+        color: #fff;
+        &:hover { background: lighten(@previous_grey, 10%); }
+    }
+
+    // types
+    &.deploy-btn {
+        background: #fff;
+        border-radius: @border_radius;
+        border: 1px solid @dark_blocks_grey;
+        text-align: left;
+        position: relative;
+        padding-right: 25px;
+        color: @washed_text_color;
+    
+        &:hover {
+            color: @regular_text_color;
+            border-color: darken(@dark_blocks_grey, 10%);
+        }
+
+        &:after {
+            content: @fa-var-chevron-down;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: @sodimac_red;
+
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            .transform( translateY(-50%) );
+        }
+    }
+
+    &.change-location-btn {
+        padding: 0px;
+        font-style: italic;
+        font-size: 11px;
+        font-weight: normal;
+        color: @light_text_color;
+
+        &:hover { color: @regular_text_color; }
+    }
+
+    &.main-search-submit {
+        background: @sodimac_red;
+        border-radius: 0 @border_radius @border_radius 0;
+        padding: 10px 5px;
+        font-size: 21px;
+        color: #fff;
+
+        &:hover {
+            background: darken(@sodimac_red, 10%);
+        }
+    }
+
+    &.app-download-btn {
+        display: block;
+        color: #000;
+        background: #fff;
+        border: 1px solid @dark_blocks_grey;
+    }
+}
+
+.main-search-form {
+    display: block;
+    width: 100%;
+
+    input, button { 
+        .button-reset;
+        display: block; 
+        float: left; 
+    }
+
+    input[type="search"] {
+        width: 90%;
+        background: #fff;
+        border-radius: @border_radius 0 0 @border_radius;
+        border: 1px solid @blocks_border_grey;
+        border-width: 1px 0 1px 1px; 
+        padding: 12px;
+
+        &:hover {
+            border-color: darken(@blocks_border_grey, 10%);
+        }
+    }
+
+    input[type="submit"], button[type="submit"] {
+        width: 10%;
+    }
+}
+
+.see-more {
+    .fa {
+        color: @sodimac_red;
+        
+    }
+}
