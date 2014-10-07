@@ -1,0 +1,158 @@
+
+///// clases para esconder cosas de desktop
+@media @desktop_media {
+    .hide-on-desktop, .only-on-mobile { display: none !important; }
+}
+
+@media @mobile_media {
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// Estructura
+    /////////////////////////////////////////////////////////
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 640px;
+    }
+
+    .column {
+        float: none;
+        margin-left: 0;
+
+        &.full, &.half, &.thirds, &.quarters, &.three-quarters, &.big-gap {
+            width: 100%;
+        }
+    }
+
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// Objetos
+    /////////////////////////////////////////////////////////
+    .button {
+        &.deploy-btn {
+            padding: 5px;
+            text-align: center;
+            &:after { display: none; }
+        }
+        &.main-search-submit {
+            padding: 5px;
+            font-size: 17px;
+        }
+
+        &.social-btn {
+            font-size: 4em;
+        }
+    }
+
+    .main-search-form {
+        input[type="search"] {
+            width: 85%;
+            padding: 5px;
+        }
+
+        input[type="submit"], button[type="submit"] {
+            width: 15%;
+        }
+    }
+    
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// Header
+    /////////////////////////////////////////////////////////
+    .main-header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo-holder {
+        padding-top: 0;
+        max-width: 47.5%;
+        margin-right: 5%;
+    }
+
+    .other-actions-holder {
+        max-width: 47.5%;
+    }
+
+    .account-notifier {
+        font-size: 16px;
+        color: @washed_text_color;
+        background: #fff;
+        border: 1px solid @blocks_border_grey;
+        min-width: 40px;
+        text-align: center;
+
+        &:active { border-color: #000; }
+    }
+
+    .main-navigation-item {
+        margin-left: 0;
+        margin-right: 5%;
+
+        &:last-child { margin-right: 0; }
+
+        &.submenu-holder { 
+            width: 10%; 
+            position: relative;
+
+            // &.deployed:after {
+            //     content: "";
+            //     display: block;
+            //     width: 100%;
+            //     height: 8px;
+
+            //     border: 1px solid @dark_blocks_grey;
+            //     border-width: 0 1px 0 1px;
+            //     background: #fff;
+                
+            //     position: absolute;
+            //     top: 100%;
+            //     left: 0;
+            //     margin-top: -2px;
+            // }
+        }
+        &.search-holder { width: 85%; }
+    }
+
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// Contenido
+    /////////////////////////////////////////////////////////
+    .main-promos-holder {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main-promo-slider-bullets {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .secondary-promo-row {
+        .column {
+            margin-bottom: @regular_vertical_margin;
+            &:last-child { margin-bottom: 0; }
+        }
+    }
+
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// Footer
+    /////////////////////////////////////////////////////////
+    .mobile-footer-section {
+        padding: 5px;
+        border-top: 1px solid @blocks_border_grey;
+    }
+
+    .footer-phone-holder {
+        font-weight: normal;
+
+        .big-icon { line-height: 40px; }
+        .footer-phone-number {
+            a { font-size: 35px; line-height: 30px; }
+        }
+    }
+
+
+    //// clases auxiliares
+    .hide-on-mobile, .only-on-desktop { display: none !important; }
+}

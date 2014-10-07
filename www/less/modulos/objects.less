@@ -89,6 +89,114 @@
         color: #000;
         background: #fff;
         border: 1px solid @dark_blocks_grey;
+        position: relative;
+
+        padding-left: 40px;
+
+        margin-bottom: 1em;
+
+        &:before{
+            content: "";
+            display: block;
+            width: 20px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            .set-bg-img( url('../images/icons/app-stores-icons-sprite.svg'), url('../images/icons/app-stores-icons-sprite.png') );
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+        }
+
+        &.ios:before{ background-position: 0 50%; }
+        &.android:before{ background-position: -20px 50%; }
+
+        &:hover {
+            border-color: darken(@dark_blocks_grey, 10%)
+        }
+
+        .fa { 
+            float: right; 
+            line-height: 17px;
+            color: #898989;
+        }
+    }
+
+    &.social-btn {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 3em;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        &.facebook {
+            color: @facebook_color;
+            &:hover { color: darken(@facebook_color, 10%) }
+            &:before { content: @fa-var-facebook-square; }
+        }
+        &.twitter {
+            color: @twitter_color;
+            &:hover { color: darken(@twitter_color, 10%) }
+            &:before { content: @fa-var-twitter-square; }
+        }
+        &.youtube {
+            color: @google_color;
+            &:hover { color: darken(@google_color, 10%) }
+            &:before { content: @fa-var-youtube-square; }
+        }
+        &.google {
+            color: @google_color;
+            &:hover { color: darken(@google_color, 10%) }
+            &:before { content: @fa-var-google-plus-square; }
+        }
+        &.pinterest {
+            color: @pinterest_color;
+            &:hover { color: darken(@pinterest_color, 10%) }
+            &:before { content: @fa-var-pinterest-square; }
+        }
+    }
+
+    &.regular-icon-btn {
+        font-size: 13px;
+        .fa {
+            color: @sodimac_red;
+            line-height: 1em;
+            font-size: 20px;
+        }
+    }
+
+    &.mobile-footer-btn {
+        display: block;
+        width: 100%;
+        background: #fff;
+        border: 1px solid @blocks_border_grey;
+        color: @washed_text_color;
+        &:active { 
+            color: @regular_text_color;
+            border-color: darken(@blocks_border_grey, 10%);
+        }
+
+        &.half {
+            float: left;
+            width: 47.5%;
+            margin-left: 5%;
+
+            &:first-child { margin-left: 0; }
+        }
+
+        .fa {
+            font-size: 16px;
+        }
+    }
+
+    &.amount-input-btn {
+        line-height: 100%;
+        padding: 0 5px;
+
+        &:hover, &:active {
+            color: @sodimac_red;
+        }
     }
 }
 
@@ -121,8 +229,94 @@
 }
 
 .see-more {
-    .fa {
-        color: @sodimac_red;
-        
+    .fa { color: @sodimac_red; }
+}
+
+.check-icon-list {
+    padding-left: 1.3em;
+    list-style-image: url('../images/icons/check-icon.svg');
+    .no-svg & { list-style-image: url('../images/icons/check-icon.png'); }
+}
+
+.flag-container {
+    display: block;
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 11px;
+        .set-bg-img( url("../images/icons/countries-flags-sprite.svg"), url("../images/icons/countries-flags-sprite.png") );
+        background-position: 0 50%;
+        margin-left: 5px;
+    }
+
+    &.chile:after { background-position: 0 50%; }
+    &.argentina:after { background-position: -16px 50%; }
+    &.colombia:after { background-position: -32px 50%; }
+    &.peru:after { background-position: -48px 50%; }
+}
+
+.pretty-select {
+    .button-reset;
+    &::-ms-expand { display: none; }
+    text-indent: 0.01px;
+    text-overflow: '';
+
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 5px;
+    border-radius: @border_radius;
+    border: 1px solid @blocks_border_grey;
+
+    .set-bg-img( url('../images/icons/chevron-down.svg'), url('../images/icons/chevron-down.png') );
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+
+    &:hover, &:focus {
+        border-color: darken(@blocks_border_grey, 10%);
+    }
+}
+
+.seamless-table {
+    display: table;
+    &.full { width: 100%; }
+}
+
+.amount-input-holder {
+    .input-space {
+        float: left;
+        width: 60%;
+    }
+    .controls-space {
+        float: left;
+        width: 40%;
+        position: relative;
+        height: 24px;
+    }
+    .amount_input {
+        .button-reset;
+        display: block;
+        width: 100%;
+        padding: 0.5em 5px;
+        background: #fff;
+        font-size: 11px;
+        text-align: center;
+        border-radius: @border_radius;
+        border: 1px solid @blocks_border_grey;
+    
+        &::-webkit-inner-spin-button { display: none; }
+        &:hover, &:focus {
+            border-color: darken(@blocks_border_grey, 10%);
+        }
+    }
+
+    .amount-input-btn {
+        position: absolute;
+        left: 0;
+
+        &.add { top: 0; }
+        &.substract { bottom: 0; }
     }
 }

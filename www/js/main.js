@@ -16,15 +16,57 @@
     ///// creamos el objeto de delegaciones
     var sodimac_delegations = {
         deploy_submenu : function( event ){
+            event.preventDefault();
+
             // variables generales
-            var sodimac = event.data.sodimac,
-                $item = $(this),
+            var $item = $(this),
                 $container = $item.parent(),
                 $submenu = $container.find('.submenu'),
-                item_offset = $container.position(),
-                submenu_width_calc = $('#main-nav').width() - item_offset.left;
+                submenu_width_calc;
 
-            $submenu.width( submenu_width_calc );
+            if( $item.attr('data-set-width') === 'true' ){
+                submenu_width_calc = $('#main-nav').width() - $container.position().left;
+                $submenu.width( submenu_width_calc ); 
+            }
+
+            $container.toggleClass('deployed');
+        },
+        deploy_mobile_menu : function( event ){
+            event.preventDefault();
+
+            var $item = $(event.currentTarget),
+                $parent = $item.parent(),
+                $submenu = $parent.find('.submenu'),
+                $main_nav = $('#main-nav'),
+                menu_width = $main_nav.innerWidth() - ( parseInt($main_nav.css('padding-left'), 10) * 2 );
+
+            $submenu.css('width', menu_width);
+            $parent.toggleClass('deployed');
+        },
+        deploy_mobile_submenu : function( event ){
+            event.preventDefault();
+
+            var $item = $(event.currentTarget);
+
+            $item.toggleClass('deployed');
+            $item.parent().toggleClass('deployed');
+        },
+        deploy_details_tooltip : function( event ){
+            event.preventDefault();
+
+            var $item = $(event.currentTarget),
+                $container = $item.parent(),
+                $header = $('#main-header'),
+                $submenu, header_offset_right, calc;
+
+            if( $item.attr('data-set-pos') === 'true' ){ 
+                $submenu = $item.parent().find('.account-notifier-details');
+                header_offset_right = $header.offset().left + $header.outerWidth();
+                calc = ( $container.offset().left + $submenu.outerWidth() ) - header_offset_right;
+                $submenu.css('left', calc * -1); 
+            }
+
+            $header.find('.deployed').removeClass('deployed');
             $container.toggleClass('deployed');
         }
     };
@@ -36,12 +78,14 @@
     ///// creamos el prototypo
     Sodimac.prototype = {
         on_ready : function(){
+            $('[data-svg-fallback]').svgFallback();
             this.event_handler( $('[data-func]') );
         },
         on_load : function(){
-            if( $('[data-role="slider"]').length ){
-                this.home_slider( $('[data-role="slider"]') );
-            }
+            if( $('[data-role="slider"]').length ){ this.home_slider( $('[data-role="slider"]') ); }
+            if( $('[data-role="amount_input"]').length ){ this.amount_inputs( $('[data-role="amount_input"]') ); }
+
+            $('[data-equalize="children"]').equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
         },
         event_handler : function( $collection ){
             if( ! $collection.length ){ return; }
@@ -111,6 +155,34 @@
             $slider.one('mouseover touchdown pointerdown', function(){
                 clearInterval( slider_interval );
             });
+        },
+
+        amount_inputs : function( $elements ){
+            $elements.each(function(){
+                var $container = $(this),
+                    $input = $container.find('[data-role="amount"]'),
+                    $controls = $container.find('[data-role="control"]');
+
+                $controls.on('click.amount_handler', function( event ){
+                    event.preventDefault();
+
+                    var action = $(this).data('action'),
+                        value = parseInt( $input.val() ) || 0;
+
+                    if( action === 'add' ){ value += 1; }
+                    else { value -= 1; }
+
+                    if( value < 0 ){ value = 0; }
+
+                    $input.val( value );
+                });
+
+                $input.on('change.amount_handler', function(){
+                    var value = parseInt( $input.val() ) || 0;
+                    if( isNaN(value) ){ value = 0; }
+                    $input.val( value );
+                });
+            });
         }
     };
 
@@ -174,7 +246,7 @@
 
     $.fn.svgFallback = function(){
         if( Modernizr.svg ){ return this; }
-        return this.each(function(i,el){ el.setAttribute("src", el.getAttribute('data-svgfallback')); });
+        return this.each(function(i,el){ el.setAttribute("src", el.getAttribute('data-svg-fallback')); });
     };
     $.fn.equalizeHeights = function( dinamic, mqException, callback ){
         var items = this,

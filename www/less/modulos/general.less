@@ -108,14 +108,35 @@
     display: inline-block;
     background: @light_blocks_grey;
     border-radius: @border_radius;
+    border: 1px solid @light_blocks_grey;
     padding: 7px;
     position: relative;
+    z-index: 15;
     text-align: left;
     font-size: @base_font_size;
     line-height: @base_line_height;
+    min-width: 150px;
 
     /// fix para bug de inline-block (margen fantasma)
     .transform( translateY(2px) );
+
+    &.deployed {
+        background: #fff;
+        border-color: @blocks_border_grey;
+        border-radius: @border_radius @border_radius 0 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 15;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+        }
+    }
 }
 
 .account-profile-welcome-options {
@@ -130,13 +151,34 @@
     display: inline-block;
     background: @light_blocks_grey;
     border-radius: @border_radius;
+    border: 1px solid @light_blocks_grey;
     padding: 7px;
     margin-left: 5px;
     position: relative;
+    z-index: 15;
     font-size: unit(@base_font_size*2.3, px);
     color: @light_text_color;
 
-    &:hover { color: #000; }
+    &:hover .icon-link, &.deployed .icon-link { color: #000; }
+
+    &.deployed {
+        background: #fff;
+        border-color: @blocks_border_grey;
+        border-radius: @border_radius @border_radius 0 0;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 15;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #fff;
+        }
+    }
+
+    .icon-link { color: @light_text_color; }
 }
 
 .account-notifications-num {
@@ -152,6 +194,118 @@
     border-radius: 100px;
 }
 
+.account-notifier-details {
+    width: 260px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 15;
+    padding: @base_font_size;
+    background: #fff;
+    border: 1px solid @blocks_border_grey;
+    border-radius: 0 0 @border_radius @border_radius;
+    font-size: @base_font_size;
+    line-height: @base_line_height;
+    text-align: left;
+    color: #000; 
+
+    display: none;
+    .deployed & { display: block; }
+
+    &.full-content { padding: 0; }
+    &.adjusted { 
+        width: 100%; 
+        .canvas & {
+            width: ~"calc(100% + 2px)";
+            left: -1px;
+        }
+    }
+}
+
+.account-notifier-details-header {
+    padding: @base_font_size @base_font_size 0 @base_font_size;
+}
+
+.account-notifier-details-section {
+    margin-top: @base_font_size;
+    padding-top: @base_font_size;
+    border-top: 1px solid @blocks_border_grey;
+
+    &.full-content { padding-top: 0; }
+}
+
+.account-profile-details-options {
+    list-style: none;
+    padding: 0;
+    // font-size: 11px;
+    color: @washed_text_color;
+
+    a {
+        display: block;
+        padding: 5px 0;
+        color: @washed_text_color;
+        &:hover { color: #000; }
+    }
+}
+
+.shopping-cart-detail-list {
+    list-style: none;
+    padding: 0;
+}
+
+.scrollable-content-holder {
+    height: 200px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable-content {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+.shopping-cart-detail-list {
+    font-size: 12px;
+
+    li {
+        padding: 10px 0;
+        border-top: 1px solid @blocks_border_grey;
+        &:first-child { border-top: 0; }
+    }
+}
+
+.profile-messages-details-list {
+    display: block;
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: block;
+        padding: 10px 10px 10px 35px;
+        border-top: 1px solid @blocks_border_grey;
+
+        .set-bg-img( url('../images/icons/check-icon.svg'), url('../images/icons/check-icon.png') );
+        background-repeat: no-repeat;
+        background-position: 10px 50%;
+
+        &:first-child { border-top: 0; }
+    }
+}
+
+.details-block-link {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+    background: @sodimac_red;
+    padding: @base_font_size;
+
+    &:hover {
+        background: darken(@sodimac_red, 10%);
+        text-decoration: none;
+    }
+}
 
 /***************************************************
 **************************** Navegacion principal
@@ -240,6 +394,41 @@
     margin-top: 1em;
 }
 
+.mobile-submenu-list {
+    list-style: none;
+    padding: @regular_vertical_margin 0 0 0;
+
+    .submenu-list-item {
+        font-size: 15px;
+
+        .set-bg-img( url('../images/icons/chevron-down.svg'), url('../images/icons/chevron-down.png') );
+        background-color: #fff;
+        background-position: ~"calc(100% - 10px)" 50%;
+        background-repeat: no-repeat;
+
+        &:hover, &:active, &.deployed {
+            .set-bg-img( url('../images/icons/chevron-up.svg'), url('../images/icons/chevron-up.png') );
+            background-position: ~"calc(100% - 10px)" 50%;
+            background-repeat: no-repeat;
+            // background-color: @sodimac_red;
+            // color: #fff;
+        }
+    }
+
+    .mobile-submenu-subitems {
+        list-style: disc;
+        padding: 10px 0 10px 2.4em;
+        font-size: 13px;
+        line-height: 150%;
+        display: none;
+
+        a { display: block; padding: 5px 0; }
+    }
+
+    .deployed .mobile-submenu-subitems {
+        display: block;
+    }
+}
 
 /***************************************************
 **************************** Promos principales home
@@ -264,6 +453,7 @@
 
 .main-promo-slider-item {
     display: block;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -273,7 +463,7 @@
     
     &.active { opacity: 1; }
 
-    a, img { display: block; }
+    a, img { display: block; width: 100%; height: auto; }
 }
 
 .main-promo-slider-bullet, .main-promo-slider-control {
@@ -404,4 +594,61 @@
     font-weight: bold;
     color: @washed_text_color;
     margin-bottom: @regular_vertical_margin;
+}
+
+.footer-socials-holder {
+    text-align: justify;
+}
+
+.footer-link-list {
+    list-style: none;
+    margin-bottom: 3em;
+}
+
+.footer-phone-holder {
+    line-height: 160%;
+    font-size: 13px;
+
+    .big-icon {
+        color: @sodimac_red;
+        font-size: 3.5em;
+        float: left;
+        margin-right: 13px;
+    }
+
+    p { margin: 0; }
+}
+
+.footer-phone-number {
+    font-size: 22px;
+    color: @light_text_color;
+    font-weight: bold;
+    display: block;
+}
+
+.footer-subscribe-form {
+    display: block;
+    margin-top: 1em;
+    font-size: 13px;
+
+    p { margin: 0; }
+
+    .inline-input-holder { margin-top: 5px; }
+
+    input, button {
+        display: block;
+        float: left;
+    }
+
+    input {
+        padding: 5px;
+        border-radius: @border_radius;
+        border: 1px solid @blocks_border_grey;
+        width: 80%;
+        margin-right: 5%;
+    }
+
+    button {
+        width: 15%;
+    }
 }

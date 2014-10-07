@@ -20,6 +20,26 @@ a {
     }
 }
 
+b, strong, .bold-text {
+    font-weight: bold;
+}
+
+.light-text {
+    font-weight: lighter;
+}
+
+.centered-text { 
+    text-align: center; 
+}
+
+.lefted-text { 
+    text-align: left; 
+}
+
+.righted-text { 
+    text-align: right; 
+}
+
 .uppercase {
     text-transform: uppercase;
 }
@@ -29,19 +49,22 @@ a {
     font-weight: bold;
 }
 
+.smaller-paragraph {
+    font-size: 11px;
+}
+
+.minified-paragraph {
+    font-size: 10px;
+}
+
 .light-paragraph {
     color: @light_text_color;
 }
 
-.minified-paragraph {
-    font-size: 11px;
+.red-text {
+    color: @sodimac_red;
 }
 
-.check-icon-list {
-    padding-left: 1.3em;
-    list-style-image: url('../images/icons/check-icon.svg');
-    .no-svg & { list-style-image: url('../images/icons/check-icon.png'); }
-}
 
 
 
