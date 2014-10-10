@@ -10,6 +10,11 @@ body {
     line-height: @base_line_height;
 }
 
+h1,h2,h3,h4,h5,h6 { 
+    line-height: @base_line_height; 
+    margin: 0;
+}
+
 
 /// se formatean los links
 a {
@@ -28,6 +33,10 @@ b, strong, .bold-text {
     font-weight: lighter;
 }
 
+.justify-text { 
+    text-align: justify; 
+}
+
 .centered-text { 
     text-align: center; 
 }
@@ -44,9 +53,21 @@ b, strong, .bold-text {
     text-transform: uppercase;
 }
 
+.huge-paragraph {
+    font-size: 2.5em;
+}
+
+.bigger-paragraph {
+    font-size: 16px;
+}
+
 .important-paragraph {
     font-size: 14px;
     font-weight: bold;
+}
+
+.base-paragraph {
+    font-size: @base_font_size;
 }
 
 .smaller-paragraph {
@@ -57,12 +78,28 @@ b, strong, .bold-text {
     font-size: 10px;
 }
 
+.relative-smaller-paragraph {
+    font-size: 0.6em;
+}
+
 .light-paragraph {
     color: @light_text_color;
 }
 
 .red-text {
     color: @sodimac_red;
+}
+
+.green-text {
+    color: @swatch_green;
+}
+
+.washed-text {
+    color: @washed_text_color;
+}
+
+.washed-light-text {
+    color: @light_text_color;
 }
 
 

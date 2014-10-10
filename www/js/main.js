@@ -9,6 +9,7 @@
     "use strict";
 
     var debug_mode = true,
+        scripts_path = '/js/libs/',
         $window = $(window),
         $document = $(document);
 
@@ -66,8 +67,23 @@
                 $submenu.css('left', calc * -1); 
             }
 
-            $header.find('.deployed').removeClass('deployed');
-            $container.toggleClass('deployed');
+            if( $container.hasClass('deployed') ){
+                $container.toggleClass('deployed');
+            } else {
+                $header.find('.deployed').removeClass('deployed');
+                $container.toggleClass('deployed');
+            }
+        },
+        scroll_to_top : function( event ){
+            event.preventDefault();
+            $('html, body').animate({ scrollTop : 0 }, 700);
+        },
+        scroll_to_target : function( event ){
+            var $target = $( document.querySelector('#' + $(this).data('target')) );
+            event.preventDefault();
+            $('html, body').animate({ 
+                scrollTop : $target.offset().top - $(this).height()
+            }, 700);
         }
     };
 
@@ -84,8 +100,12 @@
         on_load : function(){
             if( $('[data-role="slider"]').length ){ this.home_slider( $('[data-role="slider"]') ); }
             if( $('[data-role="amount_input"]').length ){ this.amount_inputs( $('[data-role="amount_input"]') ); }
+            if( $('[data-role="product_slider"]').length ){ this.product_slider( $('[data-role="product_slider"]') ); }
+            if( $('[data-role="dynamic_fixed"]').length ){ this.dynamic_fixed( $('[data-role="dynamic_fixed"]') ); }
 
             $('[data-equalize="children"]').equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+
+            this.script_loader();
         },
         event_handler : function( $collection ){
             if( ! $collection.length ){ return; }
@@ -102,8 +122,28 @@
                 }
             });
         },
+        script_loader : function(){
+            var self = this;
 
+            Modernizr.load({
+                test : $('[data-role="carousel_holder"]').length,
+                yep : [ 
+                    scripts_path + 'owl-carousel/owl.carousel.css',
+                    scripts_path + 'owl-carousel/owl.carousel.min.js' 
+                ],
+                complete : function(){
+                    self.product_carousel( $('[data-role="carousel_holder"]') );
+                }
+
+            });
+        },
+
+        ///
+        ///
+        ///
         /////// modulos discretos
+
+        /// controlador slider home
         home_slider : function( $slider ){
             var $item_list = $slider.find('[data-role="slides-holder"]'),
                 $items = $item_list.children(),
@@ -157,11 +197,14 @@
             });
         },
 
+        /// controlador de inputs de cantidad
         amount_inputs : function( $elements ){
             $elements.each(function(){
                 var $container = $(this),
                     $input = $container.find('[data-role="amount"]'),
                     $controls = $container.find('[data-role="control"]');
+
+                if( !$input.val() ){ $input.val(0); }
 
                 $controls.on('click.amount_handler', function( event ){
                     event.preventDefault();
@@ -182,6 +225,78 @@
                     if( isNaN(value) ){ value = 0; }
                     $input.val( value );
                 });
+            });
+        },
+
+        /// controlador de modilos carousel
+        product_carousel : function( $elements ){
+            $elements.each(function(){
+                var carousel = $(this).find('[data-role="carousel"]').owlCarousel({
+                    items : 5,
+                    pagination : false,
+                    slideSpeed : 500,
+                    scrollPerPage : true
+                }).data('owlCarousel');
+
+                $(this).equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+
+
+                $(this).find('[data-role="carousel_control"]').on('click.carousel_controls', function(event){
+                    event.preventDefault();
+
+                    if( $(this).data('action') === 'prev' ){ carousel.prev(); }
+                    else { carousel.next(); }
+                });
+                
+
+            });
+        },
+
+        /// controlador del slider de la ficha producto
+        product_slider : function( $elements ){
+            $elements.each(function(){
+                var $slides = $(this).find('[data-role="slide"]'),
+                    $controls = $(this).find('[data-role="control"]');
+
+                $controls.each(function( i, el ){
+                    $(el).data('index', i);
+                    $slides.eq( i ).data('index', i);
+                });
+
+                $controls.on('click.product_slider', function( event ){
+                    event.preventDefault();
+
+                    $slides.removeClass('active');
+                    $controls.removeClass('active');
+
+                    $(this).addClass('active');
+                    $slides.eq( $(this).data('index') ).addClass('active');
+                });
+
+            });
+        },
+
+        /// controlador de elementos sticky
+        dynamic_fixed : function( $elements ){
+            $elements.each(function( i, el ){
+                var $box = $(el),
+                    $container = $box.parent(),
+                    element_offset = $box.offset().top;
+
+                /// se crea un handler al scroll para cada elemento
+                $window.on('scroll.dynamic_fixed', function(){
+                    var scroll_pos = $window.scrollTop();
+
+                    if( (scroll_pos >= element_offset) && !$box.hasClass('fixed-box')){
+                        $container.height( $container.height() );
+                        $box.addClass('fixed-box');
+                    }
+                    else if( scroll_pos < element_offset ){
+                        $box.removeClass('fixed-box');
+                        $container.height('auto');
+                    }
+                });
+
             });
         }
     };
@@ -320,5 +435,5 @@
 
         // detecta android
         'android' : function () { return navigator.userAgent.toLowerCase().indexOf("android") > -1; }
-    });
 }());
+    });

@@ -1,39 +1,33 @@
-'use strict';
-
-// Main dependencies and plugins
 var gulp = require('gulp');
-var rename = require('gulp-rename');
-var nodemon = require('gulp-nodemon');
 var less = require('gulp-less-sourcemap');
-// var sourcemaps = require('gulp-sourcemaps');
 var minifyCss = require('gulp-minify-css');
-var livereload = require('gulp-livereload');
+var rename = require('gulp-rename');
+var webserver = require('gulp-webserver');
 
 var less_path = 'www/less/**/*.less';
+var less_main_path = './www/less/main.less';
 var css_path = './www/css';
 
 
 gulp.task('less', function () {
-    gulp.src('./www/less/main.less')
+    gulp.src( less_main_path )
     .pipe(less({ generateSourceMap: true }))
     .pipe(minifyCss({ keepSpecialComments: 0 }))
     .pipe(gulp.dest( css_path ));
 });
 
-// Watch Files For Changes
-gulp.task('watch', function () {
+gulp.task('watch', ['less'], function () {
     gulp.watch(less_path, ['less']);
 });
 
-gulp.task('demon', ['less', 'watch'], function () {
-    nodemon({
-        script: 'app.js',
-        ext: 'html js css',
-        env: {
-            'NODE_ENV': 'development'
-        }
-    });
+gulp.task('webserver', ['watch'], function() {
+    gulp.src('www')
+    .pipe(webserver({
+        // host: 'localhost',
+        host: '0.0.0.0',
+        livereload: true,
+        open: true
+    }));
 });
 
-// Default Task
-gulp.task('default', ['demon']);
+gulp.task('default', ['webserver']);

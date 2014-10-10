@@ -251,6 +251,15 @@
 .shopping-cart-detail-list {
     list-style: none;
     padding: 0;
+
+    .oferta-cmr {
+        padding-left: 35px;
+        background: url('../images/icons/oferta-cmr-icon-small.png') 0 50% no-repeat;
+        font-size: 11px;
+        line-height: 120%;
+
+        span { display: block; }
+    }
 }
 
 .scrollable-content-holder {
@@ -372,11 +381,15 @@
     display: block;
     border-top: 1px solid @submenu_grey;
     padding: 5px 10px;
+    text-decoration: none;
 
     &:hover {
+        text-decoration: none;
+    }
+
+    .no-touch &:hover {
         background: @sodimac_red;
         color: #fff;
-        text-decoration: none;
     }
 }
 
@@ -406,12 +419,11 @@
         background-position: ~"calc(100% - 10px)" 50%;
         background-repeat: no-repeat;
 
-        &:hover, &:active, &.deployed {
+        .no-touch &:hover, &:active, &.deployed {
             .set-bg-img( url('../images/icons/chevron-up.svg'), url('../images/icons/chevron-up.png') );
             background-position: ~"calc(100% - 10px)" 50%;
             background-repeat: no-repeat;
-            // background-color: @sodimac_red;
-            // color: #fff;
+            color: @sodimac_red;
         }
     }
 
@@ -430,113 +442,6 @@
     }
 }
 
-/***************************************************
-**************************** Promos principales home
-****************************************************/
-.main-promo-slider {
-    display: block;
-    overflow: hidden;
-    position: relative;
-    margin-top: @regular_vertical_margin;
-    min-height: 380px;
-    &.loaded { min-height: 0; }
-}
-
-.main-promo-slider-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    display: block;
-}
-
-.main-promo-slider-item {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    .transform( translateZ(0) );
-    .transition( all, ease, 700ms );
-    
-    &.active { opacity: 1; }
-
-    a, img { display: block; width: 100%; height: auto; }
-}
-
-.main-promo-slider-bullet, .main-promo-slider-control {
-    .button-reset;
-}
-
-.main-promo-slider-bullets {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 15px;
-    padding-right: 15px;
-    pointer-events: none;
-    font-size: 0;
-    line-height: 0;
-    text-align: right;
-}
-
-.main-promo-slider-bullet {
-    pointer-events: auto;
-    display: inline-block;
-    width: @base_font_size;
-    height: @base_font_size;
-    border-radius: @base_font_size;
-    background: #fff;
-    margin-left: @base_font_size;
-
-    &.active { background: @sodimac_red; }
-    &:hover { background: lighten(@sodimac_red, 20%); }
-}
-
-.main-promo-slider-controls {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    left: 0;
-    right: 0;
-    top: 50%;
-    margin-top: -30px;
-}
-
-.main-promo-slider-control {
-    pointer-events: auto;
-    display: block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    background: rgba(255,255,255,0.5);
-    position: absolute;
-    top: 0;
-
-    &.prev { 
-        left: -40px; 
-        border-radius: 0 100px 100px 0;
-        text-align: right;
-        padding-right: 7px;
-    }
-    &.next { 
-        right: -40px; 
-        border-radius: 100px 0 0 100px;
-        text-align: left;
-        padding-left: 7px;
-    }
-    &:hover {
-        background: rgba(255,255,255,1);
-        color: @sodimac_red;
-    }
-}
-
 
 /***************************************************
 **************************** Promos secundarias home
@@ -551,6 +456,81 @@
     margin-top: @regular_vertical_margin;
 }
 
+
+/***************************************************
+**************************** Contenido interior
+****************************************************/
+.breadcrumbs-holder {
+    padding: 1em 0;
+}
+
+.breadcrumb-item {
+    display: inline-block;
+}
+
+////////////////////// Fichas de productos
+.product-actions-holder {
+    margin: 1em 0;
+}
+
+.product-action-item {
+    display: inline-block;
+    padding: 0 0.5em;
+}
+
+.product-main-holder {
+    padding: 1em 0;
+    border-top: 1px solid @blocks_border_grey;
+}
+
+.product-main-price-holder, .product-options-holder {
+    margin-bottom: 1.5em;
+}
+
+.product-comment {
+    padding: @base_font_size;
+    margin-top: @base_font_size;
+    border-top: 1px solid @header_grey;
+    line-height: 130%;
+    &:first-child {
+        margin-top: 0;
+        border-top: 0;
+    }
+}
+
+.product-comment-author-holder, .product-comment-body-holder {
+    float: left;
+}
+
+.product-comment-body-holder {
+    width: 90%;
+}
+
+.product-comment-author-holder {
+    font-size: 11px;
+    line-height: 100%;
+    width: 10%;
+
+    p { margin: 0; }
+}
+
+.product-comment-evaluation {
+    margin-top: 1em;
+    p { margin: 0; }
+}
+
+.product-comment-meta {
+    margin-top: 1em;
+    padding: 5px;
+    background: #eee;
+
+    .product-comment-meta-item {
+        display: inline-block;
+        padding: 0 10px;
+        border-right: 1px solid @header_grey;
+    }
+}
+//////////////////////
 
 /***************************************************
 **************************** Footer
