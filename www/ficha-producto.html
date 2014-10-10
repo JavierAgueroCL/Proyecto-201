@@ -900,7 +900,7 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="breadcrumbs-holder">
+                <section class="breadcrumbs-holder hide-on-mobile">
                     <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
                     <i class="fa fa-angle-right"></i>
                     <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Categoría abuelo</a>
@@ -914,12 +914,19 @@
                     <a href="#" title="Ir a Mosaico productos" rel="section" class="breadcrumb-item">Productos</a>
                 </section>
 
+                <section class="mobile-back-holder hide-on-desktop">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
+                        <i class="fa fa-chevron-left"></i>
+                        Futones, Sofás Cama
+                    </a>
+                </section>
+
                 <section class="product-single-body">
-                    <h1 class="product-title">
+                    <h1 class="product-title hide-on-mobile">
                         Combo cama americana 1 plaza + textil + muebles - Combo cama americana 1 plaza + textil
                     </h1>
 
-                    <div class="product-actions-holder">
+                    <div class="product-actions-holder hide-on-mobile">
                         <div class="product-action-item">
                             SKU: 1234567-8
                         </div>
@@ -986,7 +993,7 @@
                                 </div>
 
                                 <div class="main-product-slider-controls-holder">
-                                    <div class="product-carousel clearfix" data-role="carousel_holder">
+                                    <div class="product-carousel clearfix hide-on-mobile" data-role="carousel_holder">
                                         <div class="product-carousel-control-holder">
                                             <button class="button carousel-control-btn prev" data-role="carousel_control" data-action="prev">
                                                 <i class="fa fa-chevron-left"></i>
@@ -1052,23 +1059,61 @@
                                             </button>
                                         </div>
                                     </div>
+
+                                </div>
+                            </div>
+
+                            <p class="product-title hide-on-desktop">
+                                Combo cama americana 1 plaza + textil + muebles - Combo cama americana 1 plaza + textil
+                            </p>
+                            
+                            <div class="product-actions-holder hide-on-desktop">
+                                <div class="product-action-item">
+                                    SKU: 1234567-8
+                                </div>
+
+                                <div class="product-action-item">
+                                    <div class="rating-holder red-text stars">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+
+                                <div class="product-action-item">
+                                    <a href="#" title="Escribir un comentario" rel="nofollow" class="minified-paragraph red-text bold-text">
+                                        Ver comentarios
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="column half">
                             <div class="product-main-price-holder clearfix">
                                 <div class="column two-thirds">
+                                    <div class="hide-on-desktop">
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
+                                        Precio CMR:
+                                    </div>
                                     <p class="huge-paragraph red-text bold-text" >
                                         <span class="relative-smaller-paragraph regular-text">$</span> 2.295.990 <span class="relative-smaller-paragraph regular-text">c/u</span>
                                         <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
                                     </p>
-                                    <p class="washed-light-text" >
+                                    <p class="washed-light-text hide-on-mobile" >
                                         CMR Puntos: 200
                                     </p>
                                 </div>
                                 <div class="column thirds">
-                                    <p class="washed-light-text bold-text righted-text">Ahorro: $2.234.567</p>
-                                    <p class="washed-light-text righted-text">Normal: $2.234.567</p>
+                                    <div class="hide-on-mobile">
+                                        <p class="washed-light-text bold-text righted-text">Ahorro: $2.234.567</p>
+                                        <p class="washed-light-text righted-text">Normal: $2.234.567</p>
+                                    </div>
+                                    <div class="clearfix hide-on-desktop">
+                                        <p>Ahorro: $2.234.567</p>
+                                        <p>Normal: $2.234.567</p>
+                                        <p>CMR Puntos: 200</p>
+                                    </div>
                                 </div>
                             </div>
                             
