@@ -240,15 +240,12 @@
 
                 $(this).equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
 
-
                 $(this).find('[data-role="carousel_control"]').on('click.carousel_controls', function(event){
                     event.preventDefault();
 
                     if( $(this).data('action') === 'prev' ){ carousel.prev(); }
                     else { carousel.next(); }
                 });
-                
-
             });
         },
 
@@ -308,7 +305,7 @@
     var sodimac_app = new Sodimac();
 
     // al terminar de parsear
-    $(function(){ sodimac_app.on_ready() });
+    $(function(){ sodimac_app.on_ready(); });
 
     // al terminar la carga de la pagina
     $window.load(function(){ sodimac_app.on_load(); });

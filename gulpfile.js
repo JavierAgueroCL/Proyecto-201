@@ -23,8 +23,8 @@ gulp.task('watch', ['less'], function () {
 gulp.task('webserver', ['watch'], function() {
     gulp.src('www')
     .pipe(webserver({
-        // host: 'localhost',
-        host: '0.0.0.0',
+        host: 'localhost',
+        // host: '0.0.0.0',
         livereload: true,
         open: true
     }));
