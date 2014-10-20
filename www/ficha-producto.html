@@ -975,21 +975,6 @@
                                     <div data-role="slide" class="main-product-slider-item">
                                         <img src="http://fakeimg.pl/495x495" class="elastic-img">
                                     </div>
-                                    <div data-role="slide" class="main-product-slider-item">
-                                        <img src="http://fakeimg.pl/495x495" class="elastic-img">
-                                    </div>
-                                    <div data-role="slide" class="main-product-slider-item">
-                                        <img src="http://fakeimg.pl/495x495" class="elastic-img">
-                                    </div>
-                                    <div data-role="slide" class="main-product-slider-item">
-                                        <img src="http://fakeimg.pl/495x495" class="elastic-img">
-                                    </div>
-                                    <div data-role="slide" class="main-product-slider-item">
-                                        <img src="http://fakeimg.pl/495x495" class="elastic-img">
-                                    </div>
-                                    <div data-role="slide" class="main-product-slider-item">
-                                        <img src="http://fakeimg.pl/495x495" class="elastic-img">
-                                    </div>
                                 </div>
 
                                 <div class="main-product-slider-controls-holder">
@@ -1026,31 +1011,6 @@
                                                     <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
                                                 </a>
                                             </div>
-                                            <div class="product-carousel-item">
-                                                <a data-role="control" href="#" class="block-element">
-                                                    <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
-                                                </a>
-                                            </div>
-                                            <div class="product-carousel-item">
-                                                <a data-role="control" href="#" class="block-element">
-                                                    <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
-                                                </a>
-                                            </div>
-                                            <div class="product-carousel-item">
-                                                <a data-role="control" href="#" class="block-element">
-                                                    <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
-                                                </a>
-                                            </div>
-                                            <div class="product-carousel-item">
-                                                <a data-role="control" href="#" class="block-element">
-                                                    <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
-                                                </a>
-                                            </div>
-                                            <div class="product-carousel-item">
-                                                <a data-role="control" href="#" class="block-element">
-                                                    <img src="http://fakeimg.pl/60x60" class="elastic-img submenu-img">
-                                                </a>
-                                            </div>
                                         </div>
 
                                         <div class="product-carousel-control-holder">
@@ -1060,6 +1020,13 @@
                                         </div>
                                     </div>
 
+                                    <div class="main-product-slider-mobile-controls  hide-on-desktop">
+                                        <button class="button bullet-btn active" data-role="mobile_control"></button>
+                                        <button class="button bullet-btn" data-role="mobile_control"></button>
+                                        <button class="button bullet-btn" data-role="mobile_control"></button>
+                                        <button class="button bullet-btn" data-role="mobile_control"></button>
+                                        <button class="button bullet-btn" data-role="mobile_control"></button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1092,14 +1059,35 @@
                         <div class="column half">
                             <div class="product-main-price-holder clearfix">
                                 <div class="column two-thirds">
-                                    <div class="hide-on-desktop">
-                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
-                                        Precio CMR:
+                                    <div class="mobile-product-prize clearfix">
+                                        <div class="mobile-column two-thirds">
+                                            <div class="hide-on-desktop">
+                                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
+                                                Precio CMR:
+                                            </div>
+                                            <p class="huge-paragraph red-text bold-text" >
+                                                <span class="relative-smaller-paragraph regular-text">$</span> 2.295.990 <span class="relative-smaller-paragraph regular-text">c/u</span>
+                                                <img class="hide-on-mobile" src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
+                                            </p>
+                                        </div>
+                                        <div class="mobile-column thirds hide-on-desktop">
+                                            <label class="bold-text centered-text">Cantidad</label>
+                                            <div class="clearfix amount-input-holder" data-role="amount_input">
+                                                <div class="input-space">
+                                                    <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                                </div>
+                                                <div class="controls-space">
+                                                    <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                                        <i class="fa fa-caret-up"></i>
+                                                    </button>
+                                                    <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="huge-paragraph red-text bold-text" >
-                                        <span class="relative-smaller-paragraph regular-text">$</span> 2.295.990 <span class="relative-smaller-paragraph regular-text">c/u</span>
-                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
-                                    </p>
+                                    
                                     <p class="washed-light-text hide-on-mobile" >
                                         CMR Puntos: 200
                                     </p>
@@ -1109,16 +1097,28 @@
                                         <p class="washed-light-text bold-text righted-text">Ahorro: $2.234.567</p>
                                         <p class="washed-light-text righted-text">Normal: $2.234.567</p>
                                     </div>
-                                    <div class="clearfix hide-on-desktop">
-                                        <p>Ahorro: $2.234.567</p>
-                                        <p>Normal: $2.234.567</p>
-                                        <p>CMR Puntos: 200</p>
+                                    <div class="clearfix pad top hide-on-desktop">
+                                        <div class="mobile-column two-thirds">
+                                            <p>Ahorro: $2.234.567</p>
+                                            <p>Normal: $2.234.567</p>
+                                            <p>CMR Puntos: 200</p>
+                                        </div>
+                                        <div class="mobile-column thirds">
+                                            <label class="bold-text centered-text">Tallas</label>
+                                            <select class="regular-select centered-text" name="product-size">
+                                                <option value="xxl">XXL</option>
+                                                <option value="xl">XL</option>
+                                                <option value="l">L</option>
+                                                <option value="m">m</option>
+                                                <option value="s">s</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="product-options-holder clearfix">
-                                <div class="column thirds">
+                                <div class="mobile-bordered-section column thirds">
                                     <p class="smaller-paragraph washed-light-text">Colores disponibles</p>
                                     <span class="product-color red"></span>
                                     <span class="product-color orange"></span>
@@ -1132,7 +1132,7 @@
                                     <span class="product-color white"></span>
                                     <span class="product-color grey"></span>
                                 </div>
-                                <div class="column thirds">
+                                <div class="column thirds hide-on-mobile">
                                     <label for="product-size-select" class="bold-text block-element centered-text">Tallas</label>
                                     <select class="regular-select centered-text" name="product-size" id="product-size-select">
                                         <option value="xxl">XXL</option>
@@ -1142,7 +1142,7 @@
                                         <option value="s">s</option>
                                     </select>
                                 </div>
-                                <div class="column thirds righted-text">
+                                <div class="column thirds righted-text hide-on-mobile">
                                     <p class="smaller-paragraph">Compra Asistida</p>
                                     <p class="highlighted bold-text centered-text">
                                         <i class="fa fa-phone"></i>
@@ -1151,7 +1151,7 @@
                                 </div>
                             </div>
 
-                            <div class="product-options-holder clearfix">
+                            <div class="product-options-holder clearfix hide-on-mobile">
                                 <div class="column quarters">
                                     <label class="bold-text centered-text">Cantidad</label>
                                     <div class="clearfix amount-input-holder" data-role="amount_input">
@@ -1182,8 +1182,8 @@
                             </div>
 
                             <div class="product-options-holder">
-                                <div class="clearfix">
-                                    <div class="column half">
+                                <div class="clearfix hide-on-mobile">
+                                    <div class="column half ">
                                         <p class="bold-text">Calcula el valor de tu cuota CMR</p>
                                         <p>Costo total del crédito: $3.456.456</p>
                                         <p class="bold-text">CAE: 28%</p>
@@ -1204,9 +1204,40 @@
                                     </div>
                                 </div>
 
+                                <div class="hide-on-desktop">
+                                    <h4>Características del producto</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore cumque omnis ut. Nisi, id repellat iste ad quae dignissimos itaque aut corrupti ea, sapiente aperiam praesentium fuga. Tenetur, amet, numquam!</p>
+                                </div>
+
+                                <div class="clearfix hide-on-desktop pad bottom top">
+                                    <div class="column full pad a-little bottom">
+                                        <a href="#" title="Agregar al carro" rel="nofollow" class="button red-btn block-btn tall-btn centered-text">
+                                            Agregar al carro 
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="clearfix">
+                                        <div class="mobile-column half">
+                                            <a href="#" title="Agregar al carro" rel="nofollow" class="button grey-btn block-btn one-line-tall-btn centered-text">
+                                                Compra con 1 click
+                                            </a>
+                                        </div>
+                                        <div class="mobile-column half">
+                                            <div class="highlighted righted-text">
+                                                <p class="smaller-paragraph">Compra Asistida</p>
+                                                <p class="bold-text">
+                                                    <i class="fa fa-phone"></i>
+                                                    600 600 4020
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="big-header-box">
-                                    <div class="big-header-box-header big-header">
-                                        <h4 class="centered-text" >Garantía extendida</h4>
+                                    <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                        <h4>Garantía extendida</h4>
                                     </div>
                                     <div class="big-header-box-body">
                                         <table class="big-header-box-table">
@@ -1237,8 +1268,8 @@
                                 </div>
 
                                 <div class="big-header-box">
-                                    <div class="big-header-box-header big-header">
-                                        <h4 class="centered-text" >Métodos  de envío y retiro</h4>
+                                    <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                        <h4>Métodos  de envío y retiro</h4>
                                     </div>
                                     <div class="big-header-box-body">
                                         <table class="big-header-box-table">
@@ -1250,7 +1281,7 @@
                                                     Despacho a domicilio
                                                 </td>
                                                 <td class="price-col" >
-                                                    <a href="#" title="Ver opciones" rel="nofollow">Ver opciones</a>
+                                                    <a data-func="show_lightbox" data-type="retiro-tienda" href="#" title="Ver opciones" rel="nofollow">Ver opciones</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1261,7 +1292,7 @@
                                                     Retiro en tienda
                                                 </td>
                                                 <td class="price-col" >
-                                                    <a href="#" title="Ver opciones" rel="nofollow">Ver opciones</a>
+                                                    <a data-func="show_lightbox" data-type="mapa-tienda" href="#" title="Ver opciones" rel="nofollow">Ver opciones</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -1272,7 +1303,7 @@
                                                     Ver disponibilidad en tiendas
                                                 </td>
                                                 <td class="price-col" >
-                                                    <a href="#" title="Ver disponibilidad" rel="nofollow">Ver disponibilidad</a>
+                                                    <a data-func="show_lightbox" data-type="stock-tienda" href="#" title="Ver disponibilidad" rel="nofollow">Ver disponibilidad</a>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1283,7 +1314,7 @@
                     </section>
 
                     <section class="product-proprties-hoder">
-                        <div class="fixed-menu-holder">
+                        <div class="fixed-menu-holder hide-on-mobile">
                             <div class="fixed-menu container centered-text" data-role="dynamic_fixed">
                                 <button data-func="scroll_to_target" data-target="descripcion-producto" class="button seamless-btn bold-text important-paragraph centered-text">
                                     <i class="fa fa-chevron-down red-text"></i>
@@ -1312,10 +1343,32 @@
                             </div>
                         </div>
 
+                        <div class="hide-on-desktop clearfix pad bottom smaller-paragraph">
+                            <div class="mobile-column half">
+                                <p class="bold-text">Calcular Cuota CMR</p>
+                                <p>Costo total del crédito:</p>
+                                <p class="bold-text">CAE: 28%</p>
+                            </div>
+                            <div class="mobile-column quarters">
+                                <label for="product-size-select" class="bold-text block-element centered-text">N° Cuotas</label>
+                                <select class="regular-select" name="product-size" id="product-size-select">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="mobile-column quarters">
+                                <label for="product-size-select" class="bold-text block-element centered-text">Valor Cuota</label>
+                                <input type="text" name="product-payments-value" value="$200.000" class="regular-input centered-text">
+                            </div>
+                        </div>
+
                         <!-- Partes y accesorios -->
-                        <div id="partes-accesorios" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <div id="partes-accesorios" class="big-header-box hide-on-mobile">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1405,8 +1458,8 @@
                         
                         <!-- Descripion del producto -->
                         <div id="descripcion-producto" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1474,9 +1527,9 @@
                         <!-- // -->
 
                         <!-- Productos recomendados -->
-                        <div id="productos-recomendados" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <div id="productos-recomendados" class="big-header-box hide-on-mobile">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1584,8 +1637,8 @@
 
                         <!-- Ficha tecnica -->
                         <div id="ficha-tecnica" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1635,9 +1688,9 @@
                         <!-- // -->
 
                         <!-- Despacho -->
-                        <div id="despacho" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <div id="despacho" class="big-header-box hide-on-mobile">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1658,9 +1711,9 @@
                         <!-- // -->
 
                         <!-- Cambios y devoluciones -->
-                        <div id="cambios-devoluciones" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <div id="cambios-devoluciones" class="big-header-box hide-on-mobile">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1681,9 +1734,9 @@
                         <!-- // -->
 
                         <!-- Promociones -->
-                        <div id="promociones" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <div id="promociones" class="big-header-box hide-on-mobile">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1724,10 +1777,10 @@
                         </div>
                         <!-- // -->
 
-                        <!-- Promociones -->
-                        <div id="promociones" class="big-header-box">
-                            <div class="big-header-box-header big-header">
-                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn">
+                        <!-- comentarios -->
+                        <div id="comentarios" class="big-header-box">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
                                     Volver al top
                                     <i class="fa fa-chevron-up"></i>
                                 </a>
@@ -1898,6 +1951,264 @@
                                 </article>
                             </div>
                         </div>
+                        <!-- // -->
+
+                        <!-- Descargas (Mobile only)-->
+                        <div id="descargas" class="big-header-box hide-on-desktop">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
+                                    Volver al top
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <h2>Descargas</h2>
+                            </div>
+                            <div class="big-header-box-body pad all clearfix">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit rhoncus erat eget dapibus. Integer sit amet vulputate augue, in blandit arcu. Nulla in efficitur mi. Phasellus sagittis, nibh et porta varius, purus dolor consectetur diam, in dignissim velit nisl eget ex. Vivamus congue, ligula a suscipit tincidunt, felis magna ullamcorper nisi, sodales sollicitudin orci orci ornare enim. Ut enim eros, bibendum at semper eget, tempus ultricies ex. Nullam imperdiet lacus nec molestie ullamcorper. Integer maximus tortor ac libero tristique, ac interdum leo vehicula. Phasellus finibus congue lobortis. Fusce lacinia ut nulla eget dignissim. Nunc sit amet facilisis nibh, ut finibus mauris. Morbi in condimentum mauris. Morbi enim urna, pharetra ut sodales nec, posuere vel leo. Nullam non porttitor lorem. Sed interdum nunc at sem fringilla, sed aliquam metus laoreet. In mollis varius ligula, in venenatis tortor pharetra sed.</p>
+                                <p>Morbi in condimentum mauris. Morbi enim urna, pharetra ut sodales nec, posuere vel leo. Nullam non porttitor lorem. Sed interdum nunc at sem fringilla, sed aliquam metus laoreet. In mollis varius ligula, in venenatis tortor pharetra sed.</p>
+
+                                <ul>
+                                    <li>Hendrerit, eros sem lobortis arcu, in scelerisque dui arcu non dolor</li>
+                                    <li>Eros sem lobortis arcu, in scelerisque dui arcu non dolor</li>
+                                    <li>Lobortis arcu, in scelerisque dui arcu</li>
+                                    <li>Sem lobortis arcu, in scelerisque dui arcu</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <!-- Guias y proyectos (Mobile only)-->
+                        <div id="guias-y-proyectos" class="big-header-box hide-on-desktop">
+                            <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                                <a data-func="scroll_to_top" href="#" title="Volver al top" rel="nofollow" class="big-header-box-scroll-btn hide-on-mobile">
+                                    Volver al top
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <h2>Guías y proyectos</h2>
+                            </div>
+                            <div class="big-header-box-body pad all clearfix">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit rhoncus erat eget dapibus. Integer sit amet vulputate augue, in blandit arcu. Nulla in efficitur mi. Phasellus sagittis, nibh et porta varius, purus dolor consectetur diam, in dignissim velit nisl eget ex. Vivamus congue, ligula a suscipit tincidunt, felis magna ullamcorper nisi, sodales sollicitudin orci orci ornare enim. Ut enim eros, bibendum at semper eget, tempus ultricies ex. Nullam imperdiet lacus nec molestie ullamcorper. Integer maximus tortor ac libero tristique, ac interdum leo vehicula. Phasellus finibus congue lobortis. Fusce lacinia ut nulla eget dignissim. Nunc sit amet facilisis nibh, ut finibus mauris. Morbi in condimentum mauris. Morbi enim urna, pharetra ut sodales nec, posuere vel leo. Nullam non porttitor lorem. Sed interdum nunc at sem fringilla, sed aliquam metus laoreet. In mollis varius ligula, in venenatis tortor pharetra sed.</p>
+                                <p>Morbi in condimentum mauris. Morbi enim urna, pharetra ut sodales nec, posuere vel leo. Nullam non porttitor lorem. Sed interdum nunc at sem fringilla, sed aliquam metus laoreet. In mollis varius ligula, in venenatis tortor pharetra sed.</p>
+
+                                <ul>
+                                    <li>Hendrerit, eros sem lobortis arcu, in scelerisque dui arcu non dolor</li>
+                                    <li>Eros sem lobortis arcu, in scelerisque dui arcu non dolor</li>
+                                    <li>Lobortis arcu, in scelerisque dui arcu</li>
+                                    <li>Sem lobortis arcu, in scelerisque dui arcu</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="pad top bottom hide-on-desktop">
+                            <a href="#" title="Retiro en tienda" rel="help" class="button seamless-line-btn">Retiro en tienda</a>
+                            <a href="#" title="Despacho a domicilio" rel="help" class="button seamless-line-btn">Despacho a domicilio</a>
+                            <a href="#" title="Ver disponibilidad en tiendas" rel="help" class="button seamless-line-btn">Ver disponibilidad en tiendas</a>
+                        </div>
+
+                        <!-- Carousels (Mobile only) -->
+                            <div class="mobile-carousel-holder hide-on-desktop">
+                                <h2 class="mobile-carousel-title" >Productos complementarios</h2>
+                                <div class="product-carousel full-carousel clearfix" data-role="carousel_holder" data-controls="bullets">
+                                    <div class="product-carousel-items" data-role="carousel">
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mobile-carousel-holder hide-on-desktop">
+                                <h2 class="mobile-carousel-title" >Productos recomendados</h2>
+                                <div class="product-carousel full-carousel clearfix" data-role="carousel_holder" data-controls="bullets">
+                                    <div class="product-carousel-items" data-role="carousel">
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mobile-carousel-holder hide-on-desktop">
+                                <h2 class="mobile-carousel-title" >Otros usuarios también compraron</h2>
+                                <div class="product-carousel full-carousel clearfix" data-role="carousel_holder" data-controls="bullets">
+                                    <div class="product-carousel-items" data-role="carousel">
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                        <div class="product-carousel-item">
+                                            <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                            <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                            <p class="plain">Generador 2.8 KVA Motor Bencinero</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <!-- // -->
                     </section>
                 </section>
@@ -2132,6 +2443,11 @@
         <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- scripts y estilos especificos para los carruseles -->
+        <link rel="stylesheet" type="text/css" href="js/libs/owl-carousel/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="js/libs/owl-carousel/owl.theme.css" />
+        <script src="js/libs/owl-carousel/owl.carousel.min.js"></script>
         <!-- // -->
     </body>
 </html>

@@ -7,7 +7,6 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -442,8 +441,8 @@
             <!-- Navegacion principal -->
             <nav id="main-nav" class="main-navigation container clearfix">
                 <!-- Menu principal Desktop -->
-                <div class="main-navigation-item submenu-holder deployed hide-on-mobile">
-                    <button class="button block-btn deploy-btn">Buscar por Categoría</button>
+                <div class="main-navigation-item submenu-holder hide-on-mobile">
+                    <button class="button block-btn deploy-btn" data-func="deploy_submenu" data-set-width="false">Buscar por Categoría</button>
                     <div class="submenu">
                         <a href="#" title="Campaña OnLine" rel="section" class="submenu-list-item">Campaña OnLine</a>
                         <a href="#" title="Muebles" rel="section" class="submenu-list-item">Muebles</a>
@@ -900,104 +899,1099 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="main-promos-holder">
-                    <div class="main-promo-banner-holder hide-on-mobile">
-                        <a href="#" title="Banner" rel="noindex nofollow" class="main-promo-banner">
-                            <img src="http://fakeimg.pl/838x58" class="elastic-img">
-                        </a>
-                    </div>
-                    
-                    <div class="main-promo-slider" data-role="slider">
-                        <ul class="main-promo-slider-list" data-role="slides-holder">
-                            <li class="main-promo-slider-item active" data-index="0">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                <section class="breadcrumbs-holder hide-on-mobile">
+                    <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Categoría abuelo</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría padre" rel="section" class="breadcrumb-item">Categoría padre</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría hijo" rel="section" class="breadcrumb-item">Categoría hijo</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Mosaico productos" rel="section" class="breadcrumb-item">Mosaico productos</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Mosaico productos" rel="section" class="breadcrumb-item">Productos</a>
+                </section>
+
+                <section class="mobile-back-holder hide-on-desktop">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text bordered bottom">
+                        <i class="fa fa-chevron-left"></i>
+                        Muebles y Decohogar
+                    </a>
+                </section>
+
+                <section class="clearfix">
+                    <div class="regular-sidebar column big-gap quarters">
+                        <div class="search-details-holder hide-on-desktop">
+                            <h2 class="search-details-title uppercase">Búsqueda Satisfactoria</h2>
+                            <p class="important-paragraph">
+                                Hemos encontrado <span class="red-text">16.088</span> productos asociados a tu búsqueda de: "Productos de cocina"
+                           </p>
+                        </div>
+                        
+                        <p class="page-sidebar-title mobile-menu-title search-filters-heading uppercase">Filtros de búsqueda</p>
+
+                        <aside class="search-filters-menu">
+                            <div class="search-filter">
+                                <h3 class="search-filter-title" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Categorías Relacionadas</h3>
+                                <div class="search-filter-options">
+                                    <a href="#" title="Menaje Cocina (120)" rel="nofollow" class="block-element">Menaje Cocina (120)</a>
+                                    <a href="#" title="Combos camas (25)" rel="nofollow" class="block-element">Combos camas (25)</a>
+                                    <a href="#" title="Grifería Cocina (60)" rel="nofollow" class="block-element">Grifería Cocina (60)</a>
+                                    <a href="#" title="Combos camas (34)" rel="nofollow" class="block-element">Combos camas (34)</a>
+                                </div>
+                            </div>
+
+                            <div class="search-filter">
+                                <h3 class="search-filter-title" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Filtrar por Precio</h3>
+                                <div class="search-filter-options">
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-precio[]" value="100000">
+                                        <span class="inline-checkbox-text">$100.000 - $20.000</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-precio[]" value="100000">
+                                        <span class="inline-checkbox-text">$100.000 - $20.000</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-precio[]" value="100000">
+                                        <span class="inline-checkbox-text">$100.000 - $20.000</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-precio[]" value="100000">
+                                        <span class="inline-checkbox-text">$100.000 - $20.000</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-precio[]" value="100000">
+                                        <span class="inline-checkbox-text">$100.000 - $20.000</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="search-filter">
+                                <h3 class="search-filter-title" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Filtrar por Marca</h3>
+                                <div class="search-filter-options">
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="CIC">
+                                        <span class="inline-checkbox-text">CIC</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="Celta">
+                                        <span class="inline-checkbox-text">Celta</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="Flex">
+                                        <span class="inline-checkbox-text">Flex</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="Mantahue">
+                                        <span class="inline-checkbox-text">Mantahue</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="Rosen">
+                                        <span class="inline-checkbox-text">Rosen</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="SM">
+                                        <span class="inline-checkbox-text">SM</span>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-marca[]" value="TFX">
+                                        <span class="inline-checkbox-text">TFX</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="search-filter">
+                                <h3 class="search-filter-title washed-text" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Valoración</h3>
+                                <div class="search-filter-options">
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="5">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                        </div>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="4">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                        </div>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="3">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </div>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="2">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </div>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="1">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </div>
+                                    </label>
+                                    <label class="inline-checkbox-holder">
+                                        <input class="inline-checkbox-input" type="checkbox" name="filtro-valoracion[]" value="0">
+                                        <div class="inline-checkbox-text rating-holder red-text stars">
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <h2 class="page-sidebar-subtitle uppercase hide-on-mobile">Marcas Top</h2>
+                        <ul class="regular-list bordered marginate bottom hide-on-mobile">
+                            <li><a href="#" title="Home collection" rel="section">Home collection</a></li>
+                            <li><a href="#" title="Danish Design" rel="section">Danish Design</a></li>
+                            <li><a href="#" title="Muebles Sur" rel="section">Muebles Sur</a></li>
+                            <li><a href="#" title="Rosen" rel="section">Rosen</a></li>
+                        </ul>
+
+                        <h3 class="page-sidebar-heading hide-on-mobile">Elije mejor tus productos</h3>
+                        <ul class="icon-list bordered marginate bottom hide-on-mobile">
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Home collection" rel="section">Home collection</a>
                             </li>
-                            <li class="main-promo-slider-item" data-index="1">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Danish Design" rel="section">Danish Design</a>
                             </li>
-                            <li class="main-promo-slider-item" data-index="2">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Muebles Sur" rel="section">Muebles Sur</a>
                             </li>
-                            <li class="main-promo-slider-item" data-index="3">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Rosen" rel="section">Rosen</a>
                             </li>
                         </ul>
 
-                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
-                            <button class="main-promo-slider-bullet active" data-index="0"></button>
-                            <button class="main-promo-slider-bullet" data-index="1"></button>
-                            <button class="main-promo-slider-bullet" data-index="2"></button>
-                            <button class="main-promo-slider-bullet" data-index="3"></button>
+                        <div class="bordered marginate bottom clearfix hide-on-mobile">
+                            <div class="column three-quarters">
+                                <h3 class="page-sidebar-heading">Servicios Hogar</h3>
+                            </div>
+                            <div class="column quarters">
+                                <img src="images/icons/home-service.png" class="block-element">
+                            </div>
                         </div>
 
-                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
-                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </button>
-                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
-                                <i class="fa fa-chevron-right"></i>
-                            </button>
+                        <div class="bordered bottom hide-on-mobile">
+                            <div class="clearfix">
+                                <div class="column quarters">
+                                    <img src="images/icons/destornillador.png" class="block-element">
+                                </div>
+                                <div class="column three-quarters">
+                                    <p class="bold-text">Armado de Muebles</p>
+                                    <p>Contratar nuestro Servicio de Armado de Muebles</p>
+                                </div>
+                            </div>
+                            
+                            <div class="clearfix marginate top">
+                                <div class="column quarters">
+                                    <img src="images/icons/tuercas.png" class="block-element">
+                                </div>
+                                <div class="column three-quarters">
+                                    <p class="bold-text">Diseño y proyectos</p>
+                                    <p>Contratar nuestro Servicio de Diseño</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </section>
+                    <div class="regular-page-content column big-gap three-quarters">
+                        <!-- Contenedor del header de la busqueda -->
+                        <section class="search-header">
+                            <div class="search-details-holder hide-on-mobile">
+                                <h2 class="search-details-title uppercase">Búsqueda Satisfactoria</h2>
+                                <p class="important-paragraph">
+                                    Hemos encontrado <span class="red-text">16.088</span> productos asociados a tu búsqueda de: "Productos de cocina"
+                               </p>
+                            </div>
 
-                <section class="secondary-promos-holder">
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                            <div class="search-actions-holder marginate top bottom">
+                                <div class="search-tabs-holder">
+                                    <a href="#" title="Solo internet" rel="nofollow"  class="search-tab-item active">
+                                        <span class="bold-text">Solo internet</span>
+                                        (365)
+                                    </a>
+                                    <a href="#" title="Solo internet" rel="nofollow"  class="search-tab-item">
+                                        Nueva La Florida
+                                    </a>
+                                    <a href="#" title="Solo internet" rel="nofollow"  class="search-tab-item">
+                                        Todos los productos
+                                    </a>
+                                </div>
+                                <div class="search-sorting-holder clearfix">
+                                    <div class="column two-thirds">
+                                        <div class="column half">
+                                            <label for="search-sorting" class="search-sorting-item">Ordenar por</label>
+                                            <select name="search-sorting" id="search-sorting" class="search-sorting-item pretty-select search-filter-select">
+                                                <option value="">Precio de menos a mayor</option>
+                                                <option value="">Precio de mayor a menor</option>
+                                            </select>
+                                        </div>
+                                        <div class="column half">
+                                            <div class="search-sorting-types-holder">
+                                                <span class="search-sorting-item">Vistas</span>
+                                                <a href="#" title="1 x 10" rel="alt" class="search-sorting-item search-sorting-type grid-1"></a>
+                                                <a href="#" title="3 x 4" rel="alt" class="search-sorting-item search-sorting-type grid-3x4"></a>
+                                                <a href="#" title="4 x 4" rel="alt" class="search-sorting-item search-sorting-type grid-4x4 active"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column thirds">
+                                        <div class="search-pagination-holder">
+                                            <a href="#" title="Anterior" rel="prev" class="search-pagination-item prev-btn fa fa-angle-left"></a>
 
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
+                                            <a href="#" title="¨Página 1" rel="nofollow" class="search-pagination-item active">1</a>
+                                            <a href="#" title="¨Página 2" rel="nofollow" class="search-pagination-item">2</a>
+                                            <a href="#" title="¨Página 3" rel="nofollow" class="search-pagination-item">3</a>
+                                            <a href="#" title="¨Página 4" rel="nofollow" class="search-pagination-item">4</a>
+                                            <a href="#" title="¨Página 5" rel="nofollow" class="search-pagination-item">5</a>
 
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
+                                            <a href="#" title="Siguiente" rel="next" class="search-pagination-item next-btn fa fa-angle-right"></a>
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                                            <a href="#" title="Ver todos" rel="nofollow" class="search-pagination-item see-all hide-on-mobile">Ver todos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- // -->
+                        
+                        <!-- Contenedor de los resultados de busqueda -->
+                        <section class="search-results-holder grid-3x4" data-equalize="children">
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <div class="pad top" >
+                                        <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                        Precio CMR:
+                                    </div>
+                                    <p class="search-result-price red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                    <p>Normal: $169.990 c/u</p>
+                                    <p>Ahorro: $10.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="search-result-item">
+                                <div class="search-result-actions clearfix hide-on-mobile">
+                                    <div class="column half">
+                                        <label class="inline-checkbox-holder">
+                                            <input class="inline-checkbox-input" type="checkbox" name="comparacion[]" value="32158416">
+                                            <span class="inline-checkbox-text">Comparar</span>
+                                        </label>
+                                    </div>
+                                    <div class="column half righted-text">
+                                        <a href="#" title="Agregar a lista" rel="nofollow" class="add-to-shopping-cart-btn">
+                                            <span class="plus-icon"></span>
+                                            Agregar a lista
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <figure class="search-result-figure">
+                                    <img src="http://fakeimg.pl/180x150" class="centered-elastic-img">
+                                    <a href="#" title="Vista Previa" rel="nofollow" class="preview-btn preview-btn button medium-btn light-grey-btn centered-text">Vista Previa</a>
+                                </figure>
+
+                                <div class="search-results-colors-holder hide-on-mobile">
+                                    <span class="product-color red"></span>
+                                    <span class="product-color orange"></span>
+                                    <span class="product-color yellow"></span>
+                                    <span class="product-color light-green"></span>
+                                    <span class="product-color green"></span>
+                                    <span class="product-color purple"></span>
+                                    <span class="product-color blue"></span>
+                                    <span class="product-color cyan"></span>
+                                    <span class="product-color black"></span>
+                                    <span class="product-color white"></span>
+                                    <span class="product-color grey"></span>
+                                </div>
+
+                                <div class="search-result-product-data">
+                                    <h4 class="search-result-title">Combo Cama Americana 1 plaza + Textil + Muebles</h4>
+                                    <p>
+                                        SKU: 452210-1 
+                                        <span class=" hide-on-desktop"> | </span>
+                                        <span class="rating-holder inline stars red-text hide-on-desktop">
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="full"></span>
+                                            <span class="empty"></span>
+                                            <span class="empty"></span>
+                                        </span>
+                                    </p>
+                                    
+                                    <p class="pad top">Precio normal:</p>
+                                    <p class="search-result-price bold-text bigger-paragraph pad a-little bottom" >$590.990 c/u</p>
+
+                                    <div class="rating-holder stars hide-on-mobile">
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="full"></span>
+                                        <span class="empty"></span>
+                                        <span class="empty"></span>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                        <!-- // -->
+
+                        <div class="search-actions-holder marginate top bottom">
+                            <div class="search-sorting-holder clearfix">
+                                <div class="column two-thirds">
+                                    <div class="column half">
+                                        <label for="search-sorting" class="search-sorting-item">Ordenar por</label>
+                                        <select name="search-sorting" id="search-sorting" class="search-sorting-item pretty-select search-filter-select">
+                                            <option value="">Precio de menos a mayor</option>
+                                            <option value="">Precio de mayor a menor</option>
+                                        </select>
+                                    </div>
+                                    <div class="column half">
+                                        <div class="search-sorting-types-holder">
+                                            <span class="search-sorting-item">Vistas</span>
+                                            <a href="#" title="1 x 10" rel="alt" class="search-sorting-item search-sorting-type grid-1"></a>
+                                            <a href="#" title="3 x 4" rel="alt" class="search-sorting-item search-sorting-type grid-3x4 active"></a>
+                                            <a href="#" title="4 x 4" rel="alt" class="search-sorting-item search-sorting-type grid-4x4"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column thirds">
+                                    <div class="search-pagination-holder">
+                                        <a href="#" title="Anterior" rel="prev" class="search-pagination-item prev-btn fa fa-angle-left"></a>
+
+                                        <a href="#" title="¨Página 1" rel="nofollow" class="search-pagination-item active">1</a>
+                                        <a href="#" title="¨Página 2" rel="nofollow" class="search-pagination-item">2</a>
+                                        <a href="#" title="¨Página 3" rel="nofollow" class="search-pagination-item">3</a>
+                                        <a href="#" title="¨Página 4" rel="nofollow" class="search-pagination-item">4</a>
+                                        <a href="#" title="¨Página 5" rel="nofollow" class="search-pagination-item">5</a>
+
+                                        <a href="#" title="Siguiente" rel="next" class="search-pagination-item next-btn fa fa-angle-right"></a>
+
+                                        <a href="#" title="Ver todos" rel="nofollow" class="search-pagination-item see-all hide-on-mobile">Ver todos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

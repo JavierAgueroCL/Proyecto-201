@@ -10,6 +10,7 @@
 
     var debug_mode = true,
         scripts_path = '/js/libs/',
+        mobile_mq = 'only screen and (max-width: 999px)',
         $window = $(window),
         $document = $(document);
 
@@ -45,14 +46,17 @@
             $parent.toggleClass('deployed');
         },
         deploy_mobile_submenu : function( event ){
-            event.preventDefault();
-
             var $item = $(event.currentTarget);
+
+            if( ($item.data('modifier') === 'only-mobile' && Modernizr.mq( mobile_mq )) || !$item.data('modifier') ){
+                event.preventDefault();
+            }
 
             $item.toggleClass('deployed');
             $item.parent().toggleClass('deployed');
         },
         deploy_details_tooltip : function( event ){
+            if( Modernizr.mq( mobile_mq ) ){ return; }
             event.preventDefault();
 
             var $item = $(event.currentTarget),
@@ -74,6 +78,80 @@
                 $container.toggleClass('deployed');
             }
         },
+        deploy_big_header_box : function( event ){
+            event.preventDefault();
+            $(this).parent().toggleClass('deployed');
+        },
+        delete_cart_item : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que deseas elimininar este item del carro de compras?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_parent_item : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que deseas elimininar este carro?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_direccion : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que desea eliminar la dirección?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_purchase : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que desea eliminar la compra registrada?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_cart_list : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que desea eliminar el producto de su lista?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_list_prod : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que desea eliminar su lista de productos?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
+        delete_cotizacion : function( event ){
+            event.preventDefault();
+            var $item = $(event.currentTarget);
+
+            if( confirm("¿Estas seguro que desea eliminar la cotizacion?") ){
+                $item.parents('[data-role="item"]').first().addClass('disappearing').slideUp(700, function(){
+                    $(this).remove();
+                });
+            }
+        },
         scroll_to_top : function( event ){
             event.preventDefault();
             $('html, body').animate({ scrollTop : 0 }, 700);
@@ -84,6 +162,33 @@
             $('html, body').animate({ 
                 scrollTop : $target.offset().top - $(this).height()
             }, 700);
+        },
+        show_lightbox : function( event ){
+            var $item = $(event.currentTarget),
+                type = $item.data('type'); // actuará como nombre del modal
+
+            // inicializamos el lightbox
+            var lightbox_promise = event.data.sodimac.setup_lightbox();
+
+            // hacemos el llamado ajax para buscar el contenido del lightbox
+            var ajax_data = {}, // data adcional para el ajax, necesario para produccion
+                ajax_promise = $.get('modales/' + type + '.html', ajax_data);
+
+            // preparamos la respuesta para ambas promesas
+            // el callback se ejecutara cuando ambas promesas se completen
+            $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
+                var response_html = ajax_response[0];
+
+                // se adjunta el contenido del lightbox a la caja
+                $lightbox.append( response_html );
+
+                // auto delegamos los elementos que tengan el atributo "data-func"
+                event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+            });
+        },
+        close_lightbox : function( event ){
+            event.preventDefault();
+            event.data.sodimac.close_lightbox();
         }
     };
 
@@ -102,10 +207,9 @@
             if( $('[data-role="amount_input"]').length ){ this.amount_inputs( $('[data-role="amount_input"]') ); }
             if( $('[data-role="product_slider"]').length ){ this.product_slider( $('[data-role="product_slider"]') ); }
             if( $('[data-role="dynamic_fixed"]').length ){ this.dynamic_fixed( $('[data-role="dynamic_fixed"]') ); }
+            if( $('[data-role="carousel_holder"]').length ){ this.product_carousel( $('[data-role="carousel_holder"]') ); }
 
             $('[data-equalize="children"]').equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
-
-            this.script_loader();
         },
         event_handler : function( $collection ){
             if( ! $collection.length ){ return; }
@@ -122,19 +226,64 @@
                 }
             });
         },
-        script_loader : function(){
-            var self = this;
+        setup_lightbox : function(){
+            // se crea la promesa
+            var promise = new $.Deferred();
 
-            Modernizr.load({
-                test : $('[data-role="carousel_holder"]').length,
-                yep : [ 
-                    scripts_path + 'owl-carousel/owl.carousel.css',
-                    scripts_path + 'owl-carousel/owl.carousel.min.js' 
-                ],
-                complete : function(){
-                    self.product_carousel( $('[data-role="carousel_holder"]') );
-                }
+            // se crea la estructura exterior del lightbox
+            var $background = $('<div />').attr({
+                    'id' : 'lightbox',
+                    'class' : 'lightbox-background'
+                }).css({
+                    'height' : $document.height()
+                });
 
+            // se crea el contenedor del cuerpo del lightbox
+            var $content = $('<div />').attr({
+                    'id' : 'lightbox-content',
+                    'class' : 'lightbox-content'
+                });
+
+            // se crea el boton y se delega el cierre del lightbox
+            var $close_btn = $('<button />').attr({
+                    'class' : 'button lightbox-close-btn'
+                }).on('click.sodimac_lightbox', { sodimac : this }, function( e ){
+                    e.preventDefault();
+                    e.data.sodimac.close_lightbox();
+                }).append('<i class="fa fa-close" ></i>');
+
+            // se anexa el boton en el contenido del lightbox
+            $content.append( $close_btn );
+
+            // guardamos la posicion del scroll para poder volver a ella cuando se cierre el lightbox
+            this.scrollPos = $window.scrollTop();
+
+            // cerramos los lightbox que puedan estar abiertos
+            // usamos el API de $.deferred para esperar a que se termine la animacion
+            this.close_lightbox( true ).then(function(){
+
+                // se hace scroll hacia el top para mostrar el lightbox
+                $('html, body').animate({ scrollTop: 0 }, 700);
+
+                // se inserta el lightbox y se hace aparecer
+                $background.appendTo('body').animate({ opacity: 1 }, 700, function(){
+                    // cuando la animacion termina, insertamos el contnido del lightbox y resolvemos la promesa
+                    $background.append( $content );
+                    promise.resolve( $content );
+                });
+            });
+
+            return promise;
+        },
+        close_lightbox : function( no_scroll ){
+            // se devuelve el scroll a su posicion original
+            if( !no_scroll ){
+                $('html, body').animate({ scrollTop: this.scrollPos }, 700);
+            }
+
+            // se hace desaparecer el lightbox
+            return $('#lightbox').animate({ opacity: 0 }, 700).promise().then(function(){
+                $('#lightbox').remove();
             });
         },
 
@@ -231,16 +380,21 @@
         /// controlador de modilos carousel
         product_carousel : function( $elements ){
             $elements.each(function(){
-                var carousel = $(this).find('[data-role="carousel"]').owlCarousel({
-                    items : 5,
-                    pagination : false,
-                    slideSpeed : 500,
-                    scrollPerPage : true
-                }).data('owlCarousel');
+                var $box = $(this),
+                    carousel_options = {
+                        items : 5,
+                        itemsTablet : [999, 2],
+                        itemsMobile : [999, 2],
+                        pagination : $box.data('controls') === 'bullets' ? true : false,
+                        slideSpeed : 500,
+                        scrollPerPage : true
+                    };
 
-                $(this).equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+                var carousel = $box.find('[data-role="carousel"]').owlCarousel( carousel_options ).data('owlCarousel');
 
-                $(this).find('[data-role="carousel_control"]').on('click.carousel_controls', function(event){
+                $box.equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+
+                $box.find('[data-role="carousel_control"]').on('click.carousel_controls', function(event){
                     event.preventDefault();
 
                     if( $(this).data('action') === 'prev' ){ carousel.prev(); }
@@ -252,24 +406,33 @@
         /// controlador del slider de la ficha producto
         product_slider : function( $elements ){
             $elements.each(function(){
-                var $slides = $(this).find('[data-role="slide"]'),
-                    $controls = $(this).find('[data-role="control"]');
+                var $slider = $(this),
+                    $slides = $slider.find('[data-role="slide"]'),
+                    $controls = $slider.find('[data-role="control"]'),
+                    $mobile_controls = $slider.find('[data-role="mobile_control"]'),
+                    $ctrls;
 
-                $controls.each(function( i, el ){
-                    $(el).data('index', i);
-                    $slides.eq( i ).data('index', i);
+                $slides.equalizeHeights( true, false, function( $set, max_height ){
+                    $slides.parent().height( max_height ).addClass('loaded');
                 });
 
-                $controls.on('click.product_slider', function( event ){
+                $controls.each(function( i, el ){
+                    $(el).attr('data-index', i).data('index', i);
+                    $mobile_controls.eq( i ).attr('data-index', i).data('index', i);
+                    $slides.eq( i ).attr('data-index', i).data('index', i);
+                });
+
+                $ctrls = $controls.add( $mobile_controls );
+
+                $ctrls.on('click.product_slider', function( event ){
                     event.preventDefault();
 
                     $slides.removeClass('active');
-                    $controls.removeClass('active');
+                    $ctrls.removeClass('active');
 
-                    $(this).addClass('active');
+                    $ctrls.filter('[data-index="'+ $(this).data('index') +'"]').addClass('active');
                     $slides.eq( $(this).data('index') ).addClass('active');
                 });
-
             });
         },
 
@@ -432,5 +595,5 @@
 
         // detecta android
         'android' : function () { return navigator.userAgent.toLowerCase().indexOf("android") > -1; }
-}());
     });
+}());

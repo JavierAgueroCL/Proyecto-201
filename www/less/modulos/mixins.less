@@ -62,8 +62,8 @@
 }
 
 .set-bg-img( @cool_url, @fallback_url ){
-    background: @cool_url;
-    .no-svg &{ background: @fallback_url; }
+    background-image: @cool_url;
+    .no-svg &{ background-image: @fallback_url; }
 }
 .vertical-gradient (@startColor: #eee, @endColor: white) {
     background-color: @startColor;

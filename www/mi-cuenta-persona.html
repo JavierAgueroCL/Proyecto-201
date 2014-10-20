@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sodimac</title>
+        <title>Sodimac - Mi Cuenta</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
@@ -442,8 +442,8 @@
             <!-- Navegacion principal -->
             <nav id="main-nav" class="main-navigation container clearfix">
                 <!-- Menu principal Desktop -->
-                <div class="main-navigation-item submenu-holder deployed hide-on-mobile">
-                    <button class="button block-btn deploy-btn">Buscar por Categoría</button>
+                <div class="main-navigation-item submenu-holder hide-on-mobile">
+                    <button class="button block-btn deploy-btn" data-func="deploy_submenu" data-set-width="false">Buscar por Categoría</button>
                     <div class="submenu">
                         <a href="#" title="Campaña OnLine" rel="section" class="submenu-list-item">Campaña OnLine</a>
                         <a href="#" title="Muebles" rel="section" class="submenu-list-item">Muebles</a>
@@ -900,106 +900,182 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="main-promos-holder">
-                    <div class="main-promo-banner-holder hide-on-mobile">
-                        <a href="#" title="Banner" rel="noindex nofollow" class="main-promo-banner">
-                            <img src="http://fakeimg.pl/838x58" class="elastic-img">
-                        </a>
-                    </div>
-                    
-                    <div class="main-promo-slider" data-role="slider">
-                        <ul class="main-promo-slider-list" data-role="slides-holder">
-                            <li class="main-promo-slider-item active" data-index="0">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="1">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="2">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="3">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                        </ul>
-
-                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
-                            <button class="main-promo-slider-bullet active" data-index="0"></button>
-                            <button class="main-promo-slider-bullet" data-index="1"></button>
-                            <button class="main-promo-slider-bullet" data-index="2"></button>
-                            <button class="main-promo-slider-bullet" data-index="3"></button>
-                        </div>
-
-                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
-                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </button>
-                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
-                                <i class="fa fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
+                <section class="breadcrumbs-holder hide-on-mobile">
+                    <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Mi Cuenta</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Datos Personales</a>
                 </section>
 
-                <section class="secondary-promos-holder">
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
-
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
+                        <i class="fa fa-chevron-left"></i>
+                        Inicio
+                    </a>
                 </section>
+                <section class="clearfix hide-on-desktop tit-sec">
+                	<h2>MI CUENTA</h2>
+                </section>
+
+                <section id="mi-cuenta" class="clearfix">
+                	<div class="cont-cuenta column big-gap three-quarters">
+                		<h2 class="border-bottom hide-on-mobile">Datos Personales</h2>
+                        <form action="direcciones" id="cuenta-persona">
+                            <div class="caja-datos margin-bot10">
+                                <h2>Cliente</h2>
+                                <div class="clearfix">
+                                    <div class="pad all full-m">
+                                        <p class="bold-text important-paragraph tit">Alejandro Martínez Lastra</p>
+                                        <p>Rut: 12.345.345-9</p>
+                                        <p>Fecha nacimiento: 19/21/1977</p>
+                                        <p>Nacionalidad: Chileno</p>
+                                        <p>Teléfono de contacto: 09 123 55 66</p>
+                                    </div>
+                                </div>
+                            </div><!-- CAJA CON BORDE -->
+                            <div class="caja-datos margin-bot10">
+                                <h2>Tu tienda más cercana</h2>
+                                <div class="pad all full-m">
+                                    <div class="margin-bot10">
+                                        <p class="bold-text important-paragraph tit">Nombre: Parque Arauco</p>
+                                        <p>Dirección: Av. Pdte. Kennedy 5601</p>
+                                    </div>
+                                    <div class="margin-bot10">
+                                        <p class="bold-text important-paragraph tit">Horario de atención</p>
+                                        <p>Lunes a Viernes: 08:00 a 22:00 hrs</p>
+                                        <p>Sábado: 08:00 a 22:00 hrs</p>
+                                        <p>Domingo: 08:00 a 22:00 hrs.</p>
+                                        <a href="#" class="ficha-tienda margin-top10 block-element">Ver ficha de la tienda <i><img src="images/icons/ubicacion-mapa.png" alt=""></i></a>
+                                    </div>
+                                    <div class="margin-bot10">
+                                        <p class="bold-text important-paragraph tit">Télefonos</p>
+                                        <a href="#">600 600 40 20</a>
+                                    </div>
+                                    <button class="button medium-btn light-grey-btn ancho">Cambiar</button>
+                                </div>
+                            </div><!-- CAJA CON BORDE -->
+                            <div class="caja-datos margin-bot10">
+                                <h2>Información de despacho</h2>
+                                <div class="pad all full-m">
+                                    <div class="margin-bot10">
+                                        <p class="bold-text important-paragraph tit">Dirección principal <span>(todas tus compras se enviarán aquí por defecto)</span></p>
+                                        <p class="bold-text important-paragraph tit">- Casa -</p>
+                                        <p>La Concepción 141, Dpto. 601</p>
+                                        <p>7673000, Providencia, Región Metropolitana</p>
+                                        <p>Santiago, Chile</p>
+                                        <p>56 - 2-2131 55 666</p>
+                                    </div>
+                                    <div class="margin-bot10">
+                                        <p class="bold-text important-paragraph tit">Otras direcciones</p>
+                                        <p class="bold-text important-paragraph tit">- Casa -</p>
+                                        <p>La Concepción 141, Dpto. 601</p>
+                                        <p>7673000, Providencia, Región Metropolitana</p>
+                                        <p>Santiago, Chile</p>
+                                        <p>56 - 2-2131 55 666</p>
+                                    </div>
+                                    <div>
+                                        <p class="bold-text important-paragraph tit">- Casa en la playa-</p>
+                                        <p>La Concepción 141, Dpto. 601</p>
+                                        <p>7673000, Providencia, Región Metropolitana</p>
+                                        <p>Santiago, Chile</p>
+                                        <p>56 - 2-2131 55 666</p>
+                                    </div>
+                                </div>
+                                <div class="pad all border-top gris">
+                                    <p>Información de Despacho para Comprar en 1 Click</p>
+                                    <p class="bold-text important-paragraph tit">Mi Casa</p>
+                                </div>
+                            </div><!-- CAJA CON BORDE -->
+                            <div class="caja-datos margin-bot10">
+                                <h2>E-Mail para inicio de sesión y contacto</h2>
+                                <div class="pad all full-m">
+                                    <p class="bold-text important-paragraph tit">Nombre usuario: ginger@sodimac.cl</p>
+                                    <p class="bold-text important-paragraph tit margin-top10">Servicios suscritos</p>
+                                    <div class="margin-bot10">
+                                        <p>Últimas ofertas y novedades en tu e-mail</p>
+                                        <p>Últimas ofertas y novedades en mmi celular vía SMS</p>
+                                    </div>
+                                    <p><a href=""><em>Términos y condiciones</em></a></p>
+                                </div>
+                            </div><!-- CAJA CON BORDE -->
+                            <div class="clearfix">
+                                <button class="button medium-btn grey-btn fright ancho">Editar registro</button>
+                            </div>
+                        </form><!-- Guardar Datos -->
+                	</div> <!-- Contenido Derecho -->
+                	<aside class="side column big-gap quarters">
+                		<h2 class="border-bottom">Mi Cuenta</h2>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
+                			<ul>
+	                			<li>
+	                				<a href="#" title="Datos para compra en 1 Click">Datos para compra en 1 Click</a>
+	                			</li>
+	                		</ul>
+                		</div>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Datos Personales">Datos Personales</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Cambio de clave">Cambio de clave</a>
+	                			</li>
+	                		</ul>
+                		</div>                
+						<div>
+							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Todas mis compras">Todas mis compras</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis pedidos en tienda">Mis pedidos en tienda</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
+	                			</li>
+	                		</ul>
+						</div>
+						<div>
+							<h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Mis cotizaciones en tienda">Mis cotizaciones en tienda</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis servicios cotizados">Mis servicios cotizados</a>
+	                			</li>
+	                		</ul>
+						</div>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Saldo tarjeta CMR">Saldo tarjeta CMR</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Saldo tarjeta de regalo">Saldo tarjeta de regalo</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis cupones de descuento">Mis cupones de descuento</a>
+	                			</li>
+	                		</ul>
+                		</div>               		
+                	</aside>
+                </section>
+
             </div>
         </main> 
         <!-- // -->

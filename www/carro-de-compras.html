@@ -7,7 +7,6 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -442,8 +441,8 @@
             <!-- Navegacion principal -->
             <nav id="main-nav" class="main-navigation container clearfix">
                 <!-- Menu principal Desktop -->
-                <div class="main-navigation-item submenu-holder deployed hide-on-mobile">
-                    <button class="button block-btn deploy-btn">Buscar por Categoría</button>
+                <div class="main-navigation-item submenu-holder hide-on-mobile">
+                    <button class="button block-btn deploy-btn" data-func="deploy_submenu" data-set-width="false">Buscar por Categoría</button>
                     <div class="submenu">
                         <a href="#" title="Campaña OnLine" rel="section" class="submenu-list-item">Campaña OnLine</a>
                         <a href="#" title="Muebles" rel="section" class="submenu-list-item">Muebles</a>
@@ -897,109 +896,686 @@
         </header>
         <!-- // -->
 
+
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="main-promos-holder">
-                    <div class="main-promo-banner-holder hide-on-mobile">
-                        <a href="#" title="Banner" rel="noindex nofollow" class="main-promo-banner">
-                            <img src="http://fakeimg.pl/838x58" class="elastic-img">
-                        </a>
+                <!-- Header del carro de compras en desktop -->
+                <div class="shopping-cart-header clearfix hide-on-mobile">
+                    <h1 class="column half">
+                        <i class="fa fa-shopping-cart"></i>
+                        Mi carro de compras
+                    </h1>
+
+                    <div class="column half righted-text">
+                        <a href="#" title="Compra con 1 click" rel="nofollow" class="button medium-btn grey-btn centered-text">Compra con 1 click</a>
+                        <a href="#" title="Continuar el proceso de compra" rel="nofollow" class="button medium-btn red-btn centered-text">Continuar el proceso de compra</a>
+                    </div>
+                </div>
+                <!-- // -->
+                
+                <!-- Link al inicio mobile -->
+                <section class="mobile-back-holder hide-on-desktop">
+                    <a href="#" title="Volver al inicio" rel="section" class="block-element bold-text bordered bottom">
+                        <i class="fa fa-chevron-left"></i>
+                        Inicio
+                    </a>
+                </section>
+                <!-- // -->
+                
+                <!-- Header y resumen del carro mobile -->
+                <section class="hide-on-desktop">
+                    <p class="page-sidebar-title mobile-menu-title">Mi carro de compras</p>
+                    <p class="important-paragraph pad a-little bottom">Resumen de tu compra</p>
+
+                    <div class="shopping-cart-details bordered header-grey-border all">
+                        <table class="regular-table righted-text smaller-paragraph">
+                            <tr>
+                                <td class="half minified-paragraph" >Total productos (4)</td>
+                                <td class="half" ></td>
+                            </tr>
+                            <tr>
+                                <td class="half important-paragraph" >Subtotal CMR</td>
+                                <td class="half bold-text red-text" >$80.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half" >Subtotal otro medio de pago</td>
+                                <td class="half" >$107.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half smaller-paragraph bold-text bordered top bottom" >Costos de Despacho</td>
+                                <td class="half smaller-paragraph bordered top bottom" >$14.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half important-paragraph" >Total CMR</td>
+                                <td class="half huge-paragraph bold-text red-text" >$595.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half" >Total otro medio de pago</td>
+                                <td class="half" >$707.990</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="marginate top bottom">
+                        <a href="#" title="Continúa el proceso de compra" rel="nofollow" class="button medium-btn block-btn red-btn centered-text">Continúa el proceso de compra</a>
+                        <a href="#" title="Compra en 1 Click" rel="nofollow" class="button medium-btn block-btn grey-btn centered-text marginate top">Compra en 1 Click</a>
+                    </div>
+
+                    <p class="important-paragraph bordered marginate bottom">Productos en tu carro</p>
+                </section>
+                <!-- // -->
+                
+
+                <!-- Cabeceras de las tablas de items -->
+                <div class="cart-item-holder headers hide-on-mobile">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product-header">
+                            <p class="important-paragraph centered-text">Producto</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <p class="important-paragraph centered-text">Detalle</p>
+                        </div>
+                        <div class="cart-item-data price">
+                            <p class="important-paragraph centered-text">Precio unitario</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <p class="important-paragraph centered-text">Total</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <p class="important-paragraph centered-text">Eliminar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+                
+                <!-- Tablas de items -->
+                <div class="cart-item-holder" data-role="item">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product">
+                            <img src="http://fakeimg.pl/150x120" class="elastic-img">
+                        </div>
+                        <div class="cart-item-data product-name">
+                            <p class="bold-text">Marca</p>
+                            <p class="bold-text pad a-little bottom">Outback Parrila a gas 2 quemadores</p>
+                            <p class="pad a-little bottom">SKU: 452210-2</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <div class="pad a-little bottom">
+                                <label>Cantidad:</label>
+                                <div class="clearfix amount-input-holder" data-role="amount_input">
+                                    <div class="input-space">
+                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                    </div>
+                                    <div class="controls-space">
+                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                            <i class="fa fa-caret-up"></i>
+                                        </button>
+                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="pad a-little bottom hide-on-mobile">Talla: XXL</p>
+                            <div class="clearfix hide-on-mobile">
+                                <span class="fleft pad a-little right">Color:</span>
+                                <span class="fleft product-color red"></span>
+                            </div>
+                        </div>
+                        <div class="cart-item-data price hide-on-mobile">
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <div>
+                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                Precio CMR:
+                            </div>
+                            <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                            <p>Normal:</p>
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                <span class="text">Eliminar</span>
+                            </button>
+                        </div>
                     </div>
                     
-                    <div class="main-promo-slider" data-role="slider">
-                        <ul class="main-promo-slider-list" data-role="slides-holder">
-                            <li class="main-promo-slider-item active" data-index="0">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="1">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="2">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="3">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                        </ul>
-
-                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
-                            <button class="main-promo-slider-bullet active" data-index="0"></button>
-                            <button class="main-promo-slider-bullet" data-index="1"></button>
-                            <button class="main-promo-slider-bullet" data-index="2"></button>
-                            <button class="main-promo-slider-bullet" data-index="3"></button>
+                    <div class="cart-item-promos-holder regalos" data-role="item">
+                        <div class="cart-item-promos-title">
+                            Regalos y promociones asociados
                         </div>
+                        <div class="cart-item-promos-cells">
+                            <div class="cart-item-promo photo">
+                                <div class="mobile-column column half">
+                                    <img src="images/icons/promo-regalo-icon.png" class="centered-elastic-img">
+                                </div>
+                                <div class="mobile-column column half">
+                                    <img src="http://fakeimg.pl/70x70" class="centered-elastic-img">
+                                </div>
+                            </div>
+                            <div class="cart-item-promo info">
+                                <p>Somela</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+                                <p>SKU: 161520-3</p>
+                            </div>
+                            <div class="cart-item-promo price">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo total">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo delete">
+                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                    <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                    <span class="text">Eliminar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item-promos-holder servicios" data-role="item">
+                        <div class="cart-item-promos-title">
+                            Servicios adicionales
+                        </div>
+                        <div class="cart-item-promos-cells">
+                            <div class="cart-item-promo photo">
+                                <img src="images/icons/servicios-hogar-icon.jpg" class="centered-elastic-img">
+                            </div>
+                            <div class="cart-item-promo info">
+                                <p>Somela</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>SKU: 161520-3</p>
+                            </div>
+                            <div class="cart-item-promo price">
+                                <label class="pad a-little bottom">Garantía extendida</label>
+                                <select name="garantia-select" class="pretty-select inline-select grey-select">
+                                    <option value="">Seleccionar</option>
+                                    <option value="RM">Región Metropólitana</option>
+                                    <option value="RM">Región Metropólitana</option>
+                                </select>
+                            </div>
+                            <div class="cart-item-promo total">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo delete">
+                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                    <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                    <span class="text">Eliminar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item-holder" data-role="item">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product">
+                            <img src="http://fakeimg.pl/150x120" class="elastic-img">
+                        </div>
+                        <div class="cart-item-data product-name">
+                            <p class="bold-text">Marca</p>
+                            <p class="bold-text pad a-little bottom">Outback Parrila a gas 2 quemadores</p>
+                            <p class="pad a-little bottom">SKU: 452210-2</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <div class="pad a-little bottom">
+                                <label>Cantidad:</label>
+                                <div class="clearfix amount-input-holder" data-role="amount_input">
+                                    <div class="input-space">
+                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                    </div>
+                                    <div class="controls-space">
+                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                            <i class="fa fa-caret-up"></i>
+                                        </button>
+                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
-                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
-                                <i class="fa fa-chevron-left"></i>
+                            <p class="pad a-little bottom hide-on-mobile">Talla: XXL</p>
+                            <div class="clearfix hide-on-mobile">
+                                <span class="fleft pad a-little right">Color:</span>
+                                <span class="fleft product-color red"></span>
+                            </div>
+                        </div>
+                        <div class="cart-item-data price hide-on-mobile">
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <div>
+                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                Precio CMR:
+                            </div>
+                            <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                            <p>Normal:</p>
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                <span class="text">Eliminar</span>
                             </button>
-                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
-                                <i class="fa fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-item-promos-holder regalos" data-role="item">
+                        <div class="cart-item-promos-title">
+                            Regalos y promociones asociados
+                        </div>
+                        <div class="cart-item-promos-cells">
+                            <div class="cart-item-promo photo">
+                                <div class="mobile-column column half">
+                                    <img src="images/icons/promo-regalo-icon.png" class="centered-elastic-img">
+                                </div>
+                                <div class="mobile-column column half">
+                                    <img src="http://fakeimg.pl/70x70" class="centered-elastic-img">
+                                </div>
+                            </div>
+                            <div class="cart-item-promo info">
+                                <p>Somela</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit..</p>
+                                <p>SKU: 161520-3</p>
+                            </div>
+                            <div class="cart-item-promo price">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo total">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo delete">
+                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                    <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                    <span class="text">Eliminar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item-holder" data-role="item">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product">
+                            <img src="http://fakeimg.pl/150x120" class="elastic-img">
+                        </div>
+                        <div class="cart-item-data product-name">
+                            <p class="bold-text">Marca</p>
+                            <p class="bold-text pad a-little bottom">Outback Parrila a gas 2 quemadores</p>
+                            <p class="pad a-little bottom">SKU: 452210-2</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <div class="pad a-little bottom">
+                                <label>Cantidad:</label>
+                                <div class="clearfix amount-input-holder" data-role="amount_input">
+                                    <div class="input-space">
+                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                    </div>
+                                    <div class="controls-space">
+                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                            <i class="fa fa-caret-up"></i>
+                                        </button>
+                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="pad a-little bottom hide-on-mobile">Talla: XXL</p>
+                            <div class="clearfix hide-on-mobile">
+                                <span class="fleft pad a-little right">Color:</span>
+                                <span class="fleft product-color red"></span>
+                            </div>
+                        </div>
+                        <div class="cart-item-data price hide-on-mobile">
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <div>
+                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                Precio CMR:
+                            </div>
+                            <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                            <p>Normal:</p>
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                <span class="text">Eliminar</span>
                             </button>
                         </div>
                     </div>
-                </section>
 
-                <section class="secondary-promos-holder">
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
+                    <div class="cart-item-promos-holder servicios" data-role="item">
+                        <div class="cart-item-promos-title">
+                            Servicios adicionales
                         </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
+                        <div class="cart-item-promos-cells">
+                            <div class="cart-item-promo photo">
+                                <img src="images/icons/servicios-hogar-icon.jpg" class="centered-elastic-img">
+                            </div>
+                            <div class="cart-item-promo info">
+                                <p>Somela</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                                <p>SKU: 161520-3</p>
+                            </div>
+                            <div class="cart-item-promo price">
+                                <label class="pad a-little bottom">Garantía extendida</label>
+                                <select name="garantia-select" class="pretty-select inline-select grey-select">
+                                    <option value="">Seleccionar</option>
+                                    <option value="RM">Región Metropólitana</option>
+                                    <option value="RM">Región Metropólitana</option>
+                                </select>
+                            </div>
+                            <div class="cart-item-promo total">
+                                <p>Precio referencial</p>
+                                <p>$14.990 c/u</p>
+                            </div>
+                            <div class="cart-item-promo delete">
+                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                    <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                    <span class="text">Eliminar</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="cart-item-holder" data-role="item">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product">
+                            <img src="http://fakeimg.pl/150x120" class="elastic-img">
+                        </div>
+                        <div class="cart-item-data product-name">
+                            <p class="bold-text">Marca</p>
+                            <p class="bold-text pad a-little bottom">Outback Parrila a gas 2 quemadores</p>
+                            <p class="pad a-little bottom">SKU: 452210-2</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <div class="pad a-little bottom">
+                                <label>Cantidad:</label>
+                                <div class="clearfix amount-input-holder" data-role="amount_input">
+                                    <div class="input-space">
+                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                    </div>
+                                    <div class="controls-space">
+                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                            <i class="fa fa-caret-up"></i>
+                                        </button>
+                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
+                            <p class="pad a-little bottom hide-on-mobile">Talla: XXL</p>
+                            <div class="clearfix hide-on-mobile">
+                                <span class="fleft pad a-little right">Color:</span>
+                                <span class="fleft product-color red"></span>
+                            </div>
+                        </div>
+                        <div class="cart-item-data price hide-on-mobile">
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <div>
+                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                Precio CMR:
+                            </div>
+                            <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                            <p>Normal:</p>
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                <span class="text">Eliminar</span>
+                            </button>
+                        </div>
                     </div>
+                </div>
+                <div class="cart-item-holder" data-role="item">
+                    <div class="cart-item-data-holder">
+                        <div class="cart-item-data product">
+                            <img src="http://fakeimg.pl/150x120" class="elastic-img">
+                        </div>
+                        <div class="cart-item-data product-name">
+                            <p class="bold-text">Marca</p>
+                            <p class="bold-text pad a-little bottom">Outback Parrila a gas 2 quemadores</p>
+                            <p class="pad a-little bottom">SKU: 452210-2</p>
+                        </div>
+                        <div class="cart-item-data details">
+                            <div class="pad a-little bottom">
+                                <label>Cantidad:</label>
+                                <div class="clearfix amount-input-holder" data-role="amount_input">
+                                    <div class="input-space">
+                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                    </div>
+                                    <div class="controls-space">
+                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                            <i class="fa fa-caret-up"></i>
+                                        </button>
+                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
+                            <p class="pad a-little bottom hide-on-mobile">Talla: XXL</p>
+                            <div class="clearfix hide-on-mobile">
+                                <span class="fleft pad a-little right">Color:</span>
+                                <span class="fleft product-color red"></span>
+                            </div>
+                        </div>
+                        <div class="cart-item-data price hide-on-mobile">
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data total">
+                            <div>
+                                <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="inline-block-element">
+                                Precio CMR:
+                            </div>
+                            <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                            <p>Normal:</p>
+                            <p>$169.990 c/u</p>
+                        </div>
+                        <div class="cart-item-data delete">
+                            <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
+                                <span class="text">Eliminar</span>
+                            </button>
+                        </div>
                     </div>
-                </section>
+                </div>
+                <!-- // -->
+                
+                <!-- Agregar producto -->
+                <div class="add-to-cart-box clearfix bordered header-grey-border all">
+                    <div class="column thirds">
+                        <p class="add-to-cart-box-title important-paragraph">¿Quieres agregar otro producto?</p>
+                        <p class="add-to-cart-box-lead">Búscalo por el código del producto</p>
+                    </div>
+                    <div class="add-to-cart-box-inputs column thirds clearfix">
+                        <div class="mobile-column column half" data-equalize="children">
+                            <label for="add-product-sku" class="inline-label">SKU:</label>
+                            <input type="text" name="add-product-sku" id="add-product-sku" class="regular-input inline-input">
+                        </div>
+                        <div class="mobile-column column half" data-equalize="children">
+                            <label for="add-product-quantity" class="mobile-column column half inline-input-label">Cantidad:</label>
+                            <div class="clearfix amount-input-holder mobile-column column half" data-role="amount_input">
+                                <div class="input-space">
+                                    <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                </div>
+                                <div class="controls-space">
+                                    <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                        <i class="fa fa-caret-up"></i>
+                                    </button>
+                                    <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add-to-cart-box-actions column thirds righted-text clearfix">
+                        <a href="#" title="Agregar" rel="nofollow" class="button medium-btn light-grey-btn centered-text mobile-column half">Agregar</a>
+                        <a href="#" title="Ingreso turbo" rel="nofollow" class="button medium-btn light-grey-btn centered-text mobile-column half">Ingreso turbo</a>
+                    </div>
+                </div>
+                <!-- // -->
+
+                <!-- Resumen de compra -->
+                <div class="shopping-cart-details-holder marginate top bottom">
+                    <div class="shopping-cart-details bordered all hide-on-mobile">
+                        <table class="regular-table righted-text">
+                            <tr>
+                                <td class="half minified-paragraph" >Total productos (4)</td>
+                                <td class="half" ></td>
+                            </tr>
+                            <tr>
+                                <td class="half important-paragraph" >Subtotal CMR</td>
+                                <td class="half bold-text red-text" >$80.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half" >Subtotal otro medio de pago</td>
+                                <td class="half" >$107.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half smaller-paragraph bold-text bordered top bottom" >Costos de Despacho</td>
+                                <td class="half smaller-paragraph bordered top bottom" >$14.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half important-paragraph" >Total CMR</td>
+                                <td class="half huge-paragraph bold-text red-text" >$595.990</td>
+                            </tr>
+                            <tr>
+                                <td class="half" >Total otro medio de pago</td>
+                                <td class="half" >$707.990</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="righted-text marginate top">
+                        <a href="#" title="Ver más productos" rel="nofollow" class="button medium-btn light-grey-btn centered-text hide-on-mobile">Ver más productos</a>
+                        <a href="#" title="Compra en 1 Click" rel="nofollow" class="button mobile-block-btn medium-btn grey-btn centered-text">Compra en 1 Click</a>
+                        <a href="#" title="Continúa el proceso de compra" rel="nofollow" class="button mobile-block-btn medium-btn red-btn centered-text">Continúa el proceso de compra</a>
+                    </div>
+                </div>
+                <!-- // -->
+
+                 <!-- Otros usuario compraron -->
+                <div class="big-header-box hide-on-mobile">
+                    <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
+                        <h2>Otros usuario también compraron</h2>
+                    </div>
+                    <div class="big-header-box-body pad all">
+                        <div class="product-carousel clearfix" data-role="carousel_holder">
+                            <div class="product-carousel-control-holder">
+                                <button class="button carousel-control-btn prev" data-role="carousel_control" data-action="prev">
+                                    <i class="fa fa-chevron-left"></i>
+                                </button>
+                            </div>
+                            <div class="product-carousel-items" data-role="carousel">
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                                <div class="product-carousel-item">
+                                    <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
+
+                                    <p class="bold-text plain pad top bottom a-little">$17.990 <span class="regular-text smaller-paragraph">c/u</span></p>
+                                    <p>Generador 2.8 KVA Motor Bencinero</p>
+
+                                    <a href="#" title="Ver producto" rel="contents" class="button medium-btn red-btn block-btn centered-text">Ver producto</a>
+                                </div>
+                            </div>
+
+                            <div class="product-carousel-control-holder">
+                                <button class="button carousel-control-btn next" data-role="carousel_control" data-action="next">
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+
             </div>
         </main> 
         <!-- // -->
@@ -1231,6 +1807,12 @@
         <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/main.js"></script>
+        <!-- // -->
+
+        <!-- scripts y estilos especificos para los carruseles -->
+        <link rel="stylesheet" type="text/css" href="js/libs/owl-carousel/owl.carousel.css" />
+        <link rel="stylesheet" type="text/css" href="js/libs/owl-carousel/owl.theme.css" />
+        <script src="js/libs/owl-carousel/owl.carousel.min.js"></script>
         <!-- // -->
     </body>
 </html>

@@ -21,16 +21,16 @@
         right: 1em;
         top: 50%;
         margin-top: -1em;
-
-        /// fix para el padding
-        // width: ~"calc(100% - 2em)";
     }
+
+    &.margin-auto { margin: 0 auto; display: block;}
 
     &.one-line-medium-btn { padding: 12px 12px 12px 5px; }
     &.one-line-tall-btn { padding: 12px 0; }
     &.small-btn { padding: 2px 10px; }
     &.medium-btn { padding: 8px 10px; }
     &.tall-btn { padding: 12px 10px; }
+    &.wide-btn { padding: 8px 3em; }
     &.big-btn { padding: 2em; }
 
     &.red-btn {
@@ -60,6 +60,16 @@
         font-weight: normal;
         &:hover { 
             background: darken(@swatch_light_grey, 10%); 
+            color: #fff;
+        }
+    }
+
+    &.facebook-blue-btn {
+        background: @facebook_color;
+        color: #fff;
+        font-weight: normal;
+        &:hover { 
+            background: darken(@facebook_color, 10%); 
             color: #fff;
         }
     }
@@ -242,6 +252,54 @@
         border: 1px solid #fff;
         &:hover { border-color: @blocks_border_grey; }
     }
+
+    &.seamless-line-btn {
+        display: block;
+        font-weight: bold;
+        padding: 5px;
+        border: 1px solid @header_grey;
+        border-radius: 0;
+        margin-top: -1px;
+    }
+
+    &.bullet-btn {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 32px;
+        border: 1px solid @header_grey;
+        background: #fff;
+        vertical-align: middle;
+
+        &:hover {
+            border-color: lighten(@sodimac_red, 10%);
+            background: lighten(@sodimac_red, 10%);
+        }
+        &.active {
+            border-color: @sodimac_red;
+            background: @sodimac_red;
+        }
+    }
+
+    &.lightbox-close-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+
+        border: 1px solid #fff;
+        border-radius: 60px;
+        background: #666;
+        color: #fff;
+        &:hover { background: #333; }
+    }
+
+    ////////////////////////////////// MANU 
+    &.activar {
+        width: 140px;
+    }
 }
 
 .main-search-form {
@@ -380,6 +438,19 @@
     .fa { color: @sodimac_red; }
 }
 
+.square-icon {
+    display: inline-block;
+    font-size: inherit;
+    border-radius: @border_radius;
+    text-align: center;
+    padding: 4px;
+    line-height: 100%;
+
+    &.red {
+        background: @sodimac_red;
+    }
+}
+
 .check-icon-list {
     padding-left: 1.3em;
     list-style-image: url('../images/icons/check-icon.svg');
@@ -404,6 +475,11 @@
     &.peru:after { background-position: -48px 50%; }
 }
 
+.inline-input-label {
+    display: block;
+    line-height: 2.25em;
+}
+
 .pretty-select {
     .button-reset;
     &::-ms-expand { display: none; }
@@ -420,10 +496,32 @@
 
     .set-bg-img( url('../images/icons/chevron-down.svg'), url('../images/icons/chevron-down.png') );
     background-position: 95% 50%;
+    background-position: ~"calc(100% - 5px)" 50%;
     background-repeat: no-repeat;
+    background-color: #fff;
 
     &:hover, &:focus {
         border-color: darken(@blocks_border_grey, 10%);
+    }
+
+    &.grey-select {
+        background-color: @header_grey;
+    }
+
+
+    &.inline-select {
+        display: block;
+        width: auto;
+        padding-right: 2em;
+        margin-bottom: 0;
+    }
+
+    &.search-filter-select {
+        display: inline-block;
+        width: auto;
+        font-size: 11px;
+        padding-right: 2em;
+        margin-bottom: 0;
     }
 }
 
@@ -433,16 +531,22 @@
 }
 
 .amount-input-holder {
+    &.inline-holder {
+        display: inline-block;
+    }
+
     .input-space {
         float: left;
         width: 60%;
     }
+
     .controls-space {
         float: left;
         width: 40%;
         position: relative;
         height: 24px;
     }
+
     .amount_input {
         .button-reset;
         display: block;
@@ -521,6 +625,17 @@
     &.grey { background: @swatch_grey; }
 }
 
+.regular-list {
+    list-style: disc;
+    li { padding: 2px 0; }
+}
+
+.icon-list {
+    list-style: none;
+    padding: 0;
+    li { padding: 2px 0; }
+}
+
 .regular-select {
     display: block;
     width: 100%;
@@ -538,8 +653,42 @@
     border-radius: @border_radius;
     border: 1px solid @blocks_border_grey;
 
+    &.inline-input {
+        display: inline-block;
+        width: auto;
+        max-width: 60%;
+    }
+
     &:hover, &:focus {
         border-color: darken(@blocks_border_grey, 10%);
+    }
+}
+
+.regular-table {
+    width: 100%;
+    td, th, .bordered { padding: 5px; }
+    .half { width: 50%; }
+}
+
+.inline-input-container {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+
+    .inline-item {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5px;
+
+        &.ornament { padding: 0 5px; }
+    }
+
+    .regular-col {
+        width: 15%;
+    }
+
+    .minified-col {
+        width: 2em;
     }
 }
 
@@ -556,6 +705,9 @@
     position: relative;
 
    &.big-header { padding: 1em 5px; } 
+
+   h2 { text-align: left; }
+   h4 { text-align: center; }
 }
 
 .big-header-box-scroll-btn {
@@ -633,6 +785,13 @@
 .product-carousel {
     display: block;
     width: 100%;
+
+    &.full-carousel {
+        margin-top: 5px;
+        padding: 5px 0;
+        border: 1px solid @blocks_border_grey;
+        border-width: 1px 0 1px 0;
+    }
 }
 
 .product-carousel-control-holder, .product-carousel-items {
@@ -676,11 +835,12 @@
 .product-carousel-item {
     float: left;
     padding: 1em;
+    .full-carousel & { padding: 5px; }
 }
 
 .owl-item {
     border-left: 1px solid @header_grey;
-    .plain &, &:first-child { border-left: 0; }
+    .full-carousel &, .plain &, &:first-child { border-left: 0; }
 }
 
 .main-product-slider {
@@ -710,3 +870,122 @@
     &.active { opacity: 1; }
 }
 
+.main-product-slider-mobile-controls {
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid @blocks_border_grey;
+    border-width: 1px 0 1px 0;
+    .bullet-btn { margin: 0 3px; }
+}
+
+.mobile-carousel-holder {
+    margin-top: 1em;
+}
+
+.mobile-carousel-title {
+    font-size: 16px;
+}
+
+.inline-checkbox-holder {
+    display: block;
+    padding: 2px 0;
+    cursor: pointer;
+    .transform( translateY(-4px) );
+
+    .inline-checkbox-input {
+        .transform( translateY(3px) );
+    }
+
+    .inline-checkbox-input, .inline-checkbox-text {
+        display: inline-block;
+        line-height: 1em;
+    }
+}
+
+.search-sorting-type {
+    .image-replacement;
+    display: inline-block;
+    height: 16px;
+
+    .set-bg-img( url('../images/icons/search-sorting-icons-sprite.svg'), url('../images/icons/search-sorting-icons-sprite.png') );
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &.grid-3x4 {
+        width: 16px;
+        background-position: 0 0;
+        &:hover, &.active {
+            background-position: 0 -18px;
+        }
+    }
+    &.grid-1 {
+        width: 19px;
+        background-position: -18px 0;
+        &:hover, &.active {
+            background-position: -18px -18px;
+        }
+    }
+    &.grid-4x4 {
+        width: 19px;
+        background-position: -39px 0;
+        &:hover, &.active {
+            background-position: -39px -18px;
+        }
+    }
+}
+
+/////////////////////////////
+///////// MANU 
+
+.icon-ancho {
+    width: 25px;
+}
+
+//////////////////// Lightbox
+.lightbox-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    display: block;
+    width: 100%;
+    min-width: 100vh;
+    background: rgba(255,255,255,0.8);
+    opacity: 0;
+    .transform( translateZ(0) );
+}
+
+.lightbox-content {
+    display: block;
+    width: 700px;
+    padding: 1em;
+    background: #fff;
+    box-shadow: 0 0 1em rgba(0,0,0,0.5);
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -350px;
+    .transform( translateZ(0) );
+}
+
+.lightbox-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.lightbox-header-box {
+    margin-bottom: 1em;
+    border: 1px solid  @header_grey;
+
+    .lightbox-title {
+        padding: 0.5em;
+        background: @header_grey;
+    }
+}
+
+.lightbox-header-data {
+    padding: 0.5em;
+}

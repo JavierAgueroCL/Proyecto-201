@@ -7,7 +7,6 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -442,8 +441,8 @@
             <!-- Navegacion principal -->
             <nav id="main-nav" class="main-navigation container clearfix">
                 <!-- Menu principal Desktop -->
-                <div class="main-navigation-item submenu-holder deployed hide-on-mobile">
-                    <button class="button block-btn deploy-btn">Buscar por Categoría</button>
+                <div class="main-navigation-item submenu-holder hide-on-mobile">
+                    <button class="button block-btn deploy-btn" data-func="deploy_submenu" data-set-width="false">Buscar por Categoría</button>
                     <div class="submenu">
                         <a href="#" title="Campaña OnLine" rel="section" class="submenu-list-item">Campaña OnLine</a>
                         <a href="#" title="Muebles" rel="section" class="submenu-list-item">Muebles</a>
@@ -900,104 +899,461 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="main-promos-holder">
-                    <div class="main-promo-banner-holder hide-on-mobile">
-                        <a href="#" title="Banner" rel="noindex nofollow" class="main-promo-banner">
-                            <img src="http://fakeimg.pl/838x58" class="elastic-img">
-                        </a>
-                    </div>
-                    
-                    <div class="main-promo-slider" data-role="slider">
-                        <ul class="main-promo-slider-list" data-role="slides-holder">
-                            <li class="main-promo-slider-item active" data-index="0">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                <section class="breadcrumbs-holder hide-on-mobile">
+                    <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Categoría abuelo</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría padre" rel="section" class="breadcrumb-item">Categoría padre</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría hijo" rel="section" class="breadcrumb-item">Categoría hijo</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Mosaico productos" rel="section" class="breadcrumb-item">Mosaico productos</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Mosaico productos" rel="section" class="breadcrumb-item">Productos</a>
+                </section>
+
+                <section class="mobile-back-holder hide-on-desktop">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text bordered bottom">
+                        <i class="fa fa-chevron-left"></i>
+                        Muebles y Decohogar
+                    </a>
+                </section>
+
+                <section class="clearfix">
+                    <div class="regular-sidebar column big-gap quarters">
+                        <h1 class="page-sidebar-title mobile-menu-title uppercase">Mueble y decohogar</h1>
+                        
+                        <img src="http://fakeimg.pl/300x150" class="marginate bottom block-element elastic-img hide-on-desktop" >
+
+                        <ul class="sidebar-item-list marginate bottom">
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles de cocina" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles de cocina</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
                             </li>
-                            <li class="main-promo-slider-item" data-index="1">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles dormitorio" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles dormitorio</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
                             </li>
-                            <li class="main-promo-slider-item" data-index="2">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles Home Office" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles Home Office</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
                             </li>
-                            <li class="main-promo-slider-item" data-index="3">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles de estar" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles de estar</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles living comedor" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles living comedor</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Menaje" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Menaje</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Muebles infantiles" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Muebles infantiles</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Iluminación" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Iluminación</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Camas, Colchones" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Camas, Colchones</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Decohogar, Textil" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Decohogar, Textil</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" title="Organización" rel="section" class="sidebar-item-link" data-func="deploy_mobile_submenu" data-modifier="only-mobile">Organización</a>
+                                <div class="sidebar-submenu">
+                                    <a href="#" title="Centros de entretenimiento" rel="subsection" class="sidebar-submenu-link">Centros de entretenimiento</a>
+                                    <a href="#" title="Futones, Sofás Cama" rel="subsection" class="sidebar-submenu-link">Futones, Sofás Cama</a>
+                                    <a href="#" title="Racks" rel="subsection" class="sidebar-submenu-link">Racks</a>
+                                    <a href="#" title="Sofás, Juegos de Living" rel="subsection" class="sidebar-submenu-link">Sofás, Juegos de Living</a>
+                                    <a href="#" title="Bergeres, Poltronas" rel="subsection" class="sidebar-submenu-link">Bergeres, Poltronas</a>
+                                    <a href="#" title="Sillas diseños" rel="subsection" class="sidebar-submenu-link">Sillas diseños</a>
+                                    <a href="#" title="Sillas plegables" rel="subsection" class="sidebar-submenu-link">Sillas plegables</a>
+                                    <a href="#" title="Poufs, Peras" rel="subsection" class="sidebar-submenu-link">Poufs, Peras</a>
+                                    <a href="#" title="Sillas de visita" rel="subsection" class="sidebar-submenu-link">Sillas de visita</a>
+                                    <a href="#" title="Apoya pies, Ottoman" rel="subsection" class="sidebar-submenu-link">Apoya pies, Ottoman</a>
+                                    <a href="#" title="Pisos" rel="subsection" class="sidebar-submenu-link">Pisos</a>
+                                    <a href="#" title="Soportes de TV" rel="subsection" class="sidebar-submenu-link">Soportes de TV</a>
+                                </div>
                             </li>
                         </ul>
 
-                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
-                            <button class="main-promo-slider-bullet active" data-index="0"></button>
-                            <button class="main-promo-slider-bullet" data-index="1"></button>
-                            <button class="main-promo-slider-bullet" data-index="2"></button>
-                            <button class="main-promo-slider-bullet" data-index="3"></button>
+                        <h2 class="page-sidebar-subtitle uppercase hide-on-mobile">Marcas Top</h2>
+                        <ul class="regular-list bordered marginate bottom hide-on-mobile">
+                            <li><a href="#" title="Home collection" rel="section">Home collection</a></li>
+                            <li><a href="#" title="Danish Design" rel="section">Danish Design</a></li>
+                            <li><a href="#" title="Muebles Sur" rel="section">Muebles Sur</a></li>
+                            <li><a href="#" title="Rosen" rel="section">Rosen</a></li>
+                        </ul>
+
+                        <h3 class="page-sidebar-heading hide-on-mobile">Elije mejor tus productos</h3>
+                        <ul class="icon-list bordered marginate bottom hide-on-mobile">
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Home collection" rel="section">Home collection</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Danish Design" rel="section">Danish Design</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Muebles Sur" rel="section">Muebles Sur</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-file-o"></i>
+                                <a href="#" title="Rosen" rel="section">Rosen</a>
+                            </li>
+                        </ul>
+
+                        <div class="bordered marginate bottom clearfix hide-on-mobile">
+                            <div class="column three-quarters">
+                                <h3 class="page-sidebar-heading">Servicios Hogar</h3>
+                            </div>
+                            <div class="column quarters">
+                                <img src="images/icons/home-service.png" class="block-element">
+                            </div>
                         </div>
 
-                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
-                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </button>
-                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
-                                <i class="fa fa-chevron-right"></i>
-                            </button>
+                        <div class="bordered bottom hide-on-mobile">
+                            <div class="clearfix">
+                                <div class="column quarters">
+                                    <img src="images/icons/destornillador.png" class="block-element">
+                                </div>
+                                <div class="column three-quarters">
+                                    <p class="bold-text">Armado de Muebles</p>
+                                    <p>Contratar nuestro Servicio de Armado de Muebles</p>
+                                </div>
+                            </div>
+                            
+                            <div class="clearfix marginate top">
+                                <div class="column quarters">
+                                    <img src="images/icons/tuercas.png" class="block-element">
+                                </div>
+                                <div class="column three-quarters">
+                                    <p class="bold-text">Diseño y proyectos</p>
+                                    <p>Contratar nuestro Servicio de Diseño</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </section>
+                    <div class="regular-page-content column big-gap three-quarters hide-on-mobile">
+                        <div class="marginate bottom">
+                            <img src="http://fakeimg.pl/838x380" class="elastic-img block-element">
+                        </div>
 
-                <section class="secondary-promos-holder">
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                        <h2 class="page-sidebar-title bordered marginate bottom">Muebles de cocina</h2>
 
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
+                        <div class="clearfix bordered marginate bottom">
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
+                        <div class="clearfix bordered marginate bottom">
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
+                        <div class="clearfix bordered marginate bottom">
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="clearfix bordered marginate bottom">
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                            <div class="column big-gap thirds">
+                                <img src="http://fakeimg.pl/232x232" class="elastic-img block-element">
+                                <div class="pad all">
+                                    <p class="important-paragraph pad a-little bottom">Muebles de cocina</p>
+                                    <a href="#" title="Cocina modular Teka (33)" rel="subsection" class="block-element">Cocina modular Teka (33)</a>
+                                    <a href="#" title="Cocina modular Canela (15)" rel="subsection" class="block-element">Cocina modular Canela (15)</a>
+                                    <a href="#" title="Cocina modular Milan (35)" rel="subsection" class="block-element">Cocina modular Milan (35)</a>
+                                    <a href="#" title="Cocina modular Clean (33)" rel="subsection" class="block-element">Cocina modular Clean (33)</a>
+                                    <a href="#" title="Combos y proyectos (23)" rel="subsection" class="block-element">Combos y proyectos (23)</a>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
+                        <section class="regular-content-section">
+                            <h2 class="regular-content-section-title">Inspírate con nosotros</h2>
+                            <div class="clearfix pad all">
+                                <div class="column big-gap thirds">
+                                    <img src="http://fakeimg.pl/230x230" class="elastic-img block-element">
+                                    <p class="pad all bold-text">Guía de Compra</p>
+                                    <p class="pad left right bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis at temporibus autem quos fugit, dolores rem unde aut, minus quis cupiditate maxime iure praesentium ea numquam quae. Sequi, a, quam.</p>
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                                    <a href="#" title="Ver más" rel="contents" class="block-element righted-text">
+                                        Ver más
 
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
+                                        <span class="square-icon red white-text">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="column big-gap two-thirds">
+                                    <img src="http://fakeimg.pl/473x230" class="elastic-img block-element">
+                                    <p class="pad all bold-text">Instalación de Muebles de Cocina</p>
+                                    <p class="pad left right bottom">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis at temporibus autem quos fugit, dolores rem unde aut, minus quis cupiditate maxime iure praesentium ea numquam quae. Sequi, a, quam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi repellendus, omnis nisi laboriosam facilis beatae, consectetur nemo quas velit enim consequuntur, quae eius expedita vel, odit sed reprehenderit itaque quo.</p>
+
+                                    <a href="#" title="Ver más" rel="contents" class="block-element righted-text">
+                                        Ver más
+
+                                        <span class="square-icon red white-text">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </section>
             </div>

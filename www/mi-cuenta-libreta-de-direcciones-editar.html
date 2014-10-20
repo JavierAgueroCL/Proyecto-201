@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sodimac</title>
+        <title>Sodimac - Mi Cuenta</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
@@ -442,8 +442,8 @@
             <!-- Navegacion principal -->
             <nav id="main-nav" class="main-navigation container clearfix">
                 <!-- Menu principal Desktop -->
-                <div class="main-navigation-item submenu-holder deployed hide-on-mobile">
-                    <button class="button block-btn deploy-btn">Buscar por Categoría</button>
+                <div class="main-navigation-item submenu-holder hide-on-mobile">
+                    <button class="button block-btn deploy-btn" data-func="deploy_submenu" data-set-width="false">Buscar por Categoría</button>
                     <div class="submenu">
                         <a href="#" title="Campaña OnLine" rel="section" class="submenu-list-item">Campaña OnLine</a>
                         <a href="#" title="Muebles" rel="section" class="submenu-list-item">Muebles</a>
@@ -900,106 +900,196 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="main-promos-holder">
-                    <div class="main-promo-banner-holder hide-on-mobile">
-                        <a href="#" title="Banner" rel="noindex nofollow" class="main-promo-banner">
-                            <img src="http://fakeimg.pl/838x58" class="elastic-img">
-                        </a>
-                    </div>
-                    
-                    <div class="main-promo-slider" data-role="slider">
-                        <ul class="main-promo-slider-list" data-role="slides-holder">
-                            <li class="main-promo-slider-item active" data-index="0">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="1">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="2">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                            <li class="main-promo-slider-item" data-index="3">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
-                                <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
-                            </li>
-                        </ul>
-
-                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
-                            <button class="main-promo-slider-bullet active" data-index="0"></button>
-                            <button class="main-promo-slider-bullet" data-index="1"></button>
-                            <button class="main-promo-slider-bullet" data-index="2"></button>
-                            <button class="main-promo-slider-bullet" data-index="3"></button>
-                        </div>
-
-                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
-                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
-                                <i class="fa fa-chevron-left"></i>
-                            </button>
-                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
-                                <i class="fa fa-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
+                <section class="breadcrumbs-holder hide-on-mobile">
+                    <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Mi Cuenta</a>
+                    <i class="fa fa-angle-right"></i>
+                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Tus datos para Compra en 1 click</a>
                 </section>
 
-                <section class="secondary-promos-holder">
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="secondary-promo-row clearfix">
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                        <div class="column thirds">
-                            <a href="#" title="Promo" rel="nofollow" class="block-element">
-                                <img src="http://fakeimg.pl/326x220" class="elastic-img">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
-
-                    <div class="secondary-promo-row column full hide-on-mobile">
-                        <a href="#" title="Promo" rel="nofollow" class="block-element">
-                            <img src="http://fakeimg.pl/1000x200" class="elastic-img">
-                        </a>
-                    </div>
+                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
+                        <i class="fa fa-chevron-left"></i>
+                        Inicio
+                    </a>
                 </section>
+                <section class="clearfix hide-on-desktop tit-sec">
+                	<h2>MI CUENTA</h2>
+                </section>
+
+                <section id="mi-cuenta" class="clearfix">
+                	<div class="cont-cuenta column big-gap three-quarters">
+                		<h2 class="border-bottom hide-on-mobile">Tus datos para Compra en 1 Click</h2>
+                        <div class="caja-datos">
+                            <h2>Editar Dirección</h2>
+                        </div>
+                        <form action="" class="datos-direccion">
+                            <div class="cont-form"> <!-- Contenido Form -->
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Nombre</label>
+                                        <input type="text" name="nombre" placeholder="Nombre" required="" value="Diego">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Nombre corto:</label>
+                                        <input type="text" name="nombrecorto" placeholder="Nombre corto" required="" value="Casa de la playa">
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Apellido paterno:</label>
+                                        <input type="text" name="apellidopaterno" placeholder="" value="Martinez" required="">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Apellido materno:</label>
+                                        <input type="text" name="apellidomaterno" placeholder="" value="Lastra" required="">
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Calle:</label>
+                                        <input type="text" name="calle" placeholder="Calle" value="Avenida Siempreviva" required="">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Dirección:</label>
+                                        <select name="direccion" id="">
+                                            <option value="">Casa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Número:</label>
+                                        <input type="text" name="numero" placeholder="Número" value="2300" required="">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Depto:</label>
+                                        <input type="text" name="depto" placeholder="Depto" value="206" required="">
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Código postal:</label>
+                                        <input type="text" name="depto" placeholder="Còdigo postal" required="" class="medio" value="3456">
+                                        <a href="#" class="minified-paragraph"><em>Buscar código postal</em></a>
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Ubicación:</label>
+                                        <select name="Ubicacion" id="">
+                                            <option value="">Región</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Celular:</label>
+                                        <input type="text" name="depto" placeholder="cod" required="" class="cod" value="09">
+                                    <input type="text" name="numcelu" placeholder="Número Celular" class="numero" value="34345343">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Ciudad:</label>
+                                        <select name="Ciudad" id="">
+                                            <option value="">Santiago</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Télefono casa:</label>
+                                        <input type="text" name="casa" placeholder="cod" value="02" required="" class="cod">
+                                        <input type="text" name="numcelu" placeholder="Número casa" value="25782950" class="numero">
+                                    </div>
+                                    <div class="fleft width50 full-m">
+                                        <label for="" class="hide-on-mobile">Télefono oficina:</label>
+                                        <input type="text" name="oficina" placeholder="cod" required="" class="cod" value="02">
+                                        <input type="text" name="numcelu" placeholder="Télefono oficina" value="25255256" class="numero">
+                                    </div>
+                                </div>
+                            </div> <!-- Fin Contenido Form -->
+                            <div class="clearfix">
+                                <div class="fleft hide-on-mobile">
+                                    <span><em>(*) Campos Obligatorios</em></span>
+                                </div>
+                                <div class="fright full-m">
+                                    <button class="button medium-btn red-btn full-m">Guardar dirección</button>
+                                </div>
+                            </div>
+                        </form>
+
+                	</div> <!-- Contenido Derecho -->
+                	<aside class="side column big-gap quarters">
+                		<h2 class="border-bottom">Mi Cuenta</h2>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
+                			<ul>
+	                			<li>
+	                				<a href="#" title="Datos para compra en 1 Click">Datos para compra en 1 Click</a>
+	                			</li>
+	                		</ul>
+                		</div>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Datos Personales">Datos Personales</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Cambio de clave">Cambio de clave</a>
+	                			</li>
+	                		</ul>
+                		</div>                
+						<div>
+							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Todas mis compras">Todas mis compras</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis pedidos en tienda">Mis pedidos en tienda</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
+	                			</li>
+	                		</ul>
+						</div>
+						<div>
+							<h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Mis cotizaciones en tienda">Mis cotizaciones en tienda</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis servicios cotizados">Mis servicios cotizados</a>
+	                			</li>
+	                		</ul>
+						</div>
+                		<div>
+                			<h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+	                		<ul>
+	                			<li>
+	                				<a href="#" title="Saldo tarjeta CMR">Saldo tarjeta CMR</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Saldo tarjeta de regalo">Saldo tarjeta de regalo</a>
+	                			</li>
+	                			<li>
+	                				<a href="#" title="Mis cupones de descuento">Mis cupones de descuento</a>
+	                			</li>
+	                		</ul>
+                		</div>               		
+                	</aside>
+                </section>
+
             </div>
         </main> 
         <!-- // -->
