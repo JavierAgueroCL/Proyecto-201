@@ -951,8 +951,8 @@
                             </div>
                             <div class="margin-bot10">
                                 <label for="" class="largo auto">Fecha del evento:</label>
-                                <input type="text" class="calendario">
-                                <span id="abrircalendario"><i class="fa fa-calendar-o"></i></span>
+                                <input type="date" data-role="get_calendar" class="calendario" id="calendario-input">
+                                <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input"><i class="fa fa-calendar-o"></i></span>
                             </div>
                         </div>
 
@@ -1266,6 +1266,13 @@
         <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/main.js"></script>
+        <!-- // -->
+
+        <!-- scripts y estilos especificos para datepicker -->
+        <link rel="stylesheet" type="text/css" href="js/libs/pickadate/themes/default.css" />
+        <link rel="stylesheet" type="text/css" href="js/libs/pickadate/themes/default.date.css" />
+        <script src="js/libs/pickadate/picker.js"></script>
+        <script src="js/libs/pickadate/picker.date.js"></script>
         <!-- // -->
     </body>
 </html>

@@ -942,6 +942,13 @@
     width: 25px;
 }
 
+
+input[type="date"] {
+    &::-webkit-clear-button, &::-webkit-inner-spin-button, &::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+}
+
 //////////////////// Lightbox
 .lightbox-background {
     position: absolute;
