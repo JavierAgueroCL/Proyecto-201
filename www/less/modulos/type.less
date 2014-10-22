@@ -23,6 +23,13 @@ a {
     &:hover {
         text-decoration: underline;
     }
+
+    &.decorated {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 b, strong, .bold-text {
@@ -31,6 +38,10 @@ b, strong, .bold-text {
 
 .italic-text {
     font-style: italic;
+}
+
+.regular-text {
+    font-weight: normal;
 }
 
 .light-text {

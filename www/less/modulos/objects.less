@@ -296,9 +296,47 @@
         &:hover { background: #333; }
     }
 
+    &.square-icon-btn {
+        padding: 5px 12px;
+        font-size: 21px;
+        text-align: center;
+        line-height: 100%;
+
+        &.grey-icon {
+            background: @previous_grey;
+            color: #fff;
+            &:hover { background: lighten(@previous_grey, 10%); } 
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+
     ////////////////////////////////// MANU 
     &.activar {
         width: 140px;
+    }
+}
+
+.big-icon-holder {
+    display: inline-block;
+    border: 1px solid @blocks_border_grey;
+    color: @light_text_color;
+    font-size: 3em;
+
+    width: 55px;
+    height: 55px;
+
+    &.floated-icon { float: left; }
+    &.circle-icon { border-radius: 1000px; } // siempre circular
+
+    &.shopping-cart {
+        .set-bg-img( url('../images/icons/shopping-cart-icon.svg'), url('../images/icons/shopping-cart-icon.png') );
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
     }
 }
 
@@ -653,10 +691,22 @@
     border-radius: @border_radius;
     border: 1px solid @blocks_border_grey;
 
+    textarea& {
+        min-height: 100px;
+    }
+
     &.inline-input {
         display: inline-block;
         width: auto;
         max-width: 60%;
+    }
+
+    &.one-character-input {
+        width: 2em;
+    }
+
+    &.white-bg {
+        background: #fff;
     }
 
     &:hover, &:focus {
@@ -679,7 +729,8 @@
         display: table-cell;
         vertical-align: middle;
         padding: 5px;
-
+        
+        &.va-top { vertical-align: top; }
         &.ornament { padding: 0 5px; }
     }
 
@@ -893,9 +944,9 @@
     cursor: pointer;
     .transform( translateY(-4px) );
 
-    .inline-checkbox-input {
-        .transform( translateY(3px) );
-    }
+    // .inline-checkbox-input {
+    //     .transform( translateY(3px) );
+    // }
 
     .inline-checkbox-input, .inline-checkbox-text {
         display: inline-block;
@@ -935,6 +986,60 @@
     }
 }
 
+.inline-block-inputs {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+    color: #000;
+    cursor: pointer;
+
+    label, input {
+        display: inline-block;
+        vertical-align: middle
+    }
+}
+
+.fake-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    vertical-align: middle;
+    width: 100%;
+
+    .fake-row { 
+        display: table-row; 
+    }
+    .fake-td, .fake-th { 
+        display: table-cell; 
+        vertical-align: middle;
+        padding: 5px; 
+    }
+
+    .fake-th {
+        text-align: center;
+        &.lefted { text-align: left; }
+    }
+
+    &.big-headers {
+        .fake-th {
+            padding: 10px;
+            background: @header_grey;
+        }
+    }
+
+    &.bordered-table {
+        border: 1px solid @header_grey;
+
+        .fake-td, .fake-th { 
+            border: 1px solid @header_grey;
+        }
+    }
+
+    .place-column { width: 25%; }
+    .address-column { width: 35%; }
+    .hours-column { width: 40%; }
+}
+
 /////////////////////////////
 ///////// MANU 
 
@@ -959,7 +1064,7 @@ input[type="date"] {
     z-index: 999999;
     display: block;
     width: 100%;
-    min-width: 100vh;
+    min-width: 100vw;
     background: rgba(255,255,255,0.8);
     opacity: 0;
     .transform( translateZ(0) );

@@ -49,12 +49,10 @@
 .clearer {
     clear: both;
 }
-
 .inline-block-container {
     font-size: 0;
     line-height: 0;
 }
-
 .pad {
     &.bottom { padding-bottom: 1em; }
     &.top { padding-top: 1em; }
@@ -71,7 +69,6 @@
         &.all { padding: 0.5em; }
     }
 }
-
 .marginate {
     &.bottom { margin-bottom: 1em; }
     &.top { margin-top: 1em; }
@@ -88,7 +85,6 @@
         &.all { margin: 0.5em; }
     }
 }
-
 .bordered {
     &.top {
         padding-top: @base_font_size;
@@ -108,10 +104,19 @@
     }
 }
 
+.white-bg {
+    background-color: #fff;
+}
+.header-grey-bg {
+    background-color: @header_grey;
+}
+
 .relative-pos { position: relative; }
 
 .fright { float: right; }
 .fleft { float: left; }
+
+.va-middle { vertical-align: middle; }
 
 .block-element { display: block; }
 .inline-block-element { display: inline-block; }

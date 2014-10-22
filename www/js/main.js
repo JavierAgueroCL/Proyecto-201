@@ -163,6 +163,27 @@
                 scrollTop : $target.offset().top - $(this).height()
             }, 700);
         },
+        reset_target_input : function( event ){
+            event.preventDefault();
+            $( $(this).data('target') ).val('');
+        },
+        show_payment_tab : function( event ){
+            var $item = $(this),
+                $targets = $('.payment-methods-tab-item'),
+                target;
+
+            if( $item.is('select') ){
+                target = $item.find('option:selected').data('target');
+            } else {
+                target = $item.data('target');
+            }
+
+            $item.parents('.desktop-tabs-controls').find('.active').removeClass('active');
+            $targets.removeClass('active');
+
+            $item.parent().addClass('active');
+            $targets.filter('[data-tabname="'+ target +'"]').addClass('active');
+        },
         show_lightbox : function( event ){
             var $item = $(event.currentTarget),
                 type = $item.data('type'); // actuará como nombre del modal
@@ -262,7 +283,6 @@
             // cerramos los lightbox que puedan estar abiertos
             // usamos el API de $.deferred para esperar a que se termine la animacion
             this.close_lightbox( true ).then(function(){
-
                 // se hace scroll hacia el top para mostrar el lightbox
                 $('html, body').animate({ scrollTop: 0 }, 700);
 
@@ -278,14 +298,18 @@
         },
         close_lightbox : function( no_scroll ){
             // se devuelve el scroll a su posicion original
-            if( !no_scroll ){
+            if( ! no_scroll ){
                 $('html, body').animate({ scrollTop: this.scrollPos }, 700);
             }
 
             // se hace desaparecer el lightbox
-            return $('#lightbox').animate({ opacity: 0 }, 700).promise().then(function(){
-                $('#lightbox').remove();
-            });
+            if( $('#lightbox').length ){
+                return $('#lightbox').animate({ opacity: 0 }, 700).promise().then(function(){
+                    $('#lightbox').remove();
+                });
+            }
+            
+            return new $.Deferred().resolve();
         },
 
         ///
@@ -461,6 +485,7 @@
             });
         },
 
+        /// Controlador de los datepickers
         datepickers : function( $elements ){
             $elements.each(function(){
                 var $item = $(this);
