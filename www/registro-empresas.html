@@ -3,13 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sodimac - Mi Cuenta</title>
+        <title>Sodimac - Registro Empresas</title>
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
@@ -900,261 +899,278 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <section class="breadcrumbs-holder hide-on-mobile">
-                    <a href="#" title="Ir al inicio" rel="index" class="breadcrumb-item">Home</a>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Mi Cuenta</a>
-                    <i class="fa fa-angle-right"></i>
-                    <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Mis cotizaciones</a>
-                </section>
+                <div class="login-options-holder hide-on-mobile">
+                    <span class="current-login-option">Registro</span>
+                    |
+                    <a href="#" title="Iniciar sesión como persona" rel="nofollow">o puedes registrarte como persona</a>
+                </div>
 
-                <section class="mobile-back-holder hide-on-desktop margin-top10 border-bottom">
-                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
-                        <i class="fa fa-chevron-left"></i>
-                        Mi Cuenta
+                <div class="login-options-holder clearfix hide-on-desktop">
+                    <span class="current-login-option uppercase mobile-column half">Registra tus datos</span>
+                    <a class="righted-text mobile-column half" href="#" title="Como persona" rel="nofollow">
+                        como persona
+                        <i class="fa fa-chevron-right"></i>
                     </a>
-                </section>
-                <section class="clearfix hide-on-desktop tit-sec">
-                	<h2>Mis cotizaciones en tienda</h2>
-                </section>
-
-                <section id="mi-cuenta" class="clearfix">
-                	<div class="cont-cuenta column big-gap three-quarters">
-                		<h2 class="border-bottom hide-on-mobile">Mis cotizaciones en tienda</h2>
-                        <form action="/" method="post">
-                            <div class="caja-datos">
-                                <h2>Cotizaciones registradas</h2>
-                                <div class="pad all">
-                                    <label for="tienda-select" class="inline-block-element margin-right10">Seleccione una tienda:</label>
-                                    <select name="tienda-select" id="tienda-select" class="select tienda">
-                                        <option value="Tienda 1">Tienda 1</option>
-                                        <option value="Tienda 2">Tienda 2</option>
-                                    </select>
+                </div>
+                
+                <section class="registro">
+                    <h1 class="only-on-desktop titulo">Registra los datos de la empresa</h1>
+                    <p class="marginate top bottom">Al registrarte estarás enterado de las últimas novedades y oportunidades que tenemos para ti. Además, podrás crear listas de regalos, revisar el historial de tus compras y predeterminar tus datos para compras más rápidas. Compra con 1 click</p>
+                    <form action="/" method="post">
+                        <div class="regular-content marginate bottom">
+                            <h2 class="regular-content-tittle pad a-little top bottom left">1. Datos de la cuenta <span class="error">Las contraseñas no coinciden</span></h2>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-email" class="inline-item regular-col">Email:</label>
+                                        <input class="regular-input inline-item" type="email" name="registro-email" id="registro-email" placeholder="Ingresa tu e-mail" required="">
+                                    </div>
                                 </div>
-                                <div class="table no-borderbot no-borderright no-borderleft">
-                                    <ul class="table-row hide-on-mobile centered-text ">
-                                        <li>Creación</li>
-                                        <li>Tienda</li>
-                                        <li>Monto</li>
-                                        <li>Expiración</li>
-                                        <li>Número</li>
-                                        <li>Ver cotización</li>
-                                        <li>Agregar al carro</li>
-                                        <li>Eliminar</li>
-                                    </ul>
-                                    <ul class="table-row centered-text" data-role="item">
-                                        <li class="lefted-text">
-                                            <span class="only-on-mobile">Creación</span>
-                                            <span>20/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Tienda</span>
-                                            <span>HC Las Condes</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Monto</span>
-                                            <span>$245.345</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Expiración</span>
-                                            <span>24/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Número</span>
-                                            <span>453453543</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Ver cotización</span>
-                                            <a href="#" title="Ver cotización" class="icono block-element" rel="content">Ver cotización<i class="fa fa-eye"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Agregar al carro</span>
-                                            <a href="#" title="Agregar al carro" class="icono block-element" rel="content">Agregar al carro<i class="fa fa-shopping-cart"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Eliminar</span>
-                                            <a href="#" title="Eliminar" class="icono block-element" rel="content" data-func="delete_parent_item">Eliminar<i class="fa fa-trash"></i></a>
-                                        </li>
-                                    </ul>
-                                    <ul class="table-row centered-text" data-role="item">
-                                        <li class="lefted-text">
-                                            <span class="only-on-mobile">Creación</span>
-                                            <span>20/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Tienda</span>
-                                            <span>HC Las Condes</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Monto</span>
-                                            <span>$245.345</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Expiración</span>
-                                            <span>24/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Número</span>
-                                            <span>453453543</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Ver cotización</span>
-                                            <a href="#" title="Ver cotización" class="icono block-element" rel="content">Ver cotización<i class="fa fa-eye"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Agregar al carro</span>
-                                            <a href="#" title="Agregar al carro" class="icono block-element" rel="content">Agregar al carro<i class="fa fa-shopping-cart"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Eliminar</span>
-                                            <a href="#" title="Eliminar" class="icono block-element" rel="content" data-func="delete_parent_item">Eliminar<i class="fa fa-trash"></i></a>
-                                        </li>
-                                    </ul>
-                                    <ul class="table-row centered-text" data-role="item">
-                                        <li class="lefted-text">
-                                            <span class="only-on-mobile">Creación</span>
-                                            <span>20/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Tienda</span>
-                                            <span>HC Las Condes</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Monto</span>
-                                            <span>$245.345</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Expiración</span>
-                                            <span>24/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Número</span>
-                                            <span>453453543</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Ver cotización</span>
-                                            <a href="#" title="Ver cotización" class="icono block-element" rel="content">Ver cotización<i class="fa fa-eye"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Agregar al carro</span>
-                                            <a href="#" title="Agregar al carro" class="icono block-element" rel="content">Agregar al carro<i class="fa fa-shopping-cart"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Eliminar</span>
-                                            <a href="#" title="Eliminar" class="icono block-element" rel="content" data-func="delete_parent_item">Eliminar<i class="fa fa-trash"></i></a>
-                                        </li>
-                                    </ul>
-                                    <ul class="table-row centered-text" data-role="item">
-                                        <li class="lefted-text">
-                                            <span class="only-on-mobile">Creación</span>
-                                            <span>20/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Tienda</span>
-                                            <span>HC Las Condes</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Monto</span>
-                                            <span>$245.345</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Expiración</span>
-                                            <span>24/05/2015</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Número</span>
-                                            <span>453453543</span>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Ver cotización</span>
-                                            <a href="#" title="Ver cotización" class="icono block-element" rel="content">Ver cotización<i class="fa fa-eye"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Agregar al carro</span>
-                                            <a href="#" title="Agregar al carro" class="icono block-element" rel="content">Agregar al carro<i class="fa fa-shopping-cart"></i></a>
-                                        </li>
-                                        <li>
-                                            <span class="only-on-mobile">Eliminar</span>
-                                            <a href="#" title="Eliminar" class="icono block-element" rel="content" data-func="delete_parent_item">Eliminar<i class="fa fa-trash"></i></a>
-                                        </li>
-                                    </ul>
-
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-conf-email" class="inline-item regular-col">Confirmar E-Mail:</label>
+                                        <input class="regular-input inline-item" type="email" name="registro-conf-email" id="registro-conf-email" placeholder="Confirmar e-Mail" required="">
+                                    </div>
                                 </div>
                             </div>
-                        </form>
-                	</div>
-                	<aside class="side column big-gap quarters">
-                        <h2 class="border-bottom">Mi Cuenta</h2>
-                        <div>
-                            <h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
-                            <ul>
-                                <li>
-                                    <a href="#" title="Datos para compra en 1 Click" rel="contents">Datos para compra en 1 Click</a>
-                                </li>
-                            </ul>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-contrasena" class="inline-item regular-col">Contraseña:</label>
+                                        <input class="regular-input inline-item" type="password" name="registro-contrasena" id="registro-contrasena" placeholder="Ingresa tu clave" required="">
+                                        <i class="fa fa-lock inline-item"></i>
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-conf-contrasena" class="inline-item regular-col">Confirmar contraseña:</label>
+                                        <input class="regular-input inline-item" type="password" name="registro-conf-contrasena" id="registro-conf-contrasena" placeholder="Reingresa tu clave" required="">
+                                        <i class="fa fa-lock inline-item"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="regular-content marginate bottom">
+                            <h2 class="regular-content-tittle pad a-little top bottom left">2. Datos empresa</h2>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-razon-social" class="inline-item regular-col">Razón social:</label>
+                                        <input class="regular-input inline-item" type="text" name="registro-razon-social" id="registro-razon-social" placeholder="Ingresa Razón social" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-rut-empresa" class="inline-item regular-col">Rut empresa:</label>
+                                        <input class="regular-input inline-item" type="text" name="registro-rut-empresa" id="registro-rut-empresa" placeholder="Ingresa Rut empresa" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-rubro" class="inline-item regular-col">Rubro:</label>
+                                        <input class="regular-input inline-item" type="text" name="registro-rubro" id="registro-rubro" placeholder="Ingrese Rubro" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-direccion" class="inline-item regular-col">Avenida o calle:</label>
+                                        <input class="regular-input inline-item" type="type" name="registro-direccio" id="registro-direccio" placeholder="Avenida" required="">
+                                        <label for="registro-direccion-num" class="inline-item regular-col-num only-on-desktop">Número:</label>
+                                        <input type="text" name="registro-direccion-num" id="registro-direccion-num" required="" placeholder="número" class="regular-input regular-input-num inline-item only-on-desktop">
+                                    </div>
+                                </div>
+                                <div class="column half only-on-mobile">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="registro-direccion-num" class="inline-item regular-col">Número:</label>
+                                        <input type="text" name="registro-direccion-num" id="registro-direccion-num" required="" placeholder="Número" class="regular-input inline-item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <span class="inline-item regular-col">Ubicación:</span>
+                                        <label for="oficina" class="inline-item">Oficina <input class="radio-b" type="radio" name="oficina" id="oficina" required=""></label>
+                                        <label for="departamento" class="inline-item">Departamento <input class="radio-b" type="radio" name="departamento" id="departamento" required=""></label>
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="region" class="inline-item regular-col">Región:</label>
+                                        <select name="region" id="region" class="select region full-m">
+                                            <option value="Metropolitana">Metropolitana</option>
+                                        </select>
+                                        <label for="comuna" class="inline-item regular-col-num only-on-desktop">Comuna:</label>
+                                        <select name="comuna" id="comuna" class="select comuna only-on-desktop">
+                                            <option value="Providencia">Providencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="column half only-on-mobile">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="comuna" class="inline-item regular-col">Comuna:</label>
+                                        <select name="comuna" id="comuna" class="select comuna full-m">
+                                            <option value="Providencia">Providencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="marginate top">
+                                <span class="inline-item regular-col important-paragraph pad a-little left">Tiene cuenta corriente</span>
+                                <label for="si" class="important-paragraph marginate left">Si <input type="radio" name="si" id="si" class="inline-block-element v-align-mid"></label>
+                                <label for="no" class="important-paragraph">No <input type="radio" name="no" id="no" class="inline-block-element v-align-mid"></label>
+                            </div>
+                            <div class="marginate top">
+                                <p class="important-paragraph pad a-little left bottom">Comunicados</p>
+                                <label for="acepto-email" class="block-element pad a-little left bottom"><input type="checkbox" class="marginate a-little right" name="acepto-email" id="acepto-email">Acepto Recibir Últimas ofertas y novedades en tu e-mail</label>
+                                <label for="acepto-sms" class="block-element pad a-little left"><input type="checkbox" class="marginate a-little right" name="acepto-sms" id="acepto-sms">Acepto Recibir Últimas ofertas y novedades en mi celular vía SMS</label>
+                            </div>
+                        </div>
+                        <div class="regular-content marginate bottom">
+                            <h2 class="regular-content-tittle pad a-little top bottom left">3. Información de contacto de la empresa</h2>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="nombre-contacto" class="inline-item regular-col">Nombre contacto:</label>
+                                        <input class="regular-input inline-item" type="text" name="nombre-contacto" id="nombre-contacto" placeholder="Nombre de contacto" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="apellido-paterno" class="inline-item regular-col">Apellido paterno:</label>
+                                        <input class="regular-input inline-item" type="text" name="apellido-paterno" id="apellido-paterno" placeholder="Ingresa tu e-mail" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="apellido-materno" class="inline-item regular-col">Apellido materno:</label>
+                                        <input class="regular-input inline-item" type="text" name="apellido-materno" id="apellido materno" placeholder="Apellido materno" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="cargo" class="inline-item regular-col">Cargo:</label>
+                                        <input class="regular-input inline-item" type="text" name="cargo" id="cargo" placeholder="Cargo" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="pais-residente" class="inline-item regular-col">País de residencia:</label>
+                                        <input class="regular-input inline-item" type="text" name="pais-residente" id="pais-residente" placeholder="País de residencia" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="cedula" class="inline-item regular-col">Cédula de identidad:</label>
+                                        <input class="regular-input inline-item" type="text" name="cedula" id="cedula" placeholder="Cédula de identidad" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix no-style">
+                                        <label for="fecha-de-n" class="inline-item regular-col block-m">Fecha de nacimiento:</label>
+                                        <select name="fecha-de-n" id="fecha-de-n" class="select fecha-de-n no-marginl">
+                                            <option value="Día">Día</option>
+                                        </select>
+                                        <select name="fecha-de-n" id="fecha-de-n" class="select fecha-de-n">
+                                            <option value="Mes">Mes</option>
+                                        </select>
+                                        <select name="fecha-de-n" id="fecha-de-n" class="select fecha-de-n">
+                                            <option value="Año">Año</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="genero" class="inline-item regular-col">Género:</label>
+                                        <select class="regular-col inline-item select genero full-m" name="genero" id="genero">
+                                            <option value="Masculino">Masculino</option>
+                                            <option value="Femenino">Femenino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="avenida-empresa" class="inline-item regular-col">Avenida o calle:</label>
+                                        <input class="regular-input inline-item" type="text" name="avenida-empresa" id="avenida-empresa" placeholder="Dirección" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="empresa-numero" class="inline-item regular-col">Número:</label>
+                                        <input class="regular-input inline-item" type="text" name="empresa-numero" id="empresa-numero" placeholder="Número" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <span class="inline-item regular-col">Residencia:</span>
+                                        <label for="casa-residencia" class="inline-item">Casa <input class="radio-b" type="radio" name="casa-residencia" id="casa-residencia" required=""></label>
+                                        <label for="dpto-residencia" class="inline-item">Departamento <input class="radio-b" type="radio" name="dpto-residencia" id="dpto-residencia" required=""></label>
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="region-empresa" class="inline-item regular-col">Región:</label>
+                                        <select name="region-empresa" id="region-empresa" class="select region full-m">
+                                            <option value="Metropolitana">Metropolitana</option>
+                                        </select>
+                                        <label for="comuna-empresa" class="inline-item regular-col-num only-on-desktop">Comuna:</label>
+                                        <select name="comuna-empresa" id="comuna-empresa" class="select comuna only-on-desktop">
+                                            <option value="Providencia">Providencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="column half only-on-mobile">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="comuna-empresa" class="inline-item regular-col">Comuna:</label>
+                                        <select name="comuna-empresa" id="comuna-empresa" class="select comuna full-m">
+                                            <option value="Providencia">Providencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="telefono-empresa" class="inline-item regular-col">Teléfono Casa / Oficina:</label>
+                                        <input class="regular-input inline-item fleft cod" type="text" name="telefono-empresa" id="telefono-empresa" placeholder="Cod" required="">
+                                        <input class="regular-input inline-item fleft numero" type="text" name="telefono-empresa" id="telefono-empresa" placeholder="87549865" required="">
+                                    </div>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="movil-empresa" class="inline-item regular-col">Teléfono móvil</label>
+                                        <input class="regular-input inline-item fleft cod" type="text" name="movil-empresa" id="movil-empresa" placeholder="Cod" required="">
+                                        <input class="regular-input inline-item fleft numero" type="text" name="movil-empresa" id="movil-empresa" placeholder="87549865" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="codigo-postal" class="inline-item regular-col">Código postal:</label>
+                                        <input class="regular-input inline-item fleft codigo-postal" type="text" name="codigo-postal" id="codigo-postal" placeholder="87549865" required="">
+                                        <a href="#" title="Buscar código postal" class="smaller-paragraph fleft buscar-codigo" rel="nofollow">Buscar código postal</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div>
-                            <h4 data-func="deploy_mobile_submenu">Información personal</h4>
-                            <ul>
-                                <li>
-                                    <a href="#" title="Datos Personales" rel="contents">Datos Personales</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Libreta de direcciones" rel="contents">Libreta de direcciones</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Cambio de clave" rel="contents">Cambio de clave</a>
-                                </li>
-                            </ul>
-                        </div>                
-                        <div>
-                            <h4 data-func="deploy_mobile_submenu">Mis compras</h4>
-                            <ul>
-                                <li>
-                                    <a href="#" title="Seguimiento de tu compra" rel="contents">Seguimiento de tu compra</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Todas mis compras" rel="contents">Todas mis compras</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Mis pedidos en tienda" rel="contents">Mis pedidos en tienda</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Mis carros guardados" rel="contents">Mis carros guardados</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Mis listas de favoritos" rel="contents">Mis listas de favoritos</a>
-                                </li>
-                            </ul>
+                            <button class="button wide-btn red-btn centered-text fright full-m" type="submit">Enviar registro</button>
                         </div>
-                        <div>
-                            <h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
-                            <ul>
-                                <li>
-                                    <a href="#" title="Mis cotizaciones en tienda" rel="contents">Mis cotizaciones en tienda</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Mis servicios cotizados" rel="contents">Mis servicios cotizados</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
-                            <ul>
-                                <li>
-                                    <a href="#" title="Saldo tarjeta CMR" rel="contents">Saldo tarjeta CMR</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Saldo tarjeta de regalo" rel="contents">Saldo tarjeta de regalo</a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Mis cupones de descuento" rel="contents">Mis cupones de descuento</a>
-                                </li>
-                            </ul>
-                        </div>                      
-                    </aside>
+                    </form>
                 </section>
-
             </div>
         </main> 
         <!-- // -->

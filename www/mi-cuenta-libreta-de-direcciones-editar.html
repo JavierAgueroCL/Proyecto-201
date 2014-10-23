@@ -908,102 +908,127 @@
                     <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Tus datos para Compra en 1 click</a>
                 </section>
 
-                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                <section class="mobile-back-holder hide-on-desktop margin-top10 border-bottom">
                     <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
                         <i class="fa fa-chevron-left"></i>
                         Inicio
                     </a>
                 </section>
-                <section class="clearfix hide-on-desktop tit-sec">
-                	<h2>MI CUENTA</h2>
-                </section>
 
                 <section id="mi-cuenta" class="clearfix">
                 	<div class="cont-cuenta column big-gap three-quarters">
-                		<h2 class="border-bottom hide-on-mobile">Tus datos para Compra en 1 Click</h2>
+                		<h1 class="border-bottom titulo-page">Tus datos para Compra en 1 Click</h2>
                         <div class="caja-datos">
                             <h2>Editar Dirección</h2>
                         </div>
-                        <form action="" class="datos-direccion">
+                        <form action="/" method="post" class="datos-direccion">
                             <div class="cont-form"> <!-- Contenido Form -->
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Nombre</label>
-                                        <input type="text" name="nombre" placeholder="Nombre" required="" value="Diego">
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="nombre" class="inline-item regular-col">Nombre:</label>
+                                            <input class="regular-input inline-item" type="text" name="nombre" id="nombre" placeholder="Nombre" required="" value="Diego">
+                                        </div>
                                     </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Nombre corto:</label>
-                                        <input type="text" name="nombrecorto" placeholder="Nombre corto" required="" value="Casa de la playa">
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Apellido paterno:</label>
-                                        <input type="text" name="apellidopaterno" placeholder="" value="Martinez" required="">
-                                    </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Apellido materno:</label>
-                                        <input type="text" name="apellidomaterno" placeholder="" value="Lastra" required="">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="nombre-corto" class="inline-item regular-col">Nombre corto:</label>
+                                            <input class="regular-input inline-item" type="text" name="nombre-corto" id="nombre-corto" placeholder="Nombre corto" required="" value="Casa Playa">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Calle:</label>
-                                        <input type="text" name="calle" placeholder="Calle" value="Avenida Siempreviva" required="">
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="apellido-p" class="inline-item regular-col">Apellido paterno:</label>
+                                            <input class="regular-input inline-item" type="text" name="apellido-p" id="apellido-p" placeholder="Apellido materno" required="" value="Martinez">
+                                        </div>
                                     </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Dirección:</label>
-                                        <select name="direccion" id="">
-                                            <option value="">Casa</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Número:</label>
-                                        <input type="text" name="numero" placeholder="Número" value="2300" required="">
-                                    </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Depto:</label>
-                                        <input type="text" name="depto" placeholder="Depto" value="206" required="">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="apellido-m" class="inline-item regular-col">Apellido materno:</label>
+                                            <input class="regular-input inline-item" type="text" name="apellido-m" id="apellido-m" placeholder="Apellido materno" required="" value="Lastra">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Código postal:</label>
-                                        <input type="text" name="depto" placeholder="Còdigo postal" required="" class="medio" value="3456">
-                                        <a href="#" class="minified-paragraph"><em>Buscar código postal</em></a>
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="calle" class="inline-item regular-col">Calle:</label>
+                                            <input class="regular-input inline-item" type="text" name="calle" id="calle" placeholder="Calle" required="" value="Avenia Siempreviva">
+                                        </div>
                                     </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Ubicación:</label>
-                                        <select name="Ubicacion" id="">
-                                            <option value="">Región</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Celular:</label>
-                                        <input type="text" name="depto" placeholder="cod" required="" class="cod" value="09">
-                                    <input type="text" name="numcelu" placeholder="Número Celular" class="numero" value="34345343">
-                                    </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Ciudad:</label>
-                                        <select name="Ciudad" id="">
-                                            <option value="">Santiago</option>
-                                        </select>
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="direccion" class="inline-item regular-col">Dirección:</label>
+                                            <select name="direccion" id="direccion" class="select no-style">
+                                                <option value="Casa">Casa</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="clearfix">
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Télefono casa:</label>
-                                        <input type="text" name="casa" placeholder="cod" value="02" required="" class="cod">
-                                        <input type="text" name="numcelu" placeholder="Número casa" value="25782950" class="numero">
+                                <div class="clearfix regular-section">
+                                    <div class="column half mitad-m">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="numero-casa" class="inline-item regular-col">Número:</label>
+                                            <input class="regular-input inline-item" type="text" name="numero-casa" id="numero-casa" placeholder="Número" required="" value="742">
+                                        </div>
                                     </div>
-                                    <div class="fleft width50 full-m">
-                                        <label for="" class="hide-on-mobile">Télefono oficina:</label>
-                                        <input type="text" name="oficina" placeholder="cod" required="" class="cod" value="02">
-                                        <input type="text" name="numcelu" placeholder="Télefono oficina" value="25255256" class="numero">
+                                    <div class="column half mitad-m m-left">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="depto" class="inline-item regular-col">Depto:</label>
+                                            <input class="regular-input inline-item" type="text" name="depto" id="depto" placeholder="Depto" required="" value="Depto">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="codigo-postal" class="inline-item regular-col">Código postal:</label>
+                                            <input class="regular-input inline-item fleft codigo-postal" type="text" name="codigo-postal" id="codigo-postal" placeholder="87549865" required="" value="097634">
+                                            <a href="#" title="Buscar código postal" class="smaller-paragraph fleft buscar-codigo" rel="nofollow">Buscar código postal</a>
+                                        </div>
+                                    </div>
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="ubicacion" class="inline-item regular-col">Ubicación:</label>
+                                            <select name="ubicacion" id="ubicacion" class="select no-style">
+                                                <option value="Región">Región</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="celular" class="inline-item regular-col">Celular:</label>
+                                            <input class="regular-input inline-item fleft cod" type="text" name="celular" id="celular" placeholder="Cod" required="" value="+569">
+                                            <input class="regular-input inline-item fleft numero" type="text" name="celular" id="celular" placeholder="87549865" required="" value="97854655">
+                                        </div>
+                                    </div>
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="ciudad" class="inline-item regular-col">Ciudad:</label>
+                                            <select name="ciudad" id="ciudad" class="select no-style">
+                                                <option value="Región">Región</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix regular-section">
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="tel-casa" class="inline-item regular-col">Teléfono Casa:</label>
+                                            <input class="regular-input inline-item fleft cod" type="text" name="tel-casa" id="tel-casar" placeholder="Cod" required="" value="+562">
+                                            <input class="regular-input inline-item fleft numero" type="text" name="tel-casa" id="tel-casa" placeholder="87549865" required="" value="25462801">
+                                        </div>
+                                    </div>
+                                    <div class="column half">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="tel-oficina" class="inline-item regular-col">Teléfono Oficina:</label>
+                                            <input class="regular-input inline-item fleft cod" type="text" name="tel-oficina" id="tel-oficina" placeholder="Cod" required="" value="+562">
+                                            <input class="regular-input inline-item fleft numero" type="text" name="tel-oficina" id="tel-oficina" placeholder="87549865" required="" value="24858127">
+                                        </div>
                                     </div>
                                 </div>
                             </div> <!-- Fin Contenido Form -->
@@ -1012,82 +1037,82 @@
                                     <span><em>(*) Campos Obligatorios</em></span>
                                 </div>
                                 <div class="fright full-m">
-                                    <button class="button medium-btn red-btn full-m">Guardar dirección</button>
+                                    <button class="button medium-btn red-btn full-m type="submit" ">Guardar dirección</button>
                                 </div>
                             </div>
                         </form>
 
                 	</div> <!-- Contenido Derecho -->
                 	<aside class="side column big-gap quarters">
-                		<h2 class="border-bottom">Mi Cuenta</h2>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
-                			<ul>
-	                			<li>
-	                				<a href="#" title="Datos para compra en 1 Click">Datos para compra en 1 Click</a>
-	                			</li>
-	                		</ul>
-                		</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Datos Personales">Datos Personales</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Cambio de clave">Cambio de clave</a>
-	                			</li>
-	                		</ul>
-                		</div>                
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Todas mis compras">Todas mis compras</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis pedidos en tienda">Mis pedidos en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
-	                			</li>
-	                		</ul>
-						</div>
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Mis cotizaciones en tienda">Mis cotizaciones en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis servicios cotizados">Mis servicios cotizados</a>
-	                			</li>
-	                		</ul>
-						</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta CMR">Saldo tarjeta CMR</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta de regalo">Saldo tarjeta de regalo</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis cupones de descuento">Mis cupones de descuento</a>
-	                			</li>
-	                		</ul>
-                		</div>               		
-                	</aside>
+                        <h2 class="border-bottom">Mi Cuenta</h2>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos para compra en 1 Click" rel="contents">Datos para compra en 1 Click</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Información personal</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos Personales" rel="contents">Datos Personales</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Libreta de direcciones" rel="contents">Libreta de direcciones</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Cambio de clave" rel="contents">Cambio de clave</a>
+                                </li>
+                            </ul>
+                        </div>                
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Seguimiento de tu compra" rel="contents">Seguimiento de tu compra</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Todas mis compras" rel="contents">Todas mis compras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis pedidos en tienda" rel="contents">Mis pedidos en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis carros guardados" rel="contents">Mis carros guardados</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis listas de favoritos" rel="contents">Mis listas de favoritos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Mis cotizaciones en tienda" rel="contents">Mis cotizaciones en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis servicios cotizados" rel="contents">Mis servicios cotizados</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta CMR" rel="contents">Saldo tarjeta CMR</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta de regalo" rel="contents">Saldo tarjeta de regalo</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis cupones de descuento" rel="contents">Mis cupones de descuento</a>
+                                </li>
+                            </ul>
+                        </div>                      
+                    </aside>
                 </section>
 
             </div>

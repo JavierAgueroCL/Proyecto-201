@@ -908,26 +908,23 @@
                     <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Tus datos para Compra en 1 click</a>
                 </section>
 
-                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                <section class="mobile-back-holder hide-on-desktop margin-top10 border-bottom">
                     <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
                         <i class="fa fa-chevron-left"></i>
                         Inicio
                     </a>
                 </section>
-                <section class="clearfix hide-on-desktop tit-sec">
-                	<h2>COMPRA EN 1 CLICK</h2>
-                </section>
 
                 <section id="mi-cuenta" class="clearfix">
                 	<div class="cont-cuenta column big-gap three-quarters">
-                		<h2 class="border-bottom hide-on-mobile">Tus Datos para Compra en 1 Click</h2>
+                		<h1 class="border-bottom titulo-page">Tus Datos para Compra en 1 Click</h2>
                         <form action="guardardatos">
                             <div class="caja-datos margin-bot10">
                                 <h2>Tipo de despacho</h2>
                                 <div class="pad all">
-                                    <p>Elige el tipo de despacho que quieres programa para tu Compra en 1 Click.</p>
+                                    <label class="block-element" for="tipo-despacho">Elige el tipo de despacho que quieres programa para tu Compra en 1 Click.</label>
                                     <div>
-                                        <select name="tipo-despacho" id="tipo-despacho-select" class="select margin-top10 full-m">
+                                        <select name="tipo-despacho" id="tipo-despacho" class="select margin-top10 full-m">
                                             <option value="Despacho rápido">Despacho rápido</option>
                                         </select>
                                     </div>
@@ -937,7 +934,7 @@
                                 <h2>Direcciones para el envío</h2>
                                 <div class="clearfix">
                                     <div class="pad all column two-thirds full-m marginbot-m10">
-                                        <select name="direccion" id="direccion-select" class="select margin-top10 margin-bot10 full-m">
+                                        <select name="direccion-select" id="direccion-select" class="select margin-top10 margin-bot10 full-m">
                                             <option value="Nombre">Nombre</option>           
                                         </select>
                                         <p class="bold-text">Vasconia 1879 depto. 306</p>
@@ -948,19 +945,19 @@
                                         <p class="margin-top10 margin-bot10">Dirección para el envío de la (Boleta o Factura)</p>
                                         <div>
                                             <label for="email" class="margin-right10">E-mail</label>
-                                            <input type="text" id="email">
+                                            <input type="email" id="email">
                                         </div>
                                     </div>
                                     <div class="pad left margin-top1em column thirds border-left no-padding-m no-border-m">
                                         <div class="pad a-little top bottom clearfix border-v padding1em-m">
-                                            <a href="#" class="block-element">
+                                            <a href="#" class="block-element" rel="contents">
                                                 <i class="fa fa-pencil more-bigger-paragraph margin-right10 washed-text fleft icon-ancho"></i>
                                                 <span class="block-element important-paragraph">Editar</span>
                                                 <span class="block-element smaller-paragraph">Dirección de despacho</span>
                                             </a>
                                         </div>
                                         <div class="pad a-little top bottom clearfix padding1em-m">
-                                            <a href="" class="block-element">
+                                            <a href="" class="block-element" rel="contents">
                                                 <i class="fa fa fa-pencil-square-o more-bigger-paragraph margin-right10 washed-text fleft icon-ancho"></i>
                                                 <span class="block-element important-paragraph">Agregar dirección</span>
                                             </a>
@@ -971,25 +968,29 @@
                             <div class="caja-datos margin-bot10 datos-tarjeta">
                                 <h2>Datos tarjeta</h2>
                                 <div class="pad all clearfix">
-                                    <div class="margin-bot10">
-                                        <label for="" class="inline-block-element hide-on-mobile">Cliente</label>
-                                        <select name="" id="" class="select full-m">
+                                    <div class="margin-bot10 inline-input-container">
+                                        <label for="cliente" class="inline-item regular-col">Cliente</label>
+                                        <select name="cliente" id="cliente" class="regular-col inline-item select full-m no-style">
                                             <option value="">Titular</option>
                                             <option value="">Titular</option>
                                         </select>
                                     </div>
+                                    <div class="margin-bot10 inline-input-container only-on-mobile">
+                                        <label for="numero-tarjeta" class="inline-item regular-col">N° de tarjeta:</label>
+                                        <input type="text" class="regular-input inline-item" name="numero-tarjeta" id="numero-tarjeta" placeholder="123812312">
+                                    </div>
                                     <div  class="margin-bot10">
-                                        <label for="" class="inline-block-element hide-on-mobile">N° de tarjeta:</label>
-                                        <input type="text" class="margin-right10 full-m marginbot-m10">
-                                        <label for="" class="inline-block-element">N° de cuotas</label>
-                                        <select name="" id="" class="select cod">
+                                        <label for="numero-tarjeta" class="inline-block-element only-on-desktop">N° de tarjeta:</label>
+                                        <input type="text" class="margin-right10 full-m marginbot-m10 only-on-desktop" id="numero-tarjeta" name="numero-tarjeta">
+                                        <label for="numero-cuotas" class="inline-block-element">N° de cuotas</label>
+                                        <select name="numero-cuotas" id="numero-cuotas" class="select cod">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </select>
                                     </div>
                                     <div  class="margin-bot10">
-                                        <label for="" class="inline-block-element hide-on-mobile">Pago</label>
-                                        <select name="" id="" class="select full-m">
+                                        <label for="tipo-de-pago" class="inline-block-element hide-on-mobile">Pago</label>
+                                        <select name="tipo-de-pago" id="tipo-de-pago" class="select full-m">
                                             <option value="">Pago Normal</option>
                                             <option value="">Pago no Normal</option>
                                         </select>
@@ -999,85 +1000,85 @@
                             <div class="clearfix">
                                 <div class="column half fright full-m">
                                     <div class="fleft full-m">
-                                        <button class="button medium-btn light-grey-btn margin-top20">Desactivar compra en 1 Click</button>
+                                        <button class="button medium-btn light-grey-btn margin-top20 mobile-full">Desactivar compra en 1 Click</button>
                                     </div>  
                                     <div class="fright full-m">
-                                        <button class="button medium-btn red-btn margin-left30 margin-top20">Guardar Cambios</button>
+                                        <button class="button medium-btn red-btn margin-left30 margin-top20 mobile-full guardar-cambios">Guardar Cambios</button>
                                     </div>
                                 </div>
                             </div>
                         </form><!-- Guardar Datos -->
                 	</div> <!-- Contenido Derecho -->
                 	<aside class="side column big-gap quarters">
-                		<h2 class="border-bottom">Mi Cuenta</h2>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
-                			<ul>
-	                			<li>
-	                				<a href="#" title="Datos para compra en 1 Click">Datos para compra en 1 Click</a>
-	                			</li>
-	                		</ul>
-                		</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Datos Personales">Datos Personales</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Cambio de clave">Cambio de clave</a>
-	                			</li>
-	                		</ul>
-                		</div>                
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Todas mis compras">Todas mis compras</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis pedidos en tienda">Mis pedidos en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
-	                			</li>
-	                		</ul>
-						</div>
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Mis cotizaciones en tienda">Mis cotizaciones en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis servicios cotizados">Mis servicios cotizados</a>
-	                			</li>
-	                		</ul>
-						</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta CMR">Saldo tarjeta CMR</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta de regalo">Saldo tarjeta de regalo</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis cupones de descuento">Mis cupones de descuento</a>
-	                			</li>
-	                		</ul>
-                		</div>               		
-                	</aside>
+                        <h2 class="border-bottom">Mi Cuenta</h2>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos para compra en 1 Click" rel="contents">Datos para compra en 1 Click</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Información personal</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos Personales" rel="contents">Datos Personales</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Libreta de direcciones" rel="contents">Libreta de direcciones</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Cambio de clave" rel="contents">Cambio de clave</a>
+                                </li>
+                            </ul>
+                        </div>                
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Seguimiento de tu compra" rel="contents">Seguimiento de tu compra</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Todas mis compras" rel="contents">Todas mis compras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis pedidos en tienda" rel="contents">Mis pedidos en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis carros guardados" rel="contents">Mis carros guardados</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis listas de favoritos" rel="contents">Mis listas de favoritos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Mis cotizaciones en tienda" rel="contents">Mis cotizaciones en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis servicios cotizados" rel="contents">Mis servicios cotizados</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta CMR" rel="contents">Saldo tarjeta CMR</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta de regalo" rel="contents">Saldo tarjeta de regalo</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis cupones de descuento" rel="contents">Mis cupones de descuento</a>
+                                </li>
+                            </ul>
+                        </div>                      
+                    </aside>
                 </section>
 
             </div>

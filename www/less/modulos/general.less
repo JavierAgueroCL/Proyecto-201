@@ -548,7 +548,21 @@
     }
 }
 
-#mi-cuenta {
+.select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    width:190px;
+    background-color: #f7f7f7;
+    min-width: 50px;
+}
+
+.titulo-page {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+#mi-cuenta, .servicio-cliente {
 
     .side {
 
@@ -586,24 +600,16 @@
             margin-bottom: 10px;
         }
 
-        input {
-            padding: 5px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-        }
-
-        #cambio-clave {
-            div {
+        .cambio-clave {
+            .inline-input-container {
                 margin-bottom: 10px;
             }
-
-            label {
+            .regular-col {
                 width: 20%;
-                margin-right: 10px;
-                display: inline-block;
+                min-width: 20%;
             }
-            input {
-                width: 34%;
+            .regular-input {
+                width: 60%;
             }
         }
 
@@ -614,6 +620,12 @@
                 background-color: #f0f0f0;
                 padding:0.5em 0 0.5em 1em;
                 margin-bottom: 0;
+            }
+            .select {
+                &.no-style {
+                    background: none;
+                    border:0;
+                }
             }
         }
 
@@ -712,6 +724,17 @@
                             }
                         }
                     }
+
+                    .icono {
+                        font-size:0;
+                        color: transparent;
+
+                        i {
+                            color: @previous_grey;
+                            font-size: 14px;
+                            vertical-align: middle;
+                        }
+                    }
                 }
                 &.lista-p {
                     li {
@@ -750,48 +773,28 @@
                 margin-bottom: 10px;
             }
 
-            .width50 {
-                width: 50%;
+            .inline-input-container {
                 margin-bottom: 10px;
-            }
-
-            label {
-                width: 32%;
-                padding-left: 15px;
-                display: inline-block;
-            }
-
-            input, select {
-                padding: 5px;
-                border-radius: 3px;
-                border: 1px solid #ccc;
-                width: 66%;
-
-                &.medio {
-                    width: 36%;
-                    margin-right: 2%;
+                .regular-col {
+                    width: 32%;
                 }
-
-                &.cod {
-                    width: 12%;
+                .codigo-postal {
+                    width: 52%;
                 }
-
-                &.numero {
-                    width: 53%;
+                .buscar-codigo {
+                    line-height: 26px;
+                    margin-left: 10px;
+                }
+                .regular-input {
+                    &.cod {
+                        width: 18%;
+                        margin-right: 1%;
+                    }
+                    &.numero {
+                        width: 81%;
+                    }
                 }
             }
-            a {
-                display: inline;
-            }
-        }
-
-        .select {
-            padding: 5px;
-            border-radius: 3px;
-            border: 1px solid #ccc;
-            width:190px;
-            background-color: #f7f7f7;
-            min-width: 50px;
         }
 
         .datos-tarjeta {
@@ -803,11 +806,11 @@
             }
         }
 
-        #cupones, .saldo {
-            div {
-                button.activar {
-                    margin-top: 20px;
-                }
+        .cupones, .saldo {
+
+            .regular-section {
+                padding-bottom: 1em;
+                border-bottom: 1px solid #ccc;
             }
         }
 
@@ -950,6 +953,225 @@
             }
         }
     } /* CONT - CUENTA */
+}
+
+.servicio-cliente {
+    .side.ser-cliente {
+       div {
+
+            h4 {
+                cursor:pointer;
+            }
+            ul {
+                display: none;
+            }
+
+            &.deployed {
+
+                ul {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                h4 {
+                    i.fa-chevron-right:before {
+                            content: "\f078";
+                    }
+                }
+            }
+        }
+    }
+
+    .cont-servicios {
+        background: #fff;
+        .caja {
+
+            min-height: 280px;
+            margin-bottom: 40px;
+             
+            .tit {
+                background: #f0f0f0;
+                font-size: 1.3em;
+                padding: 0.5em 0 0.5em 0.3em;
+                position: relative;
+
+                i {
+                    position: absolute;
+                    right: 2%;
+                }
+            }
+
+            .sup {
+                padding-top: 10px;
+                min-height: 100px;
+                padding-left: 1em;
+                .sub {
+                    padding: 1em 1em .5em .5em;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .links {
+                list-style: none;
+                font-size: 12px;
+                padding-left: 1em;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.aplicaciones-m {
+    h1.am {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .aplicacion {
+
+        position: relative;
+        border:1px solid #f0f0f0;
+
+        h2 {
+            background: #f0f0f0;
+            padding: 0.5em 0 0.5em 0.5em;
+        }
+        .descrip {
+            padding:1em;
+        }
+        .icon-app {
+            position: absolute;
+            top: 45%;
+            left: 10px;
+        }
+        .get-app {
+            a {
+                width: 48%;
+                margin: 0 1%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.site-map {
+    .sm {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+    .tit-listado {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    .listado {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 20px;
+            h4 {
+                margin-bottom: 5px;
+            }
+            ul {
+                list-style-type: none;
+                margin-bottom: 10px;
+
+                li {
+                    margin-bottom: 1px;
+                }
+            }
+        }
+    }
+}
+
+.registro {
+    h1.titulo {
+        font-size: 24px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .regular-content {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+
+        .regular-content-tittle {
+            background: #f0f0f0;
+            border-bottom: 1px solid #ccc;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            .error {
+                float: right;
+                color: @sodimac_red;
+                font-size: 14px;
+                font-weight: bold;
+                padding-right: 10px;
+            }
+        }
+        .regular-section {
+
+            .half {
+                padding-right: 1em;
+                margin-bottom:0.5em;
+            }
+        }
+        .regular-col {
+            width: 35%;
+        }
+        .regular-col-num {
+            width: 76px;
+        }
+        .regular-input {
+            &.error {
+                border:1px solid @sodimac_red;
+            }
+        }
+        .regular-input-num {
+            width: 80px;
+        }
+        .regular-input {
+            &.cod {
+                width: 15%;
+            }
+            &.numero {
+                width: 83%;
+                margin-left: 2%;
+            }
+        }
+        .radio-b {
+            margin:0 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .select {
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+
+            &.region {
+                width: 146px;
+            }
+            &.fecha-de-n {
+                margin-right: 1em;
+            }
+            &.genero {
+                width: 160px;
+            }
+        }
+        .codigo-postal {
+            width: 60%;
+        }
+        .buscar-codigo {
+            line-height: 26px;
+            margin-left: 10px;
+        }
+    }
 }
 
 

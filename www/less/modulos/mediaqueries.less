@@ -793,7 +793,7 @@
     ///////////////////////////////////// Mi Cuenta
     /////////////////////////////////////////////////////////
     
-    #mi-cuenta {
+    #mi-cuenta, .servicio-cliente {
 
         margin-top: 10px;
         
@@ -826,7 +826,9 @@
                     background: url(../images/icons/chevron-down.svg) 98% 50% no-repeat #fff;
 
                     &.deployed {
-                        background: url(../images/icons/chevron-up.svg) 98% 50% no-repeat #fff;
+                        background: url(../images/icons/chevron-up.svg) 98% 30% no-repeat #fff;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 10px;
                     }
                 }
                 ul {
@@ -864,16 +866,20 @@
                 margin-bottom: 0;
             }
 
-            #cambio-clave {
-                width: 100%;
-                padding:2%;
-                border: 1px solid #f0f0f0;
-
-                div {
-                    &.border-top {
-                        border-top:0;
-                        padding-top: 0;
-                    }
+            .cambio-clave {
+                padding: 1em;
+                border:1px solid #f0f0f0;
+                .inline-input-container {
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                }
+                .regular-col {
+                    min-width: 110px;
+                    width: 30%;
+                }
+                .regular-input {
+                    width: 100%;
+                    border:0;
                 }
             }
 
@@ -885,6 +891,21 @@
                     padding: .5em 0 .5em 1em;
                     margin-bottom: 0;
                 }
+                &.datos-tarjeta {
+                    .regular-col {
+                        width: 15%;
+                        min-width: 100px;
+                    }
+                    .regular-input {
+                        border:0;
+                        width: 100%;
+                    }
+                }
+            }
+            .guardar-cambios {
+                margin-top: 10px;
+                margin-left: 0;
+                margin-right: 0;
             }
             div.table {
                 ul.table-row {
@@ -943,6 +964,9 @@
                         &:first-child {
                             border-top: 1px solid #f0f0f0;
                             padding: 0;
+                        }
+                        .icono {
+                            padding: 10px;
                         }
                     }
 
@@ -1025,15 +1049,6 @@
                 }
             }
 
-            .half {
-                width: 50%;
-                padding-left: 0;
-
-                &:first-child {
-                    padding-left: 1%;
-                }
-            }
-
             .datos-direccion {
 
                 padding-top: 0;
@@ -1042,24 +1057,53 @@
                     border:1px solid #f0f0f0;
                     padding: 1em;
                 }
-
-                .width50 {
-                    input, select {
-                        width: 100%;
-
-                        &.medio {
-                            width: 50%;
-                        }
-                        &.cod {
-                            width: 10%;
-                            float: left;
-                            margin-right: 1%;
-                        }
-                        &.numero {
-                            width: 89%;
-                            float: left;
+                .regular-section {
+                    .column {
+                        &.half {
+                            &.mitad-m {
+                                width: 49%;
+                                float: left;
+                                &.m-left {
+                                    margin-left: 2%;
+                                }
+                            }
                         }
                     }
+                }
+                .inline-input-container {
+                    .select {
+                        &.no-style {
+                            background: 0 0;
+                            border: 0;
+                            padding-left: 1px;
+                            width: 100%;
+                        }
+                    }
+                    .codigo-postal {
+                        width: 40%;
+                    }
+                    .buscar-codigo {
+                        font-size: 10px;
+                        margin-left: 0;
+                    }
+                    .regular-input {
+                        &.cod {
+                            width: 25%;
+                        }
+                        &.numero {
+                            width: 74%;
+                        }
+                    }
+                }
+            }
+            .cupones {
+
+                .regular-section {
+                    padding: 0 1em;
+                    border-bottom: 0;
+                }
+                .activar {
+                    float: none;
                 }
             }
 
@@ -1136,6 +1180,206 @@
                         vertical-align: top;
                     }
                 }
+            }
+        }
+    }
+
+    .servicio-cliente {
+        .side.ser-cliente {
+            h4 {
+                i {
+                    display: none;
+                }
+            }
+        }
+
+        .cont-servicios {
+            .caja {
+                 height: auto;
+                 padding-bottom: 10px;
+                 min-height: inherit;
+                 margin-bottom: 10px;
+                .tit {
+                    background: #f0f0f0;
+                    font-size: 1.1em;
+                    padding: 0.5em 0 0.5em 0.3em;
+                    cursor: pointer;
+                }
+
+                .sup {
+                    padding-top: 10px;
+                    min-height: 50px;
+                    padding-left: 1em;
+                    .sub {
+                        padding:0.4em 1em .5em .5em;
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .links {
+                    list-style: none;
+                    font-size: 12px;
+                    padding-left: 1em;
+                    display: none;
+                    li {
+                        margin-bottom: 5px;
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                &.deployed {
+                    h2.deployed {
+                        i {
+                            &:before {
+                                content: "\f077";
+                            }
+                        }
+                    }
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .aplicaciones-m {
+        .aplicacion {
+
+            .descrip {
+                padding:1em 1em 2em 7em;
+            }
+            .icon-app {
+                position: absolute;
+                top: 26%;
+                left: 10px;
+            }
+            .get-app {
+
+                padding: 0 10px;
+
+                a {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+    .site-map {
+        .caja-listado {
+            border:1px solid @dark_blocks_grey;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .tit-listado {
+            background-color: @blocks_grey;
+            padding:0.3em 0.5em;
+            margin-bottom: 0;
+        }
+        .listado {
+
+            li.list-item {
+
+                border-top: 1px solid @dark_blocks_grey;
+                margin-bottom: 0;
+
+                ul {
+                    display: none;
+                }
+                h4 {
+                    position: relative;
+                    padding:0.5em 0.5em;
+                    cursor: pointer;
+                    margin-bottom: 0;
+                    i {
+                        position: absolute;
+                        right: 2%;
+                    }
+                }
+
+                &.deployed {
+                    h4 {
+
+                        i {
+
+                            &:before {
+                                content: "\f077";
+                            }
+                        }
+                    }
+                    ul {
+                        display: block;
+                        li {
+                            list-style-type: disc;
+                            list-style-position: inside;
+                        }
+                    }
+                }
+                &:first-child {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    .registro {
+        .regular-content {
+
+            border:1px solid #f0f0f0;
+
+            .regular-content-tittle {
+                border-bottom: 0;
+                font-size: 16px;
+            }
+
+            .regular-section {
+                .half {
+                    padding: 0 0.5em;
+
+                    &.padding-right {
+                        padding:0.5em;
+                    }
+
+                    .select {
+                        background: none;
+                        border:0;
+                        padding-left: 1px;
+
+                        &.fecha-de-n {
+                            border:1px solid #e3e3e3;
+                            width: 32%;
+                            margin:0 0 0 2%;
+
+                            &.no-marginl {
+                                margin-left: 0;
+                            }
+                        }
+                        &.full-m{
+                            width: 100%;
+                        }
+                    }
+                    .no-style {
+                        border:0;
+                    }
+                    .block-m {
+                        width: 100%;
+                        display: block;
+                    }
+                    .codigo-postal {
+                        width: 40%;
+                    }
+                    .buscar-codigo {
+                        line-height: 26px;
+                        margin-left: 0;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .configura {
+                margin: 0 1%;
+                width: 98%;
             }
         }
     }
