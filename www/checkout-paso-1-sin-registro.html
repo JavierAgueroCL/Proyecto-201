@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <script src="js/libs/modernizr.js"></script>
     </head>
@@ -899,78 +900,345 @@
         <!-- contenedor del contenido general -->
         <main id="body-container" class="row">
             <div class="container">
-                <div class="login-options-holder hide-on-mobile">
-                    <span class="current-login-option">Inicia sesión</span>
-                    |
-                    <a href="#" title="Iniciar sesión como empresa" rel="nofollow">Iniciar sesión como empresa</a>
-                </div>
-
-                <div class="login-options-holder clearfix hide-on-desktop">
-                    <span class="current-login-option uppercase mobile-column half">Inicia sesión</span>
-                    <a class="righted-text mobile-column half" href="#" title="Como empresa" rel="nofollow">
-                        Como empresa
-                        <i class="fa fa-chevron-right"></i>
+                <section class="mobile-back-holder hide-on-desktop">
+                    <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
+                        <i class="fa fa-chevron-left"></i>
+                        Carro de compras
                     </a>
+                </section>
+
+                <div class="checkout-steps-holder marginate bottom">
+                    <div class="checkout-steps-title">Proceso de Compra</div>
+                    <div class="checkout-steps-items-holder">
+                        <div class="checkout-step-item current" data-label="Iniciar Sesión">1. </div>
+                        <div class="checkout-step-item " data-label="Despacho">2. </div>
+                        <div class="checkout-step-item" data-label="Pago">3. </div>
+                        <div class="checkout-step-item" data-label="Resumen">4. </div>
+                    </div>
                 </div>
-                
-                <section class="clearfix">
+
+                <h2 class="regular-content-section-title hide-on-mobile">
+                    <i class="fa fa-shopping-cart washed-text"></i>
+                    Compra sin registro
+                </h2>
+
+                <section class="checkout-step-information-holder clearfix marginate top bottom">
                     <div class="column big-gap half">
-                        <div class="regular-content-section">
-                            <h2 class="regular-content-section-title">Ingresa tu email y clave de Sodimac</h2>
-                            <div class="pad all">
-                                <form class="inner-padded-content login-form clearfix" action="/" method="post" data-validation="auto">
-                                    <div class="inline-input-container clearfix">
-                                        <label for="login-email" class="inline-item regular-col">Email</label>
-                                        <input class="regular-input inline-item" type="email" name="login-email" id="login-email" placeholder="Ingresa tu e-mail" required>
+                        <section class="checkout-preferences-holder checkout-info-column">
+                            <div class="checkout-preferences-options">
+                                <h3 class="checkout-preferences-box checkout-preference-title">Datos para efecto del despacho, no generan un registro <span class="smaller-paragraph">(campos obligatorios)</span></h3>
+                                <div class="checkout-preferences-box">
+                                    <div class="clearfix regular-block marginate bottom">
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="nombre" class="inline-item">Nombre:</label>
+                                                <input type="text" name="nombre" id="nombre" class="regular-input" placeholder="Nombre">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="apellido-p" class="inline-item">Apellido paterno:</label>
+                                                <input type="text" name="apellido-p" id="apellido-p" class="regular-input" placeholder="Apellido paterno">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="apellido-m" class="inline-item">Apellido materno:</label>
+                                                <input type="text" name="apellido-m" id="apellido-m" class="regular-input" placeholder="Apellido materno">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="pais" class="inline-item">País:</label>
+                                                <input type="text" name="pais" id="pais" class="regular-input" placeholder="País">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="rut" class="inline-item">Cédula de identidad:</label>
+                                                <input type="text" name="rut" id="rut" class="regular-input" placeholder="Cédula de identidad">
+                                            </div>
+                                        </div>
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="telefono-casa" class="inline-item">Teléfono casa:</label>
+                                                <input type="text" name="telefono-casa" id="telefono-casa" class="regular-input" placeholder="+5624587658">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="telefono-oficina" class="inline-item">Teléfono oficina:</label>
+                                                <input type="text" name="telefono-oficina" id="telefono-oficina" class="regular-input" placeholder="+5624587658">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="telefono-cel" class="inline-item">Teléfono celular:</label>
+                                                <input type="text" name="telefono-cel" id="telefono-cel" class="regular-input" placeholder="+5694587658">
+                                            </div>
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="email" class="inline-item">E-mail:</label>
+                                                <input type="email" name="email" id="email" class="regular-input" placeholder="mail@mail.com">
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="inline-input-container clearfix marginate top bottom">
-                                        <label for="login-password" class="inline-item regular-col">Clave</label>
-                                        <input class="regular-input inline-item" type="password" name="login-password" id="login-password" placeholder="Ingresa tu clave" required>
-                                        <a href="#" title="¿Olvidaste tu clave?" rel="nofollow" class="inline-item smaller-paragraph hide-on-mobile">¿Olvidaste tu clave?</a>
+                                </div>
+                                <div class="checkout-preferences-box">
+                                    <h4>Datos del despacho</h4>
+                                </div>
+                                <div class="checkout-preferences-box">
+                                    <div class="marginate bottom">
+                                        <label class="inline-block-inputs">
+                                            Oficina
+                                            <input type="radio" name="preferencia" value="Domicilio" checked>
+                                        </label>
+                                        <label class="inline-block-inputs">
+                                            Departamento
+                                            <input type="radio" name="preferencia" value="Retiro en tienda" >
+                                        </label>
                                     </div>
-
-                                    <input type="submit" value="Ingresar" class="button wide-btn red-btn centered-text fright mobile-full">
-
-                                    <a href="#" title="¿Olvidaste tu clave?" rel="nofollow" class="button block-btn centered-text marginate top hide-on-desktop">¿Olvidaste tu clave?</a>
-                                </form>
-
-                                <div class="inner-padded-content pad top clearfix mobile-bordered-top">
-                                    <p class="pad bottom righted-text mobile-centered-text">También puedes iniciar Sesión con tus datos de Facebook</p>
-                                    <a href="#" title="Iniciar Sesión con Facebook" rel="nofollow" class="button medium-btn facebook-blue-btn centered-text fright mobile-full pad a-little top">
-                                        <i class="fa fa-facebook"></i>
-                                        Iniciar Sesión con Facebook
-                                    </a>
+                                    <div class="clearfix regular-block">
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="nombre-receptor" class="inline-item">Nombre receptor:</label>
+                                                <input type="text" name="nombre-receptor" id="nombre-receptor" class="regular-input" placeholder="Nombre receptor">
+                                            </div>
+                                        </div>
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="apellido-receptor" class="inline-item">Apellido paterno receptor:</label>
+                                                <input type="text" name="apellido-receptor" id="apellido-receptor" class="regular-input" placeholder="Apellido paterno receptor">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix regular-block">
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="calle-receptor" class="inline-item">Calle:</label>
+                                                <input type="text" name="calle-receptor" id="calle-receptor" class="regular-input" placeholder="Calle">
+                                            </div>
+                                        </div>
+                                        <div class="column half">
+                                            <div class="clearfix">
+                                                <div class="column half">
+                                                    <div class="marginate a-little bottom inline-input-container">
+                                                        <label for="numero-receptor" class="inline-item">Número:</label>
+                                                        <input type="text" name="numero-receptor" id="numero-receptor" class="regular-input" placeholder="Número">
+                                                    </div>
+                                                </div>
+                                                <div class="column half">
+                                                    <div class="marginate a-little bottom inline-input-container">
+                                                        <label for="depto-receptor" class="inline-item">Departamento:</label>
+                                                        <input type="text" name="depto-receptor" id="depto-receptor" class="regular-input" placeholder="Departamento">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="column half block-select-mobile">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="region" class="inline-item">Región:</label>
+                                                <select name="region" id="region" class="select registro-select">
+                                                    <option value="Metropolitana">Metropolitana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="column half block-select-mobile">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="ciudad" class="inline-item">Ciudad:</label>
+                                                <select name="ciudad" id="ciudad" class="select registro-select">
+                                                    <option value="Ciudad">Ciudad</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix block-select-mobile">
+                                        <div class="column half">
+                                            <div class="marginate a-little bottom inline-input-container">
+                                                <label for="comuna" class="inline-item">Comuna:</label>
+                                                <select name="comuna" id="comuna" class="select registro-select">
+                                                    <option value="Providencia">Providencia</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-preferences-box">
+                                    <p class="important-paragraph">Envío de Boleta o Factura</p>
+                                    <label for="correo-enviar" class="marginate a-little bottom">Tu boleta será enviada al correo electrónico</label>
+                                    <input type="email" class="regular-input" name="correo-enviar" id="correo-enviar">
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                     <div class="column big-gap half">
-                        <div class="regular-content-section">
-                            <h2 class="regular-content-section-title">¿Todavía no has creado tu cuenta?</h2>
+                        <section class="checkout-cart-holder">
+                            <table class="checkout-cart-table">
+                                <tr>
+                                    <td class="cart-table-heading">
+                                        <h3 class="checkout-preference-title">Resumen carro de compras</h3>
+                                    </td>
+                                    <td class="cart-table-action">
+                                        <a href="#" title="Editar mi compra" rel="nofollow">
+                                            <span class="hide-on-mobile">Editar mi compra</span>
+                                            <i class="fa fa-pencil"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
 
-                            <div class="pad all">                            
-                                <p>Al registrarte podrás beneficiarte de:</p>
+                            <table class="checkout-cart-table">
+                                <tr>
+                                    <th class="cart-table-product lefted-text">Producto</th>
+                                    <th class="cart-table-quantity">Cantidad</th>
+                                    <th class="cart-table-pice">Precio</th>
+                                </tr>
+                                <tr>
+                                    <td class="cart-table-product">
+                                        <div class="column half">
+                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        </div>
+                                        <div class="column half">
+                                            <p class="bold-text">Skill</p>
+                                            <p class="bold-text">Motosierra Profesional</p>
+                                            <p class="smaller-paragraph">Color: Celeste</p>
+                                            <p class="smaller-paragraph">Talla: 37</p>
+                                            <p class="smaller-paragraph">sku: 1234567-12</p>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-quantity">
+                                        <div class="clearfix amount-input-holder" data-role="amount_input">
+                                            <div class="input-space">
+                                                <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                            </div>
+                                            <div class="controls-space">
+                                                <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                                    <i class="fa fa-caret-up"></i>
+                                                </button>
+                                                <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-price">
+                                        <p class="bigger-paragraph">
+                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                            Precio CMR:
+                                        </p>
+                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p>$169.990 c/u</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cart-table-product">
+                                        <div class="column half">
+                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        </div>
+                                        <div class="column half">
+                                            <p class="bold-text">Skill</p>
+                                            <p class="bold-text">Motosierra Profesional</p>
+                                            <p class="smaller-paragraph">Color: Celeste</p>
+                                            <p class="smaller-paragraph">Talla: 37</p>
+                                            <p class="smaller-paragraph">sku: 1234567-12</p>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-quantity">
+                                        <div class="clearfix amount-input-holder" data-role="amount_input">
+                                            <div class="input-space">
+                                                <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                            </div>
+                                            <div class="controls-space">
+                                                <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                                    <i class="fa fa-caret-up"></i>
+                                                </button>
+                                                <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-price">
+                                        <p class="bigger-paragraph">
+                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                            Precio CMR:
+                                        </p>
+                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p>$169.990 c/u</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cart-table-product">
+                                        <div class="column half">
+                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        </div>
+                                        <div class="column half">
+                                            <p class="bold-text">Skill</p>
+                                            <p class="bold-text">Motosierra Profesional</p>
+                                            <p class="smaller-paragraph">Color: Celeste</p>
+                                            <p class="smaller-paragraph">Talla: 37</p>
+                                            <p class="smaller-paragraph">sku: 1234567-12</p>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-quantity">
+                                        <div class="clearfix amount-input-holder" data-role="amount_input">
+                                            <div class="input-space">
+                                                <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                            </div>
+                                            <div class="controls-space">
+                                                <button data-role="control" data-action="add" class="button amount-input-btn add">
+                                                    <i class="fa fa-caret-up"></i>
+                                                </button>
+                                                <button data-role="control" data-action="substract" class="button amount-input-btn substract">
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart-table-price">
+                                        <p class="bigger-paragraph">
+                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                            Precio CMR:
+                                        </p>
+                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p>$169.990 c/u</p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                                <div class="inner-padded-content">
-                                    <ul class="pad bottom">
-                                        <li>Un completo seguimiento de tus pedidos</li>
-                                        <li>El historial de las compras que has realizado</li>
-                                        <li>Definir más de una direcció de despacho</li>
-                                    </ul>
-
-                                    <a href="#" title="Regístrate" rel="nofollow" class="button block-btn medium-btn grey-btn centered-text">Regístrate</a>
-
-                                    <p class="pad top bottom">Regístrate con tus datos de Facebook</p>
-
-                                    <a href="#" title="Iniciar Sesión con Facebook" rel="nofollow" class="button block-btn medium-btn facebook-blue-btn centered-text">
-                                        <i class="fa fa-facebook"></i>
-                                        Iniciar Sesión con Facebook
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                            <table class="checkout-cart-table details">
+                                <tr>
+                                    <td class="separated" >Resumen de la compra</td>
+                                    <td class="separated" ></td>
+                                </tr>
+                                <tr>
+                                    <td class="smaller-paragraph" >Productos en tu carro <span class="red-text">(4)</span></td>
+                                    <td class="righted-text"></td>
+                                </tr>
+                                <tr class="min-pad" >
+                                    <td class="bigger-paragraph bold-text" >Descuento especial</td>
+                                    <td class="righted-text">$80.990</td>
+                                </tr>
+                                <tr class="min-pad" >
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" name="venta-personal" value="si" checked>
+                                            Venta al personal
+                                        </label>
+                                    </td>
+                                    <td class="righted-text">$7.990</td>
+                                </tr>
+                                <tr>
+                                    <td class="bigger-paragraph bold-text">Subtotal</td>
+                                    <td class="righted-text">$14.990</td>
+                                </tr>
+                                <tr>
+                                    <td class="bigger-paragraph bold-text">Subtotal usando tarjeta CMR</td>
+                                    <td class="bigger-paragraph bold-text red-text righted-text">$55.987</td>
+                                </tr>
+                                <tr>
+                                    <td>Subtotal con otros medios de pago</td>
+                                    <td class="bigger-paragraph bold-text righted-text" >$222.333</td>
+                                </tr>
+                            </table>
+                        </section>
                     </div>
                 </section>
+
+                <div class="checkout-invitation-box no-border righted-text marginate top clearfix">
+                    <a href="#" title="Volver" rel="nofollow" class="button medium-btn grey-btn centered-text mobile-column half">Volver</a>
+                    <a href="#" title="Siguiente paso" rel="nofollow" class="button medium-btn red-btn centered-text mobile-column half">Siguiente paso</a>
+                </div>
             </div>
         </main> 
         <!-- // -->

@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -918,23 +917,23 @@
                 	<h2 class="uppercase">Mi Cuenta</h2>
                 </section>
 
-                <section id="mi-cuenta" class="clearfix">
+                <section id="mi-cuenta" class="clearfix" >
                 	<div class="cont-cuenta column big-gap three-quarters">
                 		<h2 class="border-bottom">Cambio de Clave</h2>
-                		<form action="/" class="cambio-clave" method="post">
+                		<form action="/" class="cambio-clave" method="post" data-validation="auto">
                 			<div class="inline-input-container clearfix">
                 				<label class="inline-item regular-col" for="clave-actual">Clave actual:</label>
-                                <input type="password" placeholder="Clave actual" class="regular-input inline-item" id="clave-actual" name="clave-actual">
+                                <input type="password" placeholder="Clave actual" class="regular-input inline-item" id="clave-actual" name="clave-actual" required="">
                 			</div>
                 			<div class="inline-input-container clearfix">
                 				<label class="inline-item regular-col" for="clave-nueva">Clave nueva:</label>
-                                <input type="password" placeholder="Clave nueva" class="regular-input inline-item" id="clave-nueva" name="clave-nueva">
+                                <input type="password" placeholder="Clave nueva" class="regular-input inline-item" id="clave-nueva" name="clave-nueva" data-custom-validation="password_check" data-group="clave" required="">
                 			</div>
                 			<div class="inline-input-container clearfix">
                 				<label class="inline-item regular-col" for="clave-nueva-conf">Confirmar clave nueva:</label>
-                                <input type="password" placeholder="Confirmar clave nueva" class="regular-input inline-item" id="clave-nueva-conf" name="clave-nueva-conf">
+                                <input type="password" placeholder="Confirmar clave nueva" class="regular-input inline-item" id="clave-nueva-conf" name="clave-nueva-conf" data-custom-validation="password_check" data-group="clave" required="">
                 			</div>
-                			<div class="border-top pad top no-border-m no-padding-m ">
+                			<div class="border-top pad top no-border-m no-padding-m">
                 				<button class="button medium-btn red-btn margin-auto full-m" type="submit">Cambiar Clave</button>
                 			</div>
                 		</form>
@@ -1239,8 +1238,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

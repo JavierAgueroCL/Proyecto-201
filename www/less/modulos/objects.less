@@ -45,6 +45,16 @@
         &:hover { background: lighten(@previous_grey, 10%); }
     }
 
+    &.white-btn {
+        background: #fff;
+        color: @washed_text_color;
+        border: 1px solid @header_grey;
+        &:hover { 
+            color: #000;
+            border-color: darken(@header_grey, 20%);
+        }
+    }
+
     &.light-grey-btn {
         background: @dark_blocks_grey;
         color: @washed_text_color;
@@ -709,6 +719,11 @@
         background: #fff;
     }
 
+    &.tall-input {
+        padding: 12px 10px;
+        max-width: 110px;
+    }
+
     &:hover, &:focus {
         border-color: darken(@blocks_border_grey, 10%);
     }
@@ -857,6 +872,7 @@
 .product-carousel-items {
     width: 90%;
     overflow: hidden;
+    &.minificha { width: 100%; }
 }
 
 .product-carousel-list {
@@ -886,6 +902,7 @@
 .product-carousel-item {
     float: left;
     padding: 1em;
+    &.minified { max-width: 20%; }
     .full-carousel & { padding: 5px; }
 }
 
@@ -951,6 +968,15 @@
     .inline-checkbox-input, .inline-checkbox-text {
         display: inline-block;
         line-height: 1em;
+    }
+
+    .comparation-link {
+        color: @sodimac_red;
+        text-decoration: underline;
+        &:hover {
+            color: darken(@sodimac_red, 10%);
+            text-decoration: none;
+        }
     }
 }
 
@@ -1081,6 +1107,11 @@ input[type="date"] {
     left: 50%;
     margin-left: -350px;
     .transform( translateZ(0) );
+
+    &.big-lightbox {
+        width: 990px;
+        margin-left: -495px;
+    }
 }
 
 .lightbox-title {

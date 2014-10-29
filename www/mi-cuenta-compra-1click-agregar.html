@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -921,7 +920,7 @@
                         <div class="caja-datos">
                             <h2>Agregar Dirección</h2>
                         </div>
-                        <form action="/" method="post" class="datos-direccion">
+                        <form action="/" method="post" class="datos-direccion" data-validation="auto">
                             <div class="cont-form"> <!-- Contenido Form -->
                                 <div class="clearfix regular-section">
                                     <div class="column half">
@@ -961,7 +960,7 @@
                                     <div class="column half">
                                         <div class="inline-input-container clearfix">
                                             <label for="direccion" class="inline-item regular-col">Dirección:</label>
-                                            <select name="direccion" id="direccion" class="select no-style">
+                                            <select name="direccion" id="direccion" class="select no-style" required="">
                                                 <option value="Casa">Casa</option>
                                             </select>
                                         </div>
@@ -992,7 +991,7 @@
                                     <div class="column half">
                                         <div class="inline-input-container clearfix">
                                             <label for="ubicacion" class="inline-item regular-col">Ubicación:</label>
-                                            <select name="ubicacion" id="ubicacion" class="select no-style">
+                                            <select name="ubicacion" id="ubicacion" class="select no-style" required="">
                                                 <option value="Región">Región</option>
                                             </select>
                                         </div>
@@ -1343,8 +1342,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

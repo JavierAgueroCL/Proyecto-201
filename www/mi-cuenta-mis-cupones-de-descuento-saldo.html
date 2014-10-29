@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -918,7 +917,7 @@
                 <section id="mi-cuenta" class="clearfix">
                 	<div class="cont-cuenta column big-gap three-quarters">
                 		<h1 class="border-bottom titulo-page">Mis Cupones de Descuento</h1>
-                        <form action="/" method="post" class="cupones">
+                        <form action="/" method="post" class="cupones" data-validation="auto">
                             <div class="border-m">
                                 <h2 class="hide-on-desktop">Carros Registrados</h2>
                                 <p class="margin-bot10 pad a-little all">Ingresa el código de tu cupón para activarlo.</p>
@@ -926,7 +925,7 @@
                                     <div class="column three-quarters marginbot-m10">
                                         <div class="inline-input-container clearfix">
                                             <label for="codigo" class="inline-item regular-col">Código:</label>
-                                            <input class="regular-input inline-item" type="text" name="codigo" id="codigo" placeholder="Código" required="">
+                                            <input class="regular-input inline-item codigo" type="text" name="codigo" id="codigo" placeholder="Código" required="">
                                         </div>
                                     </div>
                                     <div class="column quarters marginbot-m10">
@@ -1240,8 +1239,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

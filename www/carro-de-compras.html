@@ -11,6 +11,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -1043,9 +1044,9 @@
                         </div>
                     </div>
                     
-                    <div class="cart-item-promos-holder regalos" data-role="item">
+                    <div class="cart-item-promos-holder regalos visible" data-role="item">
                         <div class="cart-item-promos-title">
-                            Regalos y promociones asociados
+                            Regalos y promociones asociados <a href="#;" rel="nofollow" class="vermas fright washed-text" data-func="deploy_cart_adicional">Ver <i class="fa fa-plus-square"></i></a>
                         </div>
                         <div class="cart-item-promos-cells">
                             <div class="cart-item-promo photo">
@@ -1070,16 +1071,16 @@
                                 <p>$14.990 c/u</p>
                             </div>
                             <div class="cart-item-promo delete">
-                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <button data-role="delete_btn" data-func="deploy_cart_adicional_remove" class="button seamless-btn block-btn centered-text">
                                     <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
                                     <span class="text">Eliminar</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div class="cart-item-promos-holder servicios" data-role="item">
+                    <div class="cart-item-promos-holder servicios visible" data-role="item">
                         <div class="cart-item-promos-title">
-                            Servicios adicionales
+                            Servicios adicionales <a href="#;" rel="nofollow" class="vermas fright washed-text" data-func="deploy_cart_adicional">Ver <i class="fa fa-plus-square"></i></a>
                         </div>
                         <div class="cart-item-promos-cells">
                             <div class="cart-item-promo photo">
@@ -1103,7 +1104,7 @@
                                 <p>$14.990 c/u</p>
                             </div>
                             <div class="cart-item-promo delete">
-                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <button data-role="delete_btn" data-func="deploy_cart_adicional_remove" class="button seamless-btn block-btn centered-text">
                                     <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
                                     <span class="text">Eliminar</span>
                                 </button>
@@ -1165,9 +1166,9 @@
                         </div>
                     </div>
                     
-                    <div class="cart-item-promos-holder regalos" data-role="item">
+                    <div class="cart-item-promos-holder regalos visible" data-role="item">
                         <div class="cart-item-promos-title">
-                            Regalos y promociones asociados
+                            Regalos y promociones asociados <a href="#;" rel="nofollow" class="vermas fright washed-text" data-func="deploy_cart_adicional">Ver <i class="fa fa-plus-square"></i></a>
                         </div>
                         <div class="cart-item-promos-cells">
                             <div class="cart-item-promo photo">
@@ -1192,7 +1193,7 @@
                                 <p>$14.990 c/u</p>
                             </div>
                             <div class="cart-item-promo delete">
-                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <button data-role="delete_btn" data-func="deploy_cart_adicional_remove" class="button seamless-btn block-btn centered-text">
                                     <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
                                     <span class="text">Eliminar</span>
                                 </button>
@@ -1254,9 +1255,9 @@
                         </div>
                     </div>
 
-                    <div class="cart-item-promos-holder servicios" data-role="item">
+                    <div class="cart-item-promos-holder servicios visible" data-role="item">
                         <div class="cart-item-promos-title">
-                            Servicios adicionales
+                            Servicios adicionales <a href="#;" rel="nofollow" class="vermas fright washed-text" data-func="deploy_cart_adicional">Ver <i class="fa fa-plus-square"></i></a>
                         </div>
                         <div class="cart-item-promos-cells">
                             <div class="cart-item-promo photo">
@@ -1280,7 +1281,7 @@
                                 <p>$14.990 c/u</p>
                             </div>
                             <div class="cart-item-promo delete">
-                                <button data-role="delete_btn" data-func="delete_cart_item" class="button seamless-btn block-btn centered-text">
+                                <button data-role="delete_btn" data-func="deploy_cart_adicional_remove" class="button seamless-btn block-btn centered-text">
                                     <i data-role="icon" class="fa fa-trash-o block-element huge-paragraph pad a-little bottom washed-light-text"></i>
                                     <span class="text">Eliminar</span>
                                 </button>
@@ -1428,7 +1429,7 @@
                     </div>
                     <div class="add-to-cart-box-actions column thirds righted-text clearfix">
                         <a href="#" title="Agregar" rel="nofollow" class="button medium-btn light-grey-btn centered-text mobile-column half">Agregar</a>
-                        <a href="#" title="Ingreso turbo" rel="nofollow" class="button medium-btn light-grey-btn centered-text mobile-column half">Ingreso turbo</a>
+                        <a href="#" title="Ingreso turbo" rel="nofollow" class="button medium-btn light-grey-btn centered-text mobile-column half" data-func="show_lightbox" data-type="ingreso-turbo">Ingreso turbo</a>
                     </div>
                 </div>
                 <!-- // -->
@@ -1804,8 +1805,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
 

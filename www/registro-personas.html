@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -916,20 +916,20 @@
                 <section class="registro">
                     <h1 class="only-on-desktop titulo">Registra los datos de la empresa</h1>
                     <p class="marginate top bottom">Al registrarte ya no será necesario que ingreses tus datos con cada compra. Bastará con tu usuario y clave y podrás revisar tu historial, crear listas de regalo o de compra y acceder a servicios como la Compra con 1 Click (más información). Además, al registrar y autorizar una suscripción a nuestros correos, podrás ser el primero en conocer nuestras mejores ofertas y oportunidades antes de que se agoten.</p>
-                    <form action="/" method="post">
+                    <form action="/" method="post" data-validation="auto">
                         <div class="regular-content marginate bottom">
-                            <h2 class="regular-content-tittle pad a-little top bottom left">1. Datos de la cuenta <span class="error"> <i class="fa fa-exclamation-triangle only-on-mobile"></i></span></h2>
+                            <h2 class="regular-content-tittle pad a-little top bottom left">1. Datos de la cuenta</h2>
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="email-persona" class="inline-item regular-col">Email:</label>
-                                        <input class="regular-input inline-item" type="email" name="email-persona" id="email-persona" placeholder="Ingresa tu e-mail" required="">
+                                        <input class="regular-input inline-item" type="email" name="email-persona" id="email-persona" placeholder="Ingresa tu e-mail" required="" data-custom-validation="password_check" data-custom-message="Email no coincide" data-group="email">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="email-persona-conf" class="inline-item regular-col">Confirmar E-Mail:</label>
-                                        <input class="regular-input inline-item" type="email" name="email-persona-conf" id="email-persona-conf" placeholder="Confirmar e-mail" required="">
+                                        <input class="regular-input inline-item" type="email" name="email-persona-conf" id="email-persona-conf" placeholder="Confirmar e-mail" required="" data-custom-validation="password_check" data-custom-message="Email no coincide" data-group="email">
                                     </div>
                                 </div>
                             </div>
@@ -937,14 +937,14 @@
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="contrasena-persona" class="inline-item regular-col">Contraseña:</label>
-                                        <input class="regular-input inline-item" type="password" name="contrasena-persona" id="contrasena-persona" placeholder="Ingresa tu clave" required="">
+                                        <input class="regular-input inline-item" type="password" name="contrasena-persona" id="contrasena-persona" placeholder="Ingresa tu clave" required="" data-custom-validation="password_check" data-custom-message="Contraseña no coincide" data-group="contrasena">
                                         <i class="fa fa-lock inline-item"></i>
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="contrasena-persona-conf" class="inline-item regular-col">Confirmar contraseña:</label>
-                                        <input class="regular-input inline-item" type="password" name="contrasena-persona-conf" id="registro-conf-contrasena" placeholder="Reingresa tu clave" required="">
+                                        <input class="regular-input inline-item" type="password" name="contrasena-persona-conf" id="registro-conf-contrasena" placeholder="Reingresa tu clave" required="" data-custom-validation="password_check" data-custom-message="Contraseña no coincide" data-group="contrasena">
                                         <i class="fa fa-lock inline-item"></i>
                                     </div>
                                 </div>
@@ -1006,7 +1006,7 @@
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="telefon" class="inline-item regular-col">Teléfono casa / oficina:</label>
-                                        <input class="regular-input inline-item" type="text" name="telefono" id="telefon" placeholder="Cédula de identidad" required="">
+                                        <input class="regular-input inline-item" type="text" name="telefono" id="telefon" placeholder="Teléfono casa / oficina:" required="">
                                     </div>
                                 </div>
                                 <div class="column half">
@@ -1344,8 +1344,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

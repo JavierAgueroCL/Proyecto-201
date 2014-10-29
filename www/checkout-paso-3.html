@@ -9,8 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -1053,7 +1053,7 @@
                                                 <option value="cmr" data-target="cmr">Tarjeta CMR Falabella</option>
                                                 <option value="credito" data-target="credito">Tarjeta bancaria</option>
                                                 <option value="redompra" data-target="redcompra">Tarjeta de débito</option>
-                                                <option value="orden" data-target="orden">Orden de compra</option>
+                                                <option value="orden" data-target="orden" class="only-on-desktop">Orden de compra</option>
                                             </select>
                                         </div>
 
@@ -1583,8 +1583,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

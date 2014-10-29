@@ -625,6 +625,10 @@
         font-weight: normal;
     }
 
+    .mobile-null-search-title {
+        line-height: 4em;
+    }
+
 
     ///////// Checkout
     .checkout-steps-holder {
@@ -896,10 +900,32 @@
                     .regular-col {
                         width: 15%;
                         min-width: 100px;
+                        &.n-cuotas {
+                            display: table-cell;
+                        }
                     }
                     .regular-input {
                         border:0;
                         width: 100%;
+                    }
+
+                    .width190 {
+
+                        &.n-cuotas {
+                            display: table-cell;
+                        }
+                    }
+                }
+                .select {
+                    &.no-style {
+                        border:0;
+                    }
+                }
+                .inline-input-container {
+                    .regular-col {
+                        &.auto {
+                            width: auto;
+                        }
                     }
                 }
             }
@@ -1074,7 +1100,7 @@
                 .inline-input-container {
                     .select {
                         &.no-style {
-                            background: 0 0;
+
                             border: 0;
                             padding-left: 1px;
                             width: 100%;
@@ -1117,6 +1143,29 @@
                 }
             }
             form.listas {
+
+                .inline-input-container {
+                    .regular-col {
+                        width: auto;
+                        &.largo {
+                            width: auto;
+                        }
+                    }
+                    .f-evento, .calendario-icon {
+                        float: left;
+                    }
+                    .calendario-icon {
+                        margin-top: 5px;
+                        margin-left: 5px;
+                    }
+                    .mensaje-l {
+                        float: left;
+                    }
+                    .mensaje-t {
+                        float: left;
+                        width: 60%;
+                    }
+                }
                 label.auto {
                     width: auto;
                     margin-right: 10px;
@@ -1165,22 +1214,19 @@
                     }
                 }
             }
-            #seguimiento {
-                .datos {
-                    padding: 1em;
-                    border:1px solid #f0f0f0;
-
-                    p.campos {
-                        margin-bottom: 10px;
-                        width: 100%;
-                        margin-right: 0;
-                    }
-                    input.codigo {
-                        width: 45%;
-                        display: inline-block;
-                        vertical-align: top;
+            .seguimiento {
+                padding: 0.5em;
+                border:1px solid #f0f0f0;
+                .campos {
+                    margin-bottom: 10px;
+                    width: 100%;
+                }
+                .regular-input {
+                    &.codigo {
+                        width: 50%;
                     }
                 }
+
             }
         }
     }
@@ -1384,6 +1430,85 @@
             }
         }
     }
+    .compra-exitosa {
+
+        p {
+            width: 100%;
+            background-position: calc(100% - 50%) 0;
+            padding:45px 0 0 0;
+            span {
+                font-size: 14px;
+                display: block;
+            }
+        }
+    }
+
+    .n-orden {
+        border:1px solid #e3e3e3;
+        tr {
+            td:first-child {
+                width: 50%;
+            }
+        }
+    }
+    .infor-purchase-data {
+        border:0;
+        .cliente, .data-desp {
+            width: 100%;
+            float: none;
+            margin-bottom: 10px;
+            border:1px solid #e3e3e3;
+            padding-bottom: 10px;
+        }
+        .infor-data {
+            margin-top: 0;
+            tr {
+                td:first-child {
+                    padding-left: 1em;
+                }
+            }
+        }
+        .tit-purchase-data {
+            font-weight: bold;
+            margin-bottom: 0;
+            border-bottom: 0;
+            padding-left: 1em;
+        }
+    }
+    .peso-chileno {
+        background-color: #eee;
+    }
+
+    .descripcion-prod {
+        border-bottom: #e3e3e3;
+    }
+    
+    .regular-block {
+        .inline-item {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 5px;
+            width: 30%;
+        }
+    }
+    .block-select-mobile {
+        .inline-item {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 5px;
+            width: 30%;
+        }
+        .select {
+
+            &.registro-select {
+                background: 0 0;
+                border: 0;
+                padding-left: 1px;
+                width: 100%;
+            }
+        }
+    }
+
 
     .full-m {
         width: 100% !important;

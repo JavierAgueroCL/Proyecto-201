@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -908,56 +907,62 @@
                     <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Mis listas de favoritos</a>
                 </section>
 
-                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                <section class="mobile-back-holder hide-on-desktop margin-top10 border-bottom">
                     <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
                         <i class="fa fa-chevron-left"></i>
                         Mi Cuenta
                     </a>
                 </section>
-                <section class="clearfix hide-on-desktop tit-sec">
-                	<h2>Mis Listas de Favoritos</h2>
-                </section>
 
                 <section id="mi-cuenta" class="clearfix">
                 	<div class="cont-cuenta column big-gap three-quarters">
-                    <form action="" class="listas">
-                		<h2 class="border-bottom hide-on-mobile">Mis listas de Favoritos</h2>
+                    <form action="/" method="post" class="listas" data-validation="auto">
+                		<h1 class="border-bottom titulo-page">Mis listas de Favoritos</h1>
                         <div class="caja-datos margin-bot10 no-margin-m">
                             <h2>Agregar nueva lista de favoritos</h2>
                         </div>
                         <div class="caja-datos pad all margin-bot10">
                             <div class="clearfix margin-bot10">
-                                <label for="lista" class="only-on-desktop">Motivo de tu lista:</label>
-                                <select name="" id="lista" class="select full-m marginbot-m10">
-                                    <option value="">Seleccionar</option>
+                                <div class="fleft full-m marginbot-m10">
+                                    <div class="inline-input-container clearfix">
+                                        <label for="motivo-de-lista" class="inline-item regular-col">Motivo de tu lista:</label>
+                                        <select name="motivo-de-lista" id="motivo-de-lista" class="select width190 no-style full-m">
+                                            <option value="Cambios Casa">Cambio de casa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="fleft full-m marginbot-m10">
+                                    <div class="inline-input-container">
+                                        <label for="otro" class="inline-item regular-col otro">Otro:</label>
+                                        <input type="text" id="otro" name="otro" class="regular-input inline-item width190 full-m" required="">
+                                    </div> 
+                                </div>                               
+                            </div>
+                            <div class="inline-input-container clearfix clearfix margin-bot10">
+                                <label for="nombre-lista" class="inline-item regular-col">Nombre para tu lista:</label>
+                                <input class="regular-input inline-item width190 full-m" type="text" name="nombre-lista" id="nombre-lista" placeholder="Nombre Lista" required="">
+                            </div>
+                            <div class="inline-input-container clearfix margin-bot10">
+                                <label for="mensaje" class="inline-item regular-col mensaje-l">Ingresar un mensaje:</label>
+                                <textarea name="mensaje" id="mensaje" cols="59" rows="5" class="mensaje-t regular-input full-m">Muebles para la nueva casa</textarea>
+                            </div>
+                            <div class="inline-input-container clearfix margin-bot10">
+                                <label for="lista-option" class="inline-item regular-col largo">Quieres hacer pública tu lista:</label>
+                                <select name="lista-option" id="lista-option" class="select width190 full-m no-style">
+                                    <option value="">Si, quiero que sea pública</option>
+                                    <option value="">No, quiero que sea privada</option>
                                 </select>
-                                <label for="" class="corto margin-left10 only-on-desktop">Otro:</label>
-                                <input type="text" class="full-m" placeholder="Otro">
                             </div>
-                            <div class="clearfix margin-bot10">
-                                <label for="" class="only-on-desktop">Nombre para tu lista:</label>
-                                <input type="text" placeholder="Casa nueva" class="full-m">
-                            </div>
-                            <div class="clearfix margin-bot10">
-                                <label for="" class="fleft only-on-desktop">Ingresar un mensaje:</label>
-                                <textarea name="" id="" cols="59" rows="5" class="fleft full-m"></textarea>
-                            </div>
-                            <div class="margin-bot10">
-                                <label for="" class="largo full-m marginbot-m10">Quieres hacer pública tu lista:</label>
-                                <select name="" id="" class="select full-m">
-                                    <option value="">Seleccionar</option>
-                                </select>
-                            </div>
-                            <div class="margin-bot10">
-                                <label for="" class="largo auto">Fecha del evento:</label>
-                                <input type="text" class="calendario">
-                                <span id="abrircalendario"><i class="fa fa-calendar-o"></i></span>
+                            <div class="inline-input-container clearfix margin-bot10">
+                                <label for="calendario-input" class="inline-item regular-col largo f-evento">Fecha del evento:</label>
+                                <input type="date" data-role="get_calendar" class="calendario regular-input inline-item width190 f-evento" id="calendario-input" name="calendario-input" required="">
+                                <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input" class="calendario-icon"><i class="fa fa-calendar-o"></i></span>
                             </div>
                         </div>
 
                         <div class="clearfix">
                             <div class="fright full-m">
-                                <button class="button medium-btn red-btn activar full-m">Guardar lista</button>
+                                <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
                             </div>
                         </div>
                     </form>
@@ -1262,9 +1267,19 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
+        <!-- // -->
+
+        <!-- scripts y estilos especificos para datepicker -->
+        <link rel="stylesheet" type="text/css" href="js/libs/pickadate/themes/default.css" />
+        <link rel="stylesheet" type="text/css" href="js/libs/pickadate/themes/default.date.css" />
+        <script src="js/libs/pickadate/picker.js"></script>
+        <script src="js/libs/pickadate/picker.date.js"></script>
+        <!--[if lte IE 8]>
+            <script src="js/libs/pickadate/legacy.js"></script>
+        <![endif]-->
         <!-- // -->
     </body>
 </html>

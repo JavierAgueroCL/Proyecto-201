@@ -11,6 +11,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -935,7 +936,7 @@
                         <div class="regular-content-section">
                             <h2 class="regular-content-section-title">Ingresa tu email y clave de Sodimac</h2>
                             <div class="pad all">
-                                <form class="inner-padded-content login-form clearfix" action="" method="post">
+                                <form class="inner-padded-content login-form clearfix" action="/" method="post" data-validation="auto">
                                     <div class="inline-input-container clearfix">
                                         <label for="login-email" class="inline-item regular-col">Email</label>
                                         <input class="regular-input inline-item" type="email" name="login-email" id="login-email" placeholder="Ingresa tu e-mail" required>
@@ -1219,8 +1220,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

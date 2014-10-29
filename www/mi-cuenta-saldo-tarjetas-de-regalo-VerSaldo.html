@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -908,29 +907,27 @@
                     <a href="#" title="Ir a Categoría abuelo" rel="section" class="breadcrumb-item">Saldo tarjetas de regalo</a>
                 </section>
 
-                <section class="mobile-back-holder hide-on-desktop margin-top10">
+                <section class="mobile-back-holder hide-on-desktop margin-top10 border-bottom">
                     <a href="#" title="Volver a Futones, Sofás Cama" rel="section" class="block-element bold-text">
                         <i class="fa fa-chevron-left"></i>
                         Inicio
                     </a>
                 </section>
-                <section class="clearfix hide-on-desktop tit-sec">
-                	<h2>Mi Cuenta</h2>
-                </section>
-
                 <section id="mi-cuenta" class="clearfix">
                 	<div class="cont-cuenta column big-gap three-quarters">
-                		<h2 class="border-bottom hide-on-mobile">Saldo Tarjetas de Regalo</h2>
-                        <form action="saldo" class="saldo">
+                		<h1 class="border-bottom hide-on-mobile">Saldo Tarjetas de Regalo</h1>
+                        <form action="saldo" class="saldo" data-validation="auto">
                             <div class="border-m">
                                 <h2 class="hide-on-desktop">Carros Registrados</h2>
-                                <div class="clearfix pad bottom padding1em-m border-bottom no-border-m">
-                                    <div class="column three-quarters pad left no-padding-m">
-                                        <p class="margin-bot10">Conoce el saldo de tu gift card, e-gift, tarjeta de venta o empresa o tajreta convenio.</p>
-                                        <label for="" class="hide-on-mobile">El código de tu tarjeta: </label>
-                                        <input type="text" placeholder="Código" class="full-m marginbot-m10">
+                                <p class="margin-bot10 pad a-little all">Conoce el saldo de tu gift card, e-gift, tarjeta de venta o empresa o tajreta convenio.</p>
+                                <div class="clearfix regular-section">
+                                    <div class="column three-quarters marginbot-m10">
+                                        <div class="inline-input-container clearfix">
+                                            <label for="codigo" class="inline-item regular-col codigo">El código de tu tarjeta:</label>
+                                            <input class="regular-input inline-item codigo" type="text" name="codigo" id="codigo" placeholder="Código" required="">
+                                        </div>
                                     </div>
-                                    <div class="column quarters ">
+                                    <div class="column quarters marginbot-m10">
                                         <button type="submit" class="button medium-btn red-btn fright activar full-m no-margin-m">Ver saldo</button>
                                     </div>
                                 </div>
@@ -942,75 +939,75 @@
                         </form><!-- Guardar Datos -->
                 	</div> <!-- Contenido Derecho -->
                 	<aside class="side column big-gap quarters">
-                		<h2 class="border-bottom">Mi Cuenta</h2>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
-                			<ul>
-	                			<li>
-	                				<a href="#" title="Datos para compra en 1 Click">Datos para compra en 1 Click</a>
-	                			</li>
-	                		</ul>
-                		</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Datos Personales">Datos Personales</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Cambio de clave">Cambio de clave</a>
-	                			</li>
-	                		</ul>
-                		</div>                
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Todas mis compras">Todas mis compras</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis pedidos en tienda">Mis pedidos en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
-	                			</li>
-	                		</ul>
-						</div>
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Mis cotizaciones en tienda">Mis cotizaciones en tienda</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis servicios cotizados">Mis servicios cotizados</a>
-	                			</li>
-	                		</ul>
-						</div>
-                		<div>
-                			<h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
-	                		<ul>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta CMR">Saldo tarjeta CMR</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Saldo tarjeta de regalo">Saldo tarjeta de regalo</a>
-	                			</li>
-	                			<li>
-	                				<a href="#" title="Mis cupones de descuento">Mis cupones de descuento</a>
-	                			</li>
-	                		</ul>
-                		</div>               		
-                	</aside>
+                        <h2 class="border-bottom">Mi Cuenta</h2>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Compra en 1 Click</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos para compra en 1 Click" rel="contents">Datos para compra en 1 Click</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Información personal</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Datos Personales" rel="contents">Datos Personales</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Libreta de direcciones" rel="contents">Libreta de direcciones</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Cambio de clave" rel="contents">Cambio de clave</a>
+                                </li>
+                            </ul>
+                        </div>                
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Seguimiento de tu compra" rel="contents">Seguimiento de tu compra</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Todas mis compras" rel="contents">Todas mis compras</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis pedidos en tienda" rel="contents">Mis pedidos en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis carros guardados" rel="contents">Mis carros guardados</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis listas de favoritos" rel="contents">Mis listas de favoritos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Cotizaciones</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Mis cotizaciones en tienda" rel="contents">Mis cotizaciones en tienda</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis servicios cotizados" rel="contents">Mis servicios cotizados</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+                            <ul>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta CMR" rel="contents">Saldo tarjeta CMR</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Saldo tarjeta de regalo" rel="contents">Saldo tarjeta de regalo</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Mis cupones de descuento" rel="contents">Mis cupones de descuento</a>
+                                </li>
+                            </ul>
+                        </div>                      
+                    </aside>
                 </section>
 
             </div>
@@ -1241,8 +1238,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>

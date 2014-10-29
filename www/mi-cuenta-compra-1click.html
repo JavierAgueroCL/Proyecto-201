@@ -9,9 +9,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
     
@@ -924,7 +923,7 @@
                                 <div class="pad all">
                                     <label class="block-element" for="tipo-despacho">Elige el tipo de despacho que quieres programa para tu Compra en 1 Click.</label>
                                     <div>
-                                        <select name="tipo-despacho" id="tipo-despacho" class="select margin-top10 full-m">
+                                        <select name="tipo-despacho" id="tipo-despacho" class="select margin-top10 full-m width190">
                                             <option value="Despacho rápido">Despacho rápido</option>
                                         </select>
                                     </div>
@@ -934,7 +933,7 @@
                                 <h2>Direcciones para el envío</h2>
                                 <div class="clearfix">
                                     <div class="pad all column two-thirds full-m marginbot-m10">
-                                        <select name="direccion-select" id="direccion-select" class="select margin-top10 margin-bot10 full-m">
+                                        <select name="direccion-select" id="direccion-select" class="select margin-top10 margin-bot10 full-m width190">
                                             <option value="Nombre">Nombre</option>           
                                         </select>
                                         <p class="bold-text">Vasconia 1879 depto. 306</p>
@@ -943,9 +942,9 @@
                                         <p>+56 9 675 98 54</p>
 
                                         <p class="margin-top10 margin-bot10">Dirección para el envío de la (Boleta o Factura)</p>
-                                        <div>
-                                            <label for="email" class="margin-right10">E-mail</label>
-                                            <input type="email" id="email">
+                                        <div class="inline-input-container">
+                                            <label for="email" class="margin-right10 regular-col inline-item auto">E-mail</label>
+                                            <input type="email" id="email" class="regular-input inline-item width190">
                                         </div>
                                     </div>
                                     <div class="pad left margin-top1em column thirds border-left no-padding-m no-border-m">
@@ -970,7 +969,7 @@
                                 <div class="pad all clearfix">
                                     <div class="margin-bot10 inline-input-container">
                                         <label for="cliente" class="inline-item regular-col">Cliente</label>
-                                        <select name="cliente" id="cliente" class="regular-col inline-item select full-m no-style">
+                                        <select name="cliente" id="cliente" class="regular-col inline-item select width190 full-m no-style">
                                             <option value="">Titular</option>
                                             <option value="">Titular</option>
                                         </select>
@@ -979,20 +978,19 @@
                                         <label for="numero-tarjeta" class="inline-item regular-col">N° de tarjeta:</label>
                                         <input type="text" class="regular-input inline-item" name="numero-tarjeta" id="numero-tarjeta" placeholder="123812312">
                                     </div>
-                                    <div  class="margin-bot10">
-                                        <label for="numero-tarjeta" class="inline-block-element only-on-desktop">N° de tarjeta:</label>
-                                        <input type="text" class="margin-right10 full-m marginbot-m10 only-on-desktop" id="numero-tarjeta" name="numero-tarjeta">
-                                        <label for="numero-cuotas" class="inline-block-element">N° de cuotas</label>
-                                        <select name="numero-cuotas" id="numero-cuotas" class="select cod">
+                                    <div class="margin-bot10 inline-input-container">
+                                        <label for="numero-tarjeta" class="only-on-desktop inline-item regular-col">N° de tarjeta:</label>
+                                        <input type="text" class="only-on-desktop regular-input inline-item width190 n-cuotas" id="numero-tarjeta" name="numero-tarjeta">
+                                        <label for="" class="inline-item regular-col n-cuotas">N° de cuotas:</label>
+                                        <select name="" id="" class="select inline-item regular-col no-style full-m inline-block-element">
                                             <option value="1">1</option>
-                                            <option value="2">2</option>
                                         </select>
                                     </div>
-                                    <div  class="margin-bot10">
-                                        <label for="tipo-de-pago" class="inline-block-element hide-on-mobile">Pago</label>
-                                        <select name="tipo-de-pago" id="tipo-de-pago" class="select full-m">
-                                            <option value="">Pago Normal</option>
-                                            <option value="">Pago no Normal</option>
+                                    <div class="margin-bot10 inline-input-container">
+                                        <label for="pago" class="inline-item regular-col">Pago:</label>
+                                        <select name="pago" id="cliente" class="regular-col inline-item select width190 full-m no-style">
+                                            <option value="Pago Normal">Pago Normal</option>
+                                            <option value="Pago Cuotas">Pago Cuotas</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1309,8 +1307,8 @@
         <!-- // -->
         <!-- // -->
         <!-- scripts al final para mejorar performance -->
-        <script src="js/libs/modernizr.js"></script>
         <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/jquery.placeholder.js"></script>
         <script src="js/main.js"></script>
         <!-- // -->
     </body>
