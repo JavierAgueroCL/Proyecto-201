@@ -133,6 +133,7 @@
         input[type="search"] {
             width: 85%;
             padding: 5px;
+            min-height: 36px;
         }
 
         input[type="submit"], button[type="submit"] {
@@ -244,8 +245,9 @@
         color: @washed_text_color;
         background: #fff;
         border: 1px solid @blocks_border_grey;
-        min-width: 40px;
+        min-width: 36px;
         text-align: center;
+        padding: 9px;
 
         &:active { border-color: #000; }
     }
@@ -261,6 +263,13 @@
             position: relative;
         }
         &.search-holder { width: 85%; }
+
+        .button {
+            &.deploy-btn {
+                min-width: 36px;
+                min-height: 36px;
+            }
+        }
     }
 
 

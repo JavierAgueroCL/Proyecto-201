@@ -33,6 +33,18 @@
 
             $container.toggleClass('deployed');
         },
+        deploy_submenu_cont : function( event ){
+            event.preventDefault();
+
+            var $item = $(event.currentTarget);
+            $item.siblings().removeClass('deployed');
+            if(event.type == 'mouseenter'){
+                $item.addClass('deployed');
+            }else{
+                $item.removeClass('deployed');
+            }
+            
+        },
         deploy_mobile_menu : function( event ){
             event.preventDefault();
 
@@ -91,6 +103,11 @@
         deploy_big_header_box : function( event ){
             event.preventDefault();
             $(this).parent().toggleClass('deployed');
+        },
+        deploy_sub_header_box : function( event ){
+            event.preventDefault();
+            $(this).parent().toggleClass('deployed');
+            $(this).parent().find('.sub-header-box-body').toggleClass('deployed');
         },
         delete_cart_item : function( event ){
             event.preventDefault();
