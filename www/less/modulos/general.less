@@ -670,6 +670,10 @@
     &.cod {
         width: 100px;
     }
+
+    &.bg-gray {
+        background-color: #f9f9f9;
+    }
 }
 
 .titulo-page {
@@ -928,19 +932,6 @@
             }
         }
 
-        .cupones, .saldo {
-
-            .regular-section {
-                padding-bottom: 1em;
-                border-bottom: 1px solid #ccc;
-
-                .inline-item {
-                    &.codigo {
-                        width: 190px;
-                    }
-                }
-            }
-        }
 
         form.listas {
 
@@ -1074,6 +1065,38 @@
         }
     } /* CONT - CUENTA */
 }
+
+.cupones, .saldo {
+
+    border-bottom: 1px solid #ccc;
+
+    .regular-section {
+        padding-bottom: 1em;
+
+        .inline-item {
+            &.codigo {
+                width: 190px;
+            }
+        }
+    }
+    .inline-input-container {
+        .regular-col {
+            &.big {
+                width: 27%;
+            }
+        }
+        .regular-input {
+            &.width-300 {
+                width: 300px;
+            }
+        }
+    }
+
+    .box-error-saldo {
+        margin-bottom: 40px;
+    }
+}
+
 
 .servicio-cliente {
     .side.ser-cliente {
@@ -1650,6 +1673,8 @@
 }
 
 
+
+
 //////////////////////
 ////////////////////// Busqueda
 .search-filters-menu {
@@ -1682,6 +1707,7 @@
     .search-sorting-item {
         display: inline-block;
         line-height: 16px;
+
     }
 }
 

@@ -119,6 +119,14 @@
         &.social-btn {
             font-size: 4em;
         }
+
+        &.altura-44-m {
+            padding: 14px 10px;
+        }
+    }
+
+    .altura-44-m {
+        height: 44px;
     }
 
     .big-icon-holder {
@@ -138,6 +146,7 @@
 
         input[type="submit"], button[type="submit"] {
             width: 15%;
+            min-height: 36px;
         }
     }
 
@@ -261,6 +270,14 @@
         &.submenu-holder { 
             width: 10%; 
             position: relative;
+
+            &.deployed {
+
+                &:after {
+                    max-width: 36px;
+                    min-width: 36px;
+                }
+            }
         }
         &.search-holder { width: 85%; }
 
@@ -268,6 +285,7 @@
             &.deploy-btn {
                 min-width: 36px;
                 min-height: 36px;
+                max-width: 36px;
             }
         }
     }
@@ -346,6 +364,20 @@
         .regular-input {
             border-radius: 0;
             border: none;
+        }
+
+        &.clean-style {
+            border:0;
+
+            label {
+                width: 100%;
+                display: block;
+                font-weight: bold;
+            }
+
+            select {
+                border: 1px solid @header_grey;
+            }
         }
     }
 
@@ -519,6 +551,30 @@
         .button { margin-bottom: 1em; }
     }
 
+    .shopping-cart-details {
+        &.all {
+            padding: 10px 0;
+
+            .regular-table {
+                td {
+                    padding: 0 5px 0 0;
+
+                    &.padding-b {
+                        padding-bottom: 5px;
+                    }
+
+                    &.padding-t {
+                        padding-top: 5px;
+                    }
+
+                    &.padding-t-10 {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
     ///////// Busqueda
     .page-sidebar-title.search-filters-heading {
         font-size: 16px;
@@ -535,6 +591,12 @@
 
     .search-filter {
         overflow: hidden;
+
+        .search-filter-ul {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
     }
 
     .search-filter-title {
@@ -554,6 +616,32 @@
         }
     }
 
+    .search-filter-title-h2 {
+        font-weight: normal;
+        padding: 7px;
+        border-width: 1px;
+        margin-top: -1px;
+        border: 1px solid #e3e3e3;
+        display: block;
+        font-size: 13px;
+
+        .set-bg-img( url('../images/icons/chevron-down.svg'), url('../images/icons/chevron-down.png') );
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+        background-position: ~"calc(100% - 10px)" 50%;
+        background-color: #fff;
+
+        .deployed & {
+            .set-bg-img( url('../images/icons/chevron-up.svg'), url('../images/icons/chevron-up.png') );
+        }
+
+        &.uppercase  {
+            text-transform: capitalize;
+        }
+    }
+
+
+
     .search-filter-options {
         display: none;
         border: 1px solid @header_grey;
@@ -571,9 +659,15 @@
 
     .search-tabs-holder {
         display: table;
+        width: 100%;
 
         .search-tab-item {
-            display: table-cell;
+            margin-left: 1.5%;
+            width: 32.3%;
+
+            &:first-child {
+                margin-left:0;
+            }
         }
     }
 
@@ -585,7 +679,7 @@
     }
 
     .search-pagination-item {
-        padding: 7px 15px;
+        padding: 7px 13px;
 
         &.prev-btn { float: left; }
         &.next-btn { float: right; }
@@ -629,7 +723,7 @@
     }
 
     .search-result-price {
-        font-size: 2.5em;
+        font-size: 30px;
         line-height: 110%;
         font-weight: normal;
     }
@@ -754,6 +848,19 @@
                 margin-bottom: 0;
                 font-size: 25px;
                 margin-right: 5px;
+
+                &.bloque {
+                    display: block;
+                    float: none;
+                }
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+
+            p {
+                text-decoration: underline;
             }
         }
     }
@@ -854,6 +961,7 @@
                     ul {
                         display: block;
                         margin-bottom: 10px;
+                        list-style-position: inside;
 
                         li {
                             min-height: 20px;
@@ -964,7 +1072,7 @@
                             width: 50%;
                             float: left;
                             position: relative;
-                            padding: 0.8em 1em;
+                            padding: 8px 1em;
                             box-sizing: border-box;
 
                             .dos-puntos {
@@ -1132,16 +1240,6 @@
                     }
                 }
             }
-            .cupones {
-
-                .regular-section {
-                    padding: 0 1em;
-                    border-bottom: 0;
-                }
-                .activar {
-                    float: none;
-                }
-            }
 
             .select {
                 &.cod {
@@ -1239,6 +1337,40 @@
             }
         }
     }
+
+    .cupones {
+
+        border-bottom: 0;
+
+        .regular-section {
+            padding: 0 10px 10px 10px;
+            border-bottom: 0;
+        }
+        .activar {
+            float: none;
+            height: 35px;
+        }
+        .ver-saldo {
+            height: 35px;
+        }
+        .inline-input-container {
+            .regular-col {
+                &.big {
+                    width: 50%;
+                }
+            }
+            .regular-input {
+                &.width-300 {
+                    width: 100%;
+                }
+            }
+        }
+        .box-error-saldo {
+            margin-bottom: 10px;
+        }
+    }
+
+
 
     .servicio-cliente {
         .side.ser-cliente {
@@ -1518,6 +1650,23 @@
         }
     }
 
+    .cont-doble-item-half {
+
+        width: 100%;        
+
+        .button {
+
+            width: 47.5%;
+            margin:20px 0  0 0;
+            float: left;
+            padding: 8px 0;
+
+            &:first-child {
+                margin-right: 5%;
+            }
+        }
+    }
+
 
     .full-m {
         width: 100% !important;
@@ -1572,4 +1721,5 @@
 
     //// clases auxiliares
     .hide-on-mobile, .only-on-desktop { display: none !important; }
+    .text-18 { font-size: 18px; }
 }
