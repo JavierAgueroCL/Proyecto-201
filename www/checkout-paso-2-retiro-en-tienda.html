@@ -5587,18 +5587,11 @@
                             <div class="checkout-preferences-options">
                                 <h3 class="checkout-preferences-box checkout-preference-title">Información de despacho</h3>
                                 <div class="checkout-preferences-box">
-                                    <label class="inline-block-inputs">
-                                        Domicilio
-                                        <input type="radio" name="preferencia" value="Domicilio">
-                                    </label>
-                                    <label class="inline-block-inputs">
-                                        Retiro en tienda
-                                        <input type="radio" name="preferencia" value="Retiro en tienda" checked >
-                                    </label>
-                                    <label class="inline-block-inputs">
-                                        Novios
-                                        <input type="radio" name="preferencia" value="Novios" >
-                                    </label>
+                                    <select name="lugar" id="lugar" class="select registro-select pretty-select grey-light-select">
+                                        <option value="Domicilio">Domicilio</option>
+                                        <option value="Retiro en tienda" selected="selected">Retiro en tienda</option>
+                                        <option value="Novios" >Novios</option>
+                                    </select>
                                 </div>
                             </div>
                             <section id="settings-holder" class="checkout-settings-holder">
@@ -5630,7 +5623,7 @@
                                         </div>
                                     </div>
 
-                                    <select name="despacho-receptor-region" id="despacho-receptor-region" class="pretty-select inline-select grey-select  marginate bottom">
+                                    <select name="despacho-receptor-region" id="despacho-receptor-region" class="pretty-select inline-select grey-light-select  marginate bottom">
                                         <option value="RM">Región Metropólitana</option>
                                         <option value="RM">Región Metropólitana</option>
                                         <option value="RM">Región Metropólitana</option>
@@ -6104,9 +6097,8 @@
                 <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
 
                 <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <i class="fa fa-phone-square big-icon"></i>
                     <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow">600 600 4020</a>
+                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
                         <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
                     </p>
                 </div>

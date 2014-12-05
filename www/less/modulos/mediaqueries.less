@@ -383,6 +383,10 @@
 
     .inner-padded-content  {
         padding: 0;
+
+        &.pad-top-m {
+            padding-top: 10px;
+        }
     }
 
     .mobile-menu-title {
@@ -967,7 +971,6 @@
                             min-height: 20px;
                             a {
                                 text-decoration: none;
-                                height: 100%;
                             }
                         }
                     }
@@ -1072,7 +1075,7 @@
                             width: 50%;
                             float: left;
                             position: relative;
-                            padding: 8px 1em;
+                            padding: 8px 10px;
                             box-sizing: border-box;
 
                             .dos-puntos {
@@ -1190,6 +1193,20 @@
                             }
                         }
                     }
+                }
+
+                &.carros-guardados {
+                	ul.table-row {
+                		li {
+                			span, a {
+
+                				width: 60%;
+                				&:first-child {
+                					width: 40%;
+                				}
+                			}
+                		}
+                	}
                 }
             }
 
@@ -1642,7 +1659,7 @@
         .select {
 
             &.registro-select {
-                background: 0 0;
+                /*background: 0 0;*/
                 border: 0;
                 padding-left: 1px;
                 width: 100%;
@@ -1697,7 +1714,29 @@
 
         .big-icon { line-height: 40px; }
         .footer-phone-number {
-            a { font-size: 35px; line-height: 30px; }
+            a { 
+                font-size: 33px; 
+                line-height: 30px;
+
+                i {
+                    float: none;
+                    display: inline;
+                    font-size: 52px;
+
+                    &:before {
+                        vertical-align: -5px;
+                    }
+                }
+
+                &:hover {
+
+                    text-decoration: none;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
         }
     }
 
@@ -1706,7 +1745,7 @@
         width: 90%;
         padding: 0.5em;
         margin-left: -45%;
-        font-size: 11px;
+        /*font-size: 11px;*/
 
         .input-holder { width: 10%; }
         .code-holder { width: 20%; }
@@ -1716,6 +1755,13 @@
 
     .lightbox-title {
         font-size: 1.5em;
+    }
+
+    .footer-socials-holder {
+        text-align: center;
+        a {
+            padding: 3px;
+        }
     }
 
 

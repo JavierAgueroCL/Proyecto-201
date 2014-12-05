@@ -401,7 +401,7 @@
     position:absolute;
     top:0;
     width:0;
-    height:auto;
+    height:0;
     left:140px;
     background-color:#fff;
     opacity:0;
@@ -410,6 +410,7 @@
     min-height:458px;
     border:1px solid #ccc;
     border-radius:0 0 3px 3px;
+    overflow: hidden;
 
     .info {
         float:left;
@@ -640,6 +641,32 @@
 }
 
 /***************************************************
+**************************** Busqueda
+****************************************************/
+
+.grid-4x4 {
+    .search-result-actions {
+        .column {
+            &.half {
+                width: 58%;
+
+                &:first-child {
+                    width: 41%;
+
+                    label {
+                        padding: 4px 0;
+
+                        span {
+                            vertical-align: bottom;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***************************************************
 **************************** Mi cuenta ( Manu )
 ****************************************************/
 .tit-sec {
@@ -661,7 +688,7 @@
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background: url(../images/icons/bg-select.png) 95% 50% no-repeat;
+    background: url(../images/icons/bg-select.png) 97% 50% no-repeat;
     
 
     &.width190 {
@@ -1114,6 +1141,7 @@
                 ul {
                     display: block;
                     margin-bottom: 10px;
+                    list-style-position: inside;
                 }
                 h4 {
                     i.fa-chevron-right:before {
@@ -1529,7 +1557,7 @@
     font-weight: bold;
     line-height: 120%;
     padding: @base_font_size;
-    background: @header_grey;
+    background: #f0f0f0;
 
     &.secondary-title { font-size: 1.1em; }
 
@@ -1539,6 +1567,33 @@
 .inner-padded-content {
     display: block;
     padding: 1em 4em;
+
+    &.no-pad-top {
+        padding-top: 0;
+    }
+
+}
+
+.big-pad-box-login {
+    padding: 1em 83px; 
+
+    ul {
+        padding-top: 10px;
+        padding-bottom: 24px;
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        &.no-padding {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+    }
+
+    &.less-padding-top {
+        padding-top: 7px;
+    }
 }
 
 //////////////////////

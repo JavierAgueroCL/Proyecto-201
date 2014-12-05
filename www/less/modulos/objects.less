@@ -30,7 +30,7 @@
     &.small-btn { padding: 2px 10px; }
     &.medium-btn { padding: 8px 20px; }
     &.tall-btn { padding: 12px 10px; }
-    &.wide-btn { padding: 8px 3em; }
+    &.wide-btn { padding: 8px 20px; }
     &.big-btn { padding: 2em; }
 
     &.red-btn {
@@ -146,6 +146,9 @@
         position: relative;
 
         padding-left: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 10px;
 
         margin-bottom: 1em;
 
@@ -332,6 +335,10 @@
 
     &.ver-saldo {
         padding: 8px 20px;
+    }
+
+    &.width-190 {
+        min-width: 190px;
     }
 }
 
@@ -558,6 +565,10 @@
 
     &.grey-select {
         background-color: @header_grey;
+    }
+
+    &.grey-light-select {
+        background-color: #f7f7f7;
     }
 
 
@@ -1095,7 +1106,7 @@ input[type="date"] {
     z-index: 999999;
     display: block;
     width: 100%;
-    min-width: 100vw;
+    /*min-width: 100vw;*/
     background: rgba(255,255,255,0.8);
     opacity: 0;
     .transform( translateZ(0) );
