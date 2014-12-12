@@ -5707,7 +5707,85 @@
                                             </div>
                                         </div>
 
-                                        <div class="desktop-tabs-controls pad all hide-on-desktop">
+                                        <div class="desktop-tabs-controls hide-on-desktop">
+                                            <div class="box-section-forma-pago">
+                                                <label for="tarjeta-cmr-falabella-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
+                                                    <input type="radio" id="tarjeta-cmr-falabella-m">
+                                                    <img src="images/icons/payment-cmr.png">
+                                                    <span class="bold-text">Tarjeta CMR Falabella</span>
+                                                </label>
+                                                <div class="box-section-info-pago">
+                                                    <select name="cmr-type-select" id="cmr-type-select" class="pretty-select marginate a-little bottom">
+                                                        <option value="">Selecciona el tipo de tarjeta</option>
+                                                        <option value="titular">Titular</option>
+                                                        <option value="adicional">Adicional</option>
+                                                    </select>
+
+                                                    <input class="regular-input marginate a-little bottom" type="text" name="cmr-card-number" placeholder="Número de tarjeta" required>
+
+                                                    <select name="cmr-payment-type" id="cmr-payment-type" class="pretty-select marginate a-little bottom">
+                                                        <option value="">Selecciona el tipo de pago</option>
+                                                        <option value="Pago normal">Pago normal</option>
+                                                        <option value="Pago diferido">Pago diferido</option>
+                                                    </select>
+
+                                                    <div class="clearfix">
+                                                        <div class="mobile-column half">
+                                                            <label for="cmr-cuota-number-select" class="block-element bold-text inline-input-label">
+                                                                Número de cuotas
+                                                            </label>
+                                                        </div>
+                                                        <div class="mobile-column half">
+                                                            <select name="cmr-cuota-number-select" id="cmr-cuota-number-select" class="pretty-select marginate a-little bottom">
+                                                                <option value="1">1</option>
+                                                                <option value="3">3</option>
+                                                                <option value="6">6</option>
+                                                                <option value="9">9</option>
+                                                                <option value="12">12</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- box-section-info-pago -->
+                                            </div>
+                                            <div class="box-section-forma-pago">
+                                                <label for="tarjeta-bancaria-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
+                                                    <input type="radio" id="tarjeta-bancaria-m">
+                                                    <img src="images/icons/payment-credito.png">
+                                                    <span class="bold-text">Tarjetas Bancarias</span>
+                                                </label>
+                                                <div class="box-section-info-pago">
+                                                    <p class="bold-text">¿Cómo pagar con tarjetas bancarias?</p>
+                                                    <p>Puedes utilizar la tarjeta bancaria nacional que desees.</p>
+                                                    <p>Solo debes tener a mano tu clave que luego te solicitará Webpay para efectuar el pago</p>
+                                                </div> <!-- box-section-info-pago -->
+                                            </div>
+                                            <div class="box-section-forma-pago">
+                                                <label for="tarjeta-debito-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
+                                                    <input type="radio" id="tarjeta-debito-m">
+                                                    <img src="images/icons/payment-redcompra.png">
+                                                    <span class="bold-text">Tarjeta de débito</span>
+                                                </label>
+                                                <div class="box-section-info-pago">
+                                                    <p class="bold-text">¿Cómo pagar con tarjetas de débito?</p>
+                                                    <p>Puedes utilizar la tarjeta de débito que desees.</p>
+                                                    <p>Solo debes tener a mano tu clave que luego te solicitará Webpay para efectuar el pago</p>
+                                                </div> <!-- box-section-info-pago -->
+                                            </div>
+                                            <div class="box-section-forma-pago last">
+                                                <label for="orden-de-compra-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
+                                                    <input type="radio" id="orden-de-compra-m">
+                                                    <img src="images/icons/payment-orden.png">
+                                                    <span class="bold-text">Órden de Compra</span>
+                                                </label>
+                                                <div class="box-section-info-pago">
+                                                    <p class="bold-text">¿Cómo pagar con orden de compra?</p>
+                                                    <p>Para utilizar esta opción solo debes tener disponibilidad de crédito en Sodimac.</p>
+                                                    <p>De lo contrario, por favor, escoge otra forma de pago</p>
+                                                </div> <!-- box-section-info-pago -->
+                                            </div>
+                                        </div>
+
+                                        <div class="desktop-tabs-controls pad all hide-on-desktop hide-on-mobile">
                                             <select data-func="show_payment_tab" data-events="change.sodimac" name="payment-method-select" id="payment-method-select" class="pretty-select">
                                                 <option value="">Selecciona la forma de pago</option>
                                                 <option value="cmr" data-target="cmr">Tarjeta CMR Falabella</option>

@@ -200,6 +200,14 @@
         width: 100%;
     }
 
+    .mobile-carousel-holder {
+        .product-carousel {
+            &.full-carousel {
+                border-top: 0;
+            }
+        }
+    }
+
     .fake-table {
         display: block;
 
@@ -299,6 +307,10 @@
         margin-left: 0;
     }
 
+    .main-promo-slider {
+        min-height:0;
+    }
+
     .main-promo-slider-bullets {
         padding-right: 0;
         text-align: center;
@@ -335,11 +347,11 @@
     .regular-content-section-title {
         font-size: 1em;
         background: #fff;
-        border-bottom: 1px solid @header_grey;
+        border-bottom: 1px solid @blocks_grey;
         text-align: center;
 
         &.preserve-in-mobile {
-            background: @header_grey;
+            background: @blocks_grey;
             text-align: left;
             font-size: 1.25em;
         }
@@ -1711,6 +1723,7 @@
 
     .footer-phone-holder {
         font-weight: normal;
+        border-top: 0;
 
         .big-icon { line-height: 40px; }
         .footer-phone-number {

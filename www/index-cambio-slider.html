@@ -5567,38 +5567,38 @@
                         </a>
                     </div>
                     
-                    <div class="main-promo-slider slider">
-                        <ul class="content-slider-items main-promo-slider-list">
-                            <li class="main-promo-slider-item">
-                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x448" class="elastic-img"></a>
+                    <div class="main-promo-slider" data-role="slider">
+                        <ul class="main-promo-slider-list" data-role="slides-holder">
+                            <li class="main-promo-slider-item active" data-index="0">
+                                <a href="#" title="Promo 1" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
                                 <a href="#" title="Promo 1 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
                             </li>
-                            <li class="main-promo-slider-item">
-                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x448" class="elastic-img"></a>
+                            <li class="main-promo-slider-item" data-index="1">
+                                <a href="#" title="Promo 2" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
                                 <a href="#" title="Promo 2 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
                             </li>
-                            <li class="main-promo-slider-item">
-                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x448" class="elastic-img"></a>
+                            <li class="main-promo-slider-item" data-index="2">
+                                <a href="#" title="Promo 3" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
                                 <a href="#" title="Promo 3 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
                             </li>
-                            <li class="main-promo-slider-item">
-                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x448" class="elastic-img"></a>
+                            <li class="main-promo-slider-item" data-index="3">
+                                <a href="#" title="Promo 4" class="hide-on-mobile"><img src="http://fakeimg.pl/838x380" class="elastic-img"></a>
                                 <a href="#" title="Promo 4 Mobile" class="hide-on-desktop"><img src="http://fakeimg.pl/300x300" class="elastic-img"></a>
                             </li>
                         </ul>
 
-                        <div class="main-promo-slider-bullets control">
-                            <button class="main-promo-slider-bullet slide-control active" data-slide="0"></button>
-                            <button class="main-promo-slider-bullet slide-control" data-slide="1"></button>
-                            <button class="main-promo-slider-bullet slide-control" data-slide="2"></button>
-                            <button class="main-promo-slider-bullet slide-control" data-slide="3"></button>
+                        <div class="main-promo-slider-bullets" data-role="bullets-holder">
+                            <button class="main-promo-slider-bullet active" data-index="0"></button>
+                            <button class="main-promo-slider-bullet" data-index="1"></button>
+                            <button class="main-promo-slider-bullet" data-index="2"></button>
+                            <button class="main-promo-slider-bullet" data-index="3"></button>
                         </div>
 
-                        <div class="main-promo-slider-controls hide-on-mobile control-arrows">
-                            <button class="main-promo-slider-control control-arrow prev" title="Anterior">
+                        <div class="main-promo-slider-controls hide-on-mobile" data-role="controls-holder">
+                            <button class="main-promo-slider-control prev" title="Anterior" data-action="prev">
                                 <i class="fa fa-chevron-left"></i>
                             </button>
-                            <button class="main-promo-slider-control control-arrow next" title="Siguiente">
+                            <button class="main-promo-slider-control next" title="Siguiente" data-action="next">
                                 <i class="fa fa-chevron-right"></i>
                             </button>
                         </div>
@@ -5888,10 +5888,7 @@
 
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/libs/jquery.placeholder.js"></script>
-        <script src="js/libs/ninjaSlider.js"></script>
         <script src="js/main.js"></script>
-
-
         <!-- // -->
     </body>
 </html>

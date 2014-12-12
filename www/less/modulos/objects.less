@@ -394,7 +394,7 @@
     overflow: hidden;
     position: relative;
     margin-top: @regular_vertical_margin;
-    min-height: 380px;
+    min-height: 448px;
     &.loaded { min-height: 0; }
 }
 
@@ -410,16 +410,20 @@
 .main-promo-slider-item {
     display: block;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+    position:relative;
+    float: left;
     .transform( translateZ(0) );
     .transition( all, 700ms, ease );
     
     &.active { opacity: 1; }
 
     a, img { display: block; width: 100%; height: auto; }
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .main-promo-slider-bullet, .main-promo-slider-control {
@@ -1147,4 +1151,246 @@ input[type="date"] {
 
 .lightbox-header-data {
     padding: 0.5em;
+}
+
+.lightbox-content {
+
+    &.ingreso-turbo {
+        width: 400px;
+        margin-left: -200px;
+
+        .lightbox-header-box {
+            border:0 0 1px 0;
+            border-width: 1px;
+        }
+
+        .minificha-tabs-controls {
+            border:0;
+            padding: 0;
+
+            .button {
+                border: 1px solid #ccc;
+                width: 31%;
+                float: left;
+                padding: 0;
+                text-align: center;
+                height: 40px;
+                font-size: 13px;
+                border-radius: 5px 5px 0 0;
+                margin-right: 3.502%;
+                background: #cacaca;
+
+                &.last {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    border-bottom: 1px solid #fff;
+                    background: #FFF;
+                }
+            }
+        }
+
+        .minificha-tabs {
+            margin-top: 0;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-radius: 0;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            margin-top: -1px;
+
+            .minificha-tab-item {
+                height: auto;
+                max-height: none;
+
+                textarea {
+                    width: 100%;
+                    min-height: 100px;
+                }
+            }
+        }
+
+        .box-btn {
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+            width: 100%;
+            padding: 10px;
+
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+
+    }
+}
+
+
+.table-compare {
+
+    border:1px solid #ccc;
+
+    tr {
+        td {
+            text-align: center;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 10px;
+
+            .quitar-producto {
+                text-align: left;
+                display: block;
+                margin-bottom: 5px;
+                border:0;
+                background: none;
+                outline: none;
+            }
+            h4 {
+                font-weight: normal;
+            }
+            h4, p {
+                text-align: left;
+            }
+            .rating-holder {
+                text-align: left;
+                display: block;
+            }
+
+            .search-result-price {
+                font-size: 22px;
+                font-weight: bold;
+                padding-top: 2px;
+
+                span {
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        td:first-child {
+            width: 100px;
+        }
+    }
+}
+
+/* LIGHTBOX PROGRAMAR DESPACHO */
+
+
+.lightbox-header-box {
+    .lightbox-title.tit-programar-despacho {
+        font-size: 20px;
+    }
+    p {
+        padding: 10px;
+        font-weight: bold;
+    }
+}
+
+.box-calcular-costo {
+    border-left: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    .box-calcular-costo-select {
+        background: #f0f0f0;
+        padding: 14px 14px 14px 20px;
+
+        .box-calcular-seleccion {
+            float: left;
+            width: 88%;
+
+            span {
+                font-size: 12px;
+                font-weight: bold;
+                margin-right: 2%;
+            }
+
+            .pretty-select {
+                width: 31%;
+                display: inline-block;
+                font-size:  10px;
+                vertical-align: middle;
+                margin-bottom: 0;
+            }
+        }
+        .box-calcular {
+            float: left;
+            width: 12%;
+
+            .button {
+                width: 100%;
+                padding: 7px;
+                text-align: center;
+                font-size: 12px;
+            }
+        }
+    }
+
+    p {
+        padding: 5px 0 0 20px;
+    }
+}
+
+.select-despacho-label {
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+
+    input {
+        margin-right: 5px;
+    }
+}
+
+
+.tabla-despacho {
+    border:1px solid #ccc;
+    width: 100%;
+    margin:0 0 20px 0;
+    display: none;
+
+    tr {
+        td {
+            border:1px solid #ccc;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+            font-size: 12px;
+
+            &:first-child {
+                width: 110px;
+            }
+        }
+    }
+
+    &.deployed {
+        display: table;
+    }
+}
+
+.box-despacho-estandar {
+    display:none;
+
+    &.deployed {
+        display: block;
+    }
+}
+
+
+.box-btn-save {
+    text-align: right;
+    background: #f0f0f0;
+    padding: 14px;
+
+    .button {
+        padding: 8px 20px;
+        text-align: center;
+        font-size: 12px;
+    }
 }

@@ -1,0 +1,65 @@
+<div class="lightbox-header-box">
+    <h2 class="lightbox-title tit-programar-despacho"><i class="fa fa-truck washed-text"></i> Programar despacho</h2>
+    <p>Tamaño del producto: MEDIO</p>
+</div>
+<div class="lightbox-body">
+    <div class="box-calcular-costo">
+        <div class="preserve-in-mobile clearfix box-calcular-costo-select">
+            <div class="box-calcular-seleccion">
+                <span>Calcula el costo del despacho</span>
+                <select name="region" id="region" class="pretty-select grey-light-select">
+                    <option value="Region Metropolitana">REGION METROPOLITANA</option>
+                </select>
+                <select name="comuna" id="comuna" class="pretty-select grey-light-select">
+                    <option value="Providencia">PROVIDENCIA</option>
+                </select>
+            </div>
+            <div class="box-calcular">
+                <button class="button grey-btn ">Calcular</button>
+            </div>
+        </div>
+        <p class="important-paragraph">Resumen del despacho</p>
+        <p>Fecha de entrega: <span>25/09/2014</span> - 9 a 21 horas Costo: $.3.990</p>
+    </div>
+    
+    <label for="despacho-programado" class="select-despacho-label" ><input type="radio" id="despacho-programado" name="igualar" data-func="deploy_despacho_programado" data-events="change" value="despacho programado">Despacho programado</label>
+    <table data-objeto class="tabla-despacho">
+        <tr>
+            <td></td>
+            <td>jueves 25/09</td>
+            <td>viernes 29/09</td>
+            <td>sábado 27/09</td>
+            <td>domingo 28/09</td>
+            <td>lunes 29/09</td>
+            <td>martes 30/09</td>
+            <td>miércoles 01/10</td>
+        </tr>
+        <tr>
+            <td>9 a 21 hrs.</td>
+            <td>$3.990</td>
+            <td>$3.990</td>
+            <td>$3.990</td>
+            <td>-</td>
+            <td>$3.990</td>
+            <td>$3.990</td>
+            <td>$3.990</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+            <td></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+            <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+        </tr>
+    </table>
+    <label for="despacho-estandar" class="select-despacho-label"><input type="radio" id="despacho-estandar" name="igualar" value="despacho programado" data-func="deploy_despacho_programado" data-events="change">Despacho estándar</label>
+    <div data-objeto class="box-despacho-estandar">
+        ajsdkjaskdjaksda
+    </div>
+    <div class="box-btn-save">
+        <button class="red-btn button f-right">Guardar despacho</button>
+    </div>
+</div>

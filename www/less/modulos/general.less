@@ -1693,6 +1693,16 @@
             display: table; 
         }
     }
+
+    &.cart-item-lightbox {
+        padding-left: 0;
+
+        .cart-item-promo {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 .cart-item-promos-title {
@@ -1724,7 +1734,7 @@
 }
 
 .shopping-cart-details-holder {
-    padding-left: 50%
+    padding-left: 47%
 }
 
 
@@ -2221,6 +2231,65 @@
 
     &.active { display: block; }
 }
+
+/* FORMAS DE PAGO */
+
+.box-section-forma-pago {
+
+    .mobile-payment-method-title {
+        cursor: pointer;
+        padding: 15px 10px;
+        margin-bottom: 0;
+        background: url(../images/icons/chevron-down.png) 98% center no-repeat;
+
+        input {
+            display: inline;
+            margin-right: 8px;
+        }
+        img {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        img, span {
+            display: inline;
+        }
+    }
+
+    .box-section-info-pago {
+        display: none;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &.deployed {
+
+        .mobile-payment-method-title {
+            background: url(../images/icons/chevron-up.png) 98% center no-repeat;
+        }
+
+        .box-section-info-pago {
+            display: block;
+        }
+    }
+
+    &.last {
+        border-bottom: 0;
+        label {
+            border-bottom: 0;
+        }
+        .box-section-info-pago {
+            border-bottom: 0;
+        }
+
+        &.deployed {
+            label {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}
+
 
 /***************************************************
 **************************** Footer

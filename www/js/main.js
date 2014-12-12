@@ -314,9 +314,11 @@
         minificha_tab_control : function( event ){
             event.preventDefault();
             var $item = $(this),
-                $targets = $('.minificha-tab-item');
+                $targets = $('.minificha-tab-item'),
+                $buttons = $('.button');
 
             $targets.removeClass('active').filter('[data-tabname="'+ $item.data('target') +'"]').addClass('active');
+            $buttons.removeClass('active').filter('[data-target="'+ $item.data('target') +'"]').addClass('active');
         },
         show_lightbox : function( event ){
             var $item = $(event.currentTarget),
@@ -342,9 +344,46 @@
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
             });
         },
+        show_lightbox_ingreso_turbo : function( event ){
+            var $item = $(event.currentTarget),
+                type = $item.data('type'); // actuará como nombre del modal
+
+            // inicializamos el lightbox
+            var lightbox_promise = event.data.sodimac.setup_lightbox();
+
+            // hacemos el llamado ajax para buscar el contenido del lightbox
+            var ajax_data = {}, // data adcional para el ajax, necesario para produccion
+                ajax_promise = $.get('modales/' + type + '.html', ajax_data);
+
+            // preparamos la respuesta para ambas promesas
+            // el callback se ejecutara cuando ambas promesas se completen
+            $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
+                var response_html = ajax_response[0];
+
+                // se adjunta el contenido del lightbox a la caja
+                $lightbox.append( response_html );
+                $lightbox.addClass('ingreso-turbo');
+                if( $('.lightbox-content [data-role="amount_input"]').length ){ Sodimac.prototype.amount_inputs( $('[data-role="amount_input"]') ); }
+
+                // auto delegamos los elementos que tengan el atributo "data-func"
+                event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+            });
+        },
         close_lightbox : function( event ){
             event.preventDefault();
             event.data.sodimac.close_lightbox();
+        },
+
+        deploy_despacho_programado : function(event) {
+            var $item = $(event.currentTarget),
+                $target = $item.parent().next(),
+                $objetos = $('[data-objeto]');
+
+                $objetos.removeClass('deployed');
+
+                if($item.is(':checked')) {  
+                    $target.addClass('deployed');  
+                }
         }
     };
 
@@ -355,12 +394,17 @@
     ///// creamos el prototypo
     Sodimac.prototype = {
         on_ready : function(){
+
+
             $('[data-svg-fallback]').svgFallback();
             this.event_handler( $('[data-func]') );
 
             if( ! Modernizr.input.placeholder ){
                 $('input, textarea').placeholder();
             }
+
+            this.setupSliders();
+            
         },
         on_load : function(){
             if( $('[data-role="slider"]').length ){ this.home_slider( $('[data-role="slider"]') ); }
@@ -654,6 +698,56 @@
                             $( $item.data('target') ).val( this.get('select', 'dd-mm-yyyy') );
                         }
                     }
+                });
+            });
+        },
+
+        /// NINJA SLIDER 
+
+        
+        setupSliders : function(){
+            var self = this,
+                $content_sliders = $('.slider'),
+                automatic = $content_sliders.attr('data-auto') ? $content_sliders.attr('data-auto') : false;
+
+            if($content_sliders.length == 0){return;}
+
+            $content_sliders.each(function(index, elem){
+                var $elem = $(elem),
+                    slider = $elem.ninjaSlider({
+                        auto : automatic,
+                        transitionCallback : function( index, slide, container ){
+                            var $slider = $(container),
+                                $slide = $(slide),
+                                $bullets = $slider.find('.slide-control'),
+                                $numbers = $slider.prev().find('.change-number');
+
+                            $bullets.removeClass('active').filter('[data-slide="'+ index +'"]').addClass('active');
+                            $numbers.text(index + 1);
+
+                        }
+                    }).data('ninjaSlider'),
+                    totalSlidesIndex = $elem.find('.content-slider-items').children().length - 1;
+
+
+                $elem.parent().find('.control-arrow').on('click', function( event ) {
+                    var $item = $(event.currentTarget),
+                        direction = $item.hasClass('next');
+
+                    if( direction ){
+                        slider.next();
+                    } else {
+                        slider.prev();
+                    }
+
+                    
+                });
+
+                $elem.find('.slide-control').on('click', function( event ) {
+                    var $item = $(event.currentTarget),
+                        targetSlidenum = $item.data('slide');
+
+                    slider.slide(targetSlidenum);
                 });
             });
         },
