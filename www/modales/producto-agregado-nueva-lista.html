@@ -1,0 +1,31 @@
+<div class="lightbox-header-box">
+    <h2 class="lightbox-title">Agregar nueva lista de favoritos</h2>
+</div>
+<div class="lb-agregar-nueva-lista-box">
+    <label for="motivo-lista">Motivo de tu lista:</label>
+    <select name="motivo-lista" id="motivo-lista" class="select marginate bottom">
+        <option value="Seleccionar">SELECCIONAR</option>
+    </select>
+
+    <label for="nombre-lista">Nombre para tu lista:</label>
+    <input class="regular-input inline-item width190 full-m marginate bottom" type="text" name="nombre-lista" id="nombre-lista" required="">
+
+    <label for="mensaje">Ingresar un mensaje:</label>
+    <textarea name="mensaje" id="mensaje" cols="59" rows="5" class="mensaje-t regular-input full-m marginate bottom"></textarea>
+
+    <label for="lista-option">Quieres hacer pública tu lista:</label>
+    <select name="lista-option" id="lista-option" class="select full-m bg-gray marginate bottom">
+        <option value="">Si, quiero que sea pública</option>
+        <option value="">No, quiero que sea privada</option>
+    </select>
+
+    <label for="calendario-input" >Fecha del evento:</label>
+    <div class="clearfix margin-bot10">
+        <input type="date" data-role="get_calendar" class="calendario regular-input inline-item" id="calendario-input" name="calendario-input" required="">
+        <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input" class="calendario-icon"><i class="fa fa-calendar-o"></i></span>
+    </div>
+
+</div>
+<div class="clearfix marginate top pad border-top gris">
+    <button class="button red-btn medium-btn block-btn">Guardar lista</button>
+</div>

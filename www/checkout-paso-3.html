@@ -5639,10 +5639,10 @@
                                     </div>
                                     <div class="marginate bottom hide-on-desktop">
                                         <select name="tipo-documento-select" id="tipo-documento-select" class="pretty-select">
-                                            <option value="">Selecciona el tipo de documento</option>
-                                            <option value="">Boleta</option>
-                                            <option value="">Factura</option>
-                                            <option value="">Novios</option>
+                                            <option value="Selecciona el tipo de documento">Selecciona el tipo de documento</option>
+                                            <option value="Boleta" selected>Boleta</option>
+                                            <option value="Factura">Factura</option>
+                                            <option value="Novios">Novios</option>
                                         </select>
                                     </div>
 
@@ -5708,13 +5708,13 @@
                                         </div>
 
                                         <div class="desktop-tabs-controls hide-on-desktop">
-                                            <div class="box-section-forma-pago">
-                                                <label for="tarjeta-cmr-falabella-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
-                                                    <input type="radio" id="tarjeta-cmr-falabella-m">
+                                            <div class="box-section-forma-pago" data-padre>
+                                                <label for="tarjeta-cmr-falabella-m" class="mobile-payment-method-title va-middle">
+                                                    <input type="radio" id="tarjeta-cmr-falabella-m" name="forma-de-pago" data-events="change" data-func="deploy_forma_de_pago">
                                                     <img src="images/icons/payment-cmr.png">
                                                     <span class="bold-text">Tarjeta CMR Falabella</span>
                                                 </label>
-                                                <div class="box-section-info-pago">
+                                                <div class="box-section-info-pago" data-objeto>
                                                     <select name="cmr-type-select" id="cmr-type-select" class="pretty-select marginate a-little bottom">
                                                         <option value="">Selecciona el tipo de tarjeta</option>
                                                         <option value="titular">Titular</option>
@@ -5747,37 +5747,37 @@
                                                     </div>
                                                 </div> <!-- box-section-info-pago -->
                                             </div>
-                                            <div class="box-section-forma-pago">
-                                                <label for="tarjeta-bancaria-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
-                                                    <input type="radio" id="tarjeta-bancaria-m">
+                                            <div class="box-section-forma-pago" data-padre>
+                                                <label for="tarjeta-bancaria-m" class="mobile-payment-method-title va-middle">
+                                                    <input type="radio" id="tarjeta-bancaria-m" name="forma-de-pago" data-events="change" data-func="deploy_forma_de_pago">
                                                     <img src="images/icons/payment-credito.png">
                                                     <span class="bold-text">Tarjetas Bancarias</span>
                                                 </label>
-                                                <div class="box-section-info-pago">
+                                                <div class="box-section-info-pago" data-objeto>
                                                     <p class="bold-text">¿Cómo pagar con tarjetas bancarias?</p>
                                                     <p>Puedes utilizar la tarjeta bancaria nacional que desees.</p>
                                                     <p>Solo debes tener a mano tu clave que luego te solicitará Webpay para efectuar el pago</p>
                                                 </div> <!-- box-section-info-pago -->
                                             </div>
-                                            <div class="box-section-forma-pago">
-                                                <label for="tarjeta-debito-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
-                                                    <input type="radio" id="tarjeta-debito-m">
+                                            <div class="box-section-forma-pago" data-padre>
+                                                <label for="tarjeta-debito-m" class="mobile-payment-method-title va-middle">
+                                                    <input type="radio" id="tarjeta-debito-m" name="forma-de-pago" data-events="change" data-func="deploy_forma_de_pago">
                                                     <img src="images/icons/payment-redcompra.png">
                                                     <span class="bold-text">Tarjeta de débito</span>
                                                 </label>
-                                                <div class="box-section-info-pago">
+                                                <div class="box-section-info-pago" data-objeto>
                                                     <p class="bold-text">¿Cómo pagar con tarjetas de débito?</p>
                                                     <p>Puedes utilizar la tarjeta de débito que desees.</p>
                                                     <p>Solo debes tener a mano tu clave que luego te solicitará Webpay para efectuar el pago</p>
                                                 </div> <!-- box-section-info-pago -->
                                             </div>
-                                            <div class="box-section-forma-pago last">
-                                                <label for="orden-de-compra-m" class="mobile-payment-method-title va-middle" data-func="deploy_big_header_box">
-                                                    <input type="radio" id="orden-de-compra-m">
+                                            <div class="box-section-forma-pago last" data-padre>
+                                                <label for="orden-de-compra-m" class="mobile-payment-method-title va-middle">
+                                                    <input type="radio" id="orden-de-compra-m" name="forma-de-pago" data-events="change" data-func="deploy_forma_de_pago">
                                                     <img src="images/icons/payment-orden.png">
                                                     <span class="bold-text">Órden de Compra</span>
                                                 </label>
-                                                <div class="box-section-info-pago">
+                                                <div class="box-section-info-pago" data-objeto>
                                                     <p class="bold-text">¿Cómo pagar con orden de compra?</p>
                                                     <p>Para utilizar esta opción solo debes tener disponibilidad de crédito en Sodimac.</p>
                                                     <p>De lo contrario, por favor, escoge otra forma de pago</p>

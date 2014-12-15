@@ -297,6 +297,11 @@
             }
         }
     }
+    .mobile-submenu-list {
+        .submenu-list-item {
+            padding: 13px 10px;
+        }
+    }
 
 
     /////////////////////////////////////////////////////////
@@ -415,6 +420,7 @@
 
             &.deployed > a {
                 .set-bg-img( url('../images/icons/chevron-up.svg'), url('../images/icons/chevron-up.png') );
+                text-decoration: none;
             }
         }
         a {
@@ -424,6 +430,7 @@
             background-repeat: no-repeat;
             background-position: 95% 50%;
             background-position: ~"calc(100% - 10px)" 50%;
+            text-decoration: none;
         }
     }
 
@@ -480,6 +487,9 @@
                     padding: 0;
                 }
             }
+        }
+        &.details {
+            max-height: 50px;
         }
     }
 
@@ -760,7 +770,7 @@
             width: 100%;
             font-size: 2em;
             padding: 5px 0;
-            border-bottom: 1px solid @header_grey;
+            /*border-bottom: 1px solid @header_grey;*/
             margin-bottom: 0.5em;
         }
 
@@ -1051,6 +1061,7 @@
                 .select {
                     &.no-style {
                         border:0;
+                        background-color: inherit;
                     }
                 }
                 .inline-input-container {
@@ -1089,6 +1100,7 @@
                             position: relative;
                             padding: 8px 10px;
                             box-sizing: border-box;
+                            max-width: 160px;
 
                             .dos-puntos {
                                 position: absolute;
@@ -1121,7 +1133,7 @@
                         }
 
                         &:first-child {
-                            border-top: 1px solid #f0f0f0;
+                            border-top: 1px solid #bbb;
                             padding: 0;
                         }
                         .icono {
@@ -1208,13 +1220,16 @@
                 }
 
                 &.carros-guardados {
+                    border-top: 0;
                 	ul.table-row {
                 		li {
                 			span, a {
 
                 				width: 60%;
+                                max-width: 100%;
                 				&:first-child {
                 					width: 40%;
+                                    max-width: 100px;
                 				}
                 			}
                 		}
@@ -1293,6 +1308,7 @@
                     .calendario-icon {
                         margin-top: 5px;
                         margin-left: 5px;
+                        display: none;
                     }
                     .mensaje-l {
                         float: left;
@@ -1560,7 +1576,7 @@
                     }
 
                     .select {
-                        background: none;
+                        background-color:#fff;
                         border:0;
                         padding-left: 1px;
 
@@ -1686,7 +1702,7 @@
         .button {
 
             width: 47.5%;
-            margin:20px 0  0 0;
+            margin:10px 0  0 0;
             float: left;
             padding: 8px 0;
 
@@ -1695,6 +1711,37 @@
             }
         }
     }
+
+    .box-cantidad-mobile {
+        label {
+            display: block;
+            text-align: right;
+        }
+        .amount-input-holder {
+            .input-space {
+                float: right;
+            }
+            .controls-space {
+                float: right;
+                width: 10%;
+            }
+        }
+    }
+    .mobile-column {
+        &.box-tallas-mobile {
+            float: right;
+            width: 20%;
+
+            label {
+                text-align: right;
+                display: block;
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// AUXILIARES
+    /////////////////////////////////////////////////////////
 
 
     .full-m {

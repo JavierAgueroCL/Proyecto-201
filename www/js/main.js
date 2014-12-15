@@ -384,6 +384,20 @@
                 if($item.is(':checked')) {  
                     $target.addClass('deployed');  
                 }
+        },
+        deploy_forma_de_pago : function( event ){
+            var $item = $(event.currentTarget),
+                $target = $item.parent().next(),
+                $objetos = $('[data-objeto]'),
+                $boxpadre = $('[data-padre]');
+
+                $objetos.removeClass('deployed');
+                $boxpadre.removeClass('deployed');
+
+                if($item.is(':checked')) {  
+                    $target.addClass('deployed'); 
+                    $item.parents('[data-padre]').addClass('deployed'); 
+                }
         }
     };
 
