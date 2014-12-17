@@ -1,33 +1,36 @@
-<div class="lightbox-header-box">
-    <h2 class="lightbox-title">Mis Listas</h2>
-    <div class="lightbox-header-data clearfix">
-        <div class="column three-quarters smaller-paragraph">
-            <p>Listas disponibles</p>
+<div class="ocultar">
+    <div class="lightbox-header-box">
+        <h2 class="lightbox-title">Mis Listas</h2>
+        <div class="lightbox-header-data clearfix">
+            <div class="column three-quarters smaller-paragraph">
+                <p>Listas disponibles</p>
+            </div>
+        </div>
+    </div>
+    <ul class="lb-listas-disponibles">
+        <li>
+            <label for="cambio-de-casa">
+                <input id="cambio-de-casa" name="lista-disponible" type="radio" value="Cambio de casa"> Cambio de casa <i class="fa fa-lock"></i>
+            </label>
+        </li>
+        <li>
+            <label for="departamento">
+                <input id="departamento" name="lista-disponible" type="radio" value="Departamento"> Departamento <i class="fa fa-lock"></i>
+            </label>
+        </li>
+        <li>
+            <label for="casa-en-la-playa">
+                <input id="casa-en-la-playa" name="lista-disponible" type="radio" value="Casa en la playa"> Casa en la playa <i class="fa fa-lock"></i>
+            </label>
+        </li>
+    </ul>
+    <div class="clearfix marginate top pad border-top gris">
+        <div class="column mobile-column half">
+            <button class="button grey-btn medium-btn block-btn" data-func="cargar_lista_lightbox">Crear lista</button>
+        </div>
+        <div class="column mobile-column half m-left5">
+            <button class="button red-btn medium-btn block-btn" data-func="cargar_lista_lightbox_exito">Agregar a la lista</button>
         </div>
     </div>
 </div>
-<ul class="lb-listas-disponnibles">
-    <li>
-        <label for="cambio-de-casa">
-            <input id="cambio-de-casa" name="cambio-de-casa" type="radio" value="Cambio de casa"> Cambio de casa <i class="fa fa-lock"></i>
-        </label>
-    </li>
-    <li>
-        <label for="departamento">
-            <input id="departamento" name="departamento" type="radio" value="Departamento"> Departamento <i class="fa fa-lock"></i>
-        </label>
-    </li>
-    <li>
-        <label for="casa-en-la-playa">
-            <input id="casa-en-la-playa" name="casa-en-la-playa" type="radio" value="Casa en la playa"> Casa en la playa <i class="fa fa-lock"></i>
-        </label>
-    </li>
-</ul>
-<div class="clearfix marginate top pad border-top gris">
-    <div class="column mobile-column half">
-        <button class="button grey-btn medium-btn block-btn">Crear lista</button>
-    </div>
-    <div class="column mobile-column half m-left5">
-        <button class="button red-btn medium-btn block-btn">Agregar a la lista</button>
-    </div>
-</div>
+<div class="cargar"></div>

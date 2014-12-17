@@ -596,6 +596,7 @@
         margin-bottom: 0;
         background: url(../images/icons/bg-select.png) calc(100% - 5px) 50% no-repeat #fff;
     }
+    &.cuotas {}
 }
 
 .seamless-table {
@@ -1159,12 +1160,21 @@ input[type="date"] {
 
     .lightbox-title {
         padding: 0px 1em;
-        background: @header_grey;
+        background: @blocks_grey;
         font-size: 20px;
 
         .sku {
             display: block;
             font-size: 13px;
+        }
+    }
+
+    .caja-datos {
+        h2 {
+            padding: 10px 1em;
+        }
+        p {
+            font-weight: normal;
         }
     }
 }
@@ -1246,19 +1256,55 @@ input[type="date"] {
                 padding: 10px 0;
             }
         }
+    }
 
+    .mini-ficha-content {
+        .box-select-cantidad {
+            float: left;
+            width: 90px;
+            margin-right: 12px;
+            margin-left: 48px;
+
+            label {
+                display: block;
+                text-align: center;
+                font-size: 13px;
+                font-weight: bold;
+            }
+            select {
+                width: 100%;
+                text-align: center;
+                background-position: 95% 50%;
+            }
+            .amount-input-holder {
+                .input-space {
+                    position: relative;
+                    width: 88%;
+                    margin-left: 8%;
+                }
+                .controls-space {
+                    position: absolute;
+                    top: 1px;
+                    right: 0;
+                    width: 23%;
+                    position: absolute;
+                    height: 21px;
+                    float: none;
+                }
+            }
+        }
     }
 }
 
 
 .table-compare {
 
-    border:1px solid #ccc;
+    border:1px solid @submenu_grey;
 
     tr {
         td {
             text-align: center;
-            border: 1px solid #ccc;
+            border: 1px solid @submenu_grey;
             border-collapse: collapse;
             padding: 10px;
 
@@ -1269,6 +1315,8 @@ input[type="date"] {
                 border:0;
                 background: none;
                 outline: none;
+                background: url(../images/icons/x-comparador.png) 0px 2px no-repeat;
+                padding-left: 15px;
             }
             h4 {
                 font-weight: normal;

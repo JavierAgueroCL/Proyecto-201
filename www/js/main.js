@@ -342,6 +342,7 @@
 
                 // auto delegamos los elementos que tengan el atributo "data-func"
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+                if( $('.lightbox-content').find('[data-role="get_calendar"]').length ){ Sodimac.prototype.datepickers( $('[data-role="get_calendar"]') ); }
             });
         },
         show_lightbox_ingreso_turbo : function( event ){
@@ -398,6 +399,19 @@
                     $target.addClass('deployed'); 
                     $item.parents('[data-padre]').addClass('deployed'); 
                 }
+        },
+        cargar_lista_lightbox : function(event){
+
+            $('.ocultar').remove();
+            $('.cargar').load('/modales/producto-agregado-nueva-lista.html', function(){
+                if( $('.lightbox-content').find('[data-role="get_calendar"]').length ){ Sodimac.prototype.datepickers( $('[data-role="get_calendar"]') ); }
+            }); 
+        }, 
+        cargar_lista_lightbox_exito : function(event){
+            $('.ocultar').remove();
+            $('.cargar').load('/modales/producto-agregado-exito.html', function(){
+                if( $('.lightbox-content').find('[data-role="get_calendar"]').length ){ Sodimac.prototype.datepickers( $('[data-role="get_calendar"]') ); }
+            }); 
         }
     };
 

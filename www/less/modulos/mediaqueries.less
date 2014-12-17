@@ -336,7 +336,7 @@
 
     .product-title {
         padding-top: 0.5em;
-        font-size: 1.5em;
+        font-size: 1.4em;
         line-height: 120%;
     }
 
@@ -393,6 +393,15 @@
             }
 
             select {
+                border: 1px solid @header_grey;
+            }
+        }
+
+        &.box-rut-mobile {
+            border:0;
+
+            .box-border-mobile {
+                border-radius: @border_radius;
                 border: 1px solid @header_grey;
             }
         }
@@ -569,6 +578,12 @@
                     width: 95%;
                 }
             }
+        }
+    }
+    .pretty-select {
+        &.cuotas {
+            width: auto;
+            min-width: 50px;
         }
     }
 
@@ -1930,6 +1945,7 @@
         border-top: 1px solid #f0f0f0;
         border-bottom: 1px solid #f0f0f0;
     }
+    .padding-top-m { padding-top: 1em;}
     .padding1em-m { padding: 1em;}
 
     /////////////////////////////////////////////////////////
