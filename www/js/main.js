@@ -296,6 +296,8 @@
             $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
                 var response_html = ajax_response[0];
 
+                
+
                 // se adjunta el contenido del lightbox a la caja
                 $lightbox.append( response_html );
 
@@ -306,6 +308,7 @@
                     })
                     
                 }
+                if( $('.lightbox-content [data-role="amount_input"]').length ){ Sodimac.prototype.amount_inputs( $('[data-role="amount_input"]') ); }
 
                 // auto delegamos los elementos que tengan el atributo "data-func"
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
