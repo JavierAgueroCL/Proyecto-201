@@ -632,7 +632,7 @@
                         itemsMobile : [999, 2],
                         pagination : $box.data('controls') === 'bullets' ? true : false,
                         slideSpeed : 500,
-                        scrollPerPage : true
+                        scrollPerPage : false
                     };
 
                 var carousel = $box.find('[data-role="carousel"]').owlCarousel( carousel_options ).data('owlCarousel');

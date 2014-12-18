@@ -789,6 +789,11 @@
                     }
                 }
             }
+            .box-change-direccion {
+                padding-left: 1em;
+                margin-top: 1em;
+                border-left: 1px solid #ccc;
+            }
         }
 
         div.table {
@@ -939,6 +944,10 @@
                 margin-bottom: 10px;
                 .regular-col {
                     width: 32%;
+
+                    &.caca {
+                        color: red;
+                    }
                 }
                 .codigo-postal {
                     width: 52%;
@@ -1117,6 +1126,10 @@
                 width: 300px;
             }
         }
+    }
+
+    .box-saldo {
+        padding: 10px;
     }
 
     .box-error-saldo {
@@ -1535,6 +1548,86 @@
         }
     }
 
+    /* LIGHTBOX MI CUENTA */
+
+    .content-lb {
+        .regular-section {
+            .half {
+                margin-bottom: 5px;
+            }
+        }
+        .inline-input-container {
+            .regular-col {
+                width: 34%;
+                float: left;
+            }
+            .codigo-postal {
+                width: 80px;
+                float: left;
+            }
+            .buscar-codigo {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+            .cod {
+                width: 14%;
+                text-align: center;
+                margin-right: 5px;
+                float: left;
+            }
+            .numero {
+                width:50%;
+            }
+            input, select {
+                float: left;
+                width: 66%;
+            }
+
+        }
+        .box-content-btn {
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 10px;
+        }
+    }
+    .listas {
+        .inline-input-container {
+            label {
+                width: 150px;
+                vertical-align: top;
+
+                &.otro {
+                    width: 50px;
+                }
+                &.largo {
+                    width: 200px;
+                }
+            }
+            select {
+                &.width190 {
+                    width: 190px;
+                }
+            }
+            input {
+                &.width190 {
+                    width: 190px;
+                }
+            }
+            .f-evento {
+                float: left;
+            }
+            .calendario-icon {
+                float: left;
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        }
+
+        .border-top {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+        }
+    }
 }
 
 ////////////////////////// RECUPERAR CLAVE 

@@ -65,7 +65,7 @@
         float: left;
         margin-left: 5%; // 5% de 320 = 16px
         &.full { width: 100%; }
-        &.half { width: 47.5%; }
+        &.half { width: 47.5%; margin-left: 5%; }
         &.quarters { width: 21.25%; }
         &.three-quarters { width: 73.75%; }
         &.thirds { width: 30%; }
@@ -121,6 +121,10 @@
         }
 
         &.altura-44-m {
+            padding: 14px 10px;
+        }
+
+        &.wide-btn, &.medium-btn {
             padding: 14px 10px;
         }
     }
@@ -403,6 +407,14 @@
             .box-border-mobile {
                 border-radius: @border_radius;
                 border: 1px solid @header_grey;
+
+                label {
+                    line-height: 29px;
+                }
+            }
+            .ornament {
+                height: 40px;
+                line-height: 40px;
             }
         }
     }
@@ -1181,11 +1193,49 @@
                         border:0;
                         background-color: inherit;
                     }
+                    &.no-bg-color {
+                        background-color: inherit;
+                    }
                 }
                 .inline-input-container {
                     .regular-col {
                         &.auto {
                             width: auto;
+                        }
+                    }
+                }
+                .box-change-direccion {
+                    border-left: 0;
+                    padding-left: 0;
+                    border-top: 1px solid #f0f0f0;
+                    padding:10px;
+
+                    .half {
+                        width: 47.5%;
+                        margin-left: 5%;
+                        float: left;
+                        padding:0;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                    .btn-editar-m {
+                        background: #ccc;
+                        border-radius: 3px;
+                        text-align: center;
+                        padding:8px 0;
+
+                        i {
+                            display: none;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                            background: #e6e6e6;
                         }
                     }
                 }
@@ -1556,6 +1606,9 @@
                 }
 
             }
+            .saldo {
+                border-bottom: 0;
+            }
         }
     }
 
@@ -1925,6 +1978,23 @@
             }
         }
     }
+     /////////////////////////////////////////////////////////
+    ///////////////////////////////////// LIGHTBOX
+    /////////////////////////////////////////////////////////
+
+
+    .lightbox-body {
+        .content-lb {
+
+            .inline-input-container {
+                .select {
+                    &.no-style {
+                        border:0;
+                    }
+                }
+            }
+        }
+    }
 
     /////////////////////////////////////////////////////////
     ///////////////////////////////////// AUXILIARES
@@ -1947,6 +2017,9 @@
     }
     .padding-top-m { padding-top: 1em;}
     .padding1em-m { padding: 1em;}
+    .righted-text-m {
+        text-align: right;
+    }
 
     /////////////////////////////////////////////////////////
     ///////////////////////////////////// Footer
@@ -1987,6 +2060,12 @@
             text-align: center;
         }
     }
+    .footer-section {
+
+        &.hide-on-desktop {
+            border-top: 1px solid @submenu_grey;
+        }
+    }
 
     //////////////////// Lightbox
     .lightbox-content {
@@ -2009,6 +2088,15 @@
         text-align: center;
         a {
             padding: 3px;
+        }
+    }
+    .regular-input, .regular-col, .select {
+        min-height: 40px;
+    }
+    .titulo-page {
+
+        &.border-bottom {
+            border-bottom: 0;
         }
     }
 

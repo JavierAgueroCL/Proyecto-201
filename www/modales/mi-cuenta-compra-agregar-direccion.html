@@ -1,0 +1,126 @@
+<div class="lightbox-header-box">
+
+        <h2 class="lightbox-title pad a-little all">Agregar Dirección</h2>
+</div>
+<div class="lightbox-body">
+    <form action="/" method="post" class="datos-direccion content-lb" data-validation="auto">
+        <div class="cont-form"> <!-- Contenido Form -->
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="nombre" class="inline-item regular-col caca">Nombre:</label>
+                        <input class="regular-input inline-item" type="text" name="nombre" id="nombre" placeholder="Nombre" required="">
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="nombre-corto" class="inline-item regular-col">Nombre corto:</label>
+                        <input class="regular-input inline-item" type="text" name="nombre-corto" id="nombre-corto" placeholder="Nombre corto" required="">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="apellido-p" class="inline-item regular-col">Apellido paterno:</label>
+                        <input class="regular-input inline-item" type="text" name="apellido-p" id="apellido-p" placeholder="Apellido materno" required="">
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="apellido-m" class="inline-item regular-col">Apellido materno:</label>
+                        <input class="regular-input inline-item" type="text" name="apellido-m" id="apellido-m" placeholder="Apellido materno" required="">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="calle" class="inline-item regular-col">Calle:</label>
+                        <input class="regular-input inline-item" type="text" name="calle" id="calle" placeholder="Calle" required="">
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="direccion" class="inline-item regular-col">Dirección:</label>
+                        <select name="direccion" id="direccion" class="select no-style" required="">
+                            <option value="Casa">Casa</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half mitad-m">
+                    <div class="inline-input-container clearfix">
+                        <label for="numero-casa" class="inline-item regular-col">Número:</label>
+                        <input class="regular-input inline-item" type="text" name="numero-casa" id="numero-casa" placeholder="Número" required="">
+                    </div>
+                </div>
+                <div class="column half mitad-m m-left">
+                    <div class="inline-input-container clearfix">
+                        <label for="depto" class="inline-item regular-col">Depto:</label>
+                        <input class="regular-input inline-item" type="text" name="depto" id="depto" placeholder="Depto" required="">
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="codigo-postal" class="inline-item regular-col">Código postal:</label>
+                        <input class="regular-input inline-item fleft codigo-postal" type="text" name="codigo-postal" id="codigo-postal" placeholder="87549865" required="">
+                        <a href="#" title="Buscar código postal" class="smaller-paragraph fleft buscar-codigo" rel="nofollow">Buscar código postal</a>
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="ubicacion" class="inline-item regular-col">Ubicación:</label>
+                        <select name="ubicacion" id="ubicacion" class="select no-style" required="">
+                            <option value="Región">Región</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="celular" class="inline-item regular-col">Celular:</label>
+                        <input class="regular-input inline-item fleft cod" type="text" name="celular" id="celular" placeholder="Cod" required="">
+                        <input class="regular-input inline-item fleft numero" type="text" name="celular" id="celular" placeholder="87549865" required="">
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="ciudad" class="inline-item regular-col">Ciudad:</label>
+                        <select name="ciudad" id="ciudad" class="select no-style">
+                            <option value="Región">Región</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix regular-section">
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="tel-casa" class="inline-item regular-col">Teléfono Casa:</label>
+                        <input class="regular-input inline-item fleft cod" type="text" name="tel-casa" id="tel-casar" placeholder="Cod" required="">
+                        <input class="regular-input inline-item fleft numero" type="text" name="tel-casa" id="tel-casa" placeholder="87549865" required="">
+                    </div>
+                </div>
+                <div class="column half">
+                    <div class="inline-input-container clearfix">
+                        <label for="tel-oficina" class="inline-item regular-col">Teléfono Oficina:</label>
+                        <input class="regular-input inline-item fleft cod" type="text" name="tel-oficina" id="tel-oficina" placeholder="Cod" required="">
+                        <input class="regular-input inline-item fleft numero" type="text" name="tel-oficina" id="tel-oficina" placeholder="87549865" required="">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Fin Contenido Form -->
+        <div class="clearfix box-content-btn">
+            <div class="fleft hide-on-mobile">
+                <span><em>(*) Campos Obligatorios</em></span>
+            </div>
+            <div class="fright full-m">
+                <button class="button medium-btn red-btn full-m type="submit" ">Guardar dirección</button>
+            </div>
+        </div>
+    </form>
+</div>
