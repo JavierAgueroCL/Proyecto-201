@@ -5565,12 +5565,13 @@
                     <a href="#" title="Iniciar sesión como persona" rel="nofollow">o puedes registrarte como persona</a>
                 </div>
 
-                <div class="login-options-holder clearfix hide-on-desktop">
-                    <span class="current-login-option uppercase mobile-column half">Registra tus datos</span>
-                    <a class="righted-text mobile-column half" href="#" title="Como persona" rel="nofollow">
-                        como persona
+                <div class="login-options-holder clearfix hide-on-desktop registro">
+                <a class="righted-text mobile-column half link-sodimac" href="#" title="Como persona" rel="nofollow">
+                        regístrate como persona
                         <i class="fa fa-chevron-right"></i>
                     </a>
+                    <span class="current-login-option uppercase mobile-column half">Registra tus datos</span>
+                    
                 </div>
                 
                 <section class="registro">
@@ -5780,9 +5781,11 @@
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <span class="inline-item regular-col">Residencia:</span>
-                                        <label for="casa-residencia" class="inline-item">Casa <input class="radio-b" type="radio" name="casa-residencia" id="casa-residencia" required=""></label>
-                                        <label for="dpto-residencia" class="inline-item">Departamento <input class="radio-b" type="radio" name="dpto-residencia" id="dpto-residencia" required=""></label>
+                                        <label for="residencia-contacto" class="inline-item regular-col">Residencia:</label>
+                                        <select name="residencia-contacto" id="residencia-contacto" class="select region full-m">
+                                            <option value="Casa">Casa</option>
+                                            <option value="Departamento">Departamento</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="column half">

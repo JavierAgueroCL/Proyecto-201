@@ -5582,7 +5582,7 @@
                 </h2>
 
                 <section class="checkout-step-information-holder clearfix marginate top bottom">
-                    <div class="column big-gap half">
+                    <div class="column big-gap half marginate a-little bottom">
                         <section class="checkout-preferences-holder checkout-info-column">
                             <div class="checkout-preferences-options">
                                 <h3 class="checkout-preferences-box checkout-preference-title">Información de despacho</h3>
@@ -5612,7 +5612,7 @@
                                     <p class="bigger-paragraph bold-text marginate bottom">Esta compra será enviada a:</p>
                                     <div class="clearfix">
                                         <div class="column half checkout-address-selection">
-                                            <select name="checkout-address-select" id="checkout-address-select" class="pretty-select grey-light-select marginate-bottom">
+                                            <select name="checkout-address-select" id="checkout-address-select" class="select pretty-select grey-light-select marginate-bottom">
                                                 <option value="">Mi casa</option>
                                                 <option value="">Otra Casa</option>
                                                 <option value="">Oficina</option>
@@ -5622,13 +5622,13 @@
                                             <p>Providencia</p>
                                             <p>Región Metropolitana</p>
                                         </div>
-                                        <div class="column half checkout-address-actions-holder">
-                                            <a href="#" title="Cambiar o editar dirección de despacho" rel="nofollow" class="checkout-address-action mobile-column half">
+                                        <div class="column half checkout-address-actions-holder box-change-direccion clearfix no-pad">
+                                            <a href="#" title="Cambiar o editar dirección de despacho" rel="nofollow" class="checkout-address-action mobile-column half btn-editar-m">
                                                 <span class="icon-element fa fa-pencil bloque"></span>
                                                 <p class="bold-text">Cambiar o editar</p>
                                                 <p class="smaller-paragraph">Dirección de Despacho</p>
                                             </a>
-                                            <a href="#" title="Agregar dirección de despacho" rel="nofollow" class="checkout-address-action mobile-column half">
+                                            <a href="#" title="Agregar dirección de despacho" rel="nofollow" class="checkout-address-action mobile-column half btn-editar-m">
                                                 <span class="icon-element fa fa-pencil-square-o bloque"></span>
                                                 <p class="bold-text">Agregar dirección</p>
                                                 <p class="smaller-paragraph">de Despacho</p>
@@ -5648,7 +5648,7 @@
                             </section>
                         </section>
 
-                        <div class="marginate top">
+                        <div class="marginate top box-despacho-mobile">
                             <div class="regular-content-section-title preserve-in-mobile">
                                 <a href="#" title="Políticas de despacho" rel="help" class="italic-text base-paragraph regular-text fright hide-on-mobile">Políticas de despacho</a>
                                 <h2>
@@ -5656,13 +5656,107 @@
                                     Programar despacho
                                 </h2>
                             </div>
-                            <div class="pad all">
-                                <p>En tu carro de compras hay productos con distintas opciones de despacho</p>
+                            <div class="pad all border-all">
+                                <p class="only-on-desktop">En tu carro de compras hay productos con distintas opciones de despacho</p>
+                                <p class="only-on-mobile">Tamaño del producto: MEDIO</p>
 
-                                <a href="#" title="Programar despacho" rel="nofollow" class="button wide-btn grey-btn centered-text mobile-full marginate a-little top" data-func="show_lightbox" data-type="programar-despacho">Programar despacho</a>
-
-                                <a href="#" title="Ver Políticas de Despacho" rel="nofollow" class="button medium-btn centered-text mobile-full marginate a-little top hide-on-desktop">Ver Políticas de Despacho</a>
+                                <a href="#" title="Programar despacho" rel="nofollow" class="button wide-btn grey-btn centered-text mobile-full marginate a-little top only-on-desktop" data-func="show_lightbox" data-type="programar-despacho">Programar despacho</a> 
                             </div>
+                            <form action="/" method="post" class="only-on-mobile">
+                                <div class="box-calcular-seleccion">
+                                    <span>Calcula el costo del despacho</span>
+                                    <select name="region" id="region" class="select pretty-select grey-light-select">
+                                        <option value="Region Metropolitana">REGION METROPOLITANA</option>
+                                    </select>
+                                    <select name="comuna" id="comuna" class="select pretty-select grey-light-select">
+                                        <option value="Providencia">PROVIDENCIA</option>
+                                    </select>
+                                    <button class="button grey-btn mobile-full medium-btn">Calcular</button>
+                                </div>
+                                <div class="pad all border-all">
+                                    <p class="important-paragraph">Resumen del despacho</p>
+                                    <p>Fecha de entrega: <span>25/09/2014</span> - 9 a 21 horas Costo: $.3.990</p>
+                                </div>
+
+                                <select name="selecion-de-despacho" id="seleccion-de-despacho" class="select seleccion-despacho-m" data-func="deploy_despacho_programado_mobile" data-events="change" >
+                                    <option value="">Seleccione el tipo de despacho</option>
+                                    <option value="Despacho Programado" selected="selected">Despacho Programado</option>
+                                    <option value="Despacho estandar">Despacho estandar</option>
+
+                                </select>
+
+                                <div class="box-despacho deployed" data-box="Despacho Programado">
+                                    <table class="tabla-despacho">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>9 a 21 hrs</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>viernes <span class="date">26/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>sábado <span class="date">27/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>domingo <span class="date">28/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>lunes <span class="date">29/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>miércoles <span class="date">30/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>jueves <span class="date">31/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>viernes <span class="date">32/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>sábado <span class="date">33/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>domingo <span class="date">34/09</span></td>
+                                                <td>$3.990</td>
+                                                <td><input type="radio" id="seleccion-dia" name="seleccion-dia"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button class="button grey-btn mobile-full medium-btn marginate a-little top">Seleccionar</button>
+                                </div>                              
+                                <div class="box-despacho-estandar" data-box="Despacho estandar">
+                                    <select name="comuna" id="comuna" class="select pretty-select grey-light-select select-despacho-estandar">
+                                        <option value="Fecha">Fecha</option>
+                                    </select>
+                                    <select name="comuna" id="comuna" class="select pretty-select grey-light-select select-despacho-estandar">
+                                        <option value="Hora / Precio">Hora / Precio</option>
+                                    </select>
+                                </div>
+
+                                <button class="button grey-btn mobile-full medium-btn">Guardar Despacho</button>
+                            </form>
+
+                            <a href="#" title="Ver Políticas de Despacho" rel="nofollow" class="button medium-btn centered-text mobile-full marginate a-little top hide-on-desktop link-secundario">Ver Políticas de Despacho</a>
                         </div>
                     </div>
                     <div class="column big-gap half">
@@ -5681,8 +5775,8 @@
                                 </tr>
                             </table>
 
-                            <table class="checkout-cart-table">
-                                <tr>
+                            <table class="checkout-cart-table product">
+                                <tr class="only-on-desktop">
                                     <th class="cart-table-product lefted-text">Producto</th>
                                     <th class="cart-table-quantity">Cantidad</th>
                                     <th class="cart-table-pice">Precio</th>

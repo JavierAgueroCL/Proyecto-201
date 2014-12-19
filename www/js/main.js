@@ -415,6 +415,13 @@
             $('.cargar').load('/modales/producto-agregado-exito.html', function(){
                 if( $('.lightbox-content').find('[data-role="get_calendar"]').length ){ Sodimac.prototype.datepickers( $('[data-role="get_calendar"]') ); }
             }); 
+        },
+
+        deploy_despacho_programado_mobile : function(event) {
+            var $item = $(event.currentTarget),
+                $objetos = $('[data-box]');
+
+                $objetos.removeClass('deployed').filter('[data-box="'+ $item.val() +'"]').addClass('deployed');
         }
     };
 
