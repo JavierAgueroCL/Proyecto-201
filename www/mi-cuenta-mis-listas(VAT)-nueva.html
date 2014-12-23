@@ -5593,25 +5593,29 @@
                                 </div>
                                 <div class="fleft full-m marginbot-m10">
                                     <div class="inline-input-container">
-                                        <label for="otro" class="inline-item regular-col otro">Otro:</label>
-                                        <input type="text" id="otro" name="otro" class="regular-input inline-item width190 full-m" required="">
+                                        <label for="otro" class="inline-item regular-col otro hide-on-mobile">Otro:</label>
+                                        <input type="text" id="otro" name="otro" class="regular-input inline-item width190 full-m" required="" placeholder="Otro:">
                                     </div> 
                                 </div>                               
                             </div>
                             <div class="inline-input-container clearfix clearfix margin-bot10">
-                                <label for="nombre-lista" class="inline-item regular-col">Nombre para tu lista:</label>
-                                <input class="regular-input inline-item width190 full-m" type="text" name="nombre-lista" id="nombre-lista" placeholder="Nombre Lista" required="">
+                                <label for="nombre-lista" class="inline-item regular-co hide-on-mobile">Nombre para tu lista:</label>
+                                <input class="regular-input inline-item width190 full-m" type="text" name="nombre-lista" id="nombre-lista" placeholder="Nombre para tu Lista" required="">
                             </div>
                             <div class="inline-input-container clearfix margin-bot10">
-                                <label for="mensaje" class="inline-item regular-col mensaje-l">Ingresar un mensaje:</label>
-                                <textarea name="mensaje" id="mensaje" cols="59" rows="5" class="mensaje-t regular-input full-m">Muebles para la nueva casa</textarea>
+                                <label for="mensaje" class="inline-item regular-col mensaje-l hide-on-mobile">Ingresar un mensaje:</label>
+                                <textarea name="mensaje" id="mensaje" cols="59" rows="5" class="mensaje-t regular-input full-m" placeholder="Muebles para la nueva casa"></textarea>
                             </div>
                             <div class="inline-input-container clearfix margin-bot10 clean-style">
                                 <label for="lista-option" class="inline-item regular-col largo">Quieres hacer pública tu lista:</label>
-                                <select name="lista-option" id="lista-option" class="select width190 full-m bg-gray no-bg-color">
+                                <select name="lista-option" id="lista-option" class="select width190 full-m bg-gray no-bg-color hide-on-mobile">
                                     <option value="">Si, quiero que sea pública</option>
                                     <option value="">No, quiero que sea privada</option>
                                 </select>
+                                <div class="only-on-mobile">
+                                    <label class="box-input-radio-m">Si, quiero que sea pública <input type="radio" id="lista-publica" name="lista-publica" class="margin-left-m"></label>
+                                    <label class="box-input-radio-m">No, quiero que sea privada <input type="radio" id="lista-publica" name="lista-publica" class="margin-left-m"></label>
+                                </div>
                             </div>
                             <div class="inline-input-container clearfix margin-bot10">
                                 <label for="calendario-input" class="inline-item regular-col largo f-evento">Fecha del evento:</label>
@@ -5652,8 +5656,8 @@
 	                			</li>
 	                		</ul>
                 		</div>                
-						<div>
-							<h4 data-func="deploy_mobile_submenu">Mis compras</h4>
+						<div class="deployed">
+							<h4 data-func="deploy_mobile_submenu" class="deployed">Mis compras</h4>
 	                		<ul>
 	                			<li>
 	                				<a href="#" title="Seguimiento de tu compra">Seguimiento de tu compra</a>
@@ -5667,7 +5671,7 @@
 	                			<li>
 	                				<a href="#" title="Mis carros guardados">Mis carros guardados</a>
 	                			</li>
-	                			<li>
+	                			<li class="active">
 	                				<a href="#" title="Mis listas de favoritos">Mis listas de favoritos</a>
 	                			</li>
                                 <li>

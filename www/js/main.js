@@ -422,6 +422,11 @@
                 $objetos = $('[data-box]');
 
                 $objetos.removeClass('deployed').filter('[data-box="'+ $item.val() +'"]').addClass('deployed');
+        },
+        deploy_filters : function(event) {
+            var $item = $(event.currentTarget);
+
+            $item.next().toggleClass('deploy');
         }
     };
 

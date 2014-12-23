@@ -5732,8 +5732,12 @@
                                             </p>
                                         </div>
                                         <div class="mobile-column thirds hide-on-desktop box-cantidad-mobile">
-                                            <label class="bold-text centered-text">Cantidad</label>
+                                            <label class="bold-text righted-text">Cantidad</label>
                                             <div class="clearfix amount-input-holder" data-role="amount_input">
+                                                
+                                                <div class="input-space">
+                                                    <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
+                                                </div>
                                                 <div class="controls-space">
                                                     <button data-role="control" data-action="add" class="button amount-input-btn add">
                                                         <i class="fa fa-caret-up"></i>
@@ -5741,9 +5745,6 @@
                                                     <button data-role="control" data-action="substract" class="button amount-input-btn substract">
                                                         <i class="fa fa-caret-down"></i>
                                                     </button>
-                                                </div>
-                                                <div class="input-space">
-                                                    <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
                                                 </div>
                                             </div>
                                         </div>
@@ -5766,7 +5767,7 @@
                                         </div>
                                         <div class="mobile-column thirds box-tallas-mobile">
                                             <label class="bold-text centered-text">Tallas</label>
-                                            <select class="regular-select centered-text" name="product-size">
+                                            <select class="select regular-select centered-text" name="product-size">
                                                 <option value="xxl">XXL</option>
                                                 <option value="xl">XL</option>
                                                 <option value="l">L</option>
@@ -6157,7 +6158,7 @@
                             </div>
                             <div class="mobile-column quarters">
                                 <label for="product-size-select" class="bold-text block-element centered-text">N° Cuotas</label>
-                                <select class="regular-select" name="product-size" id="product-size-select">
+                                <select class="select regular-select" name="product-size" id="product-size-select">
                                     <option value="3">3</option>
                                     <option value="4">4</option>
                                     <option value="5">5</option>

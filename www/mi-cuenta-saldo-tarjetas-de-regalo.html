@@ -5579,13 +5579,13 @@
                 		<h1 class="border-bottom titulo-page">Saldo Tarjetas de Regalo</h1>
                         <form action="saldo" class="saldo" data-validation="auto">
                             <div class="border-m box-saldo">
-                                <h2 class="hide-on-desktop">Saldo Tarjetas de Regalo</h2>
+                                
                                 <p class="margin-bot10 pad a-little all">Conoce el saldo de tu gift card, e-gift, tarjeta de venta o empresa o tajreta convenio.</p>
                                 <div class="clearfix regular-section">
                                     <div class="column three-quarters marginbot-m10">
                                         <div class="inline-input-container clearfix">
-                                            <label for="codigo" class="inline-item regular-col codigo">El código de tu tarjeta:</label>
-                                            <input class="regular-input inline-item codigo" type="text" name="codigo" id="codigo" placeholder="Código" required="">
+                                            <label for="codigo" class="inline-item regular-col codigo hide-on-mobile">El código de tu tarjeta:</label>
+                                            <input class="regular-input inline-item codigo" type="text" name="codigo" id="codigo" placeholder="Código:" required="">
                                         </div>
                                     </div>
                                     <div class="column quarters marginbot-m10">
@@ -5653,13 +5653,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h4 data-func="deploy_mobile_submenu">Saldo de tarjeta</h4>
+                        <div class="deployed">
+                            <h4 data-func="deploy_mobile_submenu" class="deployed">Saldo de tarjeta</h4>
                             <ul>
                                 <li>
                                     <a href="#" title="Saldo tarjeta CMR" rel="contents">Saldo tarjeta CMR</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="#" title="Saldo tarjeta de regalo" rel="contents">Saldo tarjeta de regalo</a>
                                 </li>
                                 <li>
