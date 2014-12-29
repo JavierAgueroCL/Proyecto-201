@@ -5598,7 +5598,7 @@
                             <section id="settings-holder" class="checkout-settings-holder">
                                 <div class="checkout-preferences-box force-border table-holder">
                                     <div class="cell-box icon-holder hide-on-desktop">
-                                        <img src="images/icons/sodimac-vest-icon.svg" data-svg-fallback="images/icons/sodimac-vest-icon.png">
+                                        <img src="images/icons/novios.png">
                                     </div>
                                     <div class="cell-box title-holder">
                                         Lista de novios
@@ -5609,36 +5609,45 @@
                                         <p class="smaller-paragraph">Lunes a domingo. 09:00 a 21:00 hrs.</p>
                                     </div>
                                 </div>
-                                <div class="checkout-preferences-box header-grey-bg">
+                                <div class="checkout-preferences-box">
                                     <p class="bold-text">Buscar lista por:</p>
-                                    <div class="marginate a-little top">
-                                        <label class="inline-block-inputs">
-                                            Novio:
-                                            <input type="radio" name="search-by" value="novio" >
-                                        </label>
-                                        <label class="inline-block-inputs">
-                                            Novia:
-                                            <input type="radio" name="search-by" value="novia" >
-                                        </label>
-                                        <label class="inline-block-inputs mobile-marginate top">
-                                            Apellido novio (a):
-                                            <input class="regular-input inline-input white-bg" type="text" name="search-term" required >
-                                        </label>
-                                    </div>
+                                    <p>Puedes filtrar por una de estas dos opciones de búsqueda.</p>
+                                </div>
+                                <div class="checkout-preferences-box">
+                                    <p class="bold-text">1. Apellido </p>
+                                    <label class="inline-block-inputs only-on-desktop">
+                                        Novio:
+                                        <input type="radio" name="search-by" value="novio" >
+                                    </label>
+                                    <label class="inline-block-inputs only-on-desktop">
+                                        Novia:
+                                        <input type="radio" name="search-by" value="novia" >
+                                    </label>
+                                    <select name="select-apellido-novios" id="select-apellido-novios" class="only-on-mobile select mobile-marginate top">
+                                        <option value="Seleccionada Género">Selecciona Género</option>
+                                        <option value="Novio">Novio</option>
+                                        <option value="Novia">Novia</option>
+                                    </select>
+                                    <label class="inline-block-inputs mobile-marginate top apellido-novios-m">
+                                        <span class="only-on-desktop">Apellido novio (a):</span>
+                                        <input class="regular-input inline-input white-bg " type="text" name="search-term" required placeholder="Apellido novio (a)" >
+                                    </label>
                                 </div>
                                 <div class="checkout-preferences-box ">
+                                    <p class="bold-text marginate a-little bottom">2. Código Novios</p>
                                     <div class="marginate a-little bottom clearfix">
-                                        <div class="column half mobile-marginate bottom">
+                                        <div class="column half">
                                             <label for="novios-search-code">Código:</label>
                                             <input type="text" id="novios-search-code" name="novios-search-code" class="regular-input inline-input">
                                             <input type="text" name="novios-search-code-verifier" class="regular-input inline-input one-character-input">
                                         </div>
-                                        <div class="column half righted-text">
-                                            <a data-func="show_lightbox" data-type="busqueda-novios" href="#" title="Buscar" rel="nofollow" class="button wide-btn grey-btn centered-text mobile-block-btn">Buscar</a>
-                                        </div>
                                     </div>
-
-                                    <a href="#" title="¿Quieres cambiar el tipo de despacho?" rel="help" class="block-element italic-text decorated righted-text-m ">¿Quieres cambiar el tipo de despacho?</a>
+                                </div>
+                                <div class="checkout-preferences-box">
+                                    <div class="clearfix">
+                                        <a data-func="show_lightbox" data-type="busqueda-novios" href="#" title="Buscar" rel="nofollow" class="button wide-btn grey-btn centered-text mobile-block-btn fleft mobile-marginate bottom no-float-m">Buscar</a>
+                                        <a href="#" title="¿Quieres cambiar el tipo de despacho?" rel="help" class="txt-change-despacho">¿Quieres cambiar el tipo de despacho?</a>
+                                    </div>
                                 </div>
                             </section>
 
@@ -5840,7 +5849,7 @@
                                 <tr class="min-pad" >
                                     <td>
                                         <label>
-                                            <input type="checkbox" name="venta-personal" value="si" checked>
+                                            <input type="checkbox" name="venta-personal" value="si" checked class="input-gris-btn">
                                             Venta al personal
                                         </label>
                                     </td>

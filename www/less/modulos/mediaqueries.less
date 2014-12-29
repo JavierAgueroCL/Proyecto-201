@@ -126,7 +126,29 @@
 
         &.wide-btn, &.medium-btn {
             padding: 14px 10px;
+
+            &.ficha-tienda {
+                padding-top: 9px;
+                padding-bottom: 9px;
+            }
         }
+
+        &.direc-principal {
+            width: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+    }
+    .input-gris-btn {
+        padding: 10px;
+        background: #ccc;
+        border-radius: 5px;
+        text-align: center;
+        min-height: 44px;
+        width: auto;
+        min-width: 44px;
+        line-height: 23px;
     }
 
     .text-bold-m {
@@ -948,14 +970,14 @@
             display: block;
 
             &.icon-holder { 
-                width: 15%; 
+                width: 28%; 
                 float: left;
                 margin-right: 3%;
             }
 
             &.title-holder, &.info-holder {
                 width: auto;
-                margin-left: 18%;
+                margin-left: 32%;
                 line-height: 160%;
             }
 
@@ -963,6 +985,12 @@
                 font-size: 14px;
             }
 
+        }
+        .txt-change-despacho {
+            float: none;
+            text-align: center;
+            margin-top: 20px;
+            display: block;
         }
     }
 
@@ -2172,6 +2200,13 @@
         &.no-pad {
             padding:10px 0 0 0;
         }
+        .btn-editar-block {
+            background: #ccc;
+            border-radius: 3px;
+            text-align: center;
+            padding:8px 0;
+            width: 100%;
+        }
     }
 
     .recuperar-clave {
@@ -2401,6 +2436,19 @@
     ///////////////////////////////////// AUXILIARES
     /////////////////////////////////////////////////////////
 
+   .inline-block-inputs {
+        &.apellido-novios-m {
+            width: 100%;
+            max-width: 100%;
+            margin-left: 0;
+            padding: 0;
+
+            input {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 
     .full-m {
         width: 100% !important;
@@ -2423,6 +2471,10 @@
     }
     .margin-left-m {
         margin-left: 10px;
+    }
+
+    .no-float-m {
+        float: none;
     }
 
     /////////////////////////////////////////////////////////
