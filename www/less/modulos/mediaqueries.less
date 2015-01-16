@@ -2595,6 +2595,7 @@
     .box-menu-homy {
         padding-top: 5px;
         padding-bottom: 5px;
+        position: relative;
     }
     .menu-homy {
         display: none;
@@ -2603,6 +2604,8 @@
 
         &.deployed {
             display: block;
+            top: 100%;
+            z-index: 10;
         }
     }
 
