@@ -5581,7 +5581,8 @@
                         <div class="caja-datos margin-bot10 no-margin-m">
                             <h2>Agregar nueva lista de favoritos</h2>
                         </div>
-                        <div class="caja-datos pad all margin-bot10">
+                        <div class="only-on-desktop">
+                            <div class="caja-datos pad all margin-bot10">
                             <div class="clearfix margin-bot10">
                                 <div class="fleft full-m marginbot-m10">
                                     <div class="inline-input-container clearfix">
@@ -5593,13 +5594,13 @@
                                 </div>
                                 <div class="fleft full-m marginbot-m10">
                                     <div class="inline-input-container">
-                                        <label for="otro" class="inline-item regular-col otro hide-on-mobile">Otro:</label>
+                                        <label for="otro" class="inline-item regular-col otro hide-on-mobile">Otro: *</label>
                                         <input type="text" id="otro" name="otro" class="regular-input inline-item width190 full-m" required="" placeholder="Otro:">
                                     </div> 
                                 </div>                               
                             </div>
                             <div class="inline-input-container clearfix clearfix margin-bot10">
-                                <label for="nombre-lista" class="inline-item regular-co hide-on-mobile">Nombre para tu lista:</label>
+                                <label for="nombre-lista" class="inline-item regular-col hide-on-mobile">Nombre para tu lista: *</label>
                                 <input class="regular-input inline-item width190 full-m" type="text" name="nombre-lista" id="nombre-lista" placeholder="Nombre para tu Lista" required="">
                             </div>
                             <div class="inline-input-container clearfix margin-bot10">
@@ -5630,6 +5631,86 @@
                                 <button class="button medium-btn red-btn activar" type="submit">Guardar lista</button>
                             </div>
                         </div>
+                        </div>
+                        
+                        <div class="only-on-mobile">
+                            <form action="/" method="post" class="listas" data-validation="auto">
+        <div class="clearfix caja-datos pad all border-bottom">
+            <div class="column half">
+                <p class="bold-text marginate bottom">¿Quíeres que tu lista sea permanente?</p>
+                <label for="si-quiero" class="block-element marginate a-little bottom" data-func="select_option_list"  data-target="uno"><input type="radio" id="si-quiero" name="opcion-lista" class="marginate a-little right" value="uno">Sí, quiero que sea permanente.</label>
+                <label for="no-quiero" class="block-element marginate a-little bottom" data-func="select_option_list"  data-target="dos"><input type="radio" id="no-quiero" name="opcion-lista" class="marginate a-little right" value="dos">No, no quiero que sea permanente.</label>
+            </div>
+            <div class="column half">
+                <p class="mensaje-important">*Si quieres que tu lista este siempre disponible para comprar las veces que quieras, marca “si”</p>
+            </div>
+        </div>
+        <!-- OPCION NO -->
+        <div data-option="dos" class="cont-option">
+            <h2 class="lightbox-title pad a-little all margin-top10">Datos para tu lista </h2>
+            <div class="clearfix caja-datos pad all">
+                <div class="column half">
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="motivo-de-tu-lista" class="inline-item regular-col hide-on-mobile">Motivo de tu lista:</label>
+                        <select name="" id="" class="select width160 full-m no-style only-on-desktop" id="motivo-de-tu-lista">
+                            <option value="Seleccionar">Seleccionar</option>
+                        </select>
+                        <select name="" id="" class="select full-m no-style only-on-mobile" id="motivo-de-tu-lista">
+                            <option value="Motivo de tu lista">Motivo de tu lista</option>
+                        </select>
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="otro-motivo" class="inline-item regular-col hide-on-mobile">Otro motivo:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="otro-motivo" placeholder="Otro motivo:">
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="nombre-para-tu-lista" class="inline-item regular-col hide-on-mobile">Nombre para tu lista:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="nombre-para-tu-lista" placeholder="Nombre para tu lista">
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="ingresar-mensaje" class="inline-item regular-col hide-on-mobile">Ingresar un mensaje:</label>
+                        <textarea class="regular-input inline-item width160 full-m" id="ingresar-mensaje" placeholder="Ingresar Mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="column half box-gris">
+                    <p class="bold-text marginate bottom">¿Quíeres que tu lista sea privada?</p>
+                    <label for="si-quiero-publica" class="block-element marginate a-little bottom"><input type="radio" id="si-quiero-publica" name="opcion-lista-publica" class="marginate a-little right">Sí, quiero que sea permanente.</label>
+                    <label for="no-quiero-publica" class="block-element marginate a-little bottom"><input type="radio" id="no-quiero-publica" name="opcion-lista-publica" class="marginate a-little right">No, no quiero que sea permanente.</label>
+                    <div class="inline-input-container clearfix">
+                        <label for="calendario-input" class="inline-item regular-col block-element f-evento hide-on-mobile">Fecha del evento:</label>
+                        <input type="date" data-role="get_calendar" class="calendario regular-input inline-item width190 f-evento bg-white" id="calendario-input" name="calendario-input" required="">
+                        <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input" class="calendario-icon"><i class="fa fa-calendar-o"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix border-top">
+                <div class="fright full-m">
+                    <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OPCION SI -->
+        <div data-option="uno" class="cont-option">
+            <h2 class="lightbox-title pad a-little all margin-top10">Datos para tu lista permanente </h2>
+            <div class="clearfix caja-datos pad all">
+                <div class="column half">
+                    <p class="only-on-mobile marginate a-little bottom">Nombre para tu lista:</p>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="nombre-de-tu-lista" class="inline-item regular-col hide-on-mobile">Nombre para tu lista:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="nombre-de-tu-lista" placeholder="Nombre para tu lista">
+                    </div>
+                </div>
+            </div>
+             <div class="clearfix border-top">
+                <div class="fright full-m">
+                    <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+                        </div>
                     </form>
                 	</div>
                 	<aside class="side column big-gap quarters">
@@ -5646,7 +5727,7 @@
                 			<h4 data-func="deploy_mobile_submenu">Información personal</h4>
 	                		<ul>
 	                			<li>
-	                				<a href="#" title="Datos Personales">Datos Personales</a>
+	                				<a href="#" title="Datos Comerciales">Datos Comerciales</a>
 	                			</li>
 	                			<li>
 	                				<a href="#" title="Libreta de direcciones">Libreta de direcciones</a>
@@ -5798,6 +5879,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -5895,14 +5977,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

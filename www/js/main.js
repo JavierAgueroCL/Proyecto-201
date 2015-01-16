@@ -57,6 +57,14 @@
             $submenu.css('width', menu_width);
             $parent.toggleClass('deployed');
         },
+        deploy_mobile_menu_homy : function(event) {
+            event.preventDefault();
+
+            var $item = $(event.currentTarget),
+                $target = $item.parent().next();
+
+            $target.toggleClass('deployed');
+        },
         deploy_mobile_submenu : function( event ){
             var $item = $(event.currentTarget);
 
@@ -221,6 +229,22 @@
             $item.parent().addClass('active');
             $targets.filter('[data-tabname="'+ target +'"]').addClass('active');
         },
+        select_option_list : function( event ){
+            var $item = $(event.currentTarget),
+                $targets = $('.cont-option'),
+                target;
+
+            if( $item.is('select') ){
+                target = $item.find('option:selected').data('target');
+            } else {
+                target = $item.data('target');
+            }
+
+            $item.parents('.listas').find('.active').removeClass('active');
+            $targets.removeClass('active');
+
+            $targets.filter('[data-option="'+ target +'"]').addClass('active');
+        },
         remove_from_compare_table : function( event ){
             event.preventDefault();
             var $item = $(this),
@@ -314,6 +338,39 @@
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
             });
         },
+        get_mini_ficha_sin_stock : function( event ){
+            event.preventDefault();
+
+            // promesas
+            var lightbox_promise = event.data.sodimac.setup_lightbox( 'big-lightbox' );
+
+            // hacemos el llamado ajax para buscar el contenido del lightbox
+            var ajax_data = {}, // data adcional para el ajax, necesario para produccion
+                ajax_promise = $.get('modales/mini-ficha-sin-stock.html', ajax_data);
+
+            // preparamos la respuesta para ambas promesas
+            // el callback se ejecutara cuando ambas promesas se completen
+            $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
+                var response_html = ajax_response[0];
+
+                
+
+                // se adjunta el contenido del lightbox a la caja
+                $lightbox.append( response_html );
+
+                // se manejan las unidades discretas
+                if( $lightbox.find('[data-role="product_slider"]').length ){ 
+                    imagesLoaded( $lightbox.get(0), function(){
+                        event.data.sodimac.product_slider( $lightbox.find('[data-role="product_slider"]') );
+                    })
+                    
+                }
+                if( $('.lightbox-content [data-role="amount_input"]').length ){ Sodimac.prototype.amount_inputs( $('[data-role="amount_input"]') ); }
+
+                // auto delegamos los elementos que tengan el atributo "data-func"
+                event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+            });
+        },
         minificha_tab_control : function( event ){
             event.preventDefault();
             var $item = $(this),
@@ -373,6 +430,65 @@
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
             });
         },
+        show_lightbox_compra_asistida : function( event ){
+            var $item = $(event.currentTarget),
+                type = $item.data('type'); // actuará como nombre del modal
+
+            // inicializamos el lightbox
+            var lightbox_promise = event.data.sodimac.setup_lightbox();
+
+            // hacemos el llamado ajax para buscar el contenido del lightbox
+            var ajax_data = {}, // data adcional para el ajax, necesario para produccion
+                ajax_promise = $.get('modales/' + type + '.html', ajax_data);
+
+            // preparamos la respuesta para ambas promesas
+            // el callback se ejecutara cuando ambas promesas se completen
+            $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
+                var response_html = ajax_response[0];
+
+                // se adjunta el contenido del lightbox a la caja
+                $lightbox.append( response_html );
+                $lightbox.addClass('compra-asistida');
+                if( $('.lightbox-content [data-role="amount_input"]').length ){ Sodimac.prototype.amount_inputs( $('[data-role="amount_input"]') ); }
+
+                // auto delegamos los elementos que tengan el atributo "data-func"
+                event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+            });
+        },
+
+        lightbox_small : function( event ){ 
+            var $item = $(event.currentTarget),
+                $contList = $item.parents('[data-role="item"]'),
+                type = $item.data('type'); // actuará como nombre del modal
+
+            // inicializamos el lightbox
+            var lightbox_promise = event.data.sodimac.setup_lightbox();
+
+            // hacemos el llamado ajax para buscar el contenido del lightbox
+            var ajax_data = {}, // data adcional para el ajax, necesario para produccion
+                ajax_promise = $.get('modales/' + type + '.html', ajax_data);
+
+            // preparamos la respuesta para ambas promesas
+            // el callback se ejecutara cuando ambas promesas se completen
+            $.when( lightbox_promise, ajax_promise ).then(function( $lightbox, ajax_response ){
+                var response_html = ajax_response[0];
+
+                // se adjunta el contenido del lightbox a la caja
+                $lightbox.append( response_html );
+                $lightbox.addClass('lightbox-small');
+
+                $('[data-delete]').on('click', function(){
+                    $contList.first().addClass('disappearing').slideUp(700, function(){
+                        
+                    });
+                    $('#lightbox').remove();
+                });
+
+
+                event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
+
+            });
+        },
         close_lightbox : function( event ){
             event.preventDefault();
             event.data.sodimac.close_lightbox();
@@ -425,8 +541,15 @@
         },
         deploy_filters : function(event) {
             var $item = $(event.currentTarget);
-
+            $item.toggleClass('change-icon')
             $item.next().toggleClass('deploy');
+        },
+        deployed_compra_click : function(event)  {
+            var $item = $(event.currentTarget),
+                $target = $item.parent().next();
+
+                $target.addClass('deployed');
+                $item.hide();
         }
     };
 
@@ -455,10 +578,13 @@
             if( $('[data-role="product_slider"]').length ){ this.product_slider( $('[data-role="product_slider"]') ); }
             if( $('[data-role="dynamic_fixed"]').length ){ this.dynamic_fixed( $('[data-role="dynamic_fixed"]') ); }
             if( $('[data-role="carousel_holder"]').length ){ this.product_carousel( $('[data-role="carousel_holder"]') ); }
+            if( $('[data-role="carousel_color_holder"]').length ){ this.color_carousel( $('[data-role="carousel_color_holder"]') ); }
             if( $('[data-role="get_calendar"]').length ){ this.datepickers( $('[data-role="get_calendar"]') ); }
             if( $('[data-validation="auto"]').length ){ this.handle_forms( $('[data-validation="auto"]') ); }
 
             $('[data-equalize="children"]').equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+            $('[data-equalize="children-mobile"]').equalizeChildrenHeights(true);
+
         },
         event_handler : function( $collection ){
             if( ! $collection.length ){ return; }
@@ -660,6 +786,32 @@
             });
         },
 
+        /// controlador de colores busqueda de productos
+        color_carousel : function( $elements ){
+            $elements.each(function(){
+                var $box = $(this),
+                    carousel_options = {
+                        items : 8,
+                        itemsTablet : [999, 2],
+                        itemsMobile : [999, 2],
+                        pagination : $box.data('controls') === 'bullets' ? true : false,
+                        slideSpeed : 500,
+                        scrollPerPage : false
+                    };
+
+                var carousel = $box.find('[data-role="carousel"]').owlCarousel( carousel_options ).data('owlCarousel');
+
+                $box.equalizeChildrenHeights(true, 'only screen and (max-width: 999px)');
+
+                $box.find('[data-role="carousel_control"]').on('click.carousel_controls', function(event){
+                    event.preventDefault();
+
+                    if( $(this).data('action') === 'prev' ){ carousel.prev(); }
+                    else { carousel.next(); }
+                });
+            });
+        },
+
         /// controlador del slider de la ficha producto
         product_slider : function( $elements ){
             $elements.each(function(){
@@ -838,7 +990,14 @@
                             if( $(e).val() !== value ){ valid = false; }
                         });
                         return valid;
+                    },
+                    validateRUT : function( $input ){
+                        var isSeparated = $input.data('separated') ? true : false;
+                        var value = isSeparated ? $input.val() + $input.parents('.box-border-mobile').next().next().find('input').val() : $input.val(),
+                            isValidRut = $.Rut.validar( value ) && value.length > 6;
+                        return isValidRut;
                     }
+
                 }
             });
         }

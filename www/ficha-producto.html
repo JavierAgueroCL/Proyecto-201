@@ -5635,6 +5635,10 @@
                                         <img src="http://fakeimg.pl/495x495" class="elastic-img">
                                     </div>
                                 </div>
+                                <div class="clearfix box-button-link marginate a-little top">
+                                    <button class="button view-image-product fright marginate a-little left"><i class="fa fa-camera"></i>Ver video</button>
+                                    <button class="button view-image-product fright"><i class="fa fa-youtube-play"></i>Ver imagen</button>
+                                </div>
 
                                 <div class="main-product-slider-controls-holder">
                                     <div class="product-carousel clearfix hide-on-mobile" data-role="carousel_holder">
@@ -5728,7 +5732,6 @@
                                                 <span class="relative-smaller-paragraph regular-text">$</span> 2.295.990 <span class="relative-smaller-paragraph regular-text">c/u</span>
                                                 <img class="hide-on-mobile" src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
                                                 <img class="hide-on-mobile" src="images/icons/2x1.png" title="Oferta única">
-                                                <img class="hide-on-mobile" src="images/icons/oferta-cmr-icon-big.png" title="Oferta única">
                                             </p>
                                         </div>
                                         <div class="mobile-column thirds hide-on-desktop box-cantidad-mobile">
@@ -5806,10 +5809,10 @@
                                 </div>
                                 <div class="column quarters righted-text hide-on-mobile">
                                     <p class="smaller-paragraph">Compra Asistida</p>
-                                    <p class="highlighted bold-text centered-text">
+                                    <button class="highlighted bold-text centered-text button" data-func="show_lightbox_compra_asistida" data-type="compra-asistida">
                                         <i class="fa fa-phone"></i>
                                         600 600 4020
-                                    </p>
+                                    </button>
                                 </div>
                             </div>
 
@@ -5898,12 +5901,20 @@
                                 </div>
                                 <div class="big-header-box only-on-desktop">
                                     <div class="big-header-box-header big-header" data-func="deploy_big_header_box">
-                                        <div>
-                                        	<label for="garantia-extendida" name="garantia-extendida" class="bold-text margin-right10">Garantía extendida</label>
-                                        	<select name="garantia-extendida" id="garantia-extendida" class="regular-select tallas inline-block-element width-auto">
-                                        		<option value="garantia-1-ano">Extiende tu garantía por 1 año</option>
-                                        	</select>
-                                        </div>
+                                        <h4>Servicios</h4>
+                                    </div>
+                                    <div class="clearfix box-servicios-ficha border-bottom">
+                                    	<label for="garantia-extendida" name="garantia-extendida" class="margin-right10">Garantía extendida</label>
+                                    	<select name="garantia-extendida" id="garantia-extendida" class="regular-select tallas inline-block-element">
+                                    		<option value="garantia-1-ano">Extiende tu garantía por 1 año</option>
+                                    	</select>
+                                        <a href="#" class="ver-garantia" title="Ver garantía">Ver garantía</a>
+                                    </div>
+                                    <div class="clearfix box-servicios-ficha">
+                                        <label for="servicios-hogar" name="servicios-hogar" class="margin-right10">Servicios Hogar</label>
+                                        <select name="servicios-hogar" id="servicios-hogar" class="regular-select tallas inline-block-element">
+                                            <option value="garantia-1-ano">Armado de muebles</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="big-header-box only-on-desktop">
@@ -6121,8 +6132,22 @@
                     </section>
 
                     <section class="product-proprties-hoder">
-                        <div class="fixed-menu-holder hide-on-mobile">
-                            <div class="fixed-menu container centered-text" data-role="dynamic_fixed">
+                        <div class="fixed-menu-holder hide-on-mobile" data-role="dynamic_fixed">
+                            <div class="clearfix box-fix-product">
+                                <div class="fix-product">
+                                    <img src="http://fakeimg.pl/60x45" class="centered-elastic-img fleft">
+                                    <div class="fleft marginate left">
+                                        <p class="normal-text">SKU: 185520-4</p>
+                                        <p class="bold-text bigger-paragraph">Calefón GL 7 litros tiro natural automático</p>
+                                        <p class="medium-text">Ursus Trotter</p>
+                                    </div>
+                                </div>
+                                <div class="fix-product-price clearfix">
+                                    <p class="more-bigger-paragraph bold-text fleft marginate a-little top">179.990 <span>c/u</span></p>
+                                    <button class="button red-btn medium-btn fleft marginate a-little left top">Agragar al carro</button>
+                                </div>
+                            </div>
+                            <div class="fixed-menu container centered-text">
                                 <button data-func="scroll_to_target" data-target="descripcion-producto" class="button seamless-btn bold-text important-paragraph centered-text">
                                     <i class="fa fa-chevron-down red-text"></i>
                                     Descripción del producto
@@ -6349,6 +6374,7 @@
                                             <i class="fa fa-chevron-left"></i>
                                         </button>
                                     </div>
+                                    
                                     <div class="product-carousel-items" data-role="carousel">
                                         <div class="product-carousel-item">
                                             <img src="http://fakeimg.pl/150x100" class="block-element elastic-img">
@@ -7110,6 +7136,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -7207,14 +7234,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

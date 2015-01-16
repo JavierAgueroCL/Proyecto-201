@@ -3,53 +3,77 @@
 </div>
 <div class="lightbox-body mis-listas">
     <form action="/" method="post" class="listas" data-validation="auto">
-        <div class="caja-datos pad all margin-bot10">
-            <div class="clearfix margin-bot10">
-                <div class="fleft full-m marginbot-m10">
-                    <div class="inline-input-container clearfix">
-                        <label for="motivo-de-lista" class="inline-item regular-col hide-on-mobile">Motivo de tu lista:</label>
-                        <select name="motivo-de-lista" id="motivo-de-lista" class="select width190 no-style full-m">
-                            <option value="Motivo de tu lista:">Motivo de tu lista</option>
-                            <option value="Cambios Casa">Cambio de casa</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="fleft full-m marginbot-m10">
-                    <div class="inline-input-container">
-                        <label for="otro" class="inline-item regular-col otro hide-on-mobile">Otro:</label>
-                        <input type="text" id="otro" name="otro" class="regular-input inline-item width190 full-m" required="" placeholder="Otro motivo">
-                    </div> 
-                </div>                               
+        <div class="clearfix caja-datos pad all border-bottom">
+            <div class="column half">
+                <p class="bold-text marginate bottom">¿Quíeres que tu lista sea permanente?</p>
+                <label for="si-quiero" class="block-element marginate a-little bottom" data-func="select_option_list"  data-target="uno"><input type="radio" id="si-quiero" name="opcion-lista" class="marginate a-little right" value="uno">Sí, quiero que sea permanente.</label>
+                <label for="no-quiero" class="block-element marginate a-little bottom" data-func="select_option_list"  data-target="dos"><input type="radio" id="no-quiero" name="opcion-lista" class="marginate a-little right" value="dos">No, no quiero que sea permanente.</label>
             </div>
-            <div class="inline-input-container clearfix clearfix margin-bot10">
-                <label for="nombre-lista" class="inline-item regular-col hide-on-mobile">Nombre para tu lista:</label>
-                <input class="regular-input inline-item width190 full-m" type="text" name="nombre-lista" id="nombre-lista" placeholder="Nombre Lista" required="">
-            </div>
-            <div class="inline-input-container clearfix margin-bot10">
-                <label for="mensaje" class="inline-item regular-col mensaje-l hide-on-mobile">Ingresar un mensaje:</label>
-                <textarea name="mensaje" id="mensaje" cols="59" rows="5" class="mensaje-t regular-input full-m" placeholder="Ingresar un mensaje"></textarea>
-            </div>
-            <div class="inline-input-container clearfix margin-bot10">
-                <label for="lista-option" class="inline-item regular-col largo full-m">Quieres hacer pública tu lista:</label>
-                <select name="lista-option" id="lista-option" class="select width190 full-m no-style hide-on-mobile">
-                    <option value="">Si, quiero que sea pública</option>
-                    <option value="">No, quiero que sea privada</option>
-                </select>
-                <div class="only-on-mobile">
-                    <label class="box-input-radio-m full-m">Si, quiero que sea pública <input type="radio" id="lista-publica" name="lista-publica" class="margin-left-m"></label>
-                    <label class="box-input-radio-m full-m">No, quiero que sea privada <input type="radio" id="lista-publica" name="lista-publica" class="margin-left-m"></label>
-                </div>
-            </div>
-            <div class="inline-input-container clearfix margin-bot10">
-                <label for="calendario-input" class="inline-item regular-col largo f-evento hide-on-mobile">Fecha del evento:</label>
-                <input type="date" data-role="get_calendar" class="calendario regular-input inline-item width190 f-evento" id="calendario-input" name="calendario-input" required="" placeholder="Fecha del evento">
-                <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input" class="calendario-icon hide-on-mobile"><i class="fa fa-calendar-o"></i></span>
+            <div class="column half">
+                <p class="mensaje-important">*Si quieres que tu lista este siempre disponible para comprar las veces que quieras, marca “si”</p>
             </div>
         </div>
-
-        <div class="clearfix border-top">
-            <div class="fright full-m">
-                <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
+        <!-- OPCION NO -->
+        <div data-option="dos" class="cont-option">
+            <h2 class="lightbox-title pad a-little all margin-top10">Datos para tu lista </h2>
+            <div class="clearfix caja-datos pad all">
+                <div class="column half">
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="motivo-de-tu-lista" class="inline-item regular-col hide-on-mobile">Motivo de tu lista:</label>
+                        <select name="" id="" class="select width160 full-m no-style only-on-desktop" id="motivo-de-tu-lista">
+                            <option value="Seleccionar">Seleccionar</option>
+                        </select>
+                        <select name="" id="" class="select full-m no-style only-on-mobile" id="motivo-de-tu-lista">
+                            <option value="Motivo de tu lista">Motivo de tu lista</option>
+                        </select>
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="otro-motivo" class="inline-item regular-col hide-on-mobile">Otro motivo:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="otro-motivo" placeholder="Otro motivo:">
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="nombre-para-tu-lista" class="inline-item regular-col hide-on-mobile">*Nombre para tu lista:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="nombre-para-tu-lista" placeholder="Nombre para tu lista">
+                    </div>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="ingresar-mensaje" class="inline-item regular-col hide-on-mobile">Ingresar un mensaje:</label>
+                        <textarea class="regular-input inline-item width160 full-m" id="ingresar-mensaje" placeholder="Ingresar Mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="column half box-gris">
+                    <p class="bold-text marginate bottom">¿Quíeres que tu lista sea privada?</p>
+                    <label for="si-quiero-publica" class="block-element marginate a-little bottom"><input type="radio" id="si-quiero-publica" name="opcion-lista-publica" class="marginate a-little right">Sí, quiero que sea permanente.</label>
+                    <label for="no-quiero-publica" class="block-element marginate a-little bottom"><input type="radio" id="no-quiero-publica" name="opcion-lista-publica" class="marginate a-little right">No, no quiero que sea permanente.</label>
+                    <div class="inline-input-container clearfix no-border-m">
+                        <label for="calendario-input" class="inline-item regular-col block-element f-evento hide-on-mobile">Fecha del evento:</label>
+                        <input type="date" data-role="get_calendar" class="calendario regular-input inline-item width190 f-evento bg-white" id="calendario-input" name="calendario-input" required="">
+                        <span id="abrircalendario" data-role="get_calendar" data-target="#calendario-input" class="calendario-icon"><i class="fa fa-calendar-o"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix border-top">
+                <div class="fright full-m">
+                    <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- OPCION SI -->
+        <div data-option="uno" class="cont-option">
+            <h2 class="lightbox-title pad a-little all margin-top10">Datos para tu lista permanente </h2>
+            <div class="clearfix caja-datos pad all">
+                <div class="column half">
+                    <p class="only-on-mobile marginate a-little bottom">Nombre para tu lista:</p>
+                    <div class="inline-input-container clearfix margin-bot10">
+                        <label for="nombre-de-tu-lista" class="inline-item regular-col hide-on-mobile">Nombre para tu lista:</label>
+                        <input type="text" class="regular-input inline-item width160 full-m" id="nombre-de-tu-lista" placeholder="Nombre para tu lista">
+                    </div>
+                </div>
+            </div>
+             <div class="clearfix border-top">
+                <div class="fright full-m">
+                    <button class="button medium-btn red-btn activar full-m" type="submit">Guardar lista</button>
+                </div>
             </div>
         </div>
 

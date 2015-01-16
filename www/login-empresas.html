@@ -5580,13 +5580,13 @@
                             <div class="pad all">
                                 <form class="inner-padded-content login-form clearfix" action="/" method="post" data-validation="auto">
                                     <div class="inline-input-container clearfix">
-                                        <label for="login-email" class="inline-item regular-col hide-on-mobile">Email</label>
+                                        <label for="login-email" class="inline-item regular-col hide-on-mobile">*Email</label>
                                         <input class="regular-input inline-item" type="email" name="login-email" id="login-email" placeholder="Ingresa tu e-mail" required>
                                     </div>
                                     <div class="inline-input-container clearfix marginate top box-rut-mobile">
                                         <div class="box-border-mobile">
-                                            <label for="login-rut" class="inline-item regular-col hide-on-mobile">RUT</label>
-                                            <input class="regular-input inline-item" type="text" name="login-rut" id="login-rut" placeholder="123456789" required>
+                                            <label for="login-rut" class="inline-item regular-col hide-on-mobile">*RUT</label>
+                                            <input class="regular-input inline-item" type="text" name="login-rut" id="login-rut" placeholder="123456789" data-custom-validation="validateRUT" data-separated="true" required>
                                         </div>
                                         <span class="inline-item ornament">-</span>
                                         <div class="box-border-mobile digito">
@@ -5594,7 +5594,7 @@
                                         </div>
                                     </div>
                                     <div class="inline-input-container clearfix marginate top bottom">
-                                        <label for="login-password" class="inline-item regular-col hide-on-mobile">Clave</label>
+                                        <label for="login-password" class="inline-item regular-col hide-on-mobile">*Clave</label>
                                         <input class="regular-input inline-item" type="password" name="login-password" id="login-password" placeholder="Ingresa tu clave" required>
                                         <a href="#" title="¿Olvidaste tu clave?" rel="nofollow" class="inline-item smaller-paragraph hide-on-mobile">¿Olvidaste tu clave?</a>
                                     </div>
@@ -5717,6 +5717,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -5814,14 +5815,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

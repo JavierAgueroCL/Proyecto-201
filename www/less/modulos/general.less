@@ -493,6 +493,12 @@
 
 .submenu-button-holder {
     margin-top: 1em;
+
+    .button {
+        &.medium-btn {
+            padding: 8px 10px;
+        }
+    }
 }
 
 .mobile-submenu-list {
@@ -532,12 +538,13 @@
 
     .mobile-submenu-subitems {
         list-style: disc;
-        padding: 10px 0 10px 2.4em;
+        padding: 10px 0 10px 0;
         font-size: 13px;
         line-height: 150%;
         display: none;
+        list-style-position: inside;
 
-        a { display: block; padding: 13px 0 12px 0; }
+        a { display: block; padding: 13px 0 12px 2em; }
     }
 
     .deployed .mobile-submenu-subitems {
@@ -701,6 +708,10 @@
     &.bg-gray {
         background-color: #f9f9f9;
     }
+
+    &.tipo-documento-width {
+        width: 67%;
+    }
 }
 
 .titulo-page {
@@ -751,11 +762,11 @@
                 margin-bottom: 10px;
             }
             .regular-col {
-                width: 20%;
+                width: 21%;
                 min-width: 20%;
             }
             .regular-input {
-                width: 60%;
+                width: 59%;
             }
         }
 
@@ -902,6 +913,10 @@
                         padding-top: 2px;
                         padding-bottom: 2px;
                     }
+
+                    &.nombre-corto {
+                        min-width: 110px;
+                    }
                 }
                 &.lista-p {
                     li {
@@ -984,6 +999,7 @@
                 }
                 .f-evento, .calendario-icon {
                     float: left;
+                    background: #fff;
                 }
                 .calendario-icon {
                     margin-top: 5px;
@@ -1030,7 +1046,7 @@
                     div.info-producto {
                         width: 60%;
 
-                        p.precio {
+                        p.checkout-cart-tablecio {
                             color: @sodimac_red;
                             font-size: 20px;
                             margin-bottom: 5px;
@@ -1107,6 +1123,17 @@
             }
         }
     } /* CONT - CUENTA */
+
+    &.registro {
+        .regular-content {
+            .regular-col {
+                width: 45%;
+            }
+            .width-full {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .cupones, .saldo {
@@ -1119,6 +1146,12 @@
         .inline-item {
             &.codigo {
                 width: 190px;
+            }
+            &.code-cupon {
+                width: 130px;
+            }
+            &.code-cupon-extra {
+                width: 30px;
             }
         }
     }
@@ -1142,6 +1175,15 @@
     .box-error-saldo {
         margin-bottom: 40px;
     }
+}
+.mensaje-error-cupon {
+    background: #f8cad0;
+    color: @sodimac_red;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 5px;
+    border:1px solid @sodimac_red;
+    display: inline-block;
 }
 
 
@@ -1305,6 +1347,10 @@
                 font-weight: bold;
                 padding-right: 10px;
             }
+
+            &.no-margin-bot {
+                margin-bottom: 0;
+            }
         }
         .regular-section {
 
@@ -1315,6 +1361,9 @@
         }
         .regular-col {
             width: 35%;
+        }
+        .regular-big-col {
+            width: 65%;
         }
         .regular-col-num {
             width: 76px;
@@ -1335,6 +1384,17 @@
                 width: 83%;
                 margin-left: 2%;
             }
+            &.genero {
+                 width: 160px;
+            }
+            &.cod-num {
+                width: 7%;
+                margin-left: 1%;
+            }
+            &.num-doc {
+                width: 25%;
+            }
+
         }
         .radio-b {
             margin:0 5px;
@@ -1352,10 +1412,29 @@
             }
             &.fecha-de-n {
                 margin-right: 0.5em;
-                width: 30%;
+                width: 19%;
+                background: url(../images/icons/bg-select.png) 89% 50% no-repeat #f7f7f7;
             }
             &.genero {
                 width: 160px;
+            }
+            &.cuenta-corriente-opcion {
+                width: 45px;
+                margin-left: 10px;
+                background: url(../images/icons/bg-select.png) 87% 50% no-repeat;
+                background-color: #f7f7f7;
+            }
+            &.width-full {
+                width: 100%;
+            }
+            &.full-thirds {
+                width: 70%;
+            }
+            &.sixty-five {
+                width: 65%;
+            }
+            &.fifty-five {
+                width: 55%;
             }
         }
         .codigo-postal {
@@ -1365,6 +1444,36 @@
             line-height: 26px;
             margin-left: 10px;
         }
+
+        &.no-pad-bot {
+            padding-bottom: 0;
+        }
+
+        &.border-all-f0 {
+            border-bottom: 1px solid @blocks_grey;
+        }
+    }
+    .box-select-cuenta-corriente {
+        margin-top: 1em;
+    }
+}
+
+.box-configurar-compra {
+    display: none;
+
+    &.deployed {
+        display: block;
+    }
+}
+
+.declaracion-privacidad {
+    margin-top: 10px;
+    margin-right: 10px;
+    float: left;
+    margin-left: 680px;
+
+    input {
+        margin-right: 5px;
     }
 }
 
@@ -1490,6 +1599,7 @@
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
+    font-style: italic;
 }
 .table-resumen {
     border:1px solid #eee;
@@ -1619,16 +1729,21 @@
                     width: 200px;
                 }
             }
-            select {
+            select, textarea, input {
                 &.width190 {
                     width: 190px;
+                }
+                 &.width160 {
+                    width: 160px;
                 }
             }
             input {
-                &.width190 {
-                    width: 190px;
+                
+                &.bg-white {
+                    background: #fff;
                 }
             }
+
             .f-evento {
                 float: left;
             }
@@ -1643,7 +1758,39 @@
             border-top: 1px solid #f0f0f0;
             padding-top: 10px;
         }
+
+        .mensaje-important {
+            font-size: 12px;
+            font-style: italic;
+            padding: 5px 5px 5px 10px;
+            border-radius: 5px;
+            background-color: #ebebeb;
+        }
+        .box-gris {
+            padding: 12px;
+            border-radius: 5px;
+            background-color: #ebebeb;
+        }
+        .cont-option {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
     }
+}
+.cont-option {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+.box-gris {
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #ebebeb;
 }
 
 ////////////////////////// RECUPERAR CLAVE 
@@ -1875,7 +2022,7 @@
     display: block;
     width: 100%;
     padding-left: 18%;
-    font-size: 11px;
+    font-size: 12px;
 
     &.visible {
         margin-top: 0;
@@ -2115,6 +2262,9 @@
     }
 
     &:hover .plus-icon { opacity: 1; }
+    &.block {
+        display: block;
+    }
 }
 
 .search-result-figure {
@@ -2131,19 +2281,21 @@
         bottom: 10px;
         left: 50%;
         margin-left: -40%;
+        background-color: #e6e6e6;
     }
 
     &:hover .preview-btn { display: block; }
 }
 
 .search-results-colors-holder {
-    .product-color { width: 16px; height: 16px; }
+    .product-color { width: 16px; height: 16px; border:0;}
 }
 
 .search-result-product-data {
     .rating-holder {
         color: @sodimac_red;
-        margin-top: 1.5em;
+        margin-top: 1.0em;
+        margin-bottom: 0.5em;
     }
 }
 
@@ -2439,9 +2591,29 @@
         width: 30%; 
     }
 
-    .cart-table-product { width: 50%; }
-    .cart-table-quantity { width: 20%; }
+    .cart-table-product { width: 55%; }
+    .cart-table-quantity { width: 15%; }
     .cart-table-price  {width: 30%; }
+
+    .pad-left-product {
+        padding-left: 2%;
+    }
+    .pad-left-price {
+        padding-left: 5%;
+    }
+
+
+    .border-top {
+        td {
+            border-top: 1px solid  #e3e3e3;
+        }
+    }
+    .big-pad {
+        td {
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+    }
 }
 
 .payment-methods-tabs-holder {
@@ -2500,6 +2672,10 @@
     border: 1px solid @blocks_border_grey;
 
     &.active { display: block; }
+
+    &.big-pad-desktop {
+        padding: 25px;
+    }
 }
 
 /* FORMAS DE PAGO */
@@ -2600,6 +2776,82 @@
             line-height: 25px;
         }
 
+    }
+}
+
+/***************************************************
+**************************** HOMY
+****************************************************/
+
+.box-menu-homy {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+.menu-homy {
+    a {
+        padding:10px 0;
+        float: left;
+        font-size: 12px;
+
+        span {
+            border-right: 1px solid #ebebeb;
+            padding: 0 5px;
+        }
+
+        &.first {
+            span {
+                padding-left: 0;
+            }
+        }
+        &.last {
+            span {
+                padding-right: 0;
+                border-right: 0;
+            }
+        }
+    }
+}
+
+.box-section-category {
+    padding: 1px;
+    border:1px solid #e6e7e9;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        .info-section-category {
+            bottom:0;
+        }
+    }
+}
+
+.info-section-category {
+    pointer-events:  none;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background: rgba(255,255,255,0.8);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    .transition(all, 0.3s, ease);
+
+    h3 {
+        font-size: 20px;
+        font-weight: normal;
+    }
+    i {
+        color: #fff;
+        background: @homy_color;
+        border:1px solid #fff;
+        padding: 5px 6px;
+        border-radius: 1000%;
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        margin-left: -12px;
     }
 }
 
@@ -2811,7 +3063,6 @@ input[type="radio"]:after {
 input[type="radio"]:checked:after {
     background-color: #264964;
 }
-
 
 
 .footer-column {

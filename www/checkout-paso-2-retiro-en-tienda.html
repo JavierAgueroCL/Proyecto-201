@@ -5581,13 +5581,15 @@
                     Despacho
                 </h2>
 
+                <form action="/" method="post" data-validation="auto">
+
                 <section class="checkout-step-information-holder clearfix marginate top bottom">
                     <div class="column big-gap half marginate a-little bottom">
                         <section class="checkout-preferences-holder checkout-info-column">
                             <div class="checkout-preferences-options">
                                 <h3 class="checkout-preferences-box checkout-preference-title">Información de despacho</h3>
                                 <div class="checkout-preferences-box">
-                                    <select name="lugar" id="lugar" class="select registro-select pretty-select grey-light-select">
+                                    <select name="lugar" id="lugar" class="select registro-select pretty-select grey-light-select no-margin-bot">
                                         <option value="Domicilio">Domicilio</option>
                                         <option value="Retiro en tienda" selected="selected">Retiro en tienda</option>
                                         <option value="Novios" >Novios</option>
@@ -5595,34 +5597,9 @@
                                 </div>
                             </div>
                             <section id="settings-holder" class="checkout-settings-holder">
-                                <div class="checkout-preferences-box force-border">
-                                    <p class="bold-text">¿Quién debe recibir la compra?</p>
-                                    <p>
-                                        En el caso de no ser tu quien reciba la compra, por favor, indícanos el nombre y apellidos de la persona a la que va dirigido.
-                                    </p>
-                                </div>
-                                <div class="checkout-preferences-box">
-                                    <div class="clearfix marginate bottom">
-                                        <div class="column thirds mobile-marginate bottom">
-                                            <div class="inline-input-container clearfix">
-                                                <label for="despacho-receptor-name" class="block-element regular-col hide-on-mobile">Nombre</label>
-                                                <input class="regular-input block-element" type="text" name="despacho-receptor-name" id="despacho-receptor-name" required placeholder="Nombre">
-                                            </div>
-                                        </div>
-                                        <div class="column thirds mobile-marginate bottom">
-                                            <div class="inline-input-container clearfix">
-                                                <label for="despacho-receptor-lastname" class="block-element regular-col hide-on-mobile">Apellido</label>
-                                                <input class="regular-input block-element" type="text" name="despacho-receptor-lastname" id="despacho-receptor-lastname" placeholder="Apellido" required>
-                                            </div>
-                                        </div>
-                                        <div class="column thirds">
-                                            <div class="inline-input-container clearfix">
-                                                <label for="despacho-receptor-rut" class="block-element regular-col hide-on-mobile">RUT</label>
-                                                <input class="regular-input block-element" type="text" name="despacho-receptor-rut" id="despacho-receptor-rut" placeholder="RUT" required>
-                                            </div>
-                                        </div>
-                                    </div>
 
+                                <div class="checkout-preferences-box  force-border">
+                                    
                                     <select name="despacho-receptor-region" id="despacho-receptor-region" class="pretty-select inline-select grey-light-select  marginate bottom full-m select">
                                         <option value="RM">Región Metropólitana</option>
                                         <option value="RM">Región Metropólitana</option>
@@ -5725,6 +5702,34 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="checkout-preferences-box force-border">
+                                    <p class="bold-text">¿Quién debe recibir la compra?</p>
+                                    <p>
+                                        En el caso de no ser tu quien reciba la compra, por favor, indícanos el nombre y apellidos de la persona a la que va dirigido.
+                                    </p>
+                                </div>
+                                <div class="checkout-preferences-box force-border">
+                                    <div class="clearfix marginate bottom">
+                                        <div class="column thirds mobile-marginate bottom">
+                                            <div class="inline-input-container clearfix">
+                                                <label for="despacho-receptor-name" class="block-element hide-on-mobile">*Nombre</label>
+                                                <input class="regular-input block-element" type="text" name="despacho-receptor-name" id="despacho-receptor-name" required placeholder="Nombre" required>
+                                            </div>
+                                        </div>
+                                        <div class="column thirds mobile-marginate bottom">
+                                            <div class="inline-input-container clearfix">
+                                                <label for="despacho-receptor-lastname" class="block-element hide-on-mobile">*Apellido</label>
+                                                <input class="regular-input block-element" type="text" name="despacho-receptor-lastname" id="despacho-receptor-lastname" placeholder="Apellido" required>
+                                            </div>
+                                        </div>
+                                        <div class="column thirds">
+                                            <div class="inline-input-container clearfix">
+                                                <label for="despacho-receptor-rut" class="block-element hide-on-mobile">*RUT</label>
+                                                <input class="regular-input block-element" type="text" name="despacho-receptor-rut" id="despacho-receptor-rut" placeholder="RUT" required data-custom-validation="validateRUT">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </section>
                     </div>
@@ -5752,10 +5757,10 @@
                                 </tr>
                                 <tr>
                                     <td class="cart-table-product">
-                                        <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        <div class="column thirds">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
-                                        <div class="column half">
+                                        <div class="column two-thirds pad-left-product">
                                             <p class="bold-text">Skill</p>
                                             <p class="bold-text">Motosierra Profesional</p>
                                             <p class="smaller-paragraph">Color: Celeste</p>
@@ -5778,21 +5783,21 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart-table-price">
-                                        <p class="bigger-paragraph">
-                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                    <td class="cart-table-price pad-left-price">
+                                        <p class="middle-text">
+                                            <img src="images/icons/oferta-cmr-icon-small.png" title="Oferta única" class="block-element">
                                             Precio CMR:
                                         </p>
-                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
-                                        <p>$169.990 c/u</p>
+                                        <p class="red-text important-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p class="normal-text">$169.990 c/u</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="cart-table-product">
-                                        <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        <div class="column thirds">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
-                                        <div class="column half">
+                                        <div class="column two-thirds pad-left-product">
                                             <p class="bold-text">Skill</p>
                                             <p class="bold-text">Motosierra Profesional</p>
                                             <p class="smaller-paragraph">Color: Celeste</p>
@@ -5815,21 +5820,21 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart-table-price">
-                                        <p class="bigger-paragraph">
-                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                    <td class="cart-table-price pad-left-price">
+                                        <p class="middle-text">
+                                            <img src="images/icons/oferta-cmr-icon-small.png" title="Oferta única" class="block-element">
                                             Precio CMR:
                                         </p>
-                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
-                                        <p>$169.990 c/u</p>
+                                        <p class="red-text important-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p class="normal-text">$169.990 c/u</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="cart-table-product">
-                                        <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                        <div class="column thirds">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
-                                        <div class="column half">
+                                        <div class="column two-thirds pad-left-product">
                                             <p class="bold-text">Skill</p>
                                             <p class="bold-text">Motosierra Profesional</p>
                                             <p class="smaller-paragraph">Color: Celeste</p>
@@ -5852,13 +5857,13 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="cart-table-price">
-                                        <p class="bigger-paragraph">
-                                            <img src="images/icons/oferta-cmr-icon-big.png" title="Oferta única" class="block-element">
+                                    <td class="cart-table-price pad-left-price">
+                                        <p class="middle-text">
+                                            <img src="images/icons/oferta-cmr-icon-small.png" title="Oferta única" class="block-element">
                                             Precio CMR:
                                         </p>
-                                        <p class="red-text bold-text bigger-paragraph pad a-little bottom" >$59.990 c/u</p>
-                                        <p>$169.990 c/u</p>
+                                        <p class="red-text important-paragraph pad a-little bottom" >$59.990 c/u</p>
+                                        <p class="normal-text">$169.990 c/u</p>
                                     </td>
                                 </tr>
                             </table>
@@ -5885,7 +5890,7 @@
                                     </td>
                                     <td class="righted-text">$7.990</td>
                                 </tr>
-                                <tr>
+                                <tr class="border-top">
                                     <td class="bigger-paragraph bold-text">Subtotal</td>
                                     <td class="righted-text">$14.990</td>
                                 </tr>
@@ -5893,7 +5898,7 @@
                                     <td class="bigger-paragraph bold-text">Subtotal usando tarjeta CMR</td>
                                     <td class="bigger-paragraph bold-text red-text righted-text">$55.987</td>
                                 </tr>
-                                <tr>
+                                <tr class="border-top little-pad">
                                     <td>Subtotal con otros medios de pago</td>
                                     <td class="bigger-paragraph bold-text righted-text" >$222.333</td>
                                 </tr>
@@ -5903,9 +5908,10 @@
                 </section>
 
                 <div class="checkout-invitation-box no-border righted-text marginate top clearfix">
-                    <a href="#" title="Volver" rel="nofollow" class="button medium-btn grey-btn centered-text mobile-column half">Volver</a>
-                    <a href="#" title="Siguiente paso" rel="nofollow" class="button medium-btn red-btn centered-text mobile-column half">Siguiente paso</a>
+                    <button class="button medium-btn grey-btn centered-text mobile-column half">Volver</button>
+                    <button class="button medium-btn red-btn centered-text mobile-column half" type="submit">Siguiente paso</button>
                 </div>
+                </form>
             </div>
         </main> 
         <!-- // -->
@@ -5997,6 +6003,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -6094,14 +6101,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

@@ -5582,6 +5582,8 @@
                     Compra sin registro
                 </h2>
 
+                <form action="/" method="post" data-validation="auto">
+
                 <section class="checkout-step-information-holder clearfix marginate top bottom">
                     <div class="column big-gap half marginate a-little bottom">
                         <section class="checkout-preferences-holder checkout-info-column">
@@ -5591,42 +5593,42 @@
                                     <div class="clearfix regular-block marginate bottom">
                                         <div class="column half">
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="nombre" class="inline-item hide-on-mobile">Nombre:</label>
-                                                <input type="text" name="nombre" id="nombre" class="regular-input" placeholder="Nombre">
+                                                <label for="nombre" class="inline-item hide-on-mobile">*Nombre:</label>
+                                                <input type="text" name="nombre" id="nombre" class="regular-input" placeholder="Nombre" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="apellido-p" class="inline-item hide-on-mobile">Apellido paterno:</label>
-                                                <input type="text" name="apellido-p" id="apellido-p" class="regular-input" placeholder="Apellido paterno">
+                                                <label for="apellido-p" class="inline-item hide-on-mobile">*Apellido paterno:</label>
+                                                <input type="text" name="apellido-p" id="apellido-p" class="regular-input" placeholder="Apellido paterno" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="apellido-m" class="inline-item hide-on-mobile">Apellido materno:</label>
-                                                <input type="text" name="apellido-m" id="apellido-m" class="regular-input" placeholder="Apellido materno">
+                                                <label for="apellido-m" class="inline-item hide-on-mobile">*Apellido materno:</label>
+                                                <input type="text" name="apellido-m" id="apellido-m" class="regular-input" placeholder="Apellido materno" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="pais" class="inline-item hide-on-mobile">País:</label>
-                                                <input type="text" name="pais" id="pais" class="regular-input" placeholder="País">
+                                                <label for="pais" class="inline-item hide-on-mobile">*País:</label>
+                                                <input type="text" name="pais" id="pais" class="regular-input" placeholder="País" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="rut" class="inline-item hide-on-mobile">Cédula de identidad:</label>
-                                                <input type="text" name="rut" id="rut" class="regular-input" placeholder="Cédula de identidad">
+                                                <label for="rut" class="inline-item hide-on-mobile">*Cédula de identidad:</label>
+                                                <input type="text" name="rut" id="rut" class="regular-input" data-custom-validation="validateRUT" placeholder="Cédula de identidad" required>
                                             </div>
                                         </div>
                                         <div class="column half">
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="telefono-casa" class="inline-item hide-on-mobile">Teléfono casa:</label>
-                                                <input type="text" name="telefono-casa" id="telefono-casa" class="regular-input" placeholder="+5624587658">
+                                                <label for="telefono-casa" class="inline-item hide-on-mobile">*Teléfono casa:</label>
+                                                <input type="text" name="telefono-casa" id="telefono-casa" class="regular-input" placeholder="+5624587658" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="telefono-oficina" class="inline-item hide-on-mobile">Teléfono oficina:</label>
-                                                <input type="text" name="telefono-oficina" id="telefono-oficina" class="regular-input" placeholder="+5624587658">
+                                                <label for="telefono-oficina" class="inline-item hide-on-mobile">*Teléfono oficina:</label>
+                                                <input type="text" name="telefono-oficina" id="telefono-oficina" class="regular-input" placeholder="+5624587658" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="telefono-cel" class="inline-item hide-on-mobile">Teléfono celular:</label>
-                                                <input type="text" name="telefono-cel" id="telefono-cel" class="regular-input" placeholder="+5694587658">
+                                                <label for="telefono-cel" class="inline-item hide-on-mobile">*Teléfono celular:</label>
+                                                <input type="text" name="telefono-cel" id="telefono-cel" class="regular-input" placeholder="+5694587658" required>
                                             </div>
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="email" class="inline-item hide-on-mobile">E-mail:</label>
-                                                <input type="email" name="email" id="email" class="regular-input" placeholder="mail@mail.com">
+                                                <label for="email" class="inline-item hide-on-mobile">*E-mail:</label>
+                                                <input type="email" name="email" id="email" class="regular-input" placeholder="mail@mail.com" required>
                                             </div>
 
                                         </div>
@@ -5647,36 +5649,36 @@
                                     <div class="clearfix regular-block">
                                         <div class="column half">
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="nombre-receptor" class="inline-item hide-on-mobile">Nombre receptor:</label>
-                                                <input type="text" name="nombre-receptor" id="nombre-receptor" class="regular-input" placeholder="Nombre receptor">
+                                                <label for="nombre-receptor" class="inline-item hide-on-mobile">*Nombre receptor:</label>
+                                                <input type="text" name="nombre-receptor" id="nombre-receptor" class="regular-input" placeholder="Nombre receptor" required>
                                             </div>
                                         </div>
                                         <div class="column half">
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="apellido-receptor" class="inline-item hide-on-mobile">Apellido paterno receptor:</label>
-                                                <input type="text" name="apellido-receptor" id="apellido-receptor" class="regular-input" placeholder="Apellido paterno receptor">
+                                                <label for="apellido-receptor" class="inline-item hide-on-mobile">*Apellido paterno receptor:</label>
+                                                <input type="text" name="apellido-receptor" id="apellido-receptor" class="regular-input" placeholder="Apellido paterno receptor" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="clearfix regular-block">
                                         <div class="column half">
                                             <div class="marginate a-little bottom inline-input-container">
-                                                <label for="calle-receptor" class="inline-item hide-on-mobile">Calle:</label>
-                                                <input type="text" name="calle-receptor" id="calle-receptor" class="regular-input" placeholder="Calle">
+                                                <label for="calle-receptor" class="inline-item hide-on-mobile">*Calle:</label>
+                                                <input type="text" name="calle-receptor" id="calle-receptor" class="regular-input" placeholder="Calle" required>
                                             </div>
                                         </div>
                                         <div class="column half">
                                             <div class="clearfix">
                                                 <div class="column half">
                                                     <div class="marginate a-little bottom inline-input-container">
-                                                        <label for="numero-receptor" class="inline-item hide-on-mobile">Número:</label>
-                                                        <input type="text" name="numero-receptor" id="numero-receptor" class="regular-input" placeholder="Número">
+                                                        <label for="numero-receptor" class="inline-item hide-on-mobile">*Número:</label>
+                                                        <input type="text" name="numero-receptor" id="numero-receptor" class="regular-input" placeholder="Número" required>
                                                     </div>
                                                 </div>
                                                 <div class="column half">
                                                     <div class="marginate a-little bottom inline-input-container">
-                                                        <label for="depto-receptor" class="inline-item hide-on-mobile">Departamento:</label>
-                                                        <input type="text" name="depto-receptor" id="depto-receptor" class="regular-input" placeholder="Departamento">
+                                                        <label for="depto-receptor" class="inline-item hide-on-mobile">*Departamento:</label>
+                                                        <input type="text" name="depto-receptor" id="depto-receptor" class="regular-input" placeholder="Departamento" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -5714,7 +5716,7 @@
                                 <div class="checkout-preferences-box">
                                     <p class="important-paragraph">Envío de Boleta o Factura</p>
                                     <label for="correo-enviar" class="marginate a-little bottom">Tu boleta será enviada al correo electrónico</label>
-                                    <input type="email" class="regular-input" name="correo-enviar" id="correo-enviar">
+                                    <input type="email" class="regular-input" name="correo-enviar" id="correo-enviar" required>
                                 </div>
                             </div>
                         </section>
@@ -5744,7 +5746,7 @@
                                 <tr>
                                     <td class="cart-table-product">
                                         <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
                                         <div class="column half">
                                             <p class="bold-text">Skill</p>
@@ -5781,7 +5783,7 @@
                                 <tr>
                                     <td class="cart-table-product">
                                         <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
                                         <div class="column half">
                                             <p class="bold-text">Skill</p>
@@ -5818,7 +5820,7 @@
                                 <tr>
                                     <td class="cart-table-product">
                                         <div class="column half">
-                                            <img src="http://fakeimg.pl/90x90" class="centered-elastic-img">
+                                            <img src="http://fakeimg.pl/83x83" class="centered-elastic-img">
                                         </div>
                                         <div class="column half">
                                             <p class="bold-text">Skill</p>
@@ -5892,11 +5894,11 @@
                         </section>
                     </div>
                 </section>
-
                 <div class="checkout-invitation-box no-border righted-text marginate top clearfix">
-                    <a href="#" title="Volver" rel="nofollow" class="button medium-btn grey-btn centered-text mobile-column half">Volver</a>
-                    <a href="#" title="Siguiente paso" rel="nofollow" class="button medium-btn red-btn centered-text mobile-column half">Siguiente paso</a>
+                    <button class="button medium-btn grey-btn centered-text mobile-column half">Volver</button>
+                    <button class="button medium-btn red-btn centered-text mobile-column half" type="submit">Siguiente paso</button>
                 </div>
+                </form>
             </div>
         </main> 
         <!-- // -->
@@ -5988,6 +5990,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -6085,14 +6088,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

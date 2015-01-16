@@ -96,6 +96,17 @@
         height: 44px;
     }
 
+    &.view-image-product {
+        border-radius: 0;
+        border:1px solid @submenu_grey;
+
+        i {
+            font-size: 19px;
+            margin-right: 5px;
+            vertical-align: -2px;
+        }
+    }
+
     // types
     &.deploy-btn {
         background: #fff;
@@ -354,6 +365,10 @@
 
     &.link-secundario {
         text-decoration: underline;
+    }
+
+    &.display-none {
+        display: none;
     }
 }
 
@@ -623,11 +638,22 @@
         background: url(../images/icons/bg-select.png) calc(100% - 5px) 50% no-repeat #fff;
     }
     &.cuotas {}
+
+    &.no-margin-bot {
+        margin-bottom: 0;
+    }
 }
 
 .seamless-table {
     display: table;
     &.full { width: 100%; }
+
+    .little-pad {
+        td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
 }
 
 .amount-input-holder {
@@ -816,18 +842,25 @@
     .minified-col {
         width: 2em;
     }
+
+    .agregar-absolute {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        font-style: italic;
+    }
 }
 
 .big-header-box {
     display: block;
     background: #fff;
-    border: 1px solid @header_grey;
+    border: 1px solid @blocks_grey;
     margin-top: 1.5em;
 }
 
 .big-header-box-header {
     padding: 0.5em;
-    background: @header_grey;
+    background: @blocks_grey;
     position: relative;
 
    &.big-header { padding: 1em 5px; } 
@@ -835,6 +868,36 @@
    h2 { text-align: left; }
    h4 { text-align: center; }
 }
+
+.box-servicios-ficha {
+
+    padding: 4px 10px;
+
+    label, select {
+        float: left;
+    }
+
+    label {
+        margin-top: 5px;
+        width: 140px;
+    }
+    select {
+        width: 220px;
+    }
+
+    &.border-bottom {
+        border-bottom: 1px solid @blocks_grey;
+    }
+
+    .ver-garantia {
+        float: left;
+        margin-left: 15px;
+        font-style: italic;
+        font-size:12px;
+        margin-top: 5px;
+    }
+}
+
 
 .big-header-box-scroll-btn {
     line-height: 1em;
@@ -904,9 +967,38 @@
     position: fixed;
     top: 0;
     z-index: 10000;
-    background: #fff;
+    background: #ecebeb;
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
-    padding: 5px 0;
+    padding:0;
+    width: 1000px;
+
+    .box-fix-product {
+        display: block;
+    }
+
+    .fixed-menu {
+        background: none;
+
+        .seamless-btn {
+            border:0;
+        }
+    }
+}
+
+.box-fix-product {
+    display: none;
+    background: #f9f9f9;
+
+    .fix-product {
+        float: left;
+        width: 67%;
+        padding: 10px 15px;
+    }
+    .fix-product-price {
+        float: left;
+        width: 33%;
+        padding: 10px 15px;
+    }
 }
 
 .product-carousel {
@@ -971,6 +1063,60 @@
     border-left: 1px solid @header_grey;
     .full-carousel &, .plain &, &:first-child { border-left: 0; }
 }
+
+/* SEARCH COLOR PRODUCTOS ------*/
+.product-color-carousel {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.product-color-carousel-control-holder {
+    width: 5%;
+    position: relative;
+}
+
+.product-color-carousel-control-holder, .product-color-carousel-items {
+    float: left;
+
+    .owl-item {
+        border-left: 0;
+        padding: 2px 1%;        
+    }
+}
+
+.product-color-carousel-items {
+    width: 90%;
+    overflow: hidden;
+    padding: 0 5px;
+    &.minificha { width: 100%; }
+}
+
+.product-color-carousel-item {
+    float: left;
+}
+
+.color-carousel-control-btn {
+
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    display: block;
+    padding: 0;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+    background: @light_text_color;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -8px;
+
+    &:hover { background: #000; }
+}
+
 
 .main-product-slider {
     display: block;
@@ -1173,6 +1319,54 @@ input[type="date"] {
         width: 990px;
         margin-left: -495px;
     }
+    .lightbox-title {
+        padding: 0px 1em;
+        background: @blocks_grey;
+        font-size: 20px;
+
+        .sku {
+            display: block;
+            font-size: 13px;
+        }
+    }
+    &.compra-asistida {
+        width:500px;
+        margin-left: -250px;
+    }
+
+    &.lightbox-small {
+        width: 360px;
+        margin-left: -180px;
+    }
+}
+
+.box-mensaje-atencion {
+    padding: 0;
+    margin: 0;
+
+    fieldset {
+        padding: 0;
+        margin: 0;
+        border:0;
+
+        label {
+            position: relative;
+            padding-left: 20px;
+
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    div {
+        border-left: 1px solid @blocks_grey;
+        border-right: 1px solid @blocks_grey;
+        border-bottom: 1px solid @blocks_grey;
+        margin-bottom: 10px;
+    }
 }
 
 .lightbox-title {
@@ -1203,6 +1397,10 @@ input[type="date"] {
             font-weight: normal;
         }
     }
+
+    &.no-margin {
+        margin-bottom: 0;
+    }
 }
 
 .lightbox-header-data {
@@ -1212,7 +1410,7 @@ input[type="date"] {
 .lightbox-content {
 
     &.ingreso-turbo {
-        width: 400px;
+        width: 300px;
         margin-left: -200px;
 
         .lightbox-header-box {
@@ -1228,7 +1426,7 @@ input[type="date"] {
                 border: 1px solid #ccc;
                 width: 31%;
                 float: left;
-                padding: 0;
+                padding: 0 5px;
                 text-align: center;
                 height: 40px;
                 font-size: 13px;
@@ -1288,6 +1486,41 @@ input[type="date"] {
                 padding: 10px 0;
             }
         }
+
+        .box-send-email {
+            border:1px solid #ececec;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            div {
+                border:1px solid #ccc;
+                border-radius: 3px;
+                margin-bottom: 10px;
+                display: table;
+                width: 100%;
+
+                input {
+                    border:0;
+                    padding: 5px;
+                    vertical-align: middle;
+                    width: 100%;
+                    display: table-cell;
+
+                }
+                label {
+                    width: 20%;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 5px;
+                }
+            }
+            textarea {
+                padding: 5px;
+                border-radius: 3px;
+                border:1px solid #ccc;
+                width: 100%;
+            }
+        }
     }
 
     .mini-ficha-content {
@@ -1295,7 +1528,7 @@ input[type="date"] {
             float: left;
             width: 90px;
             margin-right: 12px;
-            margin-left: 48px;
+            margin-left: 26px;
 
             label {
                 display: block;
@@ -1324,6 +1557,41 @@ input[type="date"] {
                     float: none;
                 }
             }
+        }
+    }
+
+    .product-sin-stock {
+        border:1px solid #eeeeee;
+        padding: 10px;
+        margin-top: 10px;
+
+        .product-mail {
+            width: 60%;
+            float: left;
+
+            p {
+                padding-top: 6px;
+            }
+
+            .box-suscripcion-ficha {
+                float: left;
+                width: 50%;
+                margin-left: 10px;
+
+                .main-search-form button[type=submit] {
+                    width: 20%;
+                    padding: 6px 5px;
+                }
+                .main-search-form input[type=search] {
+                    width: 80%;
+                    padding: 8px;
+                }
+            }
+        }
+        .text-email {
+            width: 40%;
+            float: left;
+            padding-top: 2px;
         }
     }
 }

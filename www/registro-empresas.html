@@ -5583,13 +5583,13 @@
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-email" class="inline-item regular-col hide-on-mobile">Email:</label>
+                                        <label for="registro-email" class="inline-item regular-col hide-on-mobile">*Email:</label>
                                         <input class="regular-input inline-item" type="email" name="registro-email" id="registro-email" placeholder="Ingresa tu e-mail" required="" data-custom-validation="password_check" data-custom-message="Email no coincide" data-group="email">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-conf-email" class="inline-item regular-col hide-on-mobile">Confirmar E-Mail:</label>
+                                        <label for="registro-conf-email" class="inline-item regular-col hide-on-mobile">*Confirmar E-Mail:</label>
                                         <input class="regular-input inline-item" type="email" name="registro-conf-email" id="registro-conf-email" placeholder="Confirmar e-Mail" required="" data-custom-validation="password_check" data-custom-message="Email no coincide" data-group="email">
                                     </div>
                                 </div>
@@ -5597,14 +5597,14 @@
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-contrasena" class="inline-item regular-col hide-on-mobile">Contraseña:</label>
+                                        <label for="registro-contrasena" class="inline-item regular-col hide-on-mobile">*Contraseña:</label>
                                         <input class="regular-input inline-item" type="password" name="registro-contrasena" id="registro-contrasena" placeholder="Ingresa tu clave" required="" data-custom-validation="password_check" data-custom-message="Contraseña no coincide" data-group="contrasena">
                                         <i class="fa fa-lock inline-item"></i>
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-conf-contrasena" class="inline-item regular-col hide-on-mobile">Confirmar contraseña:</label>
+                                        <label for="registro-conf-contrasena" class="inline-item regular-col hide-on-mobile">*Confirmar contraseña:</label>
                                         <input class="regular-input inline-item" type="password" name="registro-conf-contrasena" id="registro-conf-contrasena" placeholder="Reingresa tu clave" required="" data-custom-validation="password_check" data-custom-message="Contraseña no coincide" data-group="contrasena">
                                         <i class="fa fa-lock inline-item"></i>
                                     </div>
@@ -5616,14 +5616,14 @@
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-razon-social" class="inline-item regular-col hide-on-mobile">Razón social:</label>
+                                        <label for="registro-razon-social" class="inline-item regular-col hide-on-mobile">*Razón social:</label>
                                         <input class="regular-input inline-item" type="text" name="registro-razon-social" id="registro-razon-social" placeholder="Ingresa Razón social" required="">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-rut-empresa" class="inline-item regular-col hide-on-mobile">RUT empresa:</label>
-                                        <input class="regular-input inline-item" type="text" name="registro-rut-empresa" id="registro-rut-empresa" placeholder="Ingresa RUT empresa" required="">
+                                        <label for="registro-rut-empresa" class="inline-item regular-col hide-on-mobile">*RUT empresa:</label>
+                                        <input class="regular-input inline-item" type="text" name="registro-rut-empresa" id="registro-rut-empresa" placeholder="Ingresa RUT empresa" required="" data-custom-validation="validateRUT">
                                     </div>
                                 </div>
                             </div>
@@ -5631,12 +5631,19 @@
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="registro-rubro" class="inline-item regular-col hide-on-mobile">Rubro:</label>
-                                        <input class="regular-input inline-item" type="text" name="registro-rubro" id="registro-rubro" placeholder="Ingrese Rubro" required="">
+                                        <select name="registro-rubro" id="registro-rubro" class="regular-col inline-item select genero full-m align-bg">
+                                            <option value="Tipo de Rubro">
+                                                Tipo de Rubro
+                                            </option>
+                                            <option value="Tipo de Rubro">
+                                                Tipo de Rubro
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="registro-direccion" class="inline-item regular-col hide-on-mobile">Avenida o calle:</label>
+                                        <label for="registro-direccion" class="inline-item regular-col hide-on-mobile">*Avenida o calle:</label>
                                         <input class="regular-input inline-item" type="type" name="registro-direccio" id="registro-direccio" placeholder="Avenida" required="">
                                         <label for="registro-direccion-num" class="inline-item regular-col-num only-on-desktop">Número:</label>
                                         <input type="text" name="registro-direccion-num" id="registro-direccion-num" required="" placeholder="número" class="regular-input regular-input-num inline-item only-on-desktop">
@@ -5669,27 +5676,28 @@
                                         <select name="region" id="region" class="select region full-m">
                                             <option value="Metropolitana">Metropolitana</option>
                                         </select>
-                                        <label for="comuna" class="inline-item regular-col-num only-on-desktop">Comuna:</label>
-                                        <select name="comuna" id="comuna" class="select comuna only-on-desktop">
-                                            <option value="Providencia">Providencia</option>
-                                        </select>
                                     </div>
-                                </div>
-                                <div class="column half only-on-mobile">
-                                    <div class="inline-input-container clearfix">
+                                    <div class="inline-input-container clearfix marginate a-little top">
                                         <label for="comuna" class="inline-item regular-col">Comuna:</label>
-                                        <select name="comuna" id="comuna" class="select comuna full-m">
+                                        <select name="comuna" id="comuna" class="select region full-m">
                                             <option value="Providencia">Providencia</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <div class="marginate top">
-                                <span class="inline-item regular-col important-paragraph pad a-little left">Tiene cuenta corriente</span>
-                                <label for="si" class="important-paragraph marginate left">Si <input type="radio" name="mismo" id="si" class="inline-block-element v-align-mid"></label>
-                                <label for="no" class="important-paragraph">No <input type="radio" name="mismo" id="no" class="inline-block-element v-align-mid"></label>
+                            <div class="box-select-cuenta-corriente">
+                                <span class="inline-item regular-col important-paragraph pad a-little left hide-on-mobile">Tiene cuenta corriente</span>
+                                <select name="cuenta-corriente" id="cuenta-corriente" class="select full-m hide-on-mobile cuenta-corriente-opcion" >
+                                    <option value="Si">SI</option>
+                                    <option value="No">NO</option>
+                                </select>
+                                <select name="cuenta-corriente" id="cuenta-corriente" class="select full-m only-on-mobile align-bg ">
+                                    <option value="Tiene cuenta Corriente">Tiene cuenta corriente</option>
+                                    <option value="Si">SI</option>
+                                    <option value="No">NO</option>
+                                </select>
                             </div>
-                            <div class="marginate top">
+                            <div class="marginate top hide-on-mobile">
                                 <p class="important-paragraph pad a-little left bottom">Comunicados</p>
                                 <label for="acepto-email" class="block-element pad a-little left bottom"><input type="checkbox" class="marginate a-little right" name="acepto-email" id="acepto-email">Acepto Recibir Últimas ofertas y novedades en tu e-mail</label>
                                 <label for="acepto-sms" class="block-element pad a-little left"><input type="checkbox" class="marginate a-little right" name="acepto-sms" id="acepto-sms">Acepto Recibir Últimas ofertas y novedades en mi celular vía SMS</label>
@@ -5700,27 +5708,27 @@
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="nombre-contacto" class="inline-item regular-col">Nombre contacto:</label>
+                                        <label for="nombre-contacto" class="inline-item regular-col hide-on-mobile">*Nombre contacto:</label>
                                         <input class="regular-input inline-item" type="text" name="nombre-contacto" id="nombre-contacto" placeholder="Nombre de contacto" required="">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="apellido-paterno" class="inline-item regular-col hide-on-mobile">Apellido paterno:</label>
-                                        <input class="regular-input inline-item" type="text" name="apellido-paterno" id="apellido-paterno" placeholder="Ingresa tu e-mail" required="">
+                                        <label for="apellido-paterno" class="inline-item regular-col hide-on-mobile">*Apellido paterno:</label>
+                                        <input class="regular-input inline-item" type="text" name="apellido-paterno" id="apellido-paterno" placeholder="Apellido paterno" required="">
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix regular-section">
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="apellido-materno" class="inline-item regular-col hide-on-mobile">Apellido materno:</label>
+                                        <label for="apellido-materno" class="inline-item regular-col hide-on-mobile">*Apellido materno:</label>
                                         <input class="regular-input inline-item" type="text" name="apellido-materno" id="apellido materno" placeholder="Apellido materno" required="">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="cargo" class="inline-item regular-col hide-on-mobile">Cargo:</label>
+                                        <label for="cargo" class="inline-item regular-col hide-on-mobile">*Cargo:</label>
                                         <input class="regular-input inline-item" type="text" name="cargo" id="cargo" placeholder="Cargo" required="">
                                     </div>
                                 </div>
@@ -5729,13 +5737,16 @@
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="pais-residente" class="inline-item regular-col hide-on-mobile">País de residencia:</label>
-                                        <input class="regular-input inline-item" type="text" name="pais-residente" id="pais-residente" placeholder="País de residencia" required="">
+                                        <select name="pais-residente" id="pais-residente" class="select genero full-m">
+                                            <option value="Casa">Chile</option>
+                                            <option value="Departamento">Otro País</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="cedula" class="inline-item regular-col hide-on-mobile">Cédula de identidad:</label>
-                                        <input class="regular-input inline-item" type="text" name="cedula" id="cedula" placeholder="Cédula de identidad" required="">
+                                        <label for="cedula" class="inline-item regular-col hide-on-mobile">*Cédula de identidad:</label>
+                                        <input class="regular-input inline-item" type="text" name="cedula" id="cedula" placeholder="Cédula de identidad" required="" data-custom-validation="validateRUT">
                                     </div>
                                 </div>
                             </div>
@@ -5782,7 +5793,7 @@
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
                                         <label for="residencia-contacto" class="inline-item regular-col">Residencia:</label>
-                                        <select name="residencia-contacto" id="residencia-contacto" class="select region full-m">
+                                        <select name="residencia-contacto" id="residencia-contacto" class="select genero full-m">
                                             <option value="Casa">Casa</option>
                                             <option value="Departamento">Departamento</option>
                                         </select>
@@ -5794,46 +5805,45 @@
                                         <select name="region-empresa" id="region-empresa" class="select region full-m">
                                             <option value="Metropolitana">Metropolitana</option>
                                         </select>
-                                        <label for="comuna-empresa" class="inline-item regular-col-num only-on-desktop">Comuna:</label>
-                                        <select name="comuna-empresa" id="comuna-empresa" class="select comuna only-on-desktop">
-                                            <option value="Providencia">Providencia</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="column half only-on-mobile">
-                                    <div class="inline-input-container clearfix">
-                                        <label for="comuna-empresa" class="inline-item regular-col">Comuna:</label>
-                                        <select name="comuna-empresa" id="comuna-empresa" class="select comuna full-m">
-                                            <option value="Providencia">Providencia</option>
-                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="clearfix regular-section">
                                 <div class="column half">
-                                    <div class="inline-input-container clearfix">
-                                        <label for="telefono-empresa" class="inline-item regular-col hide-on-mobile">Teléfono Casa / Oficina:</label>
+                                    <div class="inline-input-container clearfix box-mobile-input">
+                                        
+                                        <label for="telefono-empresa" class="inline-item regular-col hide-on-mobile">*Teléfono Casa / Oficina:</label>
+
                                         <input class="regular-input inline-item fleft cod" type="text" name="telefono-empresa" id="telefono-empresa" placeholder="02" required="">
+
                                         <input class="regular-input inline-item fleft numero" type="text" name="telefono-empresa" id="telefono-empresa" placeholder="87549865 (Teléfono Casa / Oficina)" required="">
                                     </div>
                                 </div>
                                 <div class="column half">
                                     <div class="inline-input-container clearfix">
-                                        <label for="movil-empresa" class="inline-item regular-col hide-on-mobile">Teléfono móvil</label>
+                                        <label for="comuna-empresa" class="inline-item regular-col">Comuna:</label>
+                                        <select name="comuna-empresa" id="comuna-empresa" class="select region full-m">
+                                            <option value="Providencia">Providencia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix regular-section">
+                                <div class="column half inline-input-container clearfix box-mobile-input">
+                                    <label for="codigo-postal" class="inline-item regular-col hide-on-mobile">*Código postal:</label>
+                                    <input class="regular-input inline-item fleft codigo-postal" type="text" name="codigo-postal" id="codigo-postal" placeholder="Código postal:" required="">
+                                    <a href="#" title="Buscar código postal" class="smaller-paragraph fleft buscar-codigo" rel="nofollow"><i>Buscar código postal</i></a>
+                                </div>
+                                <div class="column half">
+                                    <div class="inline-input-container clearfix box-mobile-input">
+                                        
+                                        <label for="movil-empresa" class="inline-item regular-col hide-on-mobile">*Teléfono móvil</label>
                                         <input class="regular-input inline-item fleft cod" type="text" name="movil-empresa" id="movil-empresa" placeholder="09" required="">
                                         <input class="regular-input inline-item fleft numero" type="text" name="movil-empresa" id="movil-empresa" placeholder="87549865 (Teléfono móvil)" required="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="clearfix regular-section">
-                                <div class="column half">
-                                    <div class="inline-input-container clearfix">
-                                        <label for="codigo-postal" class="inline-item regular-col hide-on-mobile">Código postal:</label>
-                                        <input class="regular-input inline-item fleft codigo-postal" type="text" name="codigo-postal" id="codigo-postal" placeholder="Código postal: 87549865" required="">
-                                        <a href="#" title="Buscar código postal" class="smaller-paragraph fleft buscar-codigo" rel="nofollow">Buscar código postal</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="marginate top padding1em-m"><label for="permito"><input type="checkbox" id="permito"> Permito a Homecenter.com usar mis datos para fines relacionados con mi compra. Ver ley de <a href="#" title="Ley de Protección de datos" class="link-sodimac">protección de datos</a></label></p> 
                         </div>
                         <div>
                             <button class="button wide-btn red-btn centered-text fright full-m" type="submit">Enviar registro</button>
@@ -5931,6 +5941,7 @@
 
                     <h4 class="footer-section-title uppercase" >Gestión de cuenta</h4>
                     <ul class="footer-link-list" >
+                        <li><a href="#" title="Ir a Mi cuenta" rel="section" >Mi cuenta</a></li>
                         <li><a href="#" title="Ir a Regístrate" rel="section" >Regístrate</a></li>
                         <li><a href="#" title="Ir a Actualizar datos" rel="section" >Actualizar datos</a></li>
                         <li><a href="#" title="Ir a Cambio de clave" rel="section" >Cambio de clave</a></li>
@@ -6028,14 +6039,11 @@
                     </button>
                 </div>
 
-                <h4 class="footer-section-title pad top" >¿Necesitas ayuda?</h4>
-
-                <div class="footer-phone-holder mobile-footer-section clearfix">
-                    <p class="footer-phone-number">
-                        <a class="block-element" href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</a>
-                        <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
-                    </p>
-                </div>
+                <a href="tel:6006004020" title="Llamar al 600 600 4020" rel="nofollow" class="footer-phone-holder mobile-footer-section clearfix centered-text">
+                    <span class="footer-section-title pad top block-element lefted-text" >¿Necesitas ayuda?</span>
+                    <span class="block-element phone-number"><i class="fa fa-phone-square big-icon"></i> 600 600 4020</span>
+                    <span class="block-element smaller-paragraph centered-text">Toca el número y llama</span>
+                </a>
 
                 <div class="footer-socials-holder mobile-footer-section">
                     <a href="#" title="Síguenos en Facebook" rel="external help" class="button social-btn facebook"></a>

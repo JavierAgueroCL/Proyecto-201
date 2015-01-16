@@ -71,6 +71,8 @@
         &.thirds { width: 30%; }
         &.two-thirds { width: 65%; }
         &:first-child { margin-left: 0; }
+        &.forty { width: 40%;}
+        &.fifty-five { width: 55%;}
     }
 
 
@@ -326,6 +328,12 @@
                 min-height: 36px;
                 max-width: 36px;
             }
+            &.btn-homy-mobile {
+                border:1px solid @homy_color;
+                i {
+                    color: @homy_color;
+                }
+            }
         }
     }
     .mobile-submenu-list {
@@ -459,10 +467,61 @@
                 label {
                     line-height: 29px;
                 }
+                &.movil {
+                    width: 85%;
+                    margin-left: 2%;
+                }
             }
             .ornament {
                 height: 40px;
                 line-height: 40px;
+            }
+        }
+
+        &.box-mobile-input {
+            border:0;
+
+            input {
+                border-radius: @border_radius;
+                border: 1px solid @header_grey;
+
+                &.num {
+                    width: 70%;
+                    float: left;
+                }
+
+                &.num-ofice {
+                    width: 28%;
+                    margin-left: 2%;
+                    float: left;
+                }
+
+                &.cod {
+                    &.cod-tel {
+                        float: left;
+                        width: 15%;
+                    }
+                }
+
+                &.numero {
+                    &.numero-tel {
+                        width: 82%;
+                        float: left;
+                        margin-left: 0;
+                    }
+                }
+               
+                
+            }
+            .guion {
+                width: 1%;
+                margin-left: 1%;
+                margin-right: 1%;
+                float: left;
+                line-height: 37px;
+            }
+            .buscar-codigo {
+                margin-left: 2%;
             }
         }
     }
@@ -705,6 +764,28 @@
         text-transform: none;
         border: 1px solid @blocks_border_grey;
         margin-top: 1em;
+        margin-bottom: 1em;
+
+        i{
+            float: right;
+            margin-right: 5px;
+            margin-top: 2px;
+        }
+
+        &.change-icon {
+            margin-bottom: 0;
+            i {
+                &:before {
+                    content: "\f068";
+                }
+            }
+        }
+    }
+
+    .search-sorting-holder {
+        .search-sorting-item {
+            min-height: 40px;
+        }
     }
 
     .search-filters-menu {
@@ -791,6 +872,7 @@
         .search-tab-item {
             margin-left: 1.5%;
             width: 32.3%;
+            vertical-align: top;
 
             &:first-child {
                 margin-left:0;
@@ -1117,6 +1199,17 @@
                         }
                         float: left;
                         width: 65%;
+                    }
+                    .thirds {
+                        &:first-child {
+                            width: 33%;
+                            margin-right: 2%;
+                        }
+                        float: left;
+                    }
+                    .two-thirds {
+                        width: 62%;
+                        float: left;
                     }
 
                     *zoom: 1;
@@ -1961,6 +2054,7 @@
                             border:1px solid #e3e3e3;
                             width: 32%;
                             margin:0 0 0 2%;
+                            background: url(../images/icons/bg-select.png) 95% 50% no-repeat;
 
                             &.no-marginl {
                                 margin-left: 0;
@@ -1968,6 +2062,10 @@
                         }
                         &.full-m{
                             width: 100%;
+                        }
+
+                        &.align-bg {
+                            background: url(../images/icons/bg-select.png) 98% 50% no-repeat;
                         }
                     }
                     .no-style {
@@ -1981,9 +2079,29 @@
                         width: 40%;
                     }
                     .buscar-codigo {
-                        line-height: 26px;
+                        line-height: 39px;
                         margin-left: 0;
                         font-size: 10px;
+                    }
+
+                    .box-mobile-input {
+                        .buscar-codigo {
+                            margin-left: 5%;
+                        }
+                        input {
+                             &.num-doc {
+                                width: 40%;
+                            }
+
+                            &.cod-num {
+                                width: 20%;
+                            }
+                        }
+                    }
+                    &.box-mobile-input {
+                        .buscar-codigo {
+                            margin-left: 5%;
+                        }
                     }
                 }
             }
@@ -2001,6 +2119,26 @@
                 }
             }
         }
+        .box-select-cuenta-corriente {
+            padding: 0 .5em;
+            margin-top: 0;
+
+            .select {
+                background-color: #fff;
+                border: 1px solid #e3e3e3;
+                padding-left: 1px;
+
+                &.align-bg {
+                    background: url(../images/icons/bg-select.png) 98% 50% no-repeat;
+                }
+            }
+        }
+    }
+
+    .declaracion-privacidad {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
     .compra-exitosa {
 
@@ -2328,6 +2466,11 @@
                         display: block;
                     }
                 }
+                .calendario-icon {
+                    font-size:20px;
+                    margin-top: 10px;
+                    margin-left: 10px;
+                }
             }
         }
         &.table-vertical {
@@ -2429,7 +2572,39 @@
             }
         }
     }
+
+    /////////////////////////////////////////////////////////
+    ///////////////////////////////////// HOMY
+    /////////////////////////////////////////////////////////
+
+    .box-slider-homy {
+        max-width: 640px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: block;
+        width: 100%;
+        margin:0 auto;
+    }
     
+    .box-section-category {
+        margin-bottom: 10px;
+    }
+    .info-section-category {
+        bottom: 0;
+    }
+    .box-menu-homy {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .menu-homy {
+        display: none;
+        position: absolute;
+        
+
+        &.deployed {
+            display: block;
+        }
+    }
 
 
     /////////////////////////////////////////////////////////
@@ -2476,6 +2651,9 @@
     .no-float-m {
         float: none;
     }
+    .float-left-m  {
+        float: left;
+    }
 
     /////////////////////////////////////////////////////////
     ///////////////////////////////////// Footer
@@ -2488,33 +2666,28 @@
     .footer-phone-holder {
         font-weight: normal;
         border-top: 0;
+        display: block;
 
         .big-icon { line-height: 40px; }
-        .footer-phone-number {
-            a { 
-                font-size: 33px; 
-                line-height: 30px;
 
-                i {
-                    float: none;
-                    display: inline;
-                    font-size: 52px;
+        .phone-number {
+            font-size: 33px;
+            line-height: 30px;
+            font-weight: 700;
 
-                    &:before {
-                        vertical-align: -5px;
-                    }
-                }
-
-                &:hover {
-
-                    text-decoration: none;
-                }
+            i {
+                float: none;
+                display: inline;
+                font-size: 52px;
+                line-height: 40px;
+                vertical-align: -6px;
             }
         }
 
-        p {
-            text-align: center;
+        &:hover {
+            text-decoration: none;
         }
+
     }
     .footer-section {
 
