@@ -305,6 +305,9 @@
                 event.data.sodimac.event_handler( $lightbox.find('[data-func]') );
             });
         },
+        printPage : function( event ){
+            window.print();
+        },
         get_mini_ficha : function( event ){
             event.preventDefault();
 
