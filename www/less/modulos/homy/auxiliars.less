@@ -1,0 +1,200 @@
+.image-replacement {
+    .appearance( none );
+    font-size: 0px;
+    line-height: 0;
+    color: transparent;
+}
+.button-reset {
+    .appearance( none );
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    outline: 0px;
+    padding: 0px;
+    box-shadow: none;
+}
+.elastic-img{
+    width:100%;
+    max-width: 100%;
+    height:auto;
+    display: block;
+    &.inline { display: inline-block; }
+}
+.centered-elastic-img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.nocallout {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+}
+.clearer {
+    clear: both;
+}
+.inline-block-container {
+    font-size: 0;
+    line-height: 0;
+}
+.pad {
+    &.bottom { padding-bottom: 1em; }
+    &.top { padding-top: 1em; }
+    &.left { padding-left: 1em; }
+    &.right { padding-right: 1em; }
+    &.all { padding: 1em; }
+
+
+    &.a-little {
+        &.bottom { padding-bottom: 0.5em; }
+        &.top { padding-top: 0.5em; }
+        &.left { padding-left: 0.5em; }
+        &.right { padding-right: 0.5em; }
+        &.all { padding: 0.5em; }
+    }
+}
+.marginate {
+    &.bottom { margin-bottom: 1em; }
+    &.top { margin-top: 1em; }
+    &.left { margin-left: 1em; }
+    &.right { margin-right: 1em; }
+    &.all { margin: 1em; }
+
+
+    &.a-little {
+        &.bottom { margin-bottom: 0.5em; }
+        &.top { margin-top: 0.5em; }
+        &.left { margin-left: 0.5em; }
+        &.right { margin-right: 0.5em; }
+        &.all { margin: 0.5em; }
+    }
+}
+.bordered {
+    &.top {
+        padding-top: @base_font_size;
+        border-top: 1px solid @blocks_border_grey;
+    }
+    &.bottom {
+        padding-bottom: @base_font_size;
+        border-bottom: 1px solid @blocks_border_grey;
+    }
+    &.all {
+        padding: @base_font_size;
+        border: 1px solid @blocks_border_grey;
+    }
+
+    &.header-grey-border {
+        border-color: @header_grey;
+    }
+}
+
+.bordered-top {
+    padding-top: @base_font_size;
+    border-top: 1px solid @blocks_border_grey;
+}
+.bordered-bottom {
+    padding-bottom: @base_font_size;
+    border-bottom: 1px solid @blocks_border_grey;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+.header-grey-bg {
+    background-color: @header_grey;
+}
+
+.relative-pos { position: relative; }
+
+.fright { float: right; }
+.fleft { float: left; }
+
+.va-middle { vertical-align: middle; }
+
+.block-element { display: block; }
+.inline-block-element { display: inline-block; }
+
+/* MANUEL */
+.border-bottom { border-bottom: 1px solid #ccc; }
+.border-top { 
+    border-top: 1px solid #ccc;
+
+    &.gris {
+        border-top: 1px solid #f0f0f0;
+    }
+}
+.border-all-f0 {
+    border:1px solid @blocks_grey;
+}
+.border-right { border-right: 1px solid #ccc;}
+.border-left { border-left: 1px solid #ccc;}
+.border { border:1px solid #ccc;
+    &.error { border:1px solid @sodimac_red;}
+}
+
+
+.border-radius { border-radius: @border_radius;}
+.no-bordertop { border-top: 0 !important;}
+.no-borderbot { border-bottom: 0!important;}
+.no-borderleft { border-left: 0!important;}
+.no-borderright { border-right: 0!important;}
+.margin-top10 { margin-top:10px;}
+.margin-top20 { margin-top: 20px;}
+.margin-top1em { margin-top: 1em; }
+.margin-bot1em { margin-bottom: 1em;}
+.margin-v1em { margin-top: 1em; margin-bottom: 1em;}
+.margin-bot10 { margin-bottom: 10px;}
+.margin-right10 { margin-right: 10px;}
+.margin-left10 { margin-left: 10px;}
+.margin-left30 { margin-left: 30px;}
+.width15 { width: 15%;}
+.v-align-mid { vertical-align: middle;}
+
+div.table {
+    display: table;
+    width: 100%;
+    border:1px solid #f0f0f0;
+
+    .table-row {
+        display: table-row;
+        width: 100%;
+
+        &:first-child {
+            li {
+                border-top: 0;
+                font-weight: bold;
+            }
+        }
+        li {
+            display: table-cell;
+            border-left: 1px solid #f0f0f0;
+            padding: 8px 0.4em;
+            border-top: 1px solid #f0f0f0;
+            vertical-align: middle;
+        }
+    }
+}
+
+.p-normal {
+    position: relative;
+    top: 0;
+    left: 0;
+    color: #000;
+    display: block;
+}

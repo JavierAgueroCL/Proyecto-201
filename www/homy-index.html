@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/main-homy.css" />
         <script src="js/libs/modernizr.js"></script>
     </head>
     <body>
@@ -72,6 +72,7 @@
 
             <!-- Header principal -->
             <section id="main-header" class="main-header container clearfix">
+                
                 <div id="logo-holder" class="logo-holder main-header-section-left">
                     <a href="#" class="logo-item" title="Ir al inicio" rel="index">
                         <img class="elastic-img" src="images/logos/logo_homy.jpg" alt="Homy Diseño para todos">
@@ -79,46 +80,23 @@
                 </div>
                 
                 <div class="other-actions-holder main-header-section-right inline-block-container">
-                    <div class="account-profile-welcome hide-on-mobile">
-                        <span>Hola Alejandro,</span>
-                        <a data-func="deploy_details_tooltip" data-set-pos="false" href="#" class="account-profile-welcome-options" title="Ver mi perfil de usuario">
-                            Mi Cuenta
-                            <i class="fa fa-chevron-down"></i>
-                        </a>
+                    <div class="hide-on-mobile register-homy-box clearfix">
+                       <a href="#">Regístrate</a>
+                       <a href="#">Mi cuenta</a>
 
-                        <div class="account-notifier-details adjusted">
-                            <ul class="account-profile-details-options">
-                                <li>
-                                    <a href="#" title="Ir a mi cuenta" rel="nofollow">
-                                        <i class="fa fa-user"></i>
-                                        Mi cuenta
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Cambiar clave" rel="nofollow">
-                                        <i class="fa fa-lock"></i>
-                                        Cambio de clave
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Ir a mis compras" rel="nofollow">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        Mis compras
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Ir a mis listas" rel="nofollow">
-                                        <i class="fa fa-edit"></i>
-                                        Mis listas
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" title="Cerrar sesión" rel="nofollow">
-                                        <i class="fa fa-power-off"></i>
-                                        Salir
-                                    </a>
-                                </li>
-                            </ul>
+                    </div>
+                    <div class="hide-on-mobile main-search-box-homy clearfix">
+                        <div class="fleft column-half">
+                            <p class="medium-text righted-text ">Tu Homy:</p>
+                            <p class="medium-text"><a href="#">Cambiar</a> Homecenter Parque Arauco</p>
+                        </div>
+                        <div class="fleft column-half">
+                            <form id="main-search" class="main-search-form clearfix" action="" method="get">
+                                <input type="search" name="busqueda" required="" placeholder="Ingresa una búsqueda">
+                                <button type="submit" title="Buscar" class="button main-search-submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
 
@@ -131,267 +109,14 @@
                         <i class="fa fa-user"></i>
                     </a>
 
-                    <!-- // -->
-
-                    <div class="account-notifier">
+                    <div class="account-notifier only-on-mobile">
                         <a data-func="deploy_details_tooltip" data-set-pos="true" href="#" class="icon-link" title="Tienes 10 ítems en tu carro de compra" rel="contents">
                             <i class="fa fa-shopping-cart"></i>
                             <span class="account-notifications-num hide-on-mobile">10</span>
                         </a>
-
-                        <div class="account-notifier-details">
-                            <div>
-                                <p><strong>Minicarro</strong></p>
-                                <p>Tienes <strong>5</strong> productos en tu carro</p>
-                            </div>
-
-                            <div class="account-notifier-details-section">
-                                <div class="scrollable-content-holder">
-                                    <ul class="scrollable-content shopping-cart-detail-list">
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="oferta-cmr pad a-little top">
-                                                    <span class="red-text"><strong>$199.990 c/u</strong></span>
-                                                    <span><strong>$199.990 c/u</strong></span>
-                                                </p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="column huge-gap quarters">
-                                                <img src="http://fakeimg.pl/50x50" class="elastic-img submenu-img">
-                                            </div>
-                                            <div class="column huge-gap half">
-                                                <p><strong>Nombre producto</strong></p>
-                                                <p>SKU: 1234567-8</p>
-
-                                                <p class="pad a-little top"><strong>$199.990 c/u</strong></p>
-                                            </div>
-                                            <div class="column huge-gap quarters">
-                                                <label class="minified-paragraph">Cantidad:</label>
-                                                <div class="clearfix amount-input-holder" data-role="amount_input">
-                                                    <div class="input-space">
-                                                        <input data-role="amount" class="amount_input" type="number" name="cantidad" min="0" step="1">
-                                                    </div>
-                                                    <div class="controls-space">
-                                                        <button data-role="control" data-action="add" class="button amount-input-btn add">
-                                                            <i class="fa fa-caret-up"></i>
-                                                        </button>
-                                                        <button data-role="control" data-action="substract" class="button amount-input-btn substract">
-                                                            <i class="fa fa-caret-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="account-notifier-details-section">
-                                <table class="seamless-table full">
-                                    <tr class="red-text bold-text" >
-                                        <td class="lefted-text" >Subtotal CMR</td>
-                                        <td class="righted-text" >$199.990</td>
-                                    </tr>
-                                    <tr class="bold-text" >
-                                        <td class="lefted-text" >Subtotal normal</td>
-                                        <td class="righted-text" >$399.980</td>
-                                    </tr>
-                                </table>
-
-                                <div class="righted-text pad top">
-                                    <a href="#" title="Pagar" rel="nofollow" class="button red-btn medium-btn">Pagar</a>
-                                    <a href="#" title="Ir al carro" rel="nofollow" class="button grey-btn medium-btn">Ir al carro</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    
-                    <div class="account-notifier hide-on-mobile">
+
+                    <div class="account-notifier hide-on-mobile hide-on-desktop">
                         <a data-func="deploy_details_tooltip" data-set-pos="true" href="#" class="icon-link" title="Tienes 10 mensajes" rel="contents">
                             <i class="fa fa-envelope-o"></i>
                             <span class="account-notifications-num">10</span>
@@ -562,40 +287,7 @@
         
         <!-- contenedor del footer general -->
         <footer id="footer-container" class="footer-container" class="row">
-            <section class="footer-section container clearfix hide-on-mobile" data-equalize="children" >
-                <div class="footer-column">
-                    <h4 class="footer-section-title" >Servicios Instalaciones</h4>
-                    <p class="">Contamos con una gran variedad de servicios para ayudarlo a hacer más fácil su vida.</p>
-                    <a href="#" title="Ver más" rel="contents" class="see-more block-element righted-text">
-                        Ver más
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-section-title" >Mudanzas y Bodegaje</h4>
-                    <p class="">Lo más importante es encontrar un Servicio de Mudanza que se adapte a nosotros</p>
-                    <a href="#" title="Ver más" rel="contents" class="see-more block-element righted-text">
-                        Ver más
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-section-title" >Arriendo Herramientas</h4>
-                    <p class="">Arriendo de herramientas y maquinaria - Información general</p>
-                    <a href="#" title="Ver más" rel="contents" class="see-more block-element righted-text">
-                        Ver más
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-section-title" >App Sodimac en tu teléfono</h4>
-                    <p class="">Ahora Sodimac te acompaña a todas partes</p>
-                    <a href="#" title="Ver más" rel="contents" class="see-more block-element righted-text">
-                        Ver más
-                        <i class="fa fa-chevron-right"></i>
-                    </a>
-                </div>
-            </section>
+            
  
             <section class="footer-section container clearfix hide-on-mobile" data-equalize="children" >
                 <div class="footer-column">
@@ -705,7 +397,6 @@
                 </div>
 
             </section>
-            <div class="barra-footer only-on-desktop container"></div>
 
             <!-- Contenido del footer en moviles -->
             <section class="footer-section container hide-on-desktop" >

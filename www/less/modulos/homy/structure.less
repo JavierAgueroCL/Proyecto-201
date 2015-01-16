@@ -1,0 +1,128 @@
+
+.row {
+    display: block;
+    width: 100%;
+
+    &:before, &:after { content: " "; display: table; }
+    &:after { clear: both; }
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+///// Columnas regulares
+.column {
+    display: block;
+    float: left;
+    margin-left: 1%; // 1% de 1000px = 10px
+
+    &.fright { float: right; }
+
+    &.full {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+    
+    &.half {
+        width: 49.5%;
+    }
+
+    &.thirds {
+        width: 32.6666%;
+    }
+
+    &.two-thirds {
+        width: 66.332%;
+    }
+
+    &.quarters {
+        width: 24.25%;
+    }
+
+    &.three-quarters {
+        width: 74.75%;
+    }
+
+    &.big-gap {
+        margin-left: 2%; // 2% de 1000px = 20px
+
+        &.half {
+            width: 49%;
+        }
+
+        &.thirds {
+            width: 32%;
+        }
+
+        &.two-thirds {
+            width: 66%;
+        }
+
+        &.quarters {
+            width: 23.5%;
+        }
+
+        &.three-quarters {
+            width: 74.5%;
+        }
+    }
+
+    &.huge-gap {
+        margin-left: 5%; // 5% de 1000px = 50px
+
+        &.half {
+            width: 47.5%;
+        }
+
+        &.quarters {
+            width: 21.25%;
+        }
+    }
+
+    &.no-gap {
+        margin-left: 0;
+        &.quarters {
+            width: 25%;
+        }
+    }
+
+    &.width-auto {
+        width: auto;
+    }
+
+    &:first-child { margin-left: 0; }
+}
+
+
+///// columnas del submenu de la navegacion principal
+.submenu-column {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid @blocks_border_grey;
+
+    &:first-child { padding-left: 0; border-left: 0; }
+
+    &.half { width: 50%; }
+    &.quarter { width: 25%; }
+
+    .submenu-column {
+        padding: 0 0 0 10px;
+        border-left: 0;
+
+        &:first-child { padding-left: 0; }
+    }
+}
+
+
+///// columnas del slider principal en home
+.main-promos-holder {
+    display: block;
+    width: 83.8%;
+    margin-left: 16.2%;
+    margin-top: @regular_vertical_margin;
+}

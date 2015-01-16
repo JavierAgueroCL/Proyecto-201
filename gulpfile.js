@@ -5,7 +5,7 @@ var rename = require('gulp-rename');
 var webserver = require('gulp-webserver');
 
 var less_path = 'www/less/**/*.less';
-var less_main_path = './www/less/main.less';
+var less_main_path = ['./www/less/main.less', './www/less/main-homy.less'];
 var css_path = './www/css';
 
 

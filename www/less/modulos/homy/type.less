@@ -1,0 +1,179 @@
+/// el diseno requiere un reset total
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: @base_font_size;
+    line-height: @base_line_height;
+}
+
+h1,h2,h3,h4,h5,h6 { 
+    line-height: @base_line_height; 
+    margin: 0;
+}
+
+
+/// se formatean los links
+a {
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.decorated {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+b, strong, .bold-text {
+    font-weight: bold;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.regular-text {
+    font-weight: normal;
+}
+
+.light-text {
+    font-weight: lighter;
+}
+
+.justify-text { 
+    text-align: justify; 
+}
+
+.centered-text { 
+    text-align: center; 
+}
+
+.lefted-text { 
+    text-align: left; 
+}
+
+.righted-text { 
+    text-align: right; 
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.huge-paragraph {
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.text-price-search {
+    font-size: 20px;
+}
+
+.bigger-paragraph-18 {
+    font-size: 18px;
+}
+
+.bigger-paragraph {
+    font-size: 16px;
+}
+
+.important-paragraph {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.base-paragraph {
+    font-size: @base_font_size;
+}
+
+.smaller-paragraph {
+    font-size: 11px;
+}
+
+.normal-text {
+    font-size: 12px;
+}
+
+.medium-text {
+    font-size: 13px;
+}
+
+.middle-text {
+    font-size: 14px;
+}
+
+.minified-paragraph {
+    font-size: 10px;
+}
+
+.relative-smaller-paragraph {
+    font-size: 0.6em;
+}
+
+.light-paragraph {
+    color: @light_text_color;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.red-text {
+    color: @sodimac_red;
+}
+
+.green-text {
+    color: @swatch_green;
+}
+
+.washed-text {
+    color: @washed_text_color;
+}
+
+.washed-light-text {
+    color: @light_text_color;
+}
+
+.lighter-black-color {
+    color: @lighter_black_color;
+}
+
+///////////////////////////////////////////////////
+/* MANU */
+
+.more-bigger-paragraph {
+    font-size: 2.0em;
+}
+.mid-huge-paragraph {
+    font-size: 1.6em;
+}
+
+
+///////////////////////////////////////////////////
+//////////////////////////// Submenu
+///////////////////////////////////////////////////
+.submenu-title, .submenu-subtitle {
+    line-height: @base_line_height;
+    margin-bottom: @base_font_size;
+}
+
+.submenu-title {
+    font-size: unit( 18/@base_font_size, em );
+}
+
+.submenu-subtitle {
+    font-size: unit( 13/@base_font_size, em );
+    &.minified { margin-bottom: 0; }
+}
