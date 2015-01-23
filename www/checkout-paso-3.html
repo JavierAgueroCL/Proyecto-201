@@ -5578,7 +5578,7 @@
 
                 <h2 class="regular-content-section-title hide-on-mobile">
                     <i class="fa fa-shopping-cart washed-text"></i>
-                    Despacho
+                    Pago
                 </h2>
 
                 <section class="checkout-step-information-holder clearfix marginate top bottom">
@@ -5628,7 +5628,7 @@
                                             <option value="Selecciona el tipo de documento">Selecciona el tipo de documento</option>
                                             <option value="Boleta">Boleta</option>
                                             <option value="Factura">Factura</option>
-                                            <option value="Novios">Novios</option>
+                                            <!--option value="Novios">Novios</option-->
                                         </select>
                                     </div>
 
@@ -5637,10 +5637,10 @@
                                             Enviar Comprobante:
                                             <input class="regular-input inline-input" type="email" id="comprobante-email" name="comprobante-email" required >
                                         </label>
-                                        <a data-func="reset_target_input" data-target="#comprobante-email" href="#" title="Cambiar email" rel="nofollow" class="checkout-address-action inline-block-element fright">
+                                        <!--a data-func="reset_target_input" data-target="#comprobante-email" href="#" title="Cambiar email" rel="nofollow" class="checkout-address-action inline-block-element fright">
                                             <span class="icon-element fa fa-pencil"></span>
                                             <span class="text-element bold-text">Cambiar</span>
-                                        </a>
+                                        </a-->
                                     </div>
                                     <div class="mobile-marginate top clearfix hide-on-desktop">
                                         <label class="block-element mobile-marginate top">
@@ -5662,6 +5662,16 @@
                                 <h2 class="regular-content-section-title secondary-title preserve-in-mobile">
                                     Forma de pago
                                 </h2>
+                                <div class="payment-cupon">
+                                    <div class="column half">
+                                        <button class="button medium-btn grey-btn centered-text mobile-column half"  data-func="show_lightbox" data-type="aplicar-cupon">Aplicar cupones de descuento
+                                        </button>
+                                        <p class="monto-app"><strong>Monto Aplicado: 0</strong></p>
+                                    </div>
+                                    <div class="column half">
+                                        <a href="#"><p class="cupon">¿Que es un cupon de descuento?<p></a>
+                                    </div>
+                                </div>
                                 <div>
                                     <p class="pad all hide-on-mobile" >Selecciona el medio de pago de tu preferencia</p>
 
@@ -6048,6 +6058,12 @@
                                 <tr class="min-pad" >
                                     <td class="bigger-paragraph bold-text" >Descuento especial</td>
                                     <td class="righted-text">$80.990</td>
+                                </tr>
+                                <tr class="min-pad" >
+                                    <td>
+                                            Costo por despacho
+                                    </td>
+                                    <td class="righted-text">$3.990</td>
                                 </tr>
                                 <tr class="min-pad" >
                                     <td>
